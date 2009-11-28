@@ -191,3 +191,11 @@ td.entryMap div.googleMapLocation {
 .helpTopLink {
     float:right;
 }
+
+.blogArchivePortlet div.archiveMonth {
+    padding-left:1em;
+}
+
+.blogArchivePortlet span.archiveCount {
+    font-weight:bold;
+}

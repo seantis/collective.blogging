@@ -30,7 +30,18 @@
         </div>
     </dd>
     
-    <dd class="portletItem even">
+    <dd class="portletItem even" tal:condition="view/drafts_url">
+        <div>
+            <img tal:replace="structure context/edit.gif"/>
+            <a href="" title="Go to blog entry drafts"
+                tal:attributes="href view/drafts_url"
+                i18n:translate="label_drafts">
+                Drafts
+            </a>
+        </div>
+    </dd>
+    
+    <dd class="portletItem odd">
         <div>
             <img tal:replace="structure context/info_icon.gif"/>
             <a href="" title="User's help and documentation"

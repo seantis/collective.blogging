@@ -596,7 +596,8 @@
                     </p>
                     <ul i18n:translate="">
                         <li><b>English</b> (default) &mdash; <i>lzdych (any corrections welcomed since english is not my native language)</i></li>
-                        <li><b>Czech</b> &mdash; <i>lzdych (excluding user's guide yet)</i></li>
+                        <li><b>Czech</b> &mdash; <i>lzdych (in-progress))</i></li>
+                        <li><b>Italian</b> &mdash; <i>luthy (in-progress)</i></li>
                     </ul>
                     <p>
                         <i i18n:translate=""><b>Note:</b> Feel free to contact me if you want to submit new translations. Any help

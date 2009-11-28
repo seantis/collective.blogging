@@ -40,6 +40,13 @@ class IArchivePortlet(IPortletDataProvider):
             default_query='path:'
         )
     )
+    
+    extend_title = schema.Bool(
+        title=_(u"Extend title"),
+        description=_(u"Tick the checkbox to extend portlet title with target blog's title."),
+        required=False,
+        default=False,
+    )
 
 
 class Assignment(base.Assignment):
@@ -52,9 +59,11 @@ class Assignment(base.Assignment):
     implements(IArchivePortlet)
 
     target_blog = None
+    extend_title = False
     
-    def __init__(self, target_blog=None):
+    def __init__(self, target_blog=None, extend_title=False):
         self.target_blog = target_blog
+        self.extend_title = extend_title
     
     @property
     def title(self):
@@ -80,13 +89,18 @@ class Renderer(base.Renderer):
         self.portal_state = getMultiAdapter((self.context, self.request), name=u'plone_portal_state')
         self.tools = getMultiAdapter((self.context, self.request), name=u'plone_tools')
 
+    def update(self):
+        self.extend_title = self.data.extend_title
+
     @property
     def blog_url(self):
         blog = self.blog()
-        if blog is None:
-            return None
-        else:
+        if blog is not None:
             return blog.absolute_url()
+            
+    @property
+    def blog_title(self):
+        return self.blog() and self.blog().title
     
     @ram.cache(_cachekey)
     def archives(self):
@@ -138,10 +152,7 @@ class Renderer(base.Renderer):
         if HAS_LINGUA_PLONE:
             return obj.getTranslation()
         return obj
-    
-    def header(self):
-        blog_title = self.blog() and self.blog().title
-        return _(u"${blog} archives", mapping={'blog':blog_title})
+
 
 class AddForm(base.AddForm):
     """Portlet add form.

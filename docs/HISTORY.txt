@@ -4,6 +4,9 @@ Changelog
 1.0b1 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- extended manage blog portlet's settings by optional reference
+    to user defined drafts link [lzdych]
+
 - added blog archive portlet [lzdych]
 
 - improved browser views to enable maps to be hidden if not used [lzdych]

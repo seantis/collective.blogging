@@ -79,7 +79,9 @@ Translations
 
 - English (default): lzdych (lukas dot zdych at gmail dot com)
 
-- Czech: lzdych (user's guide not translated yet)
+- Czech: lzdych (in-progress)
+
+- Italian: luthy (in-progress)
 
 New translations or help with correction of an existing ones would be appreciated.
 
@@ -106,3 +108,5 @@ __ lzdych_
 Homepage: collective.blogging_.
 
 .. _collective.blogging: http://plone.org/products/collective.blogging
+
+

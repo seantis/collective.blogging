@@ -10,8 +10,9 @@ from plone.app.portlets.portlets import base
 from plone.app.form.widgets.uberselectionwidget import UberSelectionWidget
 from plone.memoize.instance import memoize
 
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from Products.ATContentTypes.interface.topic import IATTopic
 from Products.CMFPlone import PloneMessageFactory as PMF
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from collective.blogging import HAS_LINGUA_PLONE, BLOG_PERMISSION
 from collective.blogging import _
@@ -27,7 +28,7 @@ class IManagePortlet(IPortletDataProvider):
 
     target_blog = schema.Choice(
         title=_(u"Target blog"),
-        description=_(u"Find the blog which will be this portlet used for."),
+        description=_(u"Find a blog which will be this portlet used for."),
         required=True,
         source=SearchableTextSourceBinder(
             {'object_provides' : IFolderMarker.__identifier__},
@@ -44,6 +45,16 @@ class IManagePortlet(IPortletDataProvider):
             vocabulary='plone.app.vocabularies.ReallyUserFriendlyTypes'
         )
     )
+    
+    target_drafts = schema.Choice(
+        title=_(u"Drafts"),
+        description=_(u"Find an user defined topic with blog entry drafts."),
+        required=False,
+        source=SearchableTextSourceBinder(
+            {'object_provides' : IATTopic.__identifier__},
+            default_query='path:'
+        )
+    )
 
 class Assignment(base.Assignment):
     """Portlet assignment.
@@ -56,10 +67,12 @@ class Assignment(base.Assignment):
 
     target_blog = None
     addable_types = ()
+    target_drafts = None
     
-    def __init__(self, target_blog=None, addable_types=()):
+    def __init__(self, target_blog=None, addable_types=(), target_drafts=None):
         self.target_blog = target_blog
         self.addable_types = addable_types
+        self.target_drafts = target_drafts
     
     @property
     def title(self):
@@ -94,10 +107,14 @@ class Renderer(base.Renderer):
     @property
     def blog_url(self):
         blog = self.blog()
-        if blog is None:
-            return None
-        else:
+        if blog is not None:
             return blog.absolute_url()
+    
+    @property
+    def drafts_url(self):
+        drafts = self.drafts()
+        if drafts is not None:
+            return drafts.absolute_url()
     
     @property
     def creation_links(self):
@@ -138,6 +155,25 @@ class Renderer(base.Renderer):
         if HAS_LINGUA_PLONE:
             return obj.getTranslation()
         return obj
+    
+    @memoize
+    def drafts(self):
+        """ Get the drafts topic the portlet is pointing to """
+        
+        drafts_path = self.data.target_drafts
+        if not drafts_path:
+            return None
+
+        if drafts_path.startswith('/'):
+            drafts_path = drafts_path[1:]
+        
+        if not drafts_path:
+            return None
+        portal = self.portal_state.portal()
+        obj = portal.restrictedTraverse(drafts_path, default=None)
+        if HAS_LINGUA_PLONE:
+            return obj.getTranslation()
+        return obj
 
     @property
     def portal_url(self):
@@ -156,6 +192,7 @@ class AddForm(base.AddForm):
     """
     form_fields = form.Fields(IManagePortlet)
     form_fields['target_blog'].custom_widget = UberSelectionWidget
+    form_fields['target_drafts'].custom_widget = UberSelectionWidget
     
     label = _(u"Add Manage Blog portlet")
     description = _(u"This portlet helps to manage blog's content.")
@@ -172,6 +209,7 @@ class EditForm(base.EditForm):
 
     form_fields = form.Fields(IManagePortlet)
     form_fields['target_blog'].custom_widget = UberSelectionWidget
+    form_fields['target_drafts'].custom_widget = UberSelectionWidget
 
     label = _(u"Edit Manage Blog portlet")
     description = _(u"This portlet helps to manage blog's content.")
