@@ -4,6 +4,8 @@ Changelog
 1.0b1 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- added edit link to the entry snippet footer in the blog view [lzdych]
+
 - extended manage blog portlet's settings by optional reference
     to user defined drafts link [lzdych]
 

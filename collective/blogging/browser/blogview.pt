@@ -14,7 +14,8 @@
                             url_quote nocall:modules/Products.PythonScripts.standard/url_quote;
                             portal_discussion nocall:context/portal_discussion;
                             isDiscussionAllowedFor nocall:portal_discussion/isDiscussionAllowedFor;
-                            getDiscussionFor nocall:portal_discussion/getDiscussionFor;">
+                            getDiscussionFor nocall:portal_discussion/getDiscussionFor;
+                            checkPermission nocall:context/portal_membership/checkPermission;">
 
                 <div tal:replace="structure provider:plone.abovecontenttitle" />
 
@@ -111,7 +112,8 @@
                                                        item_is_file     python:view.is_file(item_object);
                                                        item_is_image    python:view.is_image(item_object);
                                                        item_is_newsitem python:view.is_newsitem(item_object);
-                                                       item_is_event    python:view.is_event(item_object)">
+                                                       item_is_event    python:view.is_event(item_object);
+                                                       item_can_edit    python:checkPermission('Modify portal content', item_object)">
 
                                     <div class="blogListingEntry">
                                         <a name="" tal:attributes="name item_id"></a>
@@ -498,6 +500,16 @@
                                                         tal:content="python:reply_count or 0">
                                                         99
                                                     </tal:count>)
+                                                </a>
+                                            </tal:block>
+                                            <tal:block tal:condition="item_can_edit">
+                                                |
+                                                <a title="Click to edit this entry."
+                                                    class="actionEdit"
+                                                    tal:attributes="href string:${item_url}/edit"
+                                                    i18n:translate="label_edit"
+                                                    i18n:attributes="title label_edit_title">
+                                                    Edit
                                                 </a>
                                             </tal:block>
                                             <tal:block tal:condition="python:item_date and item_date != None">
