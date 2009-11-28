@@ -1,0 +1,45 @@
+<dl class="portlet blogArchivePortlet" i18n:domain="collective.blogging"
+    tal:define="archives view/archives;blog_url view/blog_url"
+    tal:condition="archives">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <a tal:attributes="href blog_url">
+            <span tal:content="view/header" />
+        </a>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <tal:block repeat="archive archives">
+        <tal:year define="oddyear repeat/archive/odd;
+                          year_title archive/year">
+        
+            <dd class="portletItem"
+                tal:attributes="class python:oddyear and 'portletItem even' or 'portletItem odd'">
+                <a href="" tal:attributes="href archive/url">
+                    <span class="archiveYearTitle" tal:content="year_title">2009</span>
+                    <span class="archiveYearCount">(<tal:block content="archive/count">99</tal:block>)</span>
+                </a>
+                
+                <tal:block repeat="month archive/months">
+                    <div class="archiveMonth">
+                        <a href="" tal:attributes="href python:month[2]">
+                            <span class="archiveMonthTitle" tal:content="python:'%s / %s' % (year_title, month[0])">11</span>
+                            <span class="archiveMonthCount">(<tal:block content="python:month[1]">33</tal:block>)</span>
+                        </a>
+                    </div>
+                </tal:block>
+            </dd>
+        </tal:year>
+    </tal:block>
+    
+    <dd class="portletFooter">
+        <span class="portletBottomLeft"></span>
+        <a tal:attributes="href blog_url"
+            i18n:translate="label_go_to_blog">
+            Go to blog&hellip;
+        </a>
+        <span class="portletBottomRight"></span>
+    </dd>
+
+</dl>

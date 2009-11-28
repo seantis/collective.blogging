@@ -13,5 +13,16 @@
         addview=".manage.AddForm"
         editview=".manage.EditForm"
         />
+    
+    <plone:portlet
+        name="collective.blogging.ArchivePortlet"
+        interface=".archive.IArchivePortlet"
+        assignment=".archive.Assignment"
+        view_permission="zope2.View"
+        edit_permission="cmf.ManagePortal"
+        renderer=".archive.Renderer"
+        addview=".archive.AddForm"
+        editview=".archive.EditForm"
+        />
 
 </configure>

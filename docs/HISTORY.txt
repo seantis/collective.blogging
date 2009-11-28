@@ -4,11 +4,14 @@ Changelog
 1.0b1 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- added blog archive portlet [lzdych]
+
 - improved browser views to enable maps to be hidden if not used [lzdych]
 
 - removed empty entry description element if no description available [lzdych]
 
 - added initial italian translation [luthy]
+
 
 1.0a2 (2009-11-22)
 ~~~~~~~~~~~~~~~~~~
