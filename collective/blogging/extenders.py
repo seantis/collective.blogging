@@ -1,8 +1,8 @@
 from zope.interface import implements
 from zope.component import adapts
 
-from archetypes.schemaextender.interfaces import (ISchemaExtender,
-                                                    IOrderableSchemaExtender)
+from archetypes.schemaextender.interfaces import (ISchemaExtender, IOrderableSchemaExtender,
+                                                    IBrowserLayerAwareExtender)
 from archetypes.schemaextender.field import ExtensionField
 from archetypes.markerfield import InterfaceMarkerField
 
@@ -12,23 +12,13 @@ from Products.Archetypes.atapi import (BooleanWidget, TextAreaWidget,
                                         SelectionWidget)
 from Products.Archetypes.utils import IntDisplayList
 
-from Products.ATContentTypes.interface import IATDocument
-from Products.ATContentTypes.interface import IATEvent
-from Products.ATContentTypes.interface import IATFile
-from Products.ATContentTypes.interface import IATFolder
-from Products.ATContentTypes.interface import IATBTreeFolder
-from Products.ATContentTypes.interface import IATImage
-from Products.ATContentTypes.interface import IATLink
-from Products.ATContentTypes.interface import IATNewsItem
-from Products.ATContentTypes.interface import IATTopic
+from Products.ATContentTypes.interface import (IATDocument, IATEvent, IATFile,
+                                                IATFolder, IATBTreeFolder, IATImage,
+                                                IATLink, IATNewsItem, IATTopic)
 
-from collective.blogging.interfaces import IBlogMarker, IFolderMarker
-from collective.blogging.interfaces import IDocumentMarker
-from collective.blogging.interfaces import INewsItemMarker
-from collective.blogging.interfaces import IEventMarker
-from collective.blogging.interfaces import ILinkMarker
-from collective.blogging.interfaces import IImageMarker
-from collective.blogging.interfaces import IFileMarker
+from collective.blogging.interfaces import (IBlogMarker, IFolderMarker, IDocumentMarker,
+                                            INewsItemMarker, IEventMarker, ILinkMarker,
+                                            IImageMarker, IFileMarker, IBloggingSpecific)
 from collective.blogging import _
 from collective.blogging import BLOG_PERMISSION
 
@@ -90,8 +80,10 @@ class EnableToolbarField(ExtensionField, BooleanField):
 class FolderExtender(object):
     """ Add a new marker field to all ATFolder based types. """
     adapts(IATFolder)
-    implements(IOrderableSchemaExtender)
+    implements(IOrderableSchemaExtender, IBloggingSpecific)
 
+    layer = IBloggingSpecific
+    
     fields = [
         InterfaceMarkerField("blog_folder",
             schemata = "blog",
@@ -140,7 +132,9 @@ class FolderExtender(object):
 class LargeFolderExtender(object):
     """ Add a new marker field to all ATBTreeFolder based types. """
     adapts(IATBTreeFolder)
-    implements(IOrderableSchemaExtender)
+    implements(IOrderableSchemaExtender, IBrowserLayerAwareExtender)
+
+    layer = IBloggingSpecific
 
     fields = [
         InterfaceMarkerField("blog_folder",
@@ -191,7 +185,9 @@ class LargeFolderExtender(object):
 class TopicExtender(object):
     """ Add a new marker field to all ATTopic based types. """
     adapts(IATTopic)
-    implements(IOrderableSchemaExtender)
+    implements(IOrderableSchemaExtender, IBrowserLayerAwareExtender)
+
+    layer = IBloggingSpecific
 
     fields = [
         InterfaceMarkerField("blog_folder",
@@ -242,7 +238,9 @@ class TopicExtender(object):
 class DocumentExtender(object):
     """ Add a new marker field to all ATDocument based types. """
     adapts(IATDocument)
-    implements(ISchemaExtender)
+    implements(ISchemaExtender, IBrowserLayerAwareExtender)
+
+    layer = IBloggingSpecific
 
     fields = [
         InterfaceMarkerField("blog_entry",
@@ -268,7 +266,9 @@ class DocumentExtender(object):
 class NewsItemExtender(object):
     """ Add a new marker field to all ATNewsItem based types. """
     adapts(IATNewsItem)
-    implements(ISchemaExtender)
+    implements(ISchemaExtender, IBrowserLayerAwareExtender)
+
+    layer = IBloggingSpecific
 
     fields = [
         InterfaceMarkerField("blog_entry",
@@ -294,7 +294,9 @@ class NewsItemExtender(object):
 class EventExtender(object):
     """ Add a new marker field to all ATEvent based types. """
     adapts(IATEvent)
-    implements(IOrderableSchemaExtender)
+    implements(IOrderableSchemaExtender, IBrowserLayerAwareExtender)
+
+    layer = IBloggingSpecific
 
     fields = [
         InterfaceMarkerField("blog_entry",
@@ -326,7 +328,9 @@ class EventExtender(object):
 class LinkExtender(object):
     """ Add a new marker field to all ATLink based types. """
     adapts(IATLink)
-    implements(ISchemaExtender)
+    implements(ISchemaExtender, IBrowserLayerAwareExtender)
+
+    layer = IBloggingSpecific
 
     fields = [
         InterfaceMarkerField("blog_entry",
@@ -365,7 +369,9 @@ class LinkExtender(object):
 class ImageExtender(object):
     """ Add a new marker field to all ATImage based types. """
     adapts(IATImage)
-    implements(ISchemaExtender)
+    implements(ISchemaExtender, IBrowserLayerAwareExtender)
+
+    layer = IBloggingSpecific
 
     fields = [
         InterfaceMarkerField("blog_entry",
@@ -391,7 +397,9 @@ class ImageExtender(object):
 class FileExtender(object):
     """ Add a new marker field to all ATFile based types. """
     adapts(IATFile)
-    implements(ISchemaExtender)
+    implements(ISchemaExtender, IBrowserLayerAwareExtender)
+
+    layer = IBloggingSpecific
 
     fields = [
         InterfaceMarkerField("blog_entry",

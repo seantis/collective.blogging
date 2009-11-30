@@ -12,6 +12,7 @@
         class=".blogview.BlogView"
         permission="zope2.View"
         template="blogview.pt"
+        layer="..interfaces.IBloggingSpecific"
         />
     
     <!--
@@ -21,12 +22,14 @@
         action="view"
         title="Blog View"
         description="A default blog view"
+        layer="..interfaces.IBloggingSpecific"
         />
     -->
     
     <browser:defaultView 
         for="collective.blogging.interfaces.IBlogMarker"
         name="view"
+        layer="..interfaces.IBloggingSpecific"
         />
     
     <!-- Entry -->
@@ -36,11 +39,13 @@
         class=".entryview.EntryView"
         permission="zope2.View"
         template="entryview.pt"
+        layer="..interfaces.IBloggingSpecific"
         />
     
     <browser:defaultView 
         for="collective.blogging.interfaces.IEntryMarker"
         name="view"
+        layer="..interfaces.IBloggingSpecific"
         />
     
     <!-- Special handling for File & Image due to using obj/view .. -->
@@ -50,11 +55,13 @@
         class=".entryview.EntryView"
         permission="zope2.View"
         template="entryview.pt"
+        layer="..interfaces.IBloggingSpecific"
         />
     
     <browser:defaultView 
         for="collective.blogging.interfaces.IFileMarker"
         name="file_view"
+        layer="..interfaces.IBloggingSpecific"
         />
     
     <!-- Entry -->
@@ -64,11 +71,13 @@
         class=".entryview.EntryView"
         permission="zope2.View"
         template="entryview.pt"
+        layer="..interfaces.IBloggingSpecific"
         />
     
     <browser:defaultView 
         for="collective.blogging.interfaces.IImageMarker"
         name="image_view"
+        layer="..interfaces.IBloggingSpecific"
         />
     
 
@@ -79,6 +88,7 @@
         class=".help.HelpView"
         permission="zope2.View"
         template="help.pt"
+        layer="..interfaces.IBloggingSpecific"
         />
     
     <browser:page
@@ -86,6 +96,7 @@
         for="Products.CMFCore.interfaces._content.IFolderish"
         permission="zope2.View"
         template="galleryview.pt"
+        layer="..interfaces.IBloggingSpecific"
         />
     
     <browser:menuItem
@@ -94,14 +105,19 @@
         action="blog-gallery"
         title="Blog Gallery"
         description="A gallery view"
+        layer="..interfaces.IBloggingSpecific"
         />
     
     <browser:resourceDirectory
         name="collective.blogging.help_images"
-        directory="help_images" />
+        directory="help_images"
+        layer="..interfaces.IBloggingSpecific"
+        />
     
     <browser:resourceDirectory
         name="collective.blogging.static"
-        directory="static" />
+        directory="static"
+        layer="..interfaces.IBloggingSpecific"
+        />
 
 </configure>

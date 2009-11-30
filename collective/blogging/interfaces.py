@@ -1,4 +1,5 @@
 from zope.interface import Interface
+from plone.theme.interfaces import IDefaultPloneLayer
 
 # markers
 class IBlogMarker(Interface):
@@ -27,3 +28,7 @@ class IImageMarker(IEntryMarker):
 
 class IFileMarker(IEntryMarker):
     """ An file based blog entry """
+
+class IBloggingSpecific(IDefaultPloneLayer):
+    """Marker interface that defines a Zope 3 browser layer.
+    """

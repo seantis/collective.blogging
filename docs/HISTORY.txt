@@ -4,10 +4,13 @@ Changelog
 1.0b1 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- schema extenders made browser layer specific using new blogging layer [lzdych]
+
+- browser views and static resources now hangs on new blogging specific browser layer [lzdych]
+
 - added edit link to the entry snippet footer in the blog view [lzdych]
 
-- extended manage blog portlet's settings by optional reference
-    to user defined drafts link [lzdych]
+- extended manage blog portlet's settings by optional reference to user defined drafts link [lzdych]
 
 - added blog archive portlet [lzdych]
 

@@ -18,38 +18,47 @@
     <!-- extenders -->
     <adapter
         factory=".extenders.FolderExtender"
+        provides="archetypes.schemaextender.interfaces.IOrderableSchemaExtender"
         name="collective.blogging.folderextender" />
     
     <adapter
         factory=".extenders.LargeFolderExtender"
+        provides="archetypes.schemaextender.interfaces.IOrderableSchemaExtender"
         name="collective.blogging.largefolderextender" />
     
     <adapter
         factory=".extenders.TopicExtender"
+        provides="archetypes.schemaextender.interfaces.IOrderableSchemaExtender"
         name="collective.blogging.topicextender" />
     
     <adapter
         factory=".extenders.DocumentExtender"
+        provides="archetypes.schemaextender.interfaces.ISchemaExtender"
         name="collective.blogging.documentextender" />
     
     <adapter
         factory=".extenders.NewsItemExtender"
+        provides="archetypes.schemaextender.interfaces.ISchemaExtender"
         name="collective.blogging.newsitemextender" />
     
     <adapter
         factory=".extenders.EventExtender"
+        provides="archetypes.schemaextender.interfaces.IOrderableSchemaExtender"
         name="collective.blogging.eventextender" />
     
     <adapter
         factory=".extenders.LinkExtender"
+        provides="archetypes.schemaextender.interfaces.ISchemaExtender"
         name="collective.blogging.linkextender" />
     
     <adapter
         factory=".extenders.ImageExtender"
+        provides="archetypes.schemaextender.interfaces.ISchemaExtender"
         name="collective.blogging.imageextender" />
     
     <adapter
         factory=".extenders.FileExtender"
+        provides="archetypes.schemaextender.interfaces.ISchemaExtender"
         name="collective.blogging.fileextender" />
 
     <!-- Enable next/previous links for blogs -->
