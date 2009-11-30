@@ -80,7 +80,7 @@ class EnableToolbarField(ExtensionField, BooleanField):
 class FolderExtender(object):
     """ Add a new marker field to all ATFolder based types. """
     adapts(IATFolder)
-    implements(IOrderableSchemaExtender, IBloggingSpecific)
+    implements(IOrderableSchemaExtender, IBrowserLayerAwareExtender)
 
     layer = IBloggingSpecific
     
