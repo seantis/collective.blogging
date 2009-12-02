@@ -20,7 +20,10 @@ def fixEntryMarkup(context):
     catalog = getToolByName(context, 'portal_catalog')
     ifaces = (IDocumentMarker, INewsItemMarker, IEventMarker, ILinkMarker,
                 IImageMarker, IFileMarker)
-    entry_brains = catalog(object_provides=[x.__identifier__ for x in ifaces])
+    entry_brains = catalog(
+        object_provides=[x.__identifier__ for x in ifaces],
+        Language=u'all'
+    )
     logger.info("Found %s blog enries with old markup.", len(entry_brains))
     for brain in entry_brains:
         try:
@@ -43,3 +46,22 @@ def fixEntryMarkup(context):
         
         logger.info("Committing transaction after migrating this entry.")
         transaction.commit()
+
+def reindexPublishDates(context):
+    logger.info("Starting reindex existing blog entries.")
+    catalog = getToolByName(context, 'portal_catalog')
+    entry_brains = catalog(
+        object_provides=IEntryMarker.__identifier__,
+        Language=u'all'
+    )
+    logger.info("Found %s blog enries with old publishing indexes.", len(entry_brains))
+    for brain in entry_brains:
+        try:
+            entry = brain.getObject()
+        except (AttributeError, KeyError):
+            logger.warn("AttributeError getting entry object at %s",
+                        brain.getURL())
+            continue
+        
+        entry.reindexObject()
+        logger.info('Entry "%s" reindexed.' % brain.getPath())

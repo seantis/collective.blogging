@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2009-12-02 14:48+0000\n"
+"POT-Creation-Date: 2009-12-02 19:08+0000\n"
 "PO-Revision-Date: 2009-11-23 16:19+0100\n"
 "Last-Translator: Enzo Cesanelli <enzo@noiza.com>\n"
 "MIME-Version: 1.0\n"
@@ -713,8 +713,9 @@ msgstr "Leggi i Commenti a questo Post"
 msgid "select_category_option"
 msgstr "--Categoria--"
 
-#. Default: "Month"
+#. Default: "-- Month --"
 #: ./browser/blogview.py:107
+#, fuzzy
 msgid "select_month_option"
 msgstr "--Mese--"
 

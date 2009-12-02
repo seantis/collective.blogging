@@ -1,12 +1,8 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts">
 
-    <!-- Nonsense expression to not let resource registries to merge
-        this resource with other one, otherwise it doesn't work.
-    -->
     <javascript cacheable="True" compression="safe" conditionalcomment=""
-        cookable="True" enabled="True" inline="False"
-        expression="context/@@blogging-help"
+        cookable="False" enabled="True" inline="False" expression=""
         id="++resource++collective.blogging.static/blogging.js" />
 
 </object>

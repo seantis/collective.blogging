@@ -71,10 +71,19 @@
         />
     
     <!-- upgrades -->
+    <genericsetup:upgradeStep
+        title="Publishing dates"
+        description="Reindex blog entries with obsolete publishing dates format."
+        source="1"
+        destination="2"
+        handler="collective.blogging.migration.reindexPublishDates"
+        sortkey="1"
+        profile="collective.blogging:default" />
+
     <!-- BBB: see interfaces.py -->
     <genericsetup:upgradeStep
-        title="Issue descriptions"
-        description="Fix description of issues."
+        title="Entry markup"
+        description="Fix obsolete blog entries interfaces markup."
         source="1"
         destination="2"
         handler="collective.blogging.migration.fixEntryMarkup"

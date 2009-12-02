@@ -12,4 +12,6 @@ def year(obj):
 def month(obj):
     date = obj.getEffectiveDate() or obj.created()
     if date:
-        return date.month()
+        result = str(date.month())
+        return (len(result) < 2) and ("0%s" % result) or result
+            

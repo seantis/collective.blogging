@@ -104,7 +104,7 @@ class BlogView(BrowserView):
             },
             {
                 'id': 'publish_month',
-                'title': _(u'select_month_option', default=u'Month'),
+                'title': _(u'select_month_option', default=u'-- Month --'),
                 'options': catalog.uniqueValuesFor('publish_month'),
                 'selected': month and int(month) or None
             }

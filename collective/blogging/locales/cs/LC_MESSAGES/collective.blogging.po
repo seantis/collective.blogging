@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2009-12-02 14:48+0000\n"
+"POT-Creation-Date: 2009-12-02 19:08+0000\n"
 "PO-Revision-Date: 2009-12-02 15:53+0100\n"
 "Last-Translator: Lukas Zdych <lukas.zdych@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -9,7 +9,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8 latin2\n"
-"Language-Team: \n"
 
 #. Default: "<b><i>And as a bonus the blogging package comes with new gallery view which can be selected from the <b>Display</b> menu and you get a simple but fancy picture gallery. </i></b>"
 #: ./browser/help.pt:433
@@ -713,8 +712,9 @@ msgstr "Přečíst komentáře k tomuto příspěvku."
 msgid "select_category_option"
 msgstr "-- Kategorie --"
 
-#. Default: "Month"
+#. Default: "-- Month --"
 #: ./browser/blogview.py:107
+#, fuzzy
 msgid "select_month_option"
 msgstr "-- Měsíc --"
 
