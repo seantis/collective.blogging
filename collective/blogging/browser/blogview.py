@@ -1,15 +1,13 @@
 from Acquisition import aq_inner
 from zope.component import getMultiAdapter
 
-from Products.ATContentTypes.interface import IATTopic
-from Products.ATContentTypes.interface import IATFolder
-from Products.ATContentTypes.interface import IATBTreeFolder
+from Products.ATContentTypes.interface import (IATTopic, IATFolder, IATBTreeFolder,
+                                                IATNewsItem, IATEvent, IATLink, IATImage,
+                                                IATFile)
 from Products.CMFPlone import Batch
 from Products.Five import BrowserView
 
-from collective.blogging.interfaces import (IEntryMarker, ILinkMarker,
-                                            IFileMarker, IImageMarker,
-                                            INewsItemMarker, IEventMarker)
+from collective.blogging.interfaces import IEntryMarker
 from collective.blogging import _
 
 class BlogView(BrowserView):
@@ -114,7 +112,7 @@ class BlogView(BrowserView):
 
     # Image related
     def is_image(self, obj):
-        return IImageMarker.providedBy(obj)
+        return IATImage.providedBy(obj)
     
     def image_size(self, obj):
         context = aq_inner(obj)
@@ -122,15 +120,15 @@ class BlogView(BrowserView):
     
     # News Item related
     def is_newsitem(self, obj):
-        return INewsItemMarker.providedBy(obj)
+        return IATNewsItem.providedBy(obj)
     
     # Event related
     def is_event(self, obj):
-        return IEventMarker.providedBy(obj)
+        return IATEvent.providedBy(obj)
 
     # File related
     def is_file(self, obj):
-        return IFileMarker.providedBy(obj)
+        return IATFile.providedBy(obj)
     
     def file_info(self, obj):
         context = aq_inner(obj)
@@ -146,7 +144,7 @@ class BlogView(BrowserView):
 
     # Link related
     def is_link(self, obj):
-        return ILinkMarker.providedBy(obj)
+        return IATLink.providedBy(obj)
 
     def embed_code(self, obj):
         if self.is_link(obj):

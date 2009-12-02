@@ -48,7 +48,7 @@
         layer="..interfaces.IBloggingSpecific"
         />
     
-    <!-- Special handling for File & Image due to using obj/view .. -->
+    <!-- Special handling for File & Image due to using obj/view ..
     <browser:page
         name="file_view"
         for="collective.blogging.interfaces.IFileMarker"
@@ -64,7 +64,6 @@
         layer="..interfaces.IBloggingSpecific"
         />
     
-    <!-- Entry -->
     <browser:page
         name="image_view"
         for="collective.blogging.interfaces.IImageMarker"
@@ -79,7 +78,7 @@
         name="image_view"
         layer="..interfaces.IBloggingSpecific"
         />
-    
+    -->
 
     <!-- Help -->
     <browser:page

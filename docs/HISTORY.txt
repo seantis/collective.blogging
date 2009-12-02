@@ -4,6 +4,9 @@ Changelog
 1.0b1 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- refactored blog content markup by removing individual content type markup interfaces
+    and added upgrade step, also fixes: missing NewsItem's title image in blog and entry view [lzdych]
+
 - schema extenders made browser layer specific using new blogging layer [lzdych]
 
 - browser views and static resources now hangs on new blogging specific browser layer [lzdych]

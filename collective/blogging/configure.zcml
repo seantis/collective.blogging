@@ -32,6 +32,12 @@
         name="collective.blogging.topicextender" />
     
     <adapter
+        factory=".extenders.EntryExtender"
+        provides="archetypes.schemaextender.interfaces.IOrderableSchemaExtender"
+        name="collective.blogging.entryextender" />
+
+    <!--
+    <adapter
         factory=".extenders.DocumentExtender"
         provides="archetypes.schemaextender.interfaces.ISchemaExtender"
         name="collective.blogging.documentextender" />
@@ -45,12 +51,13 @@
         factory=".extenders.EventExtender"
         provides="archetypes.schemaextender.interfaces.IOrderableSchemaExtender"
         name="collective.blogging.eventextender" />
-    
+    -->
     <adapter
         factory=".extenders.LinkExtender"
         provides="archetypes.schemaextender.interfaces.ISchemaExtender"
         name="collective.blogging.linkextender" />
     
+    <!--
     <adapter
         factory=".extenders.ImageExtender"
         provides="archetypes.schemaextender.interfaces.ISchemaExtender"
@@ -60,6 +67,7 @@
         factory=".extenders.FileExtender"
         provides="archetypes.schemaextender.interfaces.ISchemaExtender"
         name="collective.blogging.fileextender" />
+    -->
 
     <!-- Enable next/previous links for blogs -->
     <adapter factory=".nextprevious.BlogNextPrevious" />
@@ -89,6 +97,17 @@
         for="Products.CMFPlone.interfaces.IPloneSiteRoot"
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
+    
+    <!-- upgrades -->
+    <!-- BBB: see interfaces.py -->
+    <genericsetup:upgradeStep
+        title="Issue descriptions"
+        description="Fix description of issues."
+        source="1"
+        destination="2"
+        handler="collective.blogging.migration.fixEntryMarkup"
+        sortkey="1"
+        profile="collective.blogging:default" />
 
 </configure>
 

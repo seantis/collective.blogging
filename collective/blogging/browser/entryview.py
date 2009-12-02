@@ -1,13 +1,14 @@
 from Acquisition import aq_inner
+
+from Products.ATContentTypes.interface import (IATNewsItem, IATEvent, IATLink, IATImage,
+                                                IATFile)
+
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.Five import BrowserView
 
 from plone.memoize import view
 
-from collective.blogging.interfaces import (ILinkMarker, IFileMarker,
-                                            IImageMarker, INewsItemMarker,
-                                            IEventMarker)
 
 class EntryView(BrowserView):
     """ An entry browser view """
@@ -25,27 +26,27 @@ class EntryView(BrowserView):
     # News Item related
     @property
     def is_newsitem(self):
-        return INewsItemMarker.providedBy(self.context)
+        return IATNewsItem.providedBy(self.context)
 
     # File related
     @property
     def is_file(self):
-        return IFileMarker.providedBy(self.context)
+        return IATFile.providedBy(self.context)
     
     # Image related
     @property
     def is_image(self):
-        return IImageMarker.providedBy(self.context)
+        return IATImage.providedBy(self.context)
     
     # Event related
     @property
     def is_event(self):
-        return IEventMarker.providedBy(self.context)
+        return IATEvent.providedBy(self.context)
 
     # Link related
     @property
     def is_link(self):
-        return ILinkMarker.providedBy(self.context)
+        return IATLink.providedBy(self.context)
 
     @property
     def embed_code(self):

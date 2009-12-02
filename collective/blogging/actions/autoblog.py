@@ -7,7 +7,6 @@ from plone.contentrules.rule.interfaces import IRuleElementData, IExecutable
 
 from Products.CMFPlone import PloneMessageFactory as _
 
-from collective.blogging.interfaces import (IBlogMarker, IEntryMarker)
 
 class IAutoBlogAction(Interface):
     """Definition of the configuration
@@ -37,7 +36,6 @@ class AutoBlogActionExecutor(object):
         self.event = event
 
     def __call__(self):
-        
         obj = self.event.object
         blog_field = obj.getField('blog_folder')
         entry_field = obj.getField('blog_entry')

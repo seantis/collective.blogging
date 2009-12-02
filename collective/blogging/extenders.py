@@ -11,14 +11,13 @@ from Products.Archetypes.atapi import (TextField, IntegerField,
 from Products.Archetypes.atapi import (BooleanWidget, TextAreaWidget,
                                         SelectionWidget)
 from Products.Archetypes.utils import IntDisplayList
+from Products.Archetypes.interfaces._base import IBaseFolder, IBaseContent
 
-from Products.ATContentTypes.interface import (IATDocument, IATEvent, IATFile,
-                                                IATFolder, IATBTreeFolder, IATImage,
-                                                IATLink, IATNewsItem, IATTopic)
+from Products.ATContentTypes.interface import (IATFolder, IATBTreeFolder,
+                                                IATLink, IATTopic)
 
-from collective.blogging.interfaces import (IBlogMarker, IFolderMarker, IDocumentMarker,
-                                            INewsItemMarker, IEventMarker, ILinkMarker,
-                                            IImageMarker, IFileMarker, IBloggingSpecific)
+from collective.blogging.interfaces import (IBlogMarker, IFolderMarker, IEntryMarker,
+                                            IBloggingSpecific)
 from collective.blogging import _
 from collective.blogging import BLOG_PERMISSION
 
@@ -235,65 +234,9 @@ class TopicExtender(object):
         return original
 
 
-class DocumentExtender(object):
-    """ Add a new marker field to all ATDocument based types. """
-    adapts(IATDocument)
-    implements(ISchemaExtender, IBrowserLayerAwareExtender)
-
-    layer = IBloggingSpecific
-
-    fields = [
-        InterfaceMarkerField("blog_entry",
-            schemata = "blog",
-            write_permission = BLOG_PERMISSION,
-            languageIndependent = True,
-            interfaces = (IDocumentMarker,),
-            widget = BooleanWidget(
-                label = _(u"label_blog_entry",
-                    default=u"Blog Entry"),
-                description = _(u"help_blog_entry_marker",
-                    default=u"Mark this content as blog entry."),
-            ),
-        ),
-    ]
-
-    def __init__(self, context):
-        self.context = context
-
-    def getFields(self):
-        return self.fields
-
-class NewsItemExtender(object):
-    """ Add a new marker field to all ATNewsItem based types. """
-    adapts(IATNewsItem)
-    implements(ISchemaExtender, IBrowserLayerAwareExtender)
-
-    layer = IBloggingSpecific
-
-    fields = [
-        InterfaceMarkerField("blog_entry",
-            schemata = "blog",
-            write_permission = BLOG_PERMISSION,
-            languageIndependent = True,
-            interfaces = (INewsItemMarker,),
-            widget = BooleanWidget(
-                label = _(u"label_blog_entry",
-                    default=u"Blog Entry"),
-                description = _(u"help_blog_entry_marker",
-                    default=u"Mark this content as blog entry."),
-            ),
-        ),
-    ]
-
-    def __init__(self, context):
-        self.context = context
-
-    def getFields(self):
-        return self.fields
-
-class EventExtender(object):
-    """ Add a new marker field to all ATEvent based types. """
-    adapts(IATEvent)
+class EntryExtender(object):
+    """ Add a new marker field to all possible entry types. """
+    adapts(IBaseContent)
     implements(IOrderableSchemaExtender, IBrowserLayerAwareExtender)
 
     layer = IBloggingSpecific
@@ -303,7 +246,7 @@ class EventExtender(object):
             schemata = "blog",
             write_permission = BLOG_PERMISSION,
             languageIndependent = True,
-            interfaces = (IEventMarker,),
+            interfaces = (IEntryMarker,),
             widget = BooleanWidget(
                 label = _(u"label_blog_entry",
                     default=u"Blog Entry"),
@@ -325,6 +268,8 @@ class EventExtender(object):
         blog.insert(0, 'blog_entry')
         return original
 
+
+
 class LinkExtender(object):
     """ Add a new marker field to all ATLink based types. """
     adapts(IATLink)
@@ -333,18 +278,6 @@ class LinkExtender(object):
     layer = IBloggingSpecific
 
     fields = [
-        InterfaceMarkerField("blog_entry",
-            schemata = "blog",
-            write_permission = BLOG_PERMISSION,
-            languageIndependent = True,
-            interfaces = (ILinkMarker,),
-            widget = BooleanWidget(
-                label = _(u"label_blog_entry",
-                    default=u"Blog Entry"),
-                description = _(u"help_blog_entry_marker",
-                    default=u"Mark this content as blog entry."),
-            ),
-        ),
 
         EmbedField('embedCode',
             schemata = "blog",
@@ -356,62 +289,6 @@ class LinkExtender(object):
                 label=_(u'label_embed', default=u'Embed'),
                 description=_(u'help_embed',
                               default=u'Paste embed code for example youtube, google or other video content.'),
-            ),
-        ),
-    ]
-
-    def __init__(self, context):
-        self.context = context
-
-    def getFields(self):
-        return self.fields
-
-class ImageExtender(object):
-    """ Add a new marker field to all ATImage based types. """
-    adapts(IATImage)
-    implements(ISchemaExtender, IBrowserLayerAwareExtender)
-
-    layer = IBloggingSpecific
-
-    fields = [
-        InterfaceMarkerField("blog_entry",
-            schemata = "blog",
-            write_permission = BLOG_PERMISSION,
-            languageIndependent = True,
-            interfaces = (IImageMarker,),
-            widget = BooleanWidget(
-                label = _(u"label_blog_entry",
-                    default=u"Blog Entry"),
-                description = _(u"help_blog_entry_marker",
-                    default=u"Mark this content as blog entry."),
-            ),
-        ),
-    ]
-
-    def __init__(self, context):
-        self.context = context
-
-    def getFields(self):
-        return self.fields
-
-class FileExtender(object):
-    """ Add a new marker field to all ATFile based types. """
-    adapts(IATFile)
-    implements(ISchemaExtender, IBrowserLayerAwareExtender)
-
-    layer = IBloggingSpecific
-
-    fields = [
-        InterfaceMarkerField("blog_entry",
-            schemata = "blog",
-            write_permission = BLOG_PERMISSION,
-            languageIndependent = True,
-            interfaces = (IFileMarker,),
-            widget = BooleanWidget(
-                label = _(u"label_blog_entry",
-                    default=u"Blog Entry"),
-                description = _(u"help_blog_entry_marker",
-                    default=u"Mark this content as blog entry."),
             ),
         ),
     ]
