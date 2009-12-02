@@ -342,7 +342,7 @@
                     <p i18n:translate="">
                         And becuase events happen in some places it would be nice to show event location on the map.
                         To enable maps feature for blogging events you just need to install additional extra package
-                        <b><a href='http://plone.org/products/collective.bloggingmaps'>blogging maps</a></b>
+                        <b><a i18n:name="url" href="http://plone.org/products/collective.bloggingmaps">blogging maps</a></b>
                         and you will be available to use Google maps integration to share geo locations.
                     </p>
                     
@@ -601,7 +601,7 @@
                     </ul>
                     <p>
                         <i i18n:translate=""><b>Note:</b> Feel free to contact me if you want to submit new translations. Any help
-                            will be appreciated. You can also checkout the source from <a href='http://svn.plone.org/svn/collective/collective.blogging/trunk/'>
+                            will be appreciated. You can also checkout the source from <a i18n:name="url" href="http://svn.plone.org/svn/collective/collective.blogging/trunk/">
                             collective</a> and use <b>update_i18n.sh</b> script included in the package to add new translation and then commit it.</i>
                     </p>
                     <br/>
