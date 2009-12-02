@@ -18,7 +18,7 @@
                             checkPermission nocall:context/portal_membership/checkPermission;">
 
                 <div tal:replace="structure provider:plone.abovecontenttitle" />
-
+                
                 <h1 class="documentFirstHeading"
                     tal:attributes="style hiddableStyle"> 
                     <metal:field use-macro="python:context.widget('title', mode='view')">

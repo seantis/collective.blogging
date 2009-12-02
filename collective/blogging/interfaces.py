@@ -12,8 +12,7 @@ class IEntryMarker(Interface):
     """ A generic blog entry """
 
 class IBloggingSpecific(IDefaultPloneLayer):
-    """Marker interface that defines a Zope 3 browser layer.
-    """
+    """ A marker interface that defines a Zope 3 browser layer. """
 
 # BBB - all these interfaces are obsolete and should
 # be removed before first release candidate

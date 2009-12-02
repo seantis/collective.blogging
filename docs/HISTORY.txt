@@ -4,6 +4,10 @@ Changelog
 1.0b1 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- disallow javascript resource merging - fixes: Gallery view doesn't work for anonymous sometimes [lzdych]
+
+- updated i18n and czech translation [lzdych]
+
 - refactored blog content markup by removing individual content type markup interfaces
     and added upgrade step, also fixes: missing NewsItem's title image in blog and entry view [lzdych]
 
@@ -15,7 +19,7 @@ Changelog
 
 - extended manage blog portlet's settings by optional reference to user defined drafts link [lzdych]
 
-- added blog archive portlet [lzdych]
+- added blog archive portlet (requires publish_year and publilsh_month catalog reindex) [lzdych]
 
 - improved browser views to enable maps to be hidden if not used [lzdych]
 

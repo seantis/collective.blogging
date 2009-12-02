@@ -16,7 +16,7 @@
                             getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
                             templateId template/getId;
                             batch images">
-
+                
                 <div tal:replace="structure provider:plone.abovecontenttitle" />
 
                 <h1 tal:content="here/pretty_title_or_id" class="documentFirstHeading">Title or id</h1>
