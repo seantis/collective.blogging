@@ -47,7 +47,7 @@ class IManagePortlet(IPortletDataProvider):
     
     target_drafts = schema.Choice(
         title=_(u"Drafts"),
-        description=_(u"Find an user defined topic with blog entry drafts."),
+        description=_(u"Find an user defined blog source with blog entry drafts."),
         required=False,
         source=SearchableTextSourceBinder(
             {'object_provides' : IBloggable.__identifier__, 'blogged' : True},

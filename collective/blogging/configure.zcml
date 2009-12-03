@@ -1,7 +1,6 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
-    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="collective.blogging">
     
@@ -14,6 +13,7 @@
     <include package=".portlets" />
     
     <include file="content.zcml" />
+    <include file="profiles.zcml" />
     
     <i18n:registerTranslations directory="locales" />
     
@@ -52,60 +52,6 @@
     <adapter factory=".indexer.year" name="publish_year" />
     <adapter factory=".indexer.month" name="publish_month" />
     <adapter factory=".indexer.blogged" name="blogged" />
-    
-    <!-- profiles -->
-    <genericsetup:registerProfile
-        name="default"
-        title="Blogging"
-        directory="profiles/default"
-        description="Setup profile for a simple blogging improvements for Plone."
-        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-        provides="Products.GenericSetup.interfaces.EXTENSION"
-        />
-    
-    <!-- import steps -->
-    <genericsetup:importStep
-        name="collective.blogging.catalog"
-        title="Blogging: Catalog setup"
-        description=""
-        handler="collective.blogging.setuphandlers.setupCatalog">
-    </genericsetup:importStep>
-    
-    <genericsetup:importStep
-        name="collective.blogging.views"
-        title="Blogging: Views setup"
-        description=""
-        handler="collective.blogging.setuphandlers.setupViews">
-    </genericsetup:importStep>
-    
-    <!-- upgrades -->
-    <genericsetup:upgradeStep
-        title="Publishing dates"
-        description="Reindex blog entries with obsolete publishing dates format."
-        source="1"
-        destination="2"
-        handler="collective.blogging.migration.reindexPublishDates"
-        sortkey="1"
-        profile="collective.blogging:default" />
-
-    <!-- BBB: see interfaces.py -->
-    <genericsetup:upgradeStep
-        title="Entry markup"
-        description="Fix obsolete blog entries interfaces markup."
-        source="1"
-        destination="2"
-        handler="collective.blogging.migration.fixEntryMarkup"
-        sortkey="2"
-        profile="collective.blogging:default" />
-    
-    <genericsetup:upgradeStep
-        title="Blog markup"
-        description="Fix obsolete blog interfaces markup."
-        source="1"
-        destination="2"
-        handler="collective.blogging.migration.fixBlogMarkup"
-        sortkey="3"
-        profile="collective.blogging:default" />
 
 </configure>
 
