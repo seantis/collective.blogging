@@ -204,6 +204,10 @@
                                 src="++resource++collective.blogging.help_images/first_entry.png"/><br/>
                         </fieldset>
                     </p>
+                    
+                    <p><i i18n:translate=""><b>Note:</b> There is additional <b>edit</b> link for quick
+                        access to entry edit form just from the blog view if you have permissions
+                        to modify an entry.</i></p>
                     <br/>
                     
                     <a name="page-newsitem"></a>
@@ -346,6 +350,12 @@
                         and you will be available to use Google maps integration to share geo locations.
                     </p>
                     
+                    <p i18n:translate="">
+                        There is also additional checkbox to explicitly enable map rendering which is useful only
+                        when you want to disable map for the entry since it is not available set "no position"
+                        on the map.
+                    </p>
+                    
                     <p>
                         <fieldset>
                             <legend class="discreet"><tal:block i18n:translate="label_help_event_maps_settings">image</tal:block> 12.</legend>
@@ -469,8 +479,53 @@
                     </p>
                     <p>
                         <i i18n:translate=""><b>Note:</b> If listed entry is <b>filled under</b> some category and the category
-                        link is clicked it filtrs blog listing by that category.</i>
+                        link is clicked it filters blog listing by that category.</i>
                     </p>
+                    
+                    <p i18n:translate="">
+                        But for those, who likes classic archives listing by years and months, there is also additional
+                        archive portlet which will help you with that. Just go to portlets management page and add new
+                        <b>Blog archive</b> portlet.
+                    </p>
+                    
+                    <p>
+                        <fieldset>
+                            <legend class="discreet"><tal:block i18n:translate="label_help_image">image</tal:block> 15.</legend>
+                            <img title="Add archive portlet"
+                                i18n:attributes="title"
+                                src="++resource++collective.blogging.help_images/add_archive.png"/><br/>
+                        </fieldset>
+                    </p>
+                    
+                    <p i18n:translate="">
+                        It requires only to select its blog entries source and optionally option if source blog's
+                        title should be included in the portlet's header.
+                    </p>
+                    
+                    <p>
+                        <fieldset>
+                            <legend class="discreet"><tal:block i18n:translate="label_help_image">image</tal:block> 16.</legend>
+                            <img title="Archive portlet settings"
+                                i18n:attributes="title"
+                                src="++resource++collective.blogging.help_images/archive_settings.png"/><br/>
+                        </fieldset>
+                    </p>
+                    
+                    <p i18n:translate="">
+                        And finally after you save those settings you get simple archvies portlet, but <b>BE AWARE</b> it can be
+                        some kind of <b>performance killer</b> when there is a lot of items to count so make sure that it won't
+                        slow your blog too much. In all cases its contents are <b>cached for a hour</b>.
+                    </p>
+                    
+                    <p>
+                        <fieldset>
+                            <legend class="discreet"><tal:block i18n:translate="label_help_image">image</tal:block> 17.</legend>
+                            <img title="Archive portlet"
+                                i18n:attributes="title"
+                                src="++resource++collective.blogging.help_images/default_archive.png"/><br/>
+                        </fieldset>
+                    </p>
+                    
                     <br/>
                     
                     <a name="portlet"></a>
@@ -485,7 +540,7 @@
                     </p>
                     <p>
                         <fieldset>
-                            <legend class="discreet"><tal:block i18n:translate="label_help_image">image</tal:block> 15.</legend>
+                            <legend class="discreet"><tal:block i18n:translate="label_help_image">image</tal:block> 18.</legend>
                             <img title="Add portlet"
                                 i18n:attributes="title"
                                 src="++resource++collective.blogging.help_images/add_portlet.png"/><br/>
@@ -493,11 +548,12 @@
                     </p>
                     <p i18n:translate="">
                         You have to select your blog content for which will be the portlet used for. After that you can
-                        select which content types should the portlet render creation links for.
+                        select which content types should the portlet render creation links for and select your predefined
+                        source of drafts (cloven entries) usually represented by some smart folder.
                     </p>
                     <p>
                         <fieldset>
-                            <legend class="discreet"><tal:block i18n:translate="label_help_image">image</tal:block> 16.</legend>
+                            <legend class="discreet"><tal:block i18n:translate="label_help_image">image</tal:block> 19.</legend>
                             <img title="Portlet settings"
                                 i18n:attributes="title"
                                 src="++resource++collective.blogging.help_images/portlet_settings.png"/><br/>
@@ -512,7 +568,7 @@
                     
                     <p>
                         <fieldset>
-                            <legend class="discreet"><tal:block i18n:translate="label_help_image">image</tal:block> 17.</legend>
+                            <legend class="discreet"><tal:block i18n:translate="label_help_image">image</tal:block> 20.</legend>
                             <img title="Default portlet"
                                 i18n:attributes="title"
                                 src="++resource++collective.blogging.help_images/portlet_default.png"/><br/>
@@ -536,7 +592,7 @@
                     </p>
                     <p>
                         <fieldset>
-                            <legend class="discreet"><tal:block i18n:translate="label_help_image">image</tal:block> 18.</legend>
+                            <legend class="discreet"><tal:block i18n:translate="label_help_image">image</tal:block> 21.</legend>
                             <img title="Next / Prev navigation settings"
                                 i18n:attributes="title"
                                 src="++resource++collective.blogging.help_images/next_prev_settings.png"/><br/>
@@ -548,7 +604,7 @@
                     </p>
                     <p>
                         <fieldset>
-                            <legend class="discreet"><tal:block i18n:translate="label_help_image">image</tal:block> 19.</legend>
+                            <legend class="discreet"><tal:block i18n:translate="label_help_image">image</tal:block> 22.</legend>
                             <img title="Next / Prev navigation"
                                 i18n:attributes="title"
                                 src="++resource++collective.blogging.help_images/next_prev_navigation.png"/><br/>
@@ -574,7 +630,7 @@
                     </p>
                     <p>
                         <fieldset>
-                            <legend class="discreet"><tal:block i18n:translate="label_help_content_rule">image</tal:block> 20.</legend>
+                            <legend class="discreet"><tal:block i18n:translate="label_help_content_rule">image</tal:block> 23.</legend>
                             <img title="Content rule action"
                                 i18n:attributes="title"
                                 src="++resource++collective.blogging.help_images/content_rule.png"/><br/>
@@ -627,6 +683,16 @@
                                     <a href="http://plone.org/products/collective.bloggingmaps">
                                         http://plone.org/products/collective.bloggingmaps
                                     </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b i18n:translate="label_examples">Examples</b> - Here are some examples of blogging
+                            package used in production.
+                            
+                            <ul>
+                                <li>
+                                    <a href="http://lukaszdych.net">lukaszdych.net</a>
                                 </li>
                             </ul>
                         </li>

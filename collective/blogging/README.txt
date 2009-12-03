@@ -62,6 +62,8 @@ Features
 
 - Simple archive toolbar (filter by category, year, month)
 
+- Archive portlet (lists entry numbers in years and months)
+
 - Helper blog portlet
 
 - Next / Prev navigation replacement
@@ -108,5 +110,4 @@ __ lzdych_
 Homepage: collective.blogging_.
 
 .. _collective.blogging: http://plone.org/products/collective.blogging
-
 
