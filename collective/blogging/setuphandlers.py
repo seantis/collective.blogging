@@ -7,6 +7,7 @@ log = getLogger('collective.blogging')
 INDEXES = {
     'publish_year' : 'FieldIndex',
     'publish_month': 'FieldIndex',
+    'blogged'      : 'FieldIndex',
 }
 
 METADATA = [

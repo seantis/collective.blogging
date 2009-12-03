@@ -11,13 +11,11 @@ from Products.Archetypes.atapi import (TextField, IntegerField,
 from Products.Archetypes.atapi import (BooleanWidget, TextAreaWidget,
                                         SelectionWidget)
 from Products.Archetypes.utils import IntDisplayList
-from Products.Archetypes.interfaces._base import IBaseFolder, IBaseContent
 
-from Products.ATContentTypes.interface import (IATFolder, IATBTreeFolder,
-                                                IATLink, IATTopic)
+from Products.ATContentTypes.interface import IATLink
 
-from collective.blogging.interfaces import (IBlogMarker, IFolderMarker, IEntryMarker,
-                                            IBloggingSpecific)
+from collective.blogging.interfaces import (IBloggable, IPostable, IBlogMarker,
+                                            IEntryMarker, IBloggingSpecific)
 from collective.blogging import _
 from collective.blogging import BLOG_PERMISSION
 
@@ -76,118 +74,13 @@ class EnableToolbarField(ExtensionField, BooleanField):
     def languageIndependent(self):
         return True
 
-class FolderExtender(object):
-    """ Add a new marker field to all ATFolder based types. """
-    adapts(IATFolder)
+class BlogExtender(object):
+    """ Add blog configuration fields to all bloggable content. """
+    adapts(IBloggable)
     implements(IOrderableSchemaExtender, IBrowserLayerAwareExtender)
 
     layer = IBloggingSpecific
     
-    fields = [
-        InterfaceMarkerField("blog_folder",
-            schemata = "blog",
-            write_permission = BLOG_PERMISSION,
-            languageIndependent = True,
-            interfaces = (IFolderMarker,),
-            widget = BooleanWidget(
-                label = _(u"label_blog_enabled",
-                    default=u"Blog enabled"),
-                description = _(u"help_blog_enabled",
-                    default=u"Tick to enable / disable blog behaviour."),
-            ),
-        ),
-        
-        BatchSizeField("batch_size",
-            widget = SelectionWidget(
-                label = _(u"label_batch_size",
-                    default=u"Batch size"),
-                description = _(u"help_batch_size",
-                    default = u"Select how many blog entries should be listed per page in the blog view."),
-            ),
-        ),
-        
-        EnableToolbarField("enable_toolbar",
-            widget = BooleanWidget(
-                label = _(u"label_enable_toolbar",
-                    default = u"Toolbar enabled"),
-                description = _(u"help_enable_toolbar",
-                    default = u"Tick to enable / disable blog toolbar on the top of its page."),
-            ),
-        ),
-    ]
-
-    def __init__(self, context):
-        self.context = context
-
-    def getFields(self):
-        return self.fields
-    
-    def getOrder(self, original):
-        blog = original['blog']
-        blog.remove('blog_folder')
-        blog.insert(0, 'blog_folder')
-        return original
-
-class LargeFolderExtender(object):
-    """ Add a new marker field to all ATBTreeFolder based types. """
-    adapts(IATBTreeFolder)
-    implements(IOrderableSchemaExtender, IBrowserLayerAwareExtender)
-
-    layer = IBloggingSpecific
-
-    fields = [
-        InterfaceMarkerField("blog_folder",
-            schemata = "blog",
-            write_permission = BLOG_PERMISSION,
-            languageIndependent = True,
-            interfaces = (IFolderMarker,),
-            widget = BooleanWidget(
-                label = _(u"label_blog_enabled",
-                    default=u"Blog enabled"),
-                description = _(u"help_blog_enabled",
-                    default=u"Tick to enable / disable blog behaviour."),
-            ),
-        ),
-        
-        BatchSizeField("batch_size",
-            widget = SelectionWidget(
-                label = _(u"label_batch_size",
-                    default=u"Batch size"),
-                description = _(u"help_batch_size",
-                    default = u"Select how many blog entries should be listed per page in the blog view."),
-            ),
-        ),
-        
-        EnableToolbarField("enable_toolbar",
-            widget = BooleanWidget(
-                label = _(u"label_enable_toolbar",
-                    default = u"Toolbar enabled"),
-                description = _(u"help_enable_toolbar",
-                    default = u"Tick to enable / disable blog toolbar on the top of its page."),
-            ),
-        ),
-    ]
-
-    def __init__(self, context):
-        self.context = context
-
-    def getFields(self):
-        return self.fields
-    
-    def getOrder(self, original):
-        blog = original['blog']
-        blog.remove('blog_folder')
-        blog.insert(0, 'blog_folder')
-        return original
-
-
-class TopicExtender(object):
-    """ Add a new marker field to all ATTopic based types. """
-    adapts(IATTopic)
-    implements(IOrderableSchemaExtender, IBrowserLayerAwareExtender)
-
-    layer = IBloggingSpecific
-
     fields = [
         InterfaceMarkerField("blog_folder",
             schemata = "blog",
@@ -236,7 +129,7 @@ class TopicExtender(object):
 
 class EntryExtender(object):
     """ Add a new marker field to all possible entry types. """
-    adapts(IBaseContent)
+    adapts(IPostable)
     implements(IOrderableSchemaExtender, IBrowserLayerAwareExtender)
 
     layer = IBloggingSpecific

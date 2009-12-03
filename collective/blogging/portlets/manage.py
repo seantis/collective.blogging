@@ -10,13 +10,12 @@ from plone.app.portlets.portlets import base
 from plone.app.form.widgets.uberselectionwidget import UberSelectionWidget
 from plone.memoize.instance import memoize
 
-from Products.ATContentTypes.interface.topic import IATTopic
 from Products.CMFPlone import PloneMessageFactory as PMF
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from collective.blogging import HAS_LINGUA_PLONE, BLOG_PERMISSION
 from collective.blogging import _
-from collective.blogging.interfaces import IFolderMarker
+from collective.blogging.interfaces import IBlog, IBloggable
 
 class IManagePortlet(IPortletDataProvider):
     """A portlet
@@ -31,7 +30,7 @@ class IManagePortlet(IPortletDataProvider):
         description=_(u"Find a blog which will be this portlet used for."),
         required=True,
         source=SearchableTextSourceBinder(
-            {'object_provides' : IFolderMarker.__identifier__},
+            {'object_provides' : IBlog.__identifier__, 'blogged' : True},
             default_query='path:'
         )
     )
@@ -51,7 +50,7 @@ class IManagePortlet(IPortletDataProvider):
         description=_(u"Find an user defined topic with blog entry drafts."),
         required=False,
         source=SearchableTextSourceBinder(
-            {'object_provides' : IATTopic.__identifier__},
+            {'object_provides' : IBloggable.__identifier__, 'blogged' : True},
             default_query='path:'
         )
     )

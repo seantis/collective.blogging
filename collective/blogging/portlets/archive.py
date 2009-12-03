@@ -15,7 +15,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from collective.blogging import HAS_LINGUA_PLONE
 from collective.blogging import _
-from collective.blogging.interfaces import IFolderMarker, IEntryMarker
+from collective.blogging.interfaces import IBlog, IEntryMarker
 
 def _cachekey(method,self):
     blog = self.data.target_blog
@@ -36,7 +36,7 @@ class IArchivePortlet(IPortletDataProvider):
         description=_(u"Find the blog which will be this portlet used for."),
         required=True,
         source=SearchableTextSourceBinder(
-            {'object_provides' : IFolderMarker.__identifier__},
+            {'object_provides' : IBlog.__identifier__, 'blogged' : True},
             default_query='path:'
         )
     )
