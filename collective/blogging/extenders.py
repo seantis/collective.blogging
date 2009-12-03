@@ -44,7 +44,7 @@ class BatchSizeField(ExtensionField, IntegerField):
     
     @property
     def enforceVocabulary(self):
-        return True
+        return False
 
     def Vocabulary(self, content_instance):
         return IntDisplayList((

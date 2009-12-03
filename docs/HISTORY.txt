@@ -1,7 +1,13 @@
 Changelog
 =========
 
-1.0b1 (unreleased)
+1.0b2 (2009-12-04)
+~~~~~~~~~~~~~~~~~~
+
+- updated i18n and czech translation [lzdych]
+- removed enforce vocabulary check for blog's batch_size field - fixes: can't translate bloggable content [lzdych]
+
+1.0b1 (2009-12-03)
 ~~~~~~~~~~~~~~~~~~
 
 - updated user's guide [lzdych]
