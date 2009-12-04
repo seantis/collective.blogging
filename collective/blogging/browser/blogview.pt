@@ -15,7 +15,11 @@
                             portal_discussion nocall:context/portal_discussion;
                             isDiscussionAllowedFor nocall:portal_discussion/isDiscussionAllowedFor;
                             getDiscussionFor nocall:portal_discussion/getDiscussionFor;
-                            checkPermission nocall:context/portal_membership/checkPermission;">
+                            checkPermission nocall:context/portal_membership/checkPermission;
+                            toLocalizedTime toLocalizedTime|nocall:context/@@plone/toLocalizedTime;
+                            normalizeString normalizeString|nocall:context/@@plone/normalizeString;
+                            isAnon isAnon|context/@@plone_portal_state/anonymous;
+                            wtool wtool|context/portal_workflow;">
 
                 <div tal:replace="structure provider:plone.abovecontenttitle" />
                 
