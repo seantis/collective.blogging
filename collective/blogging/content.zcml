@@ -1,5 +1,6 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="collective.blogging">
 
     <!-- Blogging support -->
@@ -39,6 +40,12 @@
     </class>
     
     <class class="Products.ATContentTypes.content.file.ATFile">
+        <implements interface=".interfaces.IPostable" />
+    </class>
+    
+    <!-- blob based content -->
+    <class zcml:condition="installed plone.app.blob"
+        class="plone.app.blob.content.ATBlob">
         <implements interface=".interfaces.IPostable" />
     </class>
     
