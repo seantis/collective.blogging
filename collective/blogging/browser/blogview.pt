@@ -16,8 +16,8 @@
                             isDiscussionAllowedFor nocall:portal_discussion/isDiscussionAllowedFor;
                             getDiscussionFor nocall:portal_discussion/getDiscussionFor;
                             checkPermission nocall:context/portal_membership/checkPermission;
-                            toLocalizedTime toLocalizedTime|nocall:context/@@plone/toLocalizedTime;
-                            normalizeString normalizeString|nocall:context/@@plone/normalizeString;
+                            toLocalizedTime nocall:toLocalizedTime|nocall:context/@@plone/toLocalizedTime;
+                            normalizeString nocall:normalizeString|nocall:context/@@plone/normalizeString;
                             isAnon isAnon|context/@@plone_portal_state/anonymous;
                             wtool wtool|context/portal_workflow;">
 
@@ -352,7 +352,7 @@
                                                 </p>
                                                                                                 
                                                 <div class="fancybox visualNoPrint" tal:attributes="id string:fancy_${item_object/UID}"> 
-                                                    <div class="close"/>
+                                                    <div class="close">&nbsp;</div>
 
                                                     <!-- large image --> 
                                                     <img src=""

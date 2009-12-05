@@ -24,7 +24,6 @@ setup(name='collective.blogging',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          # -*- Extra requirements: -*-
           'Plone',
           'Products.ATContentTypes',
           'archetypes.schemaextender',

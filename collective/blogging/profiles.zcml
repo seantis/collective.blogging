@@ -7,7 +7,7 @@
         name="default"
         title="Blogging"
         directory="profiles/default"
-        description="Setup profile for a simple blogging improvements for Plone."
+        description="A blogging extension for Plone."
         for="Products.CMFPlone.interfaces.IPloneSiteRoot"
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />

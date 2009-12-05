@@ -230,7 +230,7 @@
                         </p>
                         
                         <div class="fancybox visualNoPrint" tal:attributes="id string:fancy_${context/UID}"> 
-                            <div class="close"/>
+                            <div class="close">&nbsp;</div>
                             
                             <!-- large image --> 
                             <img src=""
@@ -312,6 +312,8 @@
                         </div>
                     </tal:block>
                 </tal:image>
+                
+
                 
                 <div metal:use-macro="here/document_relateditems/macros/relatedItems">
                     Show related items if they exist
