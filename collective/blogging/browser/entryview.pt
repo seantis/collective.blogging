@@ -34,7 +34,9 @@
                 </h1>
 
                 <div tal:replace="structure provider:plone.belowcontenttitle" />
-
+                
+                <div class="visualClear" id="clear-before-entry-description"><!-- --></div>
+                
                 <p class="documentDescription"
                     tal:condition="context/Description">
                     <metal:field use-macro="python:here.widget('description', mode='view')">
@@ -313,7 +315,53 @@
                     </tal:block>
                 </tal:image>
                 
+                <div class="visualClear"><!-- --></div>
+                
+                <p class="tileFooter"
+                    tal:define="toLocalizedTime nocall:toLocalizedTime|nocall:context/@@plone/toLocalizedTime;                                
+                                item_url    context/absolute_url;
+                                item_date   python:toLocalizedTime(context.Date(),long_format=1);
+                                talkback    view/talkback;
+                                reply_count view/reply_count;">
 
+                    <a href="" title="Permalink"
+                        class="actionPermalink"
+                        tal:attributes="href item_url"
+                        i18n:attributes="title label_permalink"
+                        i18n:translate="label_permalink">
+                        Permalink
+                    </a>
+                    <tal:block tal:condition="talkback|nothing">
+                        |
+                        <a title="Read comments on this entry."
+                            class="actionComments"
+                            tal:attributes="href string:${item_url}#comments"
+                            i18n:translate="label_comments_with_count"
+                            i18n:attributes="title label_read_comments_title"
+                            >Comments
+                            (<tal:count i18n:name="comments"
+                                tal:content="python:reply_count or 0">
+                                99
+                            </tal:count>)
+                        </a>
+                    </tal:block>
+                    <tal:block tal:condition="view/can_edit">
+                        |
+                        <a title="Click to edit this entry."
+                            class="actionEdit"
+                            tal:attributes="href string:${item_url}/edit"
+                            i18n:translate="label_edit"
+                            i18n:attributes="title label_edit_title">
+                            Edit
+                        </a>
+                    </tal:block>
+                    <tal:block tal:condition="python:item_date and item_date != None">
+                        |
+                        <span class="actionDate" tal:content="item_date">
+                            August 16, 2001 at 23:35:59
+                        </span>
+                    </tal:block>
+                </p>
                 
                 <div metal:use-macro="here/document_relateditems/macros/relatedItems">
                     Show related items if they exist

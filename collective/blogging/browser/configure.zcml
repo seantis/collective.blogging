@@ -15,17 +15,6 @@
         layer="..interfaces.IBloggingSpecific"
         />
     
-    <!--
-    <browser:menuItem
-        for="collective.blogging.interfaces.IBlogMarker"
-        menu="plone_displayviews"
-        action="view"
-        title="Blog View"
-        description="A default blog view"
-        layer="..interfaces.IBloggingSpecific"
-        />
-    -->
-    
     <browser:defaultView 
         for="collective.blogging.interfaces.IBlogMarker"
         name="view"
@@ -95,6 +84,28 @@
         layer="..interfaces.IBloggingSpecific"
         />
     
+    <!-- Viewlets -->
+    
+    <!-- Replace entry's the document byline -->
+    <browser:viewlet
+        for="..interfaces.IEntryMarker"
+        name="plone.belowcontenttitle.documentbyline"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+        class=".document_byline.DocumentBylineViewlet"
+        permission="zope2.View"
+        layer="..interfaces.IBloggingSpecific"
+        />
+    
+    <!-- Render the keywords -->
+    <browser:viewlet
+        for="..interfaces.IEntryMarker"
+        name="plone.belowcontenttitle.keywords"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+        template="keywords.pt"
+        permission="zope2.View"
+        layer="..interfaces.IBloggingSpecific"
+        />
+
     <!-- Resources -->
     <browser:resourceDirectory
         name="collective.blogging.help_images"

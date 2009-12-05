@@ -64,3 +64,14 @@ class EntryView(BrowserView):
     def can_edit(self):
         mtool = getToolByName(self.context, 'portal_membership')
         return mtool.checkPermission('Modify portal content', self.context)
+
+    @property
+    def talkback(self):
+        portal_discussion = getToolByName(self.context, 'portal_discussion')
+        discussion_allowed = portal_discussion.isDiscussionAllowedFor(self.context)
+        return discussion_allowed and portal_discussion.getDiscussionFor(self.context);
+
+    @property
+    def reply_count(self):
+        talkback = self.talkback
+        return talkback is not False and talkback.replyCount(self.context);

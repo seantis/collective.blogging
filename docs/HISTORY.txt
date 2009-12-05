@@ -4,6 +4,7 @@ Changelog
 1.0b2 (2009-12-05)
 ~~~~~~~~~~~~~~~~~~
 
+- unified entry documentbyline and keywords info and added entry footer panel to its detail [lzdych]
 - fixed broken news item based entry's layout by non-closed div element of fancy box [lzdych]
 - enabled blogging for ATBlog based content - makes image and file posting available in plone 4 [lzdych]
 - fixed broken browser views in plone 4 by obsolete global variables usage [lzdych]
