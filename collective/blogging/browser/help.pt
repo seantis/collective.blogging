@@ -590,6 +590,13 @@
                         which do the right navigation items calculation for you. To activate it simple tick
                         the <b>Enable next previous navigation</b> checkbox in your blog folder's edit form.
                     </p>
+                    
+                    <p>
+                        <i i18n:translate=""><b>Note:</b> Since Plone's Large Folder doesn't support next / prev
+                            navigation, there is no next / prev enable checkbox and it is <b>always enabled for Large
+                            Folder based blogs.</b></i>
+                    </p>
+                    
                     <p>
                         <fieldset>
                             <legend class="discreet"><tal:block i18n:translate="label_image">image</tal:block> 21.</legend>

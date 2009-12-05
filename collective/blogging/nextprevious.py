@@ -36,7 +36,8 @@ class BlogNextPrevious(object):
         try:
             return self.context.getNextPreviousEnabled()
         except AttributeError:
-            return False
+            # Always enabled for Large Folders
+            return True
 
     def getPosition(self, oid, contents):
         index = 0
