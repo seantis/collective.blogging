@@ -5,7 +5,7 @@ version = '1.0b2'
 
 setup(name='collective.blogging',
       version=version,
-      description="A blogging extension for Plone.",
+      description="A blogging extension for Plone 3.3.x and 4.x.",
       long_description=open(os.path.join("collective", "blogging", "README.txt")).read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
