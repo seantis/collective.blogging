@@ -19,7 +19,8 @@
                             toLocalizedTime nocall:toLocalizedTime|nocall:context/@@plone/toLocalizedTime;
                             normalizeString nocall:normalizeString|nocall:context/@@plone/normalizeString;
                             isAnon isAnon|context/@@plone_portal_state/anonymous;
-                            wtool wtool|context/portal_workflow;">
+                            wtool wtool|context/portal_workflow;
+                            show_body view/show_body">
 
                 <div tal:replace="structure provider:plone.abovecontenttitle" />
                 
@@ -143,6 +144,17 @@
                                                     </a>
                                                 </span>
                                             </tal:name>
+                                            
+                                            <tal:permalink>
+                                                |
+                                                <a href="" title="Permalink"
+                                                    class="permalink"
+                                                    tal:attributes="href item_url"
+                                                    i18n:attributes="title label_permalink"
+                                                    i18n:translate="label_permalink">
+                                                    Permalink
+                                                </a>
+                                            </tal:permalink>
 
                                             <tal:block condition="item_subject">
                                                 |
@@ -157,6 +169,38 @@
                                                         Category
                                                     </a><tal:separator condition="not: repeat/category/end">,</tal:separator>
                                                 </span>
+                                            </tal:block>
+                                        </div>
+                                        
+                                        <div class="newsImageContainer" tal:condition="item_is_newsitem">
+                                            <tal:block condition="item_object/image_mini|nothing">
+                                            
+                                                <p>
+                                                    <img src="" rel="" width=""
+                                                        tal:attributes="src string:${item_url}/image_mini;
+                                                                        rel string:#fancy_${item_object/UID}" />
+                                                    <br/>
+                                                    <span class="discreet" tal:content="item_object/imageCaption">
+                                                        Caption
+                                                    </span>
+                                                </p>
+                                                                                            
+                                                <div class="fancybox visualNoPrint" tal:attributes="id string:fancy_${item_object/UID}"> 
+                                                    <div class="close">&nbsp;</div>
+
+                                                    <!-- large image --> 
+                                                    <img src=""
+                                                        tal:attributes="src string:${item_url}/image_large" /> 
+
+                                                    <!-- image details --> 
+                                                    <div class="fancydetails"> 
+                                                        <h3 tal:content="item_object/imageCaption">Caption</h3>
+
+                                                        <p tal:content="item_description">Description</p> 
+
+                                                    </div> 
+                                                </div>
+                                            
                                             </tal:block>
                                         </div>
                                         
@@ -309,7 +353,7 @@
                                                                     <span i18n:translate="label_add_to_ical">iCal</span></a>
                                                             </td>
                                                         </tr>
-                                                        
+                                                    
                                                         <tr tal:condition="item_showmap">
                                                             <td colspan="2" class="entryMap">
                                                                 <div class="googleMapView googleMapLocation"
@@ -337,44 +381,13 @@
                                                 </table>
                                             </div>
                                         </tal:event>
-                                        
-                                        <div class="newsImageContainer" tal:condition="item_is_newsitem">
-                                            <tal:block condition="item_object/image_mini|nothing">
-                                                
-                                                <p>
-                                                    <img src="" rel="" width=""
-                                                        tal:attributes="src string:${item_url}/image_mini;
-                                                                        rel string:#fancy_${item_object/UID}" />
-                                                    <br/>
-                                                    <span class="discreet" tal:content="item_object/imageCaption">
-                                                        Caption
-                                                    </span>
-                                                </p>
-                                                                                                
-                                                <div class="fancybox visualNoPrint" tal:attributes="id string:fancy_${item_object/UID}"> 
-                                                    <div class="close">&nbsp;</div>
-
-                                                    <!-- large image --> 
-                                                    <img src=""
-                                                        tal:attributes="src string:${item_url}/image_large" /> 
-
-                                                    <!-- image details --> 
-                                                    <div class="fancydetails"> 
-                                                        <h3 tal:content="item_object/imageCaption">Caption</h3>
-
-                                                        <p tal:content="item_description">Description</p> 
-
-                                                    </div> 
-                                                </div>
-                                                
-                                            </tal:block>
-                                        </div>
-                                        
+                                    
                                         <div class="tileBody">
-                                            <tal:body tal:condition="item_text" replace="structure item_text">
+                                            <tal:body tal:condition="python:show_body and item_text"
+                                                replace="structure item_text">
                                                 Text
                                             </tal:body>
-                                        
+                                    
                                             <tal:link condition="item_is_link" i18n:domain="plone">
                                                 <p tal:define="remote_url item_object/remote_url"
                                                     tal:condition="python:remote_url and remote_url != 'http://'">
@@ -388,13 +401,14 @@
                                                     <tal:block replace="structure embed_code"/>
                                                 </p>
                                             </tal:link>
-                                        
+                                    
                                             <tal:file condition="item_is_file" i18n:domain="plone">
                                                 <p>
                                                     <span tal:define="finfo python:view.file_info(item_object)">
                                                         <a href=""
                                                             tal:attributes="href string:${item_url}/at_download/file">
                                                             <img src=""
+                                                                class="mimetypeIcon"
                                                                 tal:condition="finfo/icon"
                                                                 tal:attributes="src string:${item_url}/${finfo/icon}"/>
                                                             <tal:filename replace="finfo/filename|string:file"/>
@@ -414,11 +428,11 @@
                                                     </pre>
                                                 </div>
                                             </tal:file>
-                                        
+                                    
                                             <tal:image condition="item_is_image">
                                                 <tal:block define="image_size python:view.image_size(item_object)"
                                                     tal:condition="image_size">
-                                                    
+                                                
                                                     <p>
                                                         <img src="" rel="" width=""
                                                             tal:attributes="src string:${item_url}/image_preview;
@@ -442,7 +456,7 @@
                                                     </div>
                                                 </tal:block>
                                             </tal:image>
-                                            
+                                        
                                             <div class="relatedItems" i18n:domain="plone"
                                                 tal:define="getInfoFor python:wtool.getInfoFor;">
                                                 <tal:relatedItems tal:define="related python:item_object.computeRelatedItems();">
@@ -480,18 +494,27 @@
                                                     </tal:block>
                                                 </tal:relatedItems>
                                             </div>
-                                            
+                                        
                                         </div>
                                         <div class="visualClear"><!-- --></div>
-                                        
+                                    
                                         <p class="tileFooter">
-                                            <a href="" title="Permalink"
-                                                class="actionPermalink"
-                                                tal:attributes="href item_url"
-                                                i18n:attributes="title label_permalink"
-                                                i18n:translate="label_permalink">
-                                                Permalink
-                                            </a>
+                                            <tal:block tal:condition="python:item_date and item_date != None">
+                                                <span class="actionDate" tal:content="item_date">
+                                                    August 16, 2001 at 23:35:59
+                                                </span>
+                                            </tal:block>
+                                            
+                                            <tal:block tal:condition="python:(not show_body) and (not item_can_edit) and item_text">
+                                                |
+                                                <a title="Click to read full entry."
+                                                    class="actionReadMore"
+                                                    tal:attributes="href string:${item_url}"
+                                                    i18n:translate="label_read_more"
+                                                    i18n:attributes="title label_read_more"
+                                                    >Read more</a>
+                                            </tal:block>
+                                            
                                             <tal:block tal:condition="talkback">
                                                 |
                                                 <a title="Read comments on this entry."
@@ -503,8 +526,7 @@
                                                     (<tal:count i18n:name="comments"
                                                         tal:content="python:reply_count or 0">
                                                         99
-                                                    </tal:count>)
-                                                </a>
+                                                    </tal:count>)</a>
                                             </tal:block>
                                             <tal:block tal:condition="item_can_edit">
                                                 |
@@ -513,17 +535,9 @@
                                                     tal:attributes="href string:${item_url}/edit"
                                                     i18n:translate="label_edit"
                                                     i18n:attributes="title label_edit_title">
-                                                    Edit
-                                                </a>
-                                            </tal:block>
-                                            <tal:block tal:condition="python:item_date and item_date != None">
-                                                |
-                                                <span class="actionDate" tal:content="item_date">
-                                                    August 16, 2001 at 23:35:59
-                                                </span>
+                                                    Edit</a>
                                             </tal:block>
                                         </p>
-                                        
                                     </div>
                                 </tal:block>
                             </tal:entries>

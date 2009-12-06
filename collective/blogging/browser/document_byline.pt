@@ -21,7 +21,19 @@
             </a>
         </span>
     </tal:name>
-
+    
+    <tal:permalink>
+        |
+        <a href="" title="Permalink"
+            i18n:domain="collective.blogging"
+            class="permalink"
+            tal:attributes="href context/absolute_url"
+            i18n:attributes="title label_permalink"
+            i18n:translate="label_permalink">
+            Permalink
+        </a>
+    </tal:permalink>
+    
     <tal:expired tal:condition="view/isExpired">
         |
         <span class="state-expired"

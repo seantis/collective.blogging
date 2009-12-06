@@ -324,13 +324,12 @@
                                 talkback    view/talkback;
                                 reply_count view/reply_count;">
 
-                    <a href="" title="Permalink"
-                        class="actionPermalink"
-                        tal:attributes="href item_url"
-                        i18n:attributes="title label_permalink"
-                        i18n:translate="label_permalink">
-                        Permalink
-                    </a>
+                    <tal:block tal:condition="python:item_date and item_date != None">
+                        <span class="actionDate" tal:content="item_date">
+                            August 16, 2001 at 23:35:59
+                        </span>
+                    </tal:block>
+                    
                     <tal:block tal:condition="talkback|nothing">
                         |
                         <a title="Read comments on this entry."
@@ -342,8 +341,7 @@
                             (<tal:count i18n:name="comments"
                                 tal:content="python:reply_count or 0">
                                 99
-                            </tal:count>)
-                        </a>
+                            </tal:count>)</a>
                     </tal:block>
                     
                     <tal:block tal:condition="view/can_edit">
@@ -353,14 +351,7 @@
                             tal:attributes="href string:${item_url}/edit"
                             i18n:translate="label_edit"
                             i18n:attributes="title label_edit_title">
-                            Edit
-                        </a>
-                    </tal:block>
-                    <tal:block tal:condition="python:item_date and item_date != None">
-                        |
-                        <span class="actionDate" tal:content="item_date">
-                            August 16, 2001 at 23:35:59
-                        </span>
+                            Edit</a>
                     </tal:block>
                 </p>
                 

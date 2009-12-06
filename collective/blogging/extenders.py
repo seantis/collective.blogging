@@ -23,6 +23,25 @@ from collective.blogging import BLOG_PERMISSION
 class EmbedField(ExtensionField, TextField):
     """ An embed content field """
 
+class EnableFullField(ExtensionField, BooleanField):
+    """ A boolean field for enabling blog full view """
+    
+    @property
+    def default(self):
+        return False
+    
+    @property
+    def schemata(self):
+        return "blog"
+    
+    @property
+    def write_permission(self):
+        return BLOG_PERMISSION
+    
+    @property
+    def languageIndependent(self):
+        return True
+
 class BatchSizeField(ExtensionField, IntegerField):
     """ A batch size field """
     
@@ -94,6 +113,14 @@ class BlogExtender(object):
                 description = _(u"help_blog_enabled",
                     default=u"Tick to enable / disable blog behaviour."),
             ),
+        ),
+        
+        EnableFullField("enable_full",
+            widget = BooleanWidget(
+                label = _(u"label_full_view", default=u"Full view"),
+                description = _(u"help_full_view",
+                    default = u"Tick this checkbox to display entry body text in the blog view."),
+            ),        
         ),
         
         BatchSizeField("batch_size",

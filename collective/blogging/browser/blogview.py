@@ -74,6 +74,13 @@ class BlogView(BrowserView):
         if field:
             return field.get(self.context)
         return True
+
+    @property
+    def show_body(self):
+        field = self.context.getField('enable_full')
+        if field:
+            return field.get(self.context)
+        return False
     
     @property
     def batch_size(self):
