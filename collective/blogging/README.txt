@@ -114,7 +114,8 @@ Homepage: collective.blogging_.
 .. _collective.blogging: http://plone.org/products/collective.blogging
 
 
-Tips: lukaszdych.net_.
+Tips: `My blogging posts`__.
 
-.. _lukaszdych.net: http://lukaszdych.net/search?Subject%3Alist=blogging
+.. _blogging: http://lukaszdych.net/search?Subject%3Alist=blogging
 
+__ blogging_
