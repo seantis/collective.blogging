@@ -345,6 +345,7 @@
                             </tal:count>)
                         </a>
                     </tal:block>
+                    
                     <tal:block tal:condition="view/can_edit">
                         |
                         <a title="Click to edit this entry."
@@ -371,7 +372,7 @@
                 
 
             </tal:main-macro>
-            <a name="comments"></a>
+            <a tal:condition="context/isDiscussable" name="comments"></a>
         </div>
 
     </body>

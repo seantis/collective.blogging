@@ -4,7 +4,6 @@ from zope.component import adapts
 from plone.app.layout.nextprevious.interfaces import INextPreviousProvider
 from plone.memoize.instance import memoize
 
-from Acquisition import aq_base
 from Products.CMFCore.utils import getToolByName
 
 from collective.blogging.interfaces import IBlogMarker, IEntryMarker
@@ -75,7 +74,7 @@ class BlogNextPrevious(object):
         
     def buildNextPreviousQuery(self):
         query                    = {'object_provides': IEntryMarker.__identifier__}
-        query['sort_on']         = 'Date'
+        query['sort_on']         = 'effective'
         query['sort_order']      = 'reverse'
         query['path']            = dict(query = '/'.join(self.context.getPhysicalPath()),
                                         depth = 1)

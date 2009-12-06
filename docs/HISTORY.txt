@@ -4,6 +4,7 @@ Changelog
 1.0b2 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- blog view and next / prev navigation now uses EffectiveDate rather then Date sort criterion [lzdych]
 - added uninstall profile (wired up with QI) [lzdych]
 - next / prev navigation always enabled for blogs based on Large Folders [lzdych]
 - unified entry documentbyline and keywords info and added entry footer panel to its detail [lzdych]

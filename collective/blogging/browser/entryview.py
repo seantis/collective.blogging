@@ -75,3 +75,4 @@ class EntryView(BrowserView):
     def reply_count(self):
         talkback = self.talkback
         return talkback is not False and talkback.replyCount(self.context);
+    

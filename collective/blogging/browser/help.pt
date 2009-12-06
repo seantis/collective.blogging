@@ -208,6 +208,12 @@
                     <p><i i18n:translate=""><b>Note:</b> There is additional <b>edit</b> link for quick
                         access to entry edit form just from the blog view if you have permissions
                         to modify an entry.</i></p>
+                    
+                    <p><i i18n:translate=""><b>Warning:</b> Blog folder will not list entry which hasn't an effective
+                        date which is (by default in Plone) set automatically when content is published. To access
+                        not yet published entries (drafts) create a smart folder and link it with
+                        <a href="blogging-help#portlet">manage blog portlet</a>.</i></p>
+                    
                     <br/>
                     
                     <a name="page-newsitem"></a>
@@ -692,6 +698,12 @@
                                     </a>
                                 </li>
                             </ul>
+                        </li>
+                        <li>
+                            <b i18n:translate="label_tips">Tips</b>:
+                            <a href="http://lukaszdych.net/search?Subject%3Alist=blogging">
+                                http://lukaszdych.net/search?Subject%3Alist=blogging
+                            </a>
                         </li>
                         <li>
                             <b i18n:translate="label_examples">Examples</b> - Here are some examples of blogging

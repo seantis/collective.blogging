@@ -113,3 +113,8 @@ Homepage: collective.blogging_.
 
 .. _collective.blogging: http://plone.org/products/collective.blogging
 
+
+Tips: lukaszdych.net_.
+
+.. _lukaszdych.net: http://lukaszdych.net/search?Subject%3Alist=blogging
+

@@ -42,7 +42,7 @@ class BlogView(BrowserView):
         else:
             criteria['object_provides'] = IEntryMarker.__identifier__
             criteria['path'] = '/'.join(self.context.getPhysicalPath())
-            criteria['sort_on'] = 'Date'
+            criteria['sort_on'] = 'effective'
             criteria['sort_order'] = 'reverse'
             brains = self.tools.catalog()(criteria)
         

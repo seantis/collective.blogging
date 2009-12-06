@@ -74,6 +74,7 @@ class EnableToolbarField(ExtensionField, BooleanField):
     def languageIndependent(self):
         return True
 
+
 class BlogExtender(object):
     """ Add blog configuration fields to all bloggable content. """
     adapts(IBloggable)
