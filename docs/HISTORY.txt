@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0b2 (unreleased)
+1.0b2 (2009-12-06)
 ~~~~~~~~~~~~~~~~~~
 
 - blog view and next / prev navigation now uses EffectiveDate rather then Date sort criterion [lzdych]
