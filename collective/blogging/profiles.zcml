@@ -12,6 +12,15 @@
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
     
+    <registerProfile
+        name="uninstall"
+        title="Uninstall blogging"
+        directory="profiles/uninstall"
+        description="An uninstall profile for the blogging extension."
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+    
     <!-- import steps -->
     <importStep
         name="collective.blogging.catalog"

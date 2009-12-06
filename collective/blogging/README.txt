@@ -74,6 +74,8 @@ Features
 
 - User's guide included in the UI (localizable)
 
+- Safe uninstall
+
 For more information about how to use blogging features go to [your-site]/blogging-help.
 
 Translations

@@ -1,9 +1,10 @@
 Changelog
 =========
 
-1.0b2 (2009-12-05)
+1.0b2 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- added uninstall profile (wired up with QI) [lzdych]
 - next / prev navigation always enabled for blogs based on Large Folders [lzdych]
 - unified entry documentbyline and keywords info and added entry footer panel to its detail [lzdych]
 - fixed broken news item based entry's layout by non-closed div element of fancy box [lzdych]
