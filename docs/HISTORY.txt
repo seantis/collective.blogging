@@ -4,6 +4,7 @@ Changelog
 1.0b3 (2009-12-06)
 ~~~~~~~~~~~~~~~~~~
 
+- removed thumbnail layout replacement for blog galleries - fixes: package reinstall removes blog gallery layouts [lzdych]
 - updated user's guide, i18n and czech translateion [lzdych]
 - news item image box moved above entry description so it floats next to it [lzdych]
 - permalink moved to document by line area [lzdych]

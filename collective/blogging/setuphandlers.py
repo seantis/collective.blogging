@@ -95,7 +95,9 @@ def resetViews(context):
             type_info.view_methods = tuple([vm for vm in type_info.view_methods if vm !=GALLERY_VIEW])
             log.info('"%s" view uninstalled for %s.' % (GALLERY_VIEW, ptype))
     
-    # reset persistently assigned layouts
+    # This is how you can fix broken gallery folders due to assigned removed layout
+    # it is commented out here because we don't want to call it during package "reinstall"
+    """
     catalog = getToolByName(portal, 'portal_catalog')
     content = catalog(portal_type=VIEW_TYPES)
     for brain in content:
@@ -103,7 +105,7 @@ def resetViews(context):
         if obj.getLayout() == GALLERY_VIEW:
             obj.setLayout(FALLBACK_VIEW)
             log.info('Default "%s" layout set for "%s".' % (FALLBACK_VIEW, '/'.join(obj.getPhysicalPath())))
-
+    """
 
 def resetLayers(context):
     if context.readDataFile('collective.blogging_uninstall.txt') is None:

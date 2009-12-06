@@ -109,6 +109,8 @@ Author: `Lukas Zdych (lzdych)`__.
 
 __ lzdych_
 
+Thanks to Enzo Cesanelli (luthy) for testing and ideas.
+
 Homepage: collective.blogging_.
 
 .. _collective.blogging: http://plone.org/products/collective.blogging
