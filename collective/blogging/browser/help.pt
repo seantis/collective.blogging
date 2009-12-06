@@ -160,6 +160,18 @@
                         </fieldset>
                     </p>
                     <p><i i18n:translate=""><b>Note:</b> You can turn folders into blog anytime you want.</i></p>
+                    
+                    <p i18n:translate="">
+                        Additionally you can customize blog view a bit by some settings in the <b>Blog</b>
+                        section of the edit form:
+                    </p>
+                    
+                    <ul i18n:translate="">
+                        <li><b>Full view</b> - <i>include body text of listed entries on the blog view</i></li>
+                        <li><b>Batch size</b> - <i>select number of entries listed per page</i></li>
+                        <li><b>Toolbar enabled</b> - <i>enable / disable the filter toolbar appearance</i></li>
+                    </ul>
+                    
                     <p i18n:translate="">
                         After you click on <b>Save</b> button and will be redirected to folder's default view,
                         you can see that whatever view is selected in the <b>Display menu</b> the folder will
@@ -466,14 +478,9 @@
                     </p>
                     
                     <p i18n:translate="">
-                        Additionally you can customize blog view a bit by some settings in the <b>Blog</b>
-                        section of the edit form:
+                        You can enable it in the blog settings see <a i18n:name="url" href="blogging-help#basic-usage">
+                            Basic usage</a>
                     </p>
-                    
-                    <ul i18n:translate="">
-                        <li><b>Batch size</b> - <i>select number of entries listed per page</i></li>
-                        <li><b>Toolbar enabled</b> - <i>enable / disable the filter toolbar appearance</i></li>
-                    </ul>
                     
                     <p>
                         <fieldset>
