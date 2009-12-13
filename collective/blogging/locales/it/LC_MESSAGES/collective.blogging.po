@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
 "POT-Creation-Date: 2009-12-06 17:26+0000\n"
-"PO-Revision-Date: 2009-11-23 16:19+0100\n"
+"PO-Revision-Date: 2009-12-13 03:59+0100\n"
 "Last-Translator: Enzo Cesanelli <enzo@noiza.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -10,6 +10,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "X-Poedit-Language: Italian\n"
+"Language-Team: \n"
 
 #. Default: "<b><i>And as a bonus the blogging package comes with new gallery view which can be selected from the <b>Display</b> menu and you get a simple but fancy picture gallery. </i></b>"
 #: ./browser/help.pt:461
@@ -98,7 +99,7 @@ msgstr ""
 
 #: ./portlets/archive.py:167
 msgid "Add Blog Archive portlet"
-msgstr ""
+msgstr "Aggiungi riquadro Archivio Blog"
 
 #: ./portlets/manage.py:196
 msgid "Add Manage Blog portlet"
@@ -107,7 +108,7 @@ msgstr "Aggiungi riquadro di gestione Blog"
 #. Default: "Add archive portlet"
 #: ./browser/help.pt:507
 msgid "Add archive portlet"
-msgstr ""
+msgstr "Aggiungi riquadro Archivio"
 
 #. Default: "Add portlet"
 #: ./browser/help.pt:557
@@ -121,7 +122,7 @@ msgstr "Tipi di contenuto aggiungibili"
 #. Default: "Additionally you can customize blog view a bit by some settings in the <b>Blog</b> section of the edit form:"
 #: ./browser/help.pt:164
 msgid "Additionally you can customize blog view a bit by some settings in the <b>Blog</b> section of the edit form:"
-msgstr ""
+msgstr "Se lo desideri puoi personalizzare leggermente la vista del blog attraverso le impostazioni presenti nella sezione Blog del form di modifica"
 
 #. Default: "After saving the portlet settings you get portlet with direct links for posting new content in your blog. Content creation links are filtered accordingly to allowed content types in referenced blog folder."
 #: ./browser/help.pt:576
@@ -166,12 +167,12 @@ msgstr ""
 #. Default: "Archive portlet"
 #: ./browser/help.pt:536
 msgid "Archive portlet"
-msgstr ""
+msgstr "Riquadro Archivio"
 
 #. Default: "Archive portlet settings"
 #: ./browser/help.pt:521
 msgid "Archive portlet settings"
-msgstr ""
+msgstr "Impostazioni riquadro Archivio"
 
 #. Default: "As simple as with images it is in files case. Just add new file and mark it as <b>Blog Entry</b>."
 #: ./browser/help.pt:277
@@ -190,7 +191,7 @@ msgstr ""
 
 #: ./portlets/archive.py:74
 msgid "Blog Archive: ${blog}"
-msgstr ""
+msgstr "Archivio: ${blog}"
 
 #. Default: "Blog created"
 #: ./browser/help.pt:183
@@ -215,7 +216,7 @@ msgstr ""
 #. Default: "Content rule action"
 #: ./browser/help.pt:654
 msgid "Content rule action"
-msgstr ""
+msgstr "Azione Regola dei Contenuti"
 
 #. Default: "Create blog"
 #: ./browser/help.pt:157
@@ -234,11 +235,11 @@ msgstr "Riquadro di default"
 
 #: ./portlets/manage.py:49
 msgid "Drafts"
-msgstr ""
+msgstr "Bozze"
 
 #: ./portlets/archive.py:183
 msgid "Edit Blog Archive portlet"
-msgstr ""
+msgstr "Modifica il riquadro Archivio Blog"
 
 #: ./portlets/manage.py:213
 msgid "Edit Manage Blog portlet"
@@ -246,26 +247,26 @@ msgstr "Modifica il riquadro di gestione Blog"
 
 #: ./actions/autoblog.py:25
 msgid "Enable auto-blogging"
-msgstr ""
+msgstr "Attiva auto-blogging"
 
 #. Default: "Event entry"
 #: ./browser/help.pt:358
 msgid "Event entry"
-msgstr ""
+msgstr "Post di tipo Evento"
 
 #. Default: "Event maps"
 #: ./browser/help.pt:395
 msgid "Event maps"
-msgstr ""
+msgstr "Mappa Evento"
 
 #. Default: "Event maps settings"
 #: ./browser/help.pt:380
 msgid "Event maps settings"
-msgstr ""
+msgstr "Impostazioni Mappa Evento"
 
 #: ./portlets/archive.py:45
 msgid "Extend title"
-msgstr ""
+msgstr "Titolo esteso"
 
 #. Default: "File entry"
 #: ./browser/help.pt:283
@@ -279,7 +280,7 @@ msgstr "Barra per filtrare i post"
 
 #: ./portlets/manage.py:30
 msgid "Find a blog which will be this portlet used for."
-msgstr ""
+msgstr "Trova un blog per cui questo riquadro sarà usato"
 
 #: ./portlets/manage.py:50
 msgid "Find an user defined blog source with blog entry drafts."
@@ -376,7 +377,7 @@ msgstr ""
 #. Default: "Portlet settings"
 #: ./browser/help.pt:570
 msgid "Portlet settings"
-msgstr ""
+msgstr "Impostazioni riquadro"
 
 #: ./portlets/manage.py:40
 msgid "Select content types for which you would like to show create link in the portlet."
@@ -438,11 +439,11 @@ msgstr ""
 
 #: ./portlets/archive.py:168
 msgid "This displays blog archives."
-msgstr ""
+msgstr "Questo mostra gli archivi Blog"
 
 #: ./portlets/manage.py:197
 msgid "This portlet helps to manage blog's content."
-msgstr ""
+msgstr "Questo riquadro aiuta a gestire i contenuti del blog"
 
 #. Default: "Those who want to host their pictures locally rather then link to external service, there is simple way how to create your own galleries using <b>Plone Folders</b> with <b>thumbnail view</b> selected in the <b>display</b> menu.<br /> These local galleries can be easily liked to your blog entries using Plone's content field called <b>Related Items</b> which can be found in the <b>Categorization</b> section of each entry's edit form."
 #: ./browser/help.pt:453
@@ -451,7 +452,7 @@ msgstr ""
 
 #: ./portlets/archive.py:46
 msgid "Tick the checkbox to extend portlet title with target blog's title."
-msgstr ""
+msgstr "Spunta la casella per estendere il titolo del riquadro con il titolo del blog"
 
 #. Default: "Video entry"
 #: ./browser/help.pt:337
@@ -496,47 +497,47 @@ msgstr ""
 #. Default: "There are currently no contents in this blog."
 #: ./browser/blogview.pt:553
 msgid "description_no_items_in_blog"
-msgstr ""
+msgstr "Non ci sono post in questo blog"
 
 #. Default: "Archive vs. Filter"
 #: ./browser/help.pt:69
 msgid "heading_archive_vs_filter"
-msgstr ""
+msgstr "Archivio vs Filtro"
 
 #. Default: "Basic usage"
 #: ./browser/help.pt:34
 msgid "heading_basic_usage"
-msgstr ""
+msgstr "Utilizzo basilare"
 
 #. Default: "Blogging Help"
 #: ./browser/help.pt:14
 msgid "heading_blogging_help"
-msgstr ""
+msgstr "Guida Blogging"
 
 #. Default: "Content rules"
 #: ./browser/help.pt:84
 msgid "heading_content_rules"
-msgstr ""
+msgstr "Regole di contenuto"
 
 #. Default: "Events and Maps"
 #: ./browser/help.pt:54
 msgid "heading_events_and_maps"
-msgstr ""
+msgstr "Eventi e Mappe"
 
 #. Default: "Image Galleries"
 #: ./browser/help.pt:64
 msgid "heading_image_galleries"
-msgstr ""
+msgstr "Gallerie Immagini"
 
 #. Default: "Images and Files"
 #: ./browser/help.pt:44
 msgid "heading_images_files"
-msgstr ""
+msgstr "Immagini e File"
 
 #. Default: "Introduction"
 #: ./browser/help.pt:29
 msgid "heading_introduction"
-msgstr ""
+msgstr "Introduzione"
 
 #. Default: "Links and Embed code"
 #: ./browser/help.pt:49
@@ -596,17 +597,17 @@ msgstr ""
 #. Default: "Paste embed code for example youtube, google or other video content."
 #: ./extenders.py:211
 msgid "help_embed"
-msgstr ""
+msgstr "Incolla il codice embed, ad esempio da YouTube, Google o altro contenuto video."
 
 #. Default: "Tick to enable / disable blog toolbar on the top of its page."
 #: ./extenders.py:139
 msgid "help_enable_toolbar"
-msgstr ""
+msgstr "Spunta per attivare/disattivare la barra blog all'inizio della pagina"
 
 #. Default: "Tick this checkbox to display entry body text in the blog view."
 #: ./extenders.py:121
 msgid "help_full_view"
-msgstr ""
+msgstr "Spunta questa casella per mostrare il corpo del testo nella vista blog"
 
 #. Default: "Add new content:"
 #: ./portlets/manage.pt:16
@@ -616,7 +617,7 @@ msgstr "Aggiungi un nuovo contenuto:"
 #. Default: "Archives"
 #: ./portlets/archive.pt:8
 msgid "label_archives"
-msgstr ""
+msgstr "Archivi"
 
 #. Default: "Author"
 #: ./browser/help.pt:692
@@ -626,12 +627,12 @@ msgstr "Autore"
 #. Default: "Batch size"
 #: ./extenders.py:128
 msgid "label_batch_size"
-msgstr ""
+msgstr "Post per pagina"
 
 #. Default: "Blog enabled"
 #: ./extenders.py:111
 msgid "label_blog_enabled"
-msgstr ""
+msgstr "Blog attivato"
 
 #. Default: "Blog Entry"
 #: ./extenders.py:172
@@ -651,17 +652,17 @@ msgstr "Contenuti"
 #. Default: "Drafts"
 #: ./portlets/manage.pt:36
 msgid "label_drafts"
-msgstr ""
+msgstr "Bozze"
 
 #. Default: "Edit"
 #: ./browser/blogview.pt:533
 msgid "label_edit"
-msgstr ""
+msgstr "Modifica"
 
 #. Default: "Click to edit this entry."
 #: ./browser/blogview.pt:533
 msgid "label_edit_title"
-msgstr ""
+msgstr "Clicca per modificare questo post"
 
 #. Default: "Embed"
 #: ./extenders.py:210
@@ -671,12 +672,12 @@ msgstr "Codice Embed"
 #. Default: "Toolbar enabled"
 #: ./extenders.py:137
 msgid "label_enable_toolbar"
-msgstr ""
+msgstr "Toolbar attivata"
 
 #. Default: "Examples"
 #: ./browser/help.pt:716
 msgid "label_examples"
-msgstr ""
+msgstr "Esempi"
 
 #. Default: "filed under:"
 #: ./browser/blogview.pt:161
@@ -696,7 +697,7 @@ msgstr "Filtra i Post"
 #. Default: "Full view"
 #: ./extenders.py:120
 msgid "label_full_view"
-msgstr ""
+msgstr "Vista completa"
 
 #. Default: "Galleries"
 #: ./browser/galleryview.pt:92
@@ -726,7 +727,7 @@ msgstr "Homepage"
 #. Default: "image"
 #: ./browser/help.pt:156
 msgid "label_image"
-msgstr ""
+msgstr "immagine"
 
 #. Default: "Loading..."
 #: ./browser/galleryview.pt:54
@@ -736,12 +737,12 @@ msgstr "Caricando..."
 #. Default: "Maps extension"
 #: ./browser/help.pt:702
 msgid "label_maps_extensions"
-msgstr ""
+msgstr "Estensione Mappe"
 
 #. Default: "Newest…"
 #: ./portlets/archive.pt:41
 msgid "label_newest"
-msgstr ""
+msgstr "Il più nuovo..."
 
 #. Default: "Permalink"
 #: ./browser/blogview.pt:150
@@ -751,7 +752,7 @@ msgstr "Permalink"
 #. Default: "Posted by ${author}"
 #: ./browser/blogview.pt:138
 msgid "label_posted_by"
-msgstr "Scritto da ${author}"
+msgstr "Postato da ${author}"
 
 #. Default: "Read comments on this entry."
 #: ./browser/blogview.pt:520
@@ -761,12 +762,12 @@ msgstr "Leggi i Commenti a questo Post"
 #. Default: "Click to read full entry."
 #: ./browser/blogview.pt:510
 msgid "label_read_more"
-msgstr ""
+msgstr "Clicca per leggere tutto il post"
 
 #. Default: "Tips"
 #: ./browser/help.pt:710
 msgid "label_tips"
-msgstr ""
+msgstr "Consigli"
 
 #. Default: "-- Category --"
 #: ./browser/blogview.py:102
