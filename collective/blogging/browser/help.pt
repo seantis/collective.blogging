@@ -671,9 +671,11 @@
                         translations where the following are available at this moment:    
                     </p>
                     <ul i18n:translate="">
-                        <li><b>English</b> (default) &mdash; <i>lzdych (any corrections welcomed since english is not my native language)</i></li>
-                        <li><b>Czech</b> &mdash; <i>lzdych (in-progress))</i></li>
-                        <li><b>Italian</b> &mdash; <i>luthy (in-progress)</i></li>
+                        <li><b>English</b> (default) &mdash; <i>Lukas Zdych (lzdych)</i></li>
+                        <li><b>Czech</b> &mdash; <i>Lukas Zdych (lzdych)</i></li>
+                        <li><b>Italian</b> &mdash; <i>Enzo Cesanelli (luthy)</i></li>
+                        <li><b>Portuguese</b> &mdash; <i>Davi Lima (davilima6)</i></li>
+                        <li><b>Dutch</b> &mdash; <i>Rob Gietema (robgietema)</i></li>
                     </ul>
                     <p>
                         <i i18n:translate=""><b>Note:</b> Feel free to contact me if you want to submit new translations. Any help

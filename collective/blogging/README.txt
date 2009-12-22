@@ -83,9 +83,13 @@ Translations
 
 - English (default): lzdych (lukas dot zdych at gmail dot com)
 
-- Czech: lzdych (in-progress)
+- Czech: lzdych (lukas dot zdych at gmail dot com)
 
-- Italian: luthy (in-progress)
+- Italian: Enzo Cesanelli (luthy)
+
+- Portuguese: Davi Lima (davilima6)
+
+- Dutch: Rob Gietema (robgietema)
 
 New translations or help with correction of an existing ones would be appreciated.
 

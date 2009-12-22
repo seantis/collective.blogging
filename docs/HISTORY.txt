@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.0b4 (unreleased)
+~~~~~~~~~~~~~~~~~~
+
+- added dutch translation [robgietema]
+- updated italian translation [luthy]
+- added portuguese translation [davilima6]
+
 1.0b3 (2009-12-06)
 ~~~~~~~~~~~~~~~~~~
 
