@@ -20,79 +20,14 @@ from collective.blogging import _
 from collective.blogging import BLOG_PERMISSION
 
 
-class EmbedField(ExtensionField, TextField):
-    """ An embed content field """
+class ExTextField(ExtensionField, TextField):
+    """ A text field """
 
-class EnableFullField(ExtensionField, BooleanField):
-    """ A boolean field for enabling blog full view """
-    
-    @property
-    def default(self):
-        return False
-    
-    @property
-    def schemata(self):
-        return "blog"
-    
-    @property
-    def write_permission(self):
-        return BLOG_PERMISSION
-    
-    @property
-    def languageIndependent(self):
-        return True
+class ExBooleanField(ExtensionField, BooleanField):
+    """ A boolean field """
 
-class BatchSizeField(ExtensionField, IntegerField):
-    """ A batch size field """
-    
-    @property
-    def default(self):
-        return 10
-    
-    @property
-    def schemata(self):
-        return "blog"
-    
-    @property
-    def write_permission(self):
-        return BLOG_PERMISSION
-    
-    @property
-    def languageIndependent(self):
-        return True
-    
-    @property
-    def enforceVocabulary(self):
-        return False
-
-    def Vocabulary(self, content_instance):
-        return IntDisplayList((
-            (3, 3),
-            (5, 5),
-            (10, 10),
-            (15, 15),
-            (20, 20),
-        ))
-
-class EnableToolbarField(ExtensionField, BooleanField):
-    """ A boolean field for enabling blog toolbar """
-    
-    @property
-    def default(self):
-        return True
-    
-    @property
-    def schemata(self):
-        return "blog"
-    
-    @property
-    def write_permission(self):
-        return BLOG_PERMISSION
-    
-    @property
-    def languageIndependent(self):
-        return True
-
+class ExIntegerField(ExtensionField, IntegerField):
+    """ An integer field """
 
 class BlogExtender(object):
     """ Add blog configuration fields to all bloggable content. """
@@ -115,7 +50,11 @@ class BlogExtender(object):
             ),
         ),
         
-        EnableFullField("enable_full",
+        ExBooleanField("enable_full",
+            schemata = u'blog',
+            languageIndependent = True,
+            default = False,
+            write_permission = BLOG_PERMISSION,
             widget = BooleanWidget(
                 label = _(u"label_full_view", default=u"Full view"),
                 description = _(u"help_full_view",
@@ -123,7 +62,13 @@ class BlogExtender(object):
             ),        
         ),
         
-        BatchSizeField("batch_size",
+        ExIntegerField("batch_size",
+            schemata = u'blog',
+            languageIndependent = True,
+            default = 10,
+            write_permission = BLOG_PERMISSION,
+            enforceVocabulary = False,
+            vocabulary = (3, 5, 10, 15, 20),
             widget = SelectionWidget(
                 label = _(u"label_batch_size",
                     default=u"Batch size"),
@@ -132,12 +77,29 @@ class BlogExtender(object):
             ),
         ),
         
-        EnableToolbarField("enable_toolbar",
+        ExBooleanField("enable_toolbar",
+            schemata = u'blog',
+            languageIndependent = True,
+            default = True,
+            write_permission = BLOG_PERMISSION,
             widget = BooleanWidget(
                 label = _(u"label_enable_toolbar",
                     default = u"Toolbar enabled"),
                 description = _(u"help_enable_toolbar",
                     default = u"Tick to enable / disable blog toolbar on the top of its page."),
+            ),
+        ),
+        
+        ExBooleanField("enable_count",
+            schemata = u'blog',
+            languageIndependent = True,
+            default = True,
+            write_permission = BLOG_PERMISSION,
+            widget = BooleanWidget(
+                label = _(u"label_enable_count",
+                    default = u"Count enabled"),
+                description = _(u"help_enable_count",
+                    default = u"Tick to enable / disable blog contents count displaying."),
             ),
         ),
     ]
@@ -200,7 +162,7 @@ class LinkExtender(object):
 
     fields = [
 
-        EmbedField('embedCode',
+        ExTextField('embedCode',
             schemata = "blog",
             write_permission = BLOG_PERMISSION,
             default='',

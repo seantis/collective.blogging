@@ -4,6 +4,8 @@ Changelog
 1.0b4 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- blog filter toolbar options now reflects blog contents [lzdych]
+- blog now can show number of posts in it [lzdych]
 - added dutch translation [robgietema]
 - updated italian translation [luthy]
 - added portuguese translation [davilima6]

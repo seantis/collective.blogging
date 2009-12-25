@@ -9,8 +9,8 @@
                 tal:define="kssClassesView context/@@kss_field_decorator_view;
                             getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
                             templateId template/getId;
-                            contents view/contents;
-                            hiddableStyle python:contents and 'visibility:hidden;;height:1px;;padding:0;;' or None;
+                            batch view/batch;
+                            hiddableStyle python:batch and 'visibility:hidden;;height:1px;;padding:0;;' or None;
                             url_quote nocall:modules/Products.PythonScripts.standard/url_quote;
                             portal_discussion nocall:context/portal_discussion;
                             isDiscussionAllowedFor nocall:portal_discussion/isDiscussionAllowedFor;
@@ -31,7 +31,7 @@
                     </metal:field>
                 </h1>
 
-                <tal:block condition="not:contents">
+                <tal:block condition="not:batch">
                     <div tal:replace="structure provider:plone.belowcontenttitle" />
                 </tal:block>
                 
@@ -77,7 +77,13 @@
                     </dl>
                 </tal:toolbar>
                 
-                <tal:block condition="not:contents">
+                <div class="blogPostsCount discreet"
+                    tal:condition="view/show_count"
+                    i18n:translate="label_blog_posts_count">
+                    Currently <b i18n:name="count" tal:content="view/count">99</b> blog posts.
+                </div>
+                
+                <tal:block condition="not:batch">
                     <div tal:replace="structure provider:plone.abovecontentbody" />
                 </tal:block>
                 
@@ -86,17 +92,17 @@
                     tal:define="kss_class python:getKssClasses('text',
                                 templateId=templateId, macro='text-field-view');
                                 text context/getText|nothing"
-                    tal:condition="python:text and not contents"
+                    tal:condition="python:text and not batch"
                     tal:attributes="class python:context.Format() in ('text/structured',
                                     'text/x-rst', ) and 'stx' + kss_class or 'plain' + kss_class">
                     <div metal:define-slot="inside" tal:replace="structure text">The body</div>
                 </div>
                 
-                <tal:contents define="batch contents">
+                <tal:contents>
 
-                    <tal:listing condition="contents">
+                    <tal:listing condition="batch">
                         <tal:foldercontents define="show_about view/show_about;">
-                            <tal:entries tal:repeat="item contents">
+                            <tal:entries tal:repeat="item batch">
                                 <tal:block tal:define="item_id          item/getId;
                                                        item_url         item/getURL;
                                                        item_title_or_id item/pretty_title_or_id;
@@ -551,7 +557,7 @@
                     </tal:listing>
                     
                     <p class="discreet"
-                        tal:condition="not:contents"
+                        tal:condition="not:batch"
                         i18n:translate="description_no_items_in_blog">
                         There are currently no contents in this blog.
                     </p>

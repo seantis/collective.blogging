@@ -1,3 +1,4 @@
+from time import time
 from Acquisition import aq_inner
 from zope.component import getMultiAdapter
 
@@ -7,8 +8,15 @@ from Products.ATContentTypes.interface import (IATTopic, IATFolder, IATBTreeFold
 from Products.CMFPlone import Batch
 from Products.Five import BrowserView
 
+from plone.memoize import view, ram
+
 from collective.blogging.interfaces import IEntryMarker
 from collective.blogging import _
+
+def _filter_cachekey(method,self):
+    """ Time and path based cache """
+    path = '/'.join(self.context.getPhysicalPath())
+    return hash((path, time() // (60 * 60)))
 
 class BlogView(BrowserView):
     """ A blog browser view """
@@ -19,7 +27,8 @@ class BlogView(BrowserView):
         self.request = request
         self.tools = getMultiAdapter((context, request), name=u'plone_tools')
         self.portal_state = getMultiAdapter((context, request), name=u'plone_portal_state')
-        
+    
+    @view.memoize
     def contents(self):
         brains = []
         criteria = {}
@@ -45,9 +54,15 @@ class BlogView(BrowserView):
             criteria['sort_on'] = 'effective'
             criteria['sort_order'] = 'reverse'
             brains = self.tools.catalog()(criteria)
-        
+        return brains
+    
+    def batch(self):
         b_start = self.request.get('b_start', 0)
-        return Batch(brains, self.batch_size, int(b_start), orphan=0)
+        return Batch(self.contents(), self.batch_size, int(b_start), orphan=0)
+
+    @property
+    def count(self):
+        return len(self.contents())
 
     @property
     def is_folder(self):
@@ -74,6 +89,13 @@ class BlogView(BrowserView):
         if field:
             return field.get(self.context)
         return True
+    
+    @property
+    def show_count(self):
+        field = self.context.getField('enable_count')
+        if field:
+            return field.get(self.context)
+        return True
 
     @property
     def show_body(self):
@@ -89,30 +111,47 @@ class BlogView(BrowserView):
             return field.get(self.context)
         return 10
     
-    @property
-    def filter_info(self):
-        catalog = self.tools.catalog()
-        
+    @ram.cache(_filter_cachekey)
+    def filter_info(self):        
         subject = self.request.get('Subject')
         year    = self.request.get('publish_year')
         month   = self.request.get('publish_month')
+        
+        subjects = set()
+        years = set()
+        months = set()
+        for brain in self.contents():
+            for s in brain.Subject:
+                subjects.add(s)
+            if brain.publish_year:
+                years.add(brain.publish_year)
+            if brain.publish_month:
+                months.add(brain.publish_month)
+        subjects = list(subjects)
+        years = list(years)
+        months = list(months)
+        
+        subjects.sort()
+        years.sort()
+        months.sort()
+        
         return [
             {
                 'id': 'Subject:list',
                 'title': _(u'select_category_option', default=u'-- Category --'),
-                'options': catalog.uniqueValuesFor('Subject'),
+                'options': subjects,
                 'selected': subject and subject != [''] and subject[0] or None
             },
             {
                 'id': 'publish_year',
                 'title': _(u'select_year_option', default=u'-- Year --'),
-                'options': catalog.uniqueValuesFor('publish_year'),
+                'options': years,
                 'selected': year and int(year) or None
             },
             {
                 'id': 'publish_month',
                 'title': _(u'select_month_option', default=u'-- Month --'),
-                'options': catalog.uniqueValuesFor('publish_month'),
+                'options': months,
                 'selected': month and int(month) or None
             }
         ]

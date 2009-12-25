@@ -199,3 +199,8 @@ td.entryMap div.googleMapLocation {
 .blogArchivePortlet span.archiveCount {
     font-weight:bold;
 }
+
+.blogPostsCount {
+    float:right;
+    clear:right;
+}
