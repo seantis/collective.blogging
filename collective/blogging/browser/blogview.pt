@@ -80,7 +80,7 @@
                 <div class="blogPostsCount discreet"
                     tal:condition="view/show_count"
                     i18n:translate="label_blog_posts_count">
-                    Currently <b i18n:name="count" tal:content="view/count">99</b> blog posts.
+                    Found <b i18n:name="count" tal:content="view/count">99</b> posts.
                 </div>
                 
                 <tal:block condition="not:batch">

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2009-12-06 17:26+0000\n"
-"PO-Revision-Date: 2009-12-06 18:26+0100\n"
+"POT-Creation-Date: 2009-12-25 20:20+0000\n"
+"PO-Revision-Date: 2009-12-25 21:59+0100\n"
 "Last-Translator: Lukas Zdych <lukas.zdych@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -14,7 +14,7 @@ msgstr ""
 #. Default: "<b><i>And as a bonus the blogging package comes with new gallery view which can be selected from the <b>Display</b> menu and you get a simple but fancy picture gallery. </i></b>"
 #: ./browser/help.pt:461
 msgid "<b><i>And as a bonus the blogging package comes with new gallery view which can be selected from the <b>Display</b> menu and you get a simple but fancy picture gallery. </i></b>"
-msgstr ""
+msgstr "<b><i>A jako bonus přináší blogging balíček nové zobrazení galerie, které může být zvoleno z nabídky <b>Zobrazit</b> čímž získáte jednoduchou obrázkovou galerii. </i></b>"
 
 #. Default: "<b>Note:</b> An <b>object_provides</b> criterium is not available by default. to enable it go to <i><b>Site setup -> Collection</b></i> clik the <b>All fields</b> link. Then find <b>object_provides</b> field and enable it by ticking its checkbox and save changes in the bottom of the page."
 #: ./browser/help.pt:424
@@ -24,27 +24,27 @@ msgstr ""
 #. Default: "<b>Note:</b> As with folders you can turn existing content into blog post anytime you want."
 #: ./browser/help.pt:204
 msgid "<b>Note:</b> As with folders you can turn existing content into blog post anytime you want."
-msgstr ""
+msgstr "<b>Poznámka:</b> Stejně jako u složek, můžete z existujícího obsahu vytvořit příspěvek blogu kdykoli chcete."
 
 #. Default: "<b>Note:</b> Embed can be used for other resources or any html code since <b>Embed</b> field contents are just rendered as HTML when rendering whole blog entry."
 #: ./browser/help.pt:329
 msgid "<b>Note:</b> Embed can be used for other resources or any html code since <b>Embed</b> field contents are just rendered as HTML when rendering whole blog entry."
-msgstr ""
+msgstr "<b>Poznámka:</b> Vložený kód může být použit pro další zdroje nebo jaký-koli html kód vzhledem k tomu, že obsah pole <b>Vložený kód</b> je jednoduše renderován jako HTML při zobrazení celého příspěvku."
 
 #. Default: "<b>Note:</b> Feel free to contact me if you want to submit new translations. Any help will be appreciated. You can also checkout the source from ${url} and use <b>update_i18n.sh</b> script included in the package to add new translation and then commit it."
-#: ./browser/help.pt:680
+#: ./browser/help.pt:682
 msgid "<b>Note:</b> Feel free to contact me if you want to submit new translations. Any help will be appreciated. You can also checkout the source from ${url} and use <b>update_i18n.sh</b> script included in the package to add new translation and then commit it."
 msgstr ""
 
 #. Default: "<b>Note:</b> If listed entry is <b>filled under</b> some category and the category link is clicked it filters blog listing by that category."
 #: ./browser/help.pt:494
 msgid "<b>Note:</b> If listed entry is <b>filled under</b> some category and the category link is clicked it filters blog listing by that category."
-msgstr ""
+msgstr "<b>Poznámka:</b> Pokud je zobrazovaný příspěvek <b>přiřazen</b> do nějaké kategorie a uživatel klikne na odkaz této kategorie, blog zobrazí pouze příspěvky v této kategorii."
 
 #. Default: "<b>Note:</b> Image of the image entry is not rendered in the right as it is common in the folder summary view because the post is about an image more then a text."
 #: ./browser/help.pt:274
 msgid "<b>Note:</b> Image of the image entry is not rendered in the right as it is common in the folder summary view because the post is about an image more then a text."
-msgstr ""
+msgstr "<b>Poznámka:</b> Obrázek obrázkového příspěvku není zobrazen vpravo jako je to běžné v přehledném zobrazení složky, protože samotný příspěvek je spíše o tom obrázku než o nějakém textu."
 
 #. Default: "<b>Note:</b> Plone's <b>link auto redirection</b> feature is still working so if user can not modify link based blog post he/she will be redirected to remote url when clicks entry's title in the blog view. So enabling comments on simple link blog entry doesn't make sense."
 #: ./browser/help.pt:307
@@ -64,21 +64,21 @@ msgstr ""
 #. Default: "<b>Note:</b> You can see folder's title and description but only until there are no blog posts as you will see below."
 #: ./browser/help.pt:188
 msgid "<b>Note:</b> You can see folder's title and description but only until there are no blog posts as you will see below."
-msgstr ""
+msgstr "<b>Poznámka:</b> Můžete vidět nadpis a popis složky, ale pouze dokud není k dispozici alespoň jeden příspěvek jak uvidíte níže."
 
 #. Default: "<b>Note:</b> You can turn folders into blog anytime you want."
 #: ./browser/help.pt:162
 msgid "<b>Note:</b> You can turn folders into blog anytime you want."
-msgstr ""
+msgstr "<b>Poznámka:</b> Můžete ze složek udělat blog kdykoli chcete."
 
 #. Default: "<b>Warning:</b> Blog folder will not list entry which hasn't an effective date which is (by default in Plone) set automatically when content is published. To access not yet published entries (drafts) create a smart folder and link it with ${url}."
 #: ./browser/help.pt:227
 msgid "<b>Warning:</b> Blog folder will not list entry which hasn't an effective date which is (by default in Plone) set automatically when content is published. To access not yet published entries (drafts) create a smart folder and link it with ${url}."
 msgstr ""
 
-#. Default: "<li><b>English</b> (default) — <i>lzdych (any corrections welcomed since english is not my native language)</i></li> <li><b>Czech</b> — <i>lzdych (in-progress))</i></li> <li><b>Italian</b> — <i>luthy (in-progress)</i></li>"
+#. Default: "<li><b>English</b> (default) — <i>Lukas Zdych (lzdych)</i></li> <li><b>Czech</b> — <i>Lukas Zdych (lzdych)</i></li> <li><b>Italian</b> — <i>Enzo Cesanelli (luthy)</i></li> <li><b>Portuguese</b> — <i>Davi Lima (davilima6)</i></li> <li><b>Dutch</b> — <i>Rob Gietema (robgietema)</i></li>"
 #: ./browser/help.pt:673
-msgid "<li><b>English</b> (default) &mdash; <i>lzdych (any corrections welcomed since english is not my native language)</i></li> <li><b>Czech</b> &mdash; <i>lzdych (in-progress))</i></li> <li><b>Italian</b> &mdash; <i>luthy (in-progress)</i></li>"
+msgid "<li><b>English</b> (default) &mdash; <i>Lukas Zdych (lzdych)</i></li> <li><b>Czech</b> &mdash; <i>Lukas Zdych (lzdych)</i></li> <li><b>Italian</b> &mdash; <i>Enzo Cesanelli (luthy)</i></li> <li><b>Portuguese</b> &mdash; <i>Davi Lima (davilima6)</i></li> <li><b>Dutch</b> &mdash; <i>Rob Gietema (robgietema)</i></li>"
 msgstr ""
 
 #. Default: "<li><b>Full view</b> - <i>include body text of listed entries on the blog view</i></li> <li><b>Batch size</b> - <i>select number of entries listed per page</i></li> <li><b>Toolbar enabled</b> - <i>enable / disable the filter toolbar appearance</i></li>"
@@ -121,7 +121,7 @@ msgstr "Dostupné typy obsahu"
 #. Default: "Additionally you can customize blog view a bit by some settings in the <b>Blog</b> section of the edit form:"
 #: ./browser/help.pt:164
 msgid "Additionally you can customize blog view a bit by some settings in the <b>Blog</b> section of the edit form:"
-msgstr ""
+msgstr "Navíc si můžete trochu přizpůsobit zobrazení blogu v <b>Blog</b> sekci editace složky: "
 
 #. Default: "After saving the portlet settings you get portlet with direct links for posting new content in your blog. Content creation links are filtered accordingly to allowed content types in referenced blog folder."
 #: ./browser/help.pt:576
@@ -136,7 +136,7 @@ msgstr ""
 #. Default: "After you save new link entry with embed code you get video post with external content."
 #: ./browser/help.pt:331
 msgid "After you save new link entry with embed code you get video post with external content."
-msgstr ""
+msgstr "Jakmile uložíte nový příspěvek odkazu s vloženým kódem, máte video příspěvek s externím obsahem."
 
 #. Default: "And becuase events happen in some places it would be nice to show event location on the map. To enable maps feature for blogging events you just need to install additional extra package <b>${url}</b> and you will be available to use Google maps integration to share geo locations."
 #: ./browser/help.pt:367
@@ -156,7 +156,7 @@ msgstr ""
 #. Default: "And that's why the Blogging package was created and hopefully will save your time in case you don't need complex blogging tool but still want a blog."
 #: ./browser/help.pt:134
 msgid "And that's why the Blogging package was created and hopefully will save your time in case you don't need complex blogging tool but still want a blog."
-msgstr ""
+msgstr "A právě proto byl balíček Blogging vytvořen. Pokud nepotřebujete komplexní nástroj pro blogování, ale přesto chcete svůj blog."
 
 #. Default: "Another favorite blogging feature enables you to post any external resource through <b>embed code</b> which is usefull for video posts from <b>YouTube</b>, <b>Google Video</b> or images from <b>Skitch</b> etc. Just add new <b>Link</b> content to the blog and paste an embed code into the textarea labeled as <b>Embed</b> (You can leave default value for remote link field to be ommited from entry's and blog's view)."
 #: ./browser/help.pt:311
@@ -176,12 +176,12 @@ msgstr "Nastavení portletu archív"
 #. Default: "As simple as with images it is in files case. Just add new file and mark it as <b>Blog Entry</b>."
 #: ./browser/help.pt:277
 msgid "As simple as with images it is in files case. Just add new file and mark it as <b>Blog Entry</b>."
-msgstr ""
+msgstr "Se soubory je to stejně jednoduché jako s obrázky. Pouze přidejte nový soubor a označte ho jako <b>Příspěvek Blogu</b>."
 
 #. Default: "At first the blog folder has to be created. Go to wherever you want in your plone site structure and add new folder or Large Plone Folder if you expect a lot of posts."
 #: ./browser/help.pt:145
 msgid "At first the blog folder has to be created. Go to wherever you want in your plone site structure and add new folder or Large Plone Folder if you expect a lot of posts."
-msgstr ""
+msgstr "Nejprve musí být vytvořena složka pro blog. Přejděte kam-koli chcete ve struktuře vašeho plone portálu a přidejte novou složku nebo velkou složku pokud očekáváte hodně příspěvků."
 
 #. Default: "Basically you will use <b>Folder / Large Folder</b> as container for your blog entries but for personal blog it is common to list posts on site's frontpage which is not so easy in Plone just by selecting folder as default document of the Plone site (add content menu does'nt work as expected at least).<br /> So to get your blog appear on the frontpage just create new <b>Smart Folder</b> and enable it as Blog in <b>Blog</b> section of its edit form.<br /> Define Smart Folder's criteria usually:"
 #: ./browser/help.pt:408
@@ -317,7 +317,7 @@ msgstr "Obrázkový příspěvek"
 #. Default: "In case the <b>Embed</b> field is not empty Plone's <b>links auto redirection</b> is disabled."
 #: ./browser/help.pt:318
 msgid "In case the <b>Embed</b> field is not empty Plone's <b>links auto redirection</b> is disabled."
-msgstr ""
+msgstr "Pokud pole <b>Vložený kód</b> není prázdné, funkce <b>automatické přesměrování odkazů</b> je vypnuta."
 
 #. Default: "Instead of complicated archive views and or auto-moving your posts into generated site structere under the blog folder the <b>Blogging</b> package provides simple entries filtering toolbar which let's you and visitors of your blog to filter older entries."
 #: ./browser/help.pt:473
@@ -380,7 +380,7 @@ msgstr "Nastavení portletu"
 
 #: ./portlets/manage.py:40
 msgid "Select content types for which you would like to show create link in the portlet."
-msgstr ""
+msgstr "Vyberte typy obsahu, pro které budou v portletu zobrazeny odkazy vytvoření."
 
 #. Default: "Since blogs and blog entries are still just a Plone's content it also supports content translations using ${url} extension without any extra changes.<br /> UI of <b>Blogging</b> extra features including this user's guide also supports i18n based translations where the following are available at this moment:"
 #: ./browser/help.pt:668
@@ -451,7 +451,7 @@ msgstr ""
 
 #: ./portlets/archive.py:46
 msgid "Tick the checkbox to extend portlet title with target blog's title."
-msgstr ""
+msgstr "Zaškrtněte tento checkbox pro rozšíření nadpisu portletu názvem cílového blogu."
 
 #. Default: "Video entry"
 #: ./browser/help.pt:337
@@ -476,17 +476,17 @@ msgstr ""
 #. Default: "You can enable it in the blog settings see ${url}"
 #: ./browser/help.pt:481
 msgid "You can enable it in the blog settings see ${url}"
-msgstr ""
+msgstr "Můžete to povolit v nastavení blogu viz. ${url}"
 
 #. Default: "You can use Plone's <b>Page</b> even <b>News Item</b> content to post an entry in the blog and the only difference is that News Item has a title image with caption which is the same as in Plone itself."
 #: ./browser/help.pt:236
 msgid "You can use Plone's <b>Page</b> even <b>News Item</b> content to post an entry in the blog and the only difference is that News Item has a title image with caption which is the same as in Plone itself."
-msgstr ""
+msgstr "Můžete použít Plone typy obsahu <b>Stránka</b> nebo <b>Novinka</b> pro vytvoření příspěvku v blogu a jediný rozdíl mezi nimi je ten, že Novinka umožňuje přiložit titulní obrázek s nadpisem, což je stejné v samotném Plone. "
 
 #. Default: "You have to select your blog content for which will be the portlet used for. After that you can select which content types should the portlet render creation links for and select your predefined source of drafts (cloven entries) usually represented by some smart folder."
 #: ./browser/help.pt:562
 msgid "You have to select your blog content for which will be the portlet used for. After that you can select which content types should the portlet render creation links for and select your predefined source of drafts (cloven entries) usually represented by some smart folder."
-msgstr ""
+msgstr "Musíte vybrat blog, pro který bude tento portlet používán. Po té, můžete vybrat typy obsahu, pro které bude portlet nabízet odkazy vytvoření a také vybrat zdroj konceptů (rozepsaných příspěvků) obyčejně představující nějakou rešerši."
 
 #. Default: "Here is some user's help and blogging documentation."
 #: ./browser/help.pt:18
@@ -494,7 +494,7 @@ msgid "desc_blogging_help"
 msgstr "Zde naleznete základní uživatelskou nápovědu a dokumentaci."
 
 #. Default: "There are currently no contents in this blog."
-#: ./browser/blogview.pt:553
+#: ./browser/blogview.pt:559
 msgid "description_no_items_in_blog"
 msgstr "V tomto blogu momentálně není žádný obsah."
 
@@ -579,32 +579,37 @@ msgid "heading_using_smart_folders"
 msgstr "Použití Rešerší"
 
 #. Default: "Select how many blog entries should be listed per page in the blog view."
-#: ./extenders.py:130
+#: ./extenders.py:73
 msgid "help_batch_size"
 msgstr "Vyberte počet příspěvků na stránku při zobrazení blogu."
 
 #. Default: "Tick to enable / disable blog behaviour."
-#: ./extenders.py:113
+#: ./extenders.py:46
 msgid "help_blog_enabled"
 msgstr "Zaškrtněte pro aktivaci blogování."
 
 #. Default: "Mark this content as blog entry."
-#: ./extenders.py:174
+#: ./extenders.py:134
 msgid "help_blog_entry_marker"
 msgstr "Označit tento obsah za položku blogu."
 
 #. Default: "Paste embed code for example youtube, google or other video content."
-#: ./extenders.py:211
+#: ./extenders.py:171
 msgid "help_embed"
 msgstr "Vložte externí kód, například youtube, google nebo jiný video obsah."
 
+#. Default: "Tick to enable / disable blog contents count displaying."
+#: ./extenders.py:99
+msgid "help_enable_count"
+msgstr "Zaškrtněte pro zapnutí / vypnutí zobrazení počtu příspěvků blogu."
+
 #. Default: "Tick to enable / disable blog toolbar on the top of its page."
-#: ./extenders.py:139
+#: ./extenders.py:86
 msgid "help_enable_toolbar"
 msgstr "Zaškrtněte pro zobrazení nástrojové lišty blogu nahoře v jeho zobrazení."
 
 #. Default: "Tick this checkbox to display entry body text in the blog view."
-#: ./extenders.py:121
+#: ./extenders.py:58
 msgid "help_full_view"
 msgstr "Zaškrtněte tento checkbox pokud si přejete zahrnout textové tělo příspěvků v zobrazení blogu."
 
@@ -619,27 +624,32 @@ msgid "label_archives"
 msgstr "Archívy"
 
 #. Default: "Author"
-#: ./browser/help.pt:692
+#: ./browser/help.pt:694
 msgid "label_author"
 msgstr "Autor"
 
 #. Default: "Batch size"
-#: ./extenders.py:128
+#: ./extenders.py:71
 msgid "label_batch_size"
 msgstr "Velikost stránky"
 
 #. Default: "Blog enabled"
-#: ./extenders.py:111
+#: ./extenders.py:44
 msgid "label_blog_enabled"
 msgstr "Aktivní blog"
 
 #. Default: "Blog Entry"
-#: ./extenders.py:172
+#: ./extenders.py:132
 msgid "label_blog_entry"
 msgstr "Položka Blogu"
 
+#. Default: "Found ${count} posts."
+#: ./browser/blogview.pt:83
+msgid "label_blog_posts_count"
+msgstr "Nalezeno ${count} příspěvků."
+
 #. Default: "Comments (${comments})"
-#: ./browser/blogview.pt:526
+#: ./browser/blogview.pt:532
 msgid "label_comments_with_count"
 msgstr "Komentáře (${comments})"
 
@@ -654,32 +664,37 @@ msgid "label_drafts"
 msgstr "Koncepty"
 
 #. Default: "Edit"
-#: ./browser/blogview.pt:533
+#: ./browser/blogview.pt:539
 msgid "label_edit"
 msgstr "Upravit"
 
 #. Default: "Click to edit this entry."
-#: ./browser/blogview.pt:533
+#: ./browser/blogview.pt:539
 msgid "label_edit_title"
 msgstr "Klikněte sem pro editaci příspěvku."
 
 #. Default: "Embed"
-#: ./extenders.py:210
+#: ./extenders.py:170
 msgid "label_embed"
 msgstr "Externí"
 
+#. Default: "Display count"
+#: ./extenders.py:97
+msgid "label_enable_count"
+msgstr "Zobrazit počet"
+
 #. Default: "Toolbar enabled"
-#: ./extenders.py:137
+#: ./extenders.py:84
 msgid "label_enable_toolbar"
 msgstr "Povolit nástrojovou lištu"
 
 #. Default: "Examples"
-#: ./browser/help.pt:716
+#: ./browser/help.pt:718
 msgid "label_examples"
 msgstr "Příklady"
 
 #. Default: "filed under:"
-#: ./browser/blogview.pt:161
+#: ./browser/blogview.pt:167
 msgid "label_filed_under"
 msgstr "kategorie:"
 
@@ -694,7 +709,7 @@ msgid "label_filter_posts"
 msgstr "Filtrovat příspěvky"
 
 #. Default: "Full view"
-#: ./extenders.py:120
+#: ./extenders.py:57
 msgid "label_full_view"
 msgstr "Úplné zobrazení"
 
@@ -719,7 +734,7 @@ msgid "label_help"
 msgstr "Nápověda"
 
 #. Default: "Homepage"
-#: ./browser/help.pt:695
+#: ./browser/help.pt:697
 msgid "label_homepage"
 msgstr "Domovská stránka"
 
@@ -734,7 +749,7 @@ msgid "label_loading"
 msgstr "Načítá se..."
 
 #. Default: "Maps extension"
-#: ./browser/help.pt:702
+#: ./browser/help.pt:704
 msgid "label_maps_extensions"
 msgstr "Rozšíření o mapy"
 
@@ -744,42 +759,42 @@ msgid "label_newest"
 msgstr "Nejnovější..."
 
 #. Default: "Permalink"
-#: ./browser/blogview.pt:150
+#: ./browser/blogview.pt:156
 msgid "label_permalink"
 msgstr "Permalink"
 
 #. Default: "Posted by ${author}"
-#: ./browser/blogview.pt:138
+#: ./browser/blogview.pt:144
 msgid "label_posted_by"
 msgstr "Author ${author}"
 
 #. Default: "Read comments on this entry."
-#: ./browser/blogview.pt:520
+#: ./browser/blogview.pt:526
 msgid "label_read_comments_title"
 msgstr "Přečíst komentáře k tomuto příspěvku."
 
 #. Default: "Click to read full entry."
-#: ./browser/blogview.pt:510
+#: ./browser/blogview.pt:516
 msgid "label_read_more"
 msgstr "Klikněte pro čtení celého příspěvku."
 
 #. Default: "Tips"
-#: ./browser/help.pt:710
+#: ./browser/help.pt:712
 msgid "label_tips"
 msgstr "Tipy"
 
 #. Default: "-- Category --"
-#: ./browser/blogview.py:102
+#: ./browser/blogview.py:141
 msgid "select_category_option"
 msgstr "-- Kategorie --"
 
 #. Default: "-- Month --"
-#: ./browser/blogview.py:114
+#: ./browser/blogview.py:153
 msgid "select_month_option"
 msgstr "-- Měsíc --"
 
 #. Default: "-- Year --"
-#: ./browser/blogview.py:108
+#: ./browser/blogview.py:147
 msgid "select_year_option"
 msgstr "-- Rok --"
 

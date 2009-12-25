@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2009-12-06 17:26+0000\n"
+"POT-Creation-Date: 2009-12-25 20:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgid "<b>Note:</b> Embed can be used for other resources or any html code since
 msgstr ""
 
 #. Default: "<b>Note:</b> Feel free to contact me if you want to submit new translations. Any help will be appreciated. You can also checkout the source from ${url} and use <b>update_i18n.sh</b> script included in the package to add new translation and then commit it."
-#: ./browser/help.pt:680
+#: ./browser/help.pt:682
 msgid "<b>Note:</b> Feel free to contact me if you want to submit new translations. Any help will be appreciated. You can also checkout the source from ${url} and use <b>update_i18n.sh</b> script included in the package to add new translation and then commit it."
 msgstr ""
 
@@ -75,9 +75,9 @@ msgstr ""
 msgid "<b>Warning:</b> Blog folder will not list entry which hasn't an effective date which is (by default in Plone) set automatically when content is published. To access not yet published entries (drafts) create a smart folder and link it with ${url}."
 msgstr ""
 
-#. Default: "<li><b>English</b> (default) — <i>lzdych (any corrections welcomed since english is not my native language)</i></li> <li><b>Czech</b> — <i>lzdych (in-progress))</i></li> <li><b>Italian</b> — <i>luthy (in-progress)</i></li>"
+#. Default: "<li><b>English</b> (default) — <i>Lukas Zdych (lzdych)</i></li> <li><b>Czech</b> — <i>Lukas Zdych (lzdych)</i></li> <li><b>Italian</b> — <i>Enzo Cesanelli (luthy)</i></li> <li><b>Portuguese</b> — <i>Davi Lima (davilima6)</i></li> <li><b>Dutch</b> — <i>Rob Gietema (robgietema)</i></li>"
 #: ./browser/help.pt:673
-msgid "<li><b>English</b> (default) &mdash; <i>lzdych (any corrections welcomed since english is not my native language)</i></li> <li><b>Czech</b> &mdash; <i>lzdych (in-progress))</i></li> <li><b>Italian</b> &mdash; <i>luthy (in-progress)</i></li>"
+msgid "<li><b>English</b> (default) &mdash; <i>Lukas Zdych (lzdych)</i></li> <li><b>Czech</b> &mdash; <i>Lukas Zdych (lzdych)</i></li> <li><b>Italian</b> &mdash; <i>Enzo Cesanelli (luthy)</i></li> <li><b>Portuguese</b> &mdash; <i>Davi Lima (davilima6)</i></li> <li><b>Dutch</b> &mdash; <i>Rob Gietema (robgietema)</i></li>"
 msgstr ""
 
 #. Default: "<li><b>Full view</b> - <i>include body text of listed entries on the blog view</i></li> <li><b>Batch size</b> - <i>select number of entries listed per page</i></li> <li><b>Toolbar enabled</b> - <i>enable / disable the filter toolbar appearance</i></li>"
@@ -493,7 +493,7 @@ msgid "desc_blogging_help"
 msgstr ""
 
 #. Default: "There are currently no contents in this blog."
-#: ./browser/blogview.pt:553
+#: ./browser/blogview.pt:559
 msgid "description_no_items_in_blog"
 msgstr ""
 
@@ -578,32 +578,37 @@ msgid "heading_using_smart_folders"
 msgstr ""
 
 #. Default: "Select how many blog entries should be listed per page in the blog view."
-#: ./extenders.py:130
+#: ./extenders.py:73
 msgid "help_batch_size"
 msgstr ""
 
 #. Default: "Tick to enable / disable blog behaviour."
-#: ./extenders.py:113
+#: ./extenders.py:46
 msgid "help_blog_enabled"
 msgstr ""
 
 #. Default: "Mark this content as blog entry."
-#: ./extenders.py:174
+#: ./extenders.py:134
 msgid "help_blog_entry_marker"
 msgstr ""
 
 #. Default: "Paste embed code for example youtube, google or other video content."
-#: ./extenders.py:211
+#: ./extenders.py:171
 msgid "help_embed"
 msgstr ""
 
+#. Default: "Tick to enable / disable blog contents count displaying."
+#: ./extenders.py:99
+msgid "help_enable_count"
+msgstr ""
+
 #. Default: "Tick to enable / disable blog toolbar on the top of its page."
-#: ./extenders.py:139
+#: ./extenders.py:86
 msgid "help_enable_toolbar"
 msgstr ""
 
 #. Default: "Tick this checkbox to display entry body text in the blog view."
-#: ./extenders.py:121
+#: ./extenders.py:58
 msgid "help_full_view"
 msgstr ""
 
@@ -618,27 +623,32 @@ msgid "label_archives"
 msgstr ""
 
 #. Default: "Author"
-#: ./browser/help.pt:692
+#: ./browser/help.pt:694
 msgid "label_author"
 msgstr ""
 
 #. Default: "Batch size"
-#: ./extenders.py:128
+#: ./extenders.py:71
 msgid "label_batch_size"
 msgstr ""
 
 #. Default: "Blog enabled"
-#: ./extenders.py:111
+#: ./extenders.py:44
 msgid "label_blog_enabled"
 msgstr ""
 
 #. Default: "Blog Entry"
-#: ./extenders.py:172
+#: ./extenders.py:132
 msgid "label_blog_entry"
 msgstr ""
 
+#. Default: "Found ${count} posts."
+#: ./browser/blogview.pt:83
+msgid "label_blog_posts_count"
+msgstr ""
+
 #. Default: "Comments (${comments})"
-#: ./browser/blogview.pt:526
+#: ./browser/blogview.pt:532
 msgid "label_comments_with_count"
 msgstr ""
 
@@ -653,32 +663,37 @@ msgid "label_drafts"
 msgstr ""
 
 #. Default: "Edit"
-#: ./browser/blogview.pt:533
+#: ./browser/blogview.pt:539
 msgid "label_edit"
 msgstr ""
 
 #. Default: "Click to edit this entry."
-#: ./browser/blogview.pt:533
+#: ./browser/blogview.pt:539
 msgid "label_edit_title"
 msgstr ""
 
 #. Default: "Embed"
-#: ./extenders.py:210
+#: ./extenders.py:170
 msgid "label_embed"
 msgstr ""
 
+#. Default: "Display count"
+#: ./extenders.py:97
+msgid "label_enable_count"
+msgstr ""
+
 #. Default: "Toolbar enabled"
-#: ./extenders.py:137
+#: ./extenders.py:84
 msgid "label_enable_toolbar"
 msgstr ""
 
 #. Default: "Examples"
-#: ./browser/help.pt:716
+#: ./browser/help.pt:718
 msgid "label_examples"
 msgstr ""
 
 #. Default: "filed under:"
-#: ./browser/blogview.pt:161
+#: ./browser/blogview.pt:167
 msgid "label_filed_under"
 msgstr ""
 
@@ -693,7 +708,7 @@ msgid "label_filter_posts"
 msgstr ""
 
 #. Default: "Full view"
-#: ./extenders.py:120
+#: ./extenders.py:57
 msgid "label_full_view"
 msgstr ""
 
@@ -718,7 +733,7 @@ msgid "label_help"
 msgstr ""
 
 #. Default: "Homepage"
-#: ./browser/help.pt:695
+#: ./browser/help.pt:697
 msgid "label_homepage"
 msgstr ""
 
@@ -733,7 +748,7 @@ msgid "label_loading"
 msgstr ""
 
 #. Default: "Maps extension"
-#: ./browser/help.pt:702
+#: ./browser/help.pt:704
 msgid "label_maps_extensions"
 msgstr ""
 
@@ -743,42 +758,42 @@ msgid "label_newest"
 msgstr ""
 
 #. Default: "Permalink"
-#: ./browser/blogview.pt:150
+#: ./browser/blogview.pt:156
 msgid "label_permalink"
 msgstr ""
 
 #. Default: "Posted by ${author}"
-#: ./browser/blogview.pt:138
+#: ./browser/blogview.pt:144
 msgid "label_posted_by"
 msgstr ""
 
 #. Default: "Read comments on this entry."
-#: ./browser/blogview.pt:520
+#: ./browser/blogview.pt:526
 msgid "label_read_comments_title"
 msgstr ""
 
 #. Default: "Click to read full entry."
-#: ./browser/blogview.pt:510
+#: ./browser/blogview.pt:516
 msgid "label_read_more"
 msgstr ""
 
 #. Default: "Tips"
-#: ./browser/help.pt:710
+#: ./browser/help.pt:712
 msgid "label_tips"
 msgstr ""
 
 #. Default: "-- Category --"
-#: ./browser/blogview.py:102
+#: ./browser/blogview.py:141
 msgid "select_category_option"
 msgstr ""
 
 #. Default: "-- Month --"
-#: ./browser/blogview.py:114
+#: ./browser/blogview.py:153
 msgid "select_month_option"
 msgstr ""
 
 #. Default: "-- Year --"
-#: ./browser/blogview.py:108
+#: ./browser/blogview.py:147
 msgid "select_year_option"
 msgstr ""
 

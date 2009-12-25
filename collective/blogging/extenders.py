@@ -10,8 +10,6 @@ from Products.Archetypes.atapi import (TextField, IntegerField,
                                         BooleanField)
 from Products.Archetypes.atapi import (BooleanWidget, TextAreaWidget,
                                         SelectionWidget)
-from Products.Archetypes.utils import IntDisplayList
-
 from Products.ATContentTypes.interface import IATLink
 
 from collective.blogging.interfaces import (IBloggable, IPostable, IBlogMarker,
@@ -97,7 +95,7 @@ class BlogExtender(object):
             write_permission = BLOG_PERMISSION,
             widget = BooleanWidget(
                 label = _(u"label_enable_count",
-                    default = u"Count enabled"),
+                    default = u"Display count"),
                 description = _(u"help_enable_count",
                     default = u"Tick to enable / disable blog contents count displaying."),
             ),

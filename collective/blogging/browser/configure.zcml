@@ -5,6 +5,23 @@
     
     <include package="plone.app.contentmenu" />
     
+    <!-- macro views -->
+    <browser:page
+        for="collective.blogging.interfaces.IBlogMarker"
+        name="blog_macros"
+        class=".macros.BlogMacros"
+        layer="..interfaces.IBloggingSpecific"
+        permission="zope2.View"
+        />
+    
+    <browser:page
+        for="collective.blogging.interfaces.IEntryMarker"
+        name="entry_macros"
+        class=".macros.EntryMacros"
+        layer="..interfaces.IBloggingSpecific"
+        permission="zope2.View"
+        />
+    
     <!-- Blog -->
     <browser:page
         name="view"
