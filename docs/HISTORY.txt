@@ -4,6 +4,7 @@ Changelog
 1.0b4 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- added share entry portlet [lzdych]
 - blog filter toolbar options now reflects blog contents [lzdych]
 - blog now can show number of posts in it [lzdych]
 - added dutch translation [robgietema]

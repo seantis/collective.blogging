@@ -20,5 +20,13 @@
         i18n:attributes="title title_blog_archive_portlet;
                          description description_blog_archive_portlet"
     />
+
+    <portlet
+        addview="collective.blogging.SharePortlet"
+        title="Share Entry"
+        description="A portlet which displays share links."
+        i18n:attributes="title title_blog_share_portlet;
+                         description description_share_portlet"
+    />
  
 </portlets>
