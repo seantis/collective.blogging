@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2009-12-27 00:33+0000\n"
+"POT-Creation-Date: 2009-12-27 00:58+0000\n"
 "PO-Revision-Date: 2009-12-09 09:58-0300\n"
 "Last-Translator: Davi Lima <davilima6@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -102,7 +102,7 @@ msgstr "<li>Associe o <b>workflow de publicação simples</b> a Arquivos e Image
 msgid "Add Blog Archive portlet"
 msgstr "Adicionar um portlet de Arquivo do Blog"
 
-#: ./portlets/manage.py:196
+#: ./portlets/manage.py:236
 msgid "Add Manage Blog portlet"
 msgstr "Adicionar portlet de Administração do Blog"
 
@@ -120,7 +120,7 @@ msgstr "Adicionar portlet de Arquivo"
 msgid "Add portlet"
 msgstr "Adicionar portlet"
 
-#: ./portlets/manage.py:39
+#: ./portlets/manage.py:40
 msgid "Addable types"
 msgstr "Tipos adicionáveis"
 
@@ -238,7 +238,7 @@ msgstr "Criar entrada"
 msgid "Default portlet"
 msgstr "Portlet padrão"
 
-#: ./portlets/manage.py:49
+#: ./portlets/manage.py:50
 msgid "Drafts"
 msgstr "Esboços"
 
@@ -246,7 +246,7 @@ msgstr "Esboços"
 msgid "Edit Blog Archive portlet"
 msgstr "Editar portlet de Arquivo do Blog"
 
-#: ./portlets/manage.py:213
+#: ./portlets/manage.py:254
 msgid "Edit Manage Blog portlet"
 msgstr "Editar portlet de Gerenciamento do Blog"
 
@@ -291,13 +291,17 @@ msgstr "Entrada de Arquivo"
 msgid "Filter toolbar"
 msgstr "Barra de ferramentas de Filtragem"
 
-#: ./portlets/manage.py:30
+#: ./portlets/manage.py:31
 msgid "Find a blog which will be this portlet used for."
 msgstr "Encontre um blog para o qual este portlet será usado."
 
-#: ./portlets/manage.py:50
+#: ./portlets/manage.py:51
 msgid "Find an user defined blog source with blog entry drafts."
 msgstr "Encontre uma fonte de blog definida pelo usuário com esboços de entradas de blog."
+
+#: ./portlets/manage.py:61
+msgid "Find an user defined folder for blog pictures and photo galleries."
+msgstr ""
 
 #: ./portlets/archive.py:36
 msgid "Find the blog which will be this portlet used for."
@@ -353,7 +357,7 @@ msgstr "Ele apenas requer que você selecione a fonte das entradas de seu blog e
 msgid "Link entry"
 msgstr "Entrada de Link"
 
-#: ./portlets/manage.py:82
+#: ./portlets/manage.py:96
 msgid "Manage Blog: ${blog}"
 msgstr "Gerenciar Blog: ${blog}"
 
@@ -382,6 +386,10 @@ msgstr "Configurações da navegação Próximo/Anterior"
 msgid "Now you can start blogging in your new blog folder by adding standard Plone content. Go to blog folder and use default Plone's UI to add new page for example. Again the only trick you need to do is tick the box with label <b>Blog Entry</b> in the <b>Blog</b> section of the content's edit form."
 msgstr "Agora você pode começar a blogar na sua nova pasta de blog adicionando conteúdos padrão do Plone. Vá à pasta de blog e use a interface padrão do Plone para adicionar uma nova Página, por exemplo. Novamente o único truque que você precisa para fazer isso, é marcar a caixa com a etiqueta <b>Entrada de Blog</b> na seção <b>Blog</b> de seu formulário de edição de conteúdo."
 
+#: ./portlets/manage.py:60
+msgid "Pictures"
+msgstr ""
+
 #. Default: "Plone provides great feature of next / prev navigation for content inside folder but items position in the navigation is calculated by its position in the folder which is not useful for the blog where we list blog entries by its effective date."
 #: ./browser/help.pt:596
 msgid "Plone provides great feature of next / prev navigation for content inside folder but items position in the navigation is calculated by its position in the folder which is not useful for the blog where we list blog entries by its effective date."
@@ -408,7 +416,7 @@ msgstr ""
 msgid "Restrict portlet availability by content types wich entries are based on."
 msgstr ""
 
-#: ./portlets/manage.py:40
+#: ./portlets/manage.py:41
 msgid "Select content types for which you would like to show create link in the portlet."
 msgstr "Selecione os tipos de conteúdo para os quais você gostaria de mostrar um link de criação no portlet."
 
@@ -478,7 +486,7 @@ msgstr "Existe uma nova ação <b>Ativar auto-blogging</b> para ser conectada ao
 msgid "This displays blog archives."
 msgstr "Isto exibe arquivos de blog."
 
-#: ./portlets/manage.py:197
+#: ./portlets/manage.py:237
 msgid "This portlet helps to manage blog's content."
 msgstr "Este portlet ajuda a gerenciar o conteúdo do blog."
 
@@ -766,7 +774,7 @@ msgid "label_galleries"
 msgstr ""
 
 #. Default: "Go to blog…"
-#: ./portlets/manage.pt:57
+#: ./portlets/manage.pt:65
 msgid "label_go_to_blog"
 msgstr ""
 
@@ -776,7 +784,7 @@ msgid "label_go_to_top"
 msgstr ""
 
 #. Default: "Help"
-#: ./portlets/manage.pt:47
+#: ./portlets/manage.pt:55
 msgid "label_help"
 msgstr ""
 
@@ -808,6 +816,11 @@ msgstr ""
 #. Default: "Permalink"
 #: ./browser/blogview.pt:156
 msgid "label_permalink"
+msgstr ""
+
+#. Default: "Pictures"
+#: ./portlets/manage.pt:44
+msgid "label_pictures"
 msgstr ""
 
 #. Default: "Posted by ${author}"

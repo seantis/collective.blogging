@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2009-12-27 00:33+0000\n"
+"POT-Creation-Date: 2009-12-27 00:58+0000\n"
 "PO-Revision-Date: 2009-12-15 16:57+0100\n"
 "Last-Translator: Rob Gietema <rob@fourdigits.nl>\n"
 "MIME-Version: 1.0\n"
@@ -99,7 +99,7 @@ msgstr ""
 msgid "Add Blog Archive portlet"
 msgstr "Voeg Blog Archief portlet toe"
 
-#: ./portlets/manage.py:196
+#: ./portlets/manage.py:236
 msgid "Add Manage Blog portlet"
 msgstr "Voeg Beheer Blog portlet toe"
 
@@ -117,7 +117,7 @@ msgstr "Voeg archief portlet toe"
 msgid "Add portlet"
 msgstr "Voeg portlet toe"
 
-#: ./portlets/manage.py:39
+#: ./portlets/manage.py:40
 msgid "Addable types"
 msgstr "Toe te voegen types"
 
@@ -235,7 +235,7 @@ msgstr "Maak bericht aan"
 msgid "Default portlet"
 msgstr "Standaard portlet"
 
-#: ./portlets/manage.py:49
+#: ./portlets/manage.py:50
 msgid "Drafts"
 msgstr "Concepten"
 
@@ -243,7 +243,7 @@ msgstr "Concepten"
 msgid "Edit Blog Archive portlet"
 msgstr "Wijzig Blog Archief portlet"
 
-#: ./portlets/manage.py:213
+#: ./portlets/manage.py:254
 msgid "Edit Manage Blog portlet"
 msgstr "Wijzig Beheer Blog portlet"
 
@@ -288,13 +288,17 @@ msgstr "Bestand"
 msgid "Filter toolbar"
 msgstr "Filter toolbar"
 
-#: ./portlets/manage.py:30
+#: ./portlets/manage.py:31
 msgid "Find a blog which will be this portlet used for."
 msgstr "Zoek een blog waar deze portlet voor gebruikt moet worden."
 
-#: ./portlets/manage.py:50
+#: ./portlets/manage.py:51
 msgid "Find an user defined blog source with blog entry drafts."
 msgstr "Zoek een eigen bron blog met concept blog berichten."
+
+#: ./portlets/manage.py:61
+msgid "Find an user defined folder for blog pictures and photo galleries."
+msgstr ""
 
 #: ./portlets/archive.py:36
 msgid "Find the blog which will be this portlet used for."
@@ -350,7 +354,7 @@ msgstr ""
 msgid "Link entry"
 msgstr "Link"
 
-#: ./portlets/manage.py:82
+#: ./portlets/manage.py:96
 msgid "Manage Blog: ${blog}"
 msgstr "Beheer Blog ${blog}"
 
@@ -379,6 +383,10 @@ msgstr "Volgende / Vorige navigatie instellingen"
 msgid "Now you can start blogging in your new blog folder by adding standard Plone content. Go to blog folder and use default Plone's UI to add new page for example. Again the only trick you need to do is tick the box with label <b>Blog Entry</b> in the <b>Blog</b> section of the content's edit form."
 msgstr ""
 
+#: ./portlets/manage.py:60
+msgid "Pictures"
+msgstr ""
+
 #. Default: "Plone provides great feature of next / prev navigation for content inside folder but items position in the navigation is calculated by its position in the folder which is not useful for the blog where we list blog entries by its effective date."
 #: ./browser/help.pt:596
 msgid "Plone provides great feature of next / prev navigation for content inside folder but items position in the navigation is calculated by its position in the folder which is not useful for the blog where we list blog entries by its effective date."
@@ -405,7 +413,7 @@ msgstr ""
 msgid "Restrict portlet availability by content types wich entries are based on."
 msgstr ""
 
-#: ./portlets/manage.py:40
+#: ./portlets/manage.py:41
 msgid "Select content types for which you would like to show create link in the portlet."
 msgstr "Selecteer content typen voor welke je een voeg toe link wilt tonen in de portlet."
 
@@ -475,7 +483,7 @@ msgstr ""
 msgid "This displays blog archives."
 msgstr "Dit geeft blog archieven weer."
 
-#: ./portlets/manage.py:197
+#: ./portlets/manage.py:237
 msgid "This portlet helps to manage blog's content."
 msgstr "Deze portlet helpt bij het beheren van blog inhoud."
 
@@ -763,7 +771,7 @@ msgid "label_galleries"
 msgstr "Galerijen"
 
 #. Default: "Go to blog…"
-#: ./portlets/manage.pt:57
+#: ./portlets/manage.pt:65
 msgid "label_go_to_blog"
 msgstr "Ga naar de blog&hellip;"
 
@@ -773,7 +781,7 @@ msgid "label_go_to_top"
 msgstr "Ga naar boven"
 
 #. Default: "Help"
-#: ./portlets/manage.pt:47
+#: ./portlets/manage.pt:55
 msgid "label_help"
 msgstr "Help"
 
@@ -806,6 +814,11 @@ msgstr "Nieuwste&hellip;"
 #: ./browser/blogview.pt:156
 msgid "label_permalink"
 msgstr "Permalink"
+
+#. Default: "Pictures"
+#: ./portlets/manage.pt:44
+msgid "label_pictures"
+msgstr ""
 
 #. Default: "Posted by ${author}"
 #: ./browser/blogview.pt:144

@@ -39,6 +39,14 @@
                 Drafts
             </a>
         </div>
+        <div>
+            <img tal:replace="structure context/image_icon.gif"/>
+            <a href="" title="Go to blog pictures folder"
+                tal:attributes="href view/pictures_url"
+                i18n:translate="label_pictures">
+                Pictures
+            </a>
+        </div>
     </dd>
     
     <dd class="portletItem odd">
