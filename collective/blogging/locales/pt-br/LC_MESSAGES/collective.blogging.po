@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2009-12-25 20:20+0000\n"
+"POT-Creation-Date: 2009-12-27 00:33+0000\n"
 "PO-Revision-Date: 2009-12-09 09:58-0300\n"
 "Last-Translator: Davi Lima <davilima6@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -105,6 +105,10 @@ msgstr "Adicionar um portlet de Arquivo do Blog"
 #: ./portlets/manage.py:196
 msgid "Add Manage Blog portlet"
 msgstr "Adicionar portlet de Administração do Blog"
+
+#: ./portlets/share.py:140
+msgid "Add Share Entry portlet"
+msgstr ""
 
 #. Default: "Add archive portlet"
 #: ./browser/help.pt:507
@@ -246,9 +250,17 @@ msgstr "Editar portlet de Arquivo do Blog"
 msgid "Edit Manage Blog portlet"
 msgstr "Editar portlet de Gerenciamento do Blog"
 
+#: ./portlets/share.py:155
+msgid "Edit Share Entry portlet"
+msgstr ""
+
 #: ./actions/autoblog.py:25
 msgid "Enable auto-blogging"
 msgstr "Ativar auto-bloggin"
+
+#: ./portlets/share.py:54
+msgid "Enter portlet tile."
+msgstr ""
 
 #. Default: "Event entry"
 #: ./browser/help.pt:358
@@ -380,9 +392,33 @@ msgstr "O Plone fornece um excelente mecanismo de navegação próximo/anterior 
 msgid "Portlet settings"
 msgstr "Configurações do portlet"
 
+#: ./portlets/share.py:53
+msgid "Portlet title"
+msgstr ""
+
+#: ./portlets/share.py:67
+msgid "Providers"
+msgstr ""
+
+#: ./portlets/share.py:59
+msgid "Restrict by types"
+msgstr ""
+
+#: ./portlets/share.py:60
+msgid "Restrict portlet availability by content types wich entries are based on."
+msgstr ""
+
 #: ./portlets/manage.py:40
 msgid "Select content types for which you would like to show create link in the portlet."
 msgstr "Selecione os tipos de conteúdo para os quais você gostaria de mostrar um link de criação no portlet."
+
+#: ./portlets/share.py:68
+msgid "Select enabled sharing services."
+msgstr ""
+
+#: ./portlets/share.py:93
+msgid "Share post"
+msgstr ""
 
 #. Default: "Since blogs and blog entries are still just a Plone's content it also supports content translations using ${url} extension without any extra changes.<br /> UI of <b>Blogging</b> extra features including this user's guide also supports i18n based translations where the following are available at this moment:"
 #: ./browser/help.pt:668
@@ -445,6 +481,10 @@ msgstr "Isto exibe arquivos de blog."
 #: ./portlets/manage.py:197
 msgid "This portlet helps to manage blog's content."
 msgstr "Este portlet ajuda a gerenciar o conteúdo do blog."
+
+#: ./portlets/share.py:141
+msgid "This portlet renders link(s) to share an entry."
+msgstr ""
 
 #. Default: "Those who want to host their pictures locally rather then link to external service, there is simple way how to create your own galleries using <b>Plone Folders</b> with <b>thumbnail view</b> selected in the <b>display</b> menu.<br /> These local galleries can be easily liked to your blog entries using Plone's content field called <b>Related Items</b> which can be found in the <b>Categorization</b> section of each entry's edit form."
 #: ./browser/help.pt:453
@@ -650,6 +690,11 @@ msgstr ""
 msgid "label_blog_posts_count"
 msgstr ""
 
+#. Default: "Click to read full entry."
+#: ./browser/blogview.pt:516
+msgid "label_click_to_read_full_entry"
+msgstr ""
+
 #. Default: "Comments (${comments})"
 #: ./browser/blogview.pt:532
 msgid "label_comments_with_count"
@@ -775,7 +820,7 @@ msgstr ""
 msgid "label_read_comments_title"
 msgstr ""
 
-#. Default: "Click to read full entry."
+#. Default: "Read more"
 #: ./browser/blogview.pt:516
 msgid "label_read_more"
 msgstr ""

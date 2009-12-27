@@ -57,7 +57,7 @@ class ISharePortlet(IPortletDataProvider):
     restrict_types = List(
         required = False,
         title = _(u"Restrict by types"),
-        description = _(u"Restrict portlet by content types"),
+        description = _(u"Restrict portlet availability by content types wich entries are based on."),
         value_type = Choice(vocabulary =
             'plone.app.vocabularies.ReallyUserFriendlyTypes'),
     )

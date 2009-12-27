@@ -517,7 +517,7 @@
                                                     class="actionReadMore"
                                                     tal:attributes="href string:${item_url}"
                                                     i18n:translate="label_read_more"
-                                                    i18n:attributes="title label_read_more"
+                                                    i18n:attributes="title label_click_to_read_full_entry"
                                                     >Read more</a>
                                             </tal:block>
                                             
