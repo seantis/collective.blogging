@@ -92,7 +92,7 @@
                     tal:define="kss_class python:getKssClasses('text',
                                 templateId=templateId, macro='text-field-view');
                                 text context/getText|nothing"
-                    tal:condition="python:text and not batch"
+                    tal:condition="text"
                     tal:attributes="class python:context.Format() in ('text/structured',
                                     'text/x-rst', ) and 'stx' + kss_class or 'plain' + kss_class">
                     <div metal:define-slot="inside" tal:replace="structure text">The body</div>
