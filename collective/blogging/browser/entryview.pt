@@ -42,13 +42,13 @@
                 
                 <metal:imageContent use-macro="context/entry_macros/macros/image_content"/>
                 
-                <div class="visualClear" id="clear-before-entry-footer"><!-- --></div>
-                
-                <metal:entryFooter use-macro="context/entry_macros/macros/entry_footer"/>
-                
                 <div metal:use-macro="here/document_relateditems/macros/relatedItems">
                     Show related items if they exist
                 </div>
+                
+                <div class="visualClear" id="clear-before-entry-footer"><!-- --></div>
+                
+                <metal:entryFooter use-macro="context/entry_macros/macros/entry_footer"/>
         
                 <div tal:replace="structure provider:plone.belowcontentbody" />        
 

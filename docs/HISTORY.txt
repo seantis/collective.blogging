@@ -4,6 +4,8 @@ Changelog
 1.0b4 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- unified entry rendering in blog and entry view [lzdych]
+- moved blog and entry view snippets into separated macros [lzdych]
 - added pictures folder reference to manage blog portlet [lzdych]
 - enabled text contents of smart folders in blog view (if nonempty) [lzdych]
 - fixed i18n markup for read more link [lzdych]
