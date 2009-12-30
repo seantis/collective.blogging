@@ -16,7 +16,7 @@
     </p>
 </metal:blogDesc>
 
-<metal:toolbar define-macro="toolbar">
+<metal:toolbar define-macro="toolbar" i18n:domain="collective.blogging">
     <tal:toolbar condition="view/show_toolbar">
         <dl id="blog-filter" class="collapsible inline collapsedOnLoad"
             tal:define="filter_info view/filter_info">
@@ -53,7 +53,7 @@
     </tal:toolbar>
 </metal:toolbar>
 
-<metal:postCount define-macro="post_count">
+<metal:postCount define-macro="post_count" i18n:domain="collective.blogging">
     <div class="blogPostsCount discreet"
         tal:condition="view/show_count"
         i18n:translate="label_blog_posts_count">
@@ -100,7 +100,7 @@
     </tal:body>
 </metal:entryText>
 
-<metal:entryDocumentByLine define-macro="entry_documentbyline">
+<metal:entryDocumentByLine define-macro="entry_documentbyline" i18n:domain="collective.blogging">
     <div class="documentByLine" tal:condition="python: site_properties.allowAnonymousViewAbout or not isAnon">
         <tal:name tal:condition="item_creator"
             tal:define="author python:view.tools.membership().getMemberInfo(item_creator)">
@@ -468,7 +468,7 @@
 </metal:entryRelated>
 
 
-<metal:entryFooter define-macro="entry_footer">
+<metal:entryFooter define-macro="entry_footer" i18n:domain="collective.blogging">
     <p class="tileFooter">
         <tal:block tal:condition="python:item_date and item_date != None">
             <span class="actionDate" tal:content="item_date">
@@ -511,7 +511,7 @@
     </p>
 </metal:entryFooter>
 
-<metal:blogEmpty define-macro="blog_empty">
+<metal:blogEmpty define-macro="blog_empty" i18n:domain="collective.blogging">
     <p class="discreet"
         tal:condition="not:batch"
         i18n:translate="description_no_items_in_blog">

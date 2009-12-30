@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2009-12-27 00:58+0000\n"
+"POT-Creation-Date: 2009-12-30 16:44+0000\n"
 "PO-Revision-Date: 2009-12-27 01:59+0100\n"
 "Last-Translator: Lukas Zdych <lukas.zdych@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -9,7 +9,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8 latin2\n"
-"Language-Team: \n"
 
 #. Default: "<b><i>And as a bonus the blogging package comes with new gallery view which can be selected from the <b>Display</b> menu and you get a simple but fancy picture gallery. </i></b>"
 #: ./browser/help.pt:461
@@ -542,7 +541,7 @@ msgid "desc_blogging_help"
 msgstr "Zde naleznete základní uživatelskou nápovědu a dokumentaci."
 
 #. Default: "There are currently no contents in this blog."
-#: ./browser/blogview.pt:559
+#: ./browser/blog_macros.pt:515
 msgid "description_no_items_in_blog"
 msgstr "V tomto blogu momentálně není žádný obsah."
 
@@ -692,17 +691,17 @@ msgid "label_blog_entry"
 msgstr "Položka Blogu"
 
 #. Default: "Found ${count} posts."
-#: ./browser/blogview.pt:83
+#: ./browser/blog_macros.pt:60
 msgid "label_blog_posts_count"
 msgstr "Nalezeno ${count} příspěvků."
 
 #. Default: "Click to read full entry."
-#: ./browser/blogview.pt:516
+#: ./browser/blog_macros.pt:481
 msgid "label_click_to_read_full_entry"
 msgstr "Klikněte pro zobrazení celého příspěvku."
 
 #. Default: "Comments (${comments})"
-#: ./browser/blogview.pt:532
+#: ./browser/blog_macros.pt:497
 msgid "label_comments_with_count"
 msgstr "Komentáře (${comments})"
 
@@ -717,12 +716,12 @@ msgid "label_drafts"
 msgstr "Koncepty"
 
 #. Default: "Edit"
-#: ./browser/blogview.pt:539
+#: ./browser/blog_macros.pt:504
 msgid "label_edit"
 msgstr "Upravit"
 
 #. Default: "Click to edit this entry."
-#: ./browser/blogview.pt:539
+#: ./browser/blog_macros.pt:504
 msgid "label_edit_title"
 msgstr "Klikněte sem pro editaci příspěvku."
 
@@ -747,17 +746,17 @@ msgid "label_examples"
 msgstr "Příklady"
 
 #. Default: "filed under:"
-#: ./browser/blogview.pt:167
+#: ./browser/blog_macros.pt:132
 msgid "label_filed_under"
 msgstr "kategorie:"
 
 #. Default: "Filter"
-#: ./browser/blogview.pt:72
+#: ./browser/blog_macros.pt:47
 msgid "label_filter"
 msgstr "Filtr"
 
 #. Default: "Filter posts"
-#: ./browser/blogview.pt:49
+#: ./browser/blog_macros.pt:24
 msgid "label_filter_posts"
 msgstr "Filtrovat příspěvky"
 
@@ -812,7 +811,7 @@ msgid "label_newest"
 msgstr "Nejnovější..."
 
 #. Default: "Permalink"
-#: ./browser/blogview.pt:156
+#: ./browser/blog_macros.pt:121
 msgid "label_permalink"
 msgstr "Permalink"
 
@@ -822,17 +821,17 @@ msgid "label_pictures"
 msgstr "Obrázky"
 
 #. Default: "Posted by ${author}"
-#: ./browser/blogview.pt:144
+#: ./browser/blog_macros.pt:109
 msgid "label_posted_by"
 msgstr "Author ${author}"
 
 #. Default: "Read comments on this entry."
-#: ./browser/blogview.pt:526
+#: ./browser/blog_macros.pt:491
 msgid "label_read_comments_title"
 msgstr "Přečíst komentáře k tomuto příspěvku."
 
 #. Default: "Read more"
-#: ./browser/blogview.pt:516
+#: ./browser/blog_macros.pt:481
 msgid "label_read_more"
 msgstr "Čtěte více"
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2009-12-27 00:58+0000\n"
+"POT-Creation-Date: 2009-12-30 16:44+0000\n"
 "PO-Revision-Date: 2009-12-15 16:57+0100\n"
 "Last-Translator: Rob Gietema <rob@fourdigits.nl>\n"
 "MIME-Version: 1.0\n"
@@ -541,7 +541,7 @@ msgid "desc_blogging_help"
 msgstr "Hier is wat gebruikers help en bloggen informatie."
 
 #. Default: "There are currently no contents in this blog."
-#: ./browser/blogview.pt:559
+#: ./browser/blog_macros.pt:515
 msgid "description_no_items_in_blog"
 msgstr "Deze blog bevat op dit moment geen inhoud."
 
@@ -691,17 +691,17 @@ msgid "label_blog_entry"
 msgstr "Blog item"
 
 #. Default: "Found ${count} posts."
-#: ./browser/blogview.pt:83
+#: ./browser/blog_macros.pt:60
 msgid "label_blog_posts_count"
 msgstr ""
 
 #. Default: "Click to read full entry."
-#: ./browser/blogview.pt:516
+#: ./browser/blog_macros.pt:481
 msgid "label_click_to_read_full_entry"
 msgstr ""
 
 #. Default: "Comments (${comments})"
-#: ./browser/blogview.pt:532
+#: ./browser/blog_macros.pt:497
 msgid "label_comments_with_count"
 msgstr "Reacties (${comments})"
 
@@ -716,12 +716,12 @@ msgid "label_drafts"
 msgstr "Concepten"
 
 #. Default: "Edit"
-#: ./browser/blogview.pt:539
+#: ./browser/blog_macros.pt:504
 msgid "label_edit"
 msgstr "Bewerken"
 
 #. Default: "Click to edit this entry."
-#: ./browser/blogview.pt:539
+#: ./browser/blog_macros.pt:504
 msgid "label_edit_title"
 msgstr "Klik hier om dit bericht te bewerken."
 
@@ -746,17 +746,17 @@ msgid "label_examples"
 msgstr "Voorbeelden"
 
 #. Default: "filed under:"
-#: ./browser/blogview.pt:167
+#: ./browser/blog_macros.pt:132
 msgid "label_filed_under"
 msgstr "geplaatst onder:"
 
 #. Default: "Filter"
-#: ./browser/blogview.pt:72
+#: ./browser/blog_macros.pt:47
 msgid "label_filter"
 msgstr "Filter"
 
 #. Default: "Filter posts"
-#: ./browser/blogview.pt:49
+#: ./browser/blog_macros.pt:24
 msgid "label_filter_posts"
 msgstr "Filter berichten"
 
@@ -811,7 +811,7 @@ msgid "label_newest"
 msgstr "Nieuwste&hellip;"
 
 #. Default: "Permalink"
-#: ./browser/blogview.pt:156
+#: ./browser/blog_macros.pt:121
 msgid "label_permalink"
 msgstr "Permalink"
 
@@ -821,17 +821,17 @@ msgid "label_pictures"
 msgstr ""
 
 #. Default: "Posted by ${author}"
-#: ./browser/blogview.pt:144
+#: ./browser/blog_macros.pt:109
 msgid "label_posted_by"
 msgstr "Geplaatst door ${author}"
 
 #. Default: "Read comments on this entry."
-#: ./browser/blogview.pt:526
+#: ./browser/blog_macros.pt:491
 msgid "label_read_comments_title"
 msgstr "Lees reacties op dit bericht."
 
 #. Default: "Read more"
-#: ./browser/blogview.pt:516
+#: ./browser/blog_macros.pt:481
 #, fuzzy
 msgid "label_read_more"
 msgstr "Lees meer"

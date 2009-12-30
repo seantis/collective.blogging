@@ -100,7 +100,7 @@
     </tal:image>
 </metal:imageContent>
 
-<metal:entryFooter define-macro="entry_footer">
+<metal:entryFooter define-macro="entry_footer" i18n:domain="collective.blogging">
     <p class="tileFooter"
         tal:define="toLocalizedTime nocall:toLocalizedTime|nocall:context/@@plone/toLocalizedTime;                                
                     item_url    context/absolute_url;
