@@ -2,13 +2,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
 "POT-Creation-Date: 2009-12-30 16:44+0000\n"
-"PO-Revision-Date: 2009-12-15 16:57+0100\n"
+"PO-Revision-Date: 2010-01-06 16:09+0100\n"
 "Last-Translator: Rob Gietema <rob@fourdigits.nl>\n"
+"Language-Team:  <support@fourdigits.nl>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Language-Code: nl\n"
+"Language-Name: Dutch\n"
 "Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.blogging\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: NETHERLANDS\n"
 
 #. Default: "<b><i>And as a bonus the blogging package comes with new gallery view which can be selected from the <b>Display</b> menu and you get a simple but fancy picture gallery. </i></b>"
 #: ./browser/help.pt:461
@@ -105,7 +111,7 @@ msgstr "Voeg Beheer Blog portlet toe"
 
 #: ./portlets/share.py:140
 msgid "Add Share Entry portlet"
-msgstr ""
+msgstr "Voeg Deel Item portlet toe"
 
 #. Default: "Add archive portlet"
 #: ./browser/help.pt:507
@@ -249,7 +255,7 @@ msgstr "Wijzig Beheer Blog portlet"
 
 #: ./portlets/share.py:155
 msgid "Edit Share Entry portlet"
-msgstr ""
+msgstr "Wijzig Deel Item portlet"
 
 #: ./actions/autoblog.py:25
 msgid "Enable auto-blogging"
@@ -257,7 +263,7 @@ msgstr "Zet auto-bloggen aan"
 
 #: ./portlets/share.py:54
 msgid "Enter portlet tile."
-msgstr ""
+msgstr "Geef de titel van de portlet."
 
 #. Default: "Event entry"
 #: ./browser/help.pt:358
@@ -298,7 +304,7 @@ msgstr "Zoek een eigen bron blog met concept blog berichten."
 
 #: ./portlets/manage.py:61
 msgid "Find an user defined folder for blog pictures and photo galleries."
-msgstr ""
+msgstr "Selecteer een persoonlijke map voor blog afbeeldingen en foto gallerijen."
 
 #: ./portlets/archive.py:36
 msgid "Find the blog which will be this portlet used for."
@@ -385,7 +391,7 @@ msgstr ""
 
 #: ./portlets/manage.py:60
 msgid "Pictures"
-msgstr ""
+msgstr "Afbeeldingen"
 
 #. Default: "Plone provides great feature of next / prev navigation for content inside folder but items position in the navigation is calculated by its position in the folder which is not useful for the blog where we list blog entries by its effective date."
 #: ./browser/help.pt:596
@@ -399,19 +405,19 @@ msgstr "Portlet instellingen"
 
 #: ./portlets/share.py:53
 msgid "Portlet title"
-msgstr ""
+msgstr "Portlet titel"
 
 #: ./portlets/share.py:67
 msgid "Providers"
-msgstr ""
+msgstr "Aanbieders"
 
 #: ./portlets/share.py:59
 msgid "Restrict by types"
-msgstr ""
+msgstr "Scherm af op typen"
 
 #: ./portlets/share.py:60
 msgid "Restrict portlet availability by content types wich entries are based on."
-msgstr ""
+msgstr "Scherm portlet beschikbaarheid op basis van de content typen waar de items op zijn gebaseerd."
 
 #: ./portlets/manage.py:41
 msgid "Select content types for which you would like to show create link in the portlet."
@@ -419,11 +425,11 @@ msgstr "Selecteer content typen voor welke je een voeg toe link wilt tonen in de
 
 #: ./portlets/share.py:68
 msgid "Select enabled sharing services."
-msgstr ""
+msgstr "Selecteer de beschikbare delen opties."
 
 #: ./portlets/share.py:93
 msgid "Share post"
-msgstr ""
+msgstr "Blog item delen"
 
 #. Default: "Since blogs and blog entries are still just a Plone's content it also supports content translations using ${url} extension without any extra changes.<br /> UI of <b>Blogging</b> extra features including this user's guide also supports i18n based translations where the following are available at this moment:"
 #: ./browser/help.pt:668
@@ -489,7 +495,7 @@ msgstr "Deze portlet helpt bij het beheren van blog inhoud."
 
 #: ./portlets/share.py:141
 msgid "This portlet renders link(s) to share an entry."
-msgstr ""
+msgstr "Deze portlet toont links die gebruikt kunnen worden om dit item te delen."
 
 #. Default: "Those who want to host their pictures locally rather then link to external service, there is simple way how to create your own galleries using <b>Plone Folders</b> with <b>thumbnail view</b> selected in the <b>display</b> menu.<br /> These local galleries can be easily liked to your blog entries using Plone's content field called <b>Related Items</b> which can be found in the <b>Categorization</b> section of each entry's edit form."
 #: ./browser/help.pt:453
@@ -648,7 +654,7 @@ msgstr "Plak embed code van bijvoorbeeld youtube, google of andere video content
 #. Default: "Tick to enable / disable blog contents count displaying."
 #: ./extenders.py:99
 msgid "help_enable_count"
-msgstr ""
+msgstr "Schakel het blog inhoud aantal in en uit."
 
 #. Default: "Tick to enable / disable blog toolbar on the top of its page."
 #: ./extenders.py:86
@@ -693,12 +699,12 @@ msgstr "Blog item"
 #. Default: "Found ${count} posts."
 #: ./browser/blog_macros.pt:60
 msgid "label_blog_posts_count"
-msgstr ""
+msgstr "Klik om het blog inhoud aantal te tonen."
 
 #. Default: "Click to read full entry."
 #: ./browser/blog_macros.pt:481
 msgid "label_click_to_read_full_entry"
-msgstr ""
+msgstr "Lees meer"
 
 #. Default: "Comments (${comments})"
 #: ./browser/blog_macros.pt:497
@@ -733,7 +739,7 @@ msgstr "Embed"
 #. Default: "Display count"
 #: ./extenders.py:97
 msgid "label_enable_count"
-msgstr ""
+msgstr "Geef aantal weer"
 
 #. Default: "Toolbar enabled"
 #: ./extenders.py:84
@@ -818,7 +824,7 @@ msgstr "Permalink"
 #. Default: "Pictures"
 #: ./portlets/manage.pt:44
 msgid "label_pictures"
-msgstr ""
+msgstr "Afbeeldingen"
 
 #. Default: "Posted by ${author}"
 #: ./browser/blog_macros.pt:109
@@ -832,7 +838,6 @@ msgstr "Lees reacties op dit bericht."
 
 #. Default: "Read more"
 #: ./browser/blog_macros.pt:481
-#, fuzzy
 msgid "label_read_more"
 msgstr "Lees meer"
 
