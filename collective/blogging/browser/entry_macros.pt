@@ -82,7 +82,7 @@
             </p>
             
             <div class="fancybox visualNoPrint" tal:attributes="id string:fancy_${context/UID}"> 
-                <div class="close"/>
+                <div class="close">&nbsp;</div>
                 
                 <!-- large image --> 
                 <img src=""
@@ -330,7 +330,7 @@
             </p>
             
             <div class="fancybox visualNoPrint" tal:attributes="id string:fancy_${context/UID}"> 
-                <div class="close">&nbsp;</div>
+                
                 
                 <!-- large image --> 
                 <img src=""

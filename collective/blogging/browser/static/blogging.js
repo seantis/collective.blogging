@@ -1,12 +1,12 @@
 /* FANCYBOX */
 
 jq(document).ready(function () {
-    jq("img[rel]").overlay({
+    jq("img[rel]").overlay(/*{
         'absolute':false,
         'speed':'fast',
         'top':-20,
         'left':-20
-    });
+    }*/);
 });
 
 

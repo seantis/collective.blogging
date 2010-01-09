@@ -36,6 +36,8 @@
                 
                 <metal:postCount use-macro="context/blog_macros/macros/post_count"/>
                 
+                <div class="visualClear" id="clear-before-entries-listing"><!-- --></div>
+                
                 <tal:block condition="not:batch">
                     <div tal:replace="structure provider:plone.abovecontentbody" />
                 </tal:block>

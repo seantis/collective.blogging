@@ -10,7 +10,7 @@
     /* styling */ 
     background-color:#333; 
     
-    width:786px;     
+    width:768px;     
     min-height:200px; 
     border:1px solid #666; 
     
@@ -36,12 +36,14 @@
     color:white;
     font-weight:bold; 
     font-size:15px; 
-    margin:0 0 -10px 0; 
+    margin:0;
+    padding:5px 15px 0 15px;
 }
 
 .fancydetails p { 
     font-size:11px; 
-    color:#AABBAA; 
+    color:#AABBAA;
+    padding:0 15px;
 } 
 
 
@@ -200,14 +202,14 @@ td.entryMap div.googleMapLocation {
     font-weight:bold;
 }
 
-dl#blog-filter dd.collapsibleContent {
-    padding:1em;
-}
-
 dl#blog-filter dt.collapsibleHeader {
     border:1px solid #8CACBB;
     background-color:#DEE7EC;
     padding:0.4em 1em 0.4em 2em;
+}
+
+dl#blog-filter dd.collapsibleContent {
+    padding:1em;
 }
 
 .blogPostsCount {
