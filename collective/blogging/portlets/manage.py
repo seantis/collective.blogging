@@ -220,6 +220,10 @@ class Renderer(base.Renderer):
     def header(self):
         blog_title = self.blog() and self.blog().title
         return _(u"Manage Blog: ${blog}", mapping={'blog':blog_title})
+    
+    @property
+    def show_footer(self):
+        return not bool(self.blog() == self.context)
 
 class AddForm(base.AddForm):
     """Portlet add form.

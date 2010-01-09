@@ -5,7 +5,7 @@
     </roles>
       
     <permissions>
-        <permission name="collective.blogging: Blog" acquire="False">
+        <permission name="collective.blogging: Blog" acquire="True">
             <role name="Manager" />
             <role name="Blogger" />
         </permission>    

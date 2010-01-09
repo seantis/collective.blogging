@@ -4,6 +4,8 @@ Changelog
 1.0b4 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- blog link from manage portlet excluded in the blog context [lzdych]
+- blogging permission is now acquired by default [lzdych]
 - unified entry rendering in blog and entry view [lzdych]
 - moved blog and entry view snippets into separated macros [lzdych]
 - added pictures folder reference to manage blog portlet [lzdych]

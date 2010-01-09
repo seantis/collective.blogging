@@ -60,7 +60,7 @@
         </div>
     </dd>
 
-    <dd class="portletFooter">
+    <dd class="portletFooter" tal:condition="view/show_footer">
         <span class="portletBottomLeft"></span>
         <a tal:attributes="href blog_url"
             i18n:translate="label_go_to_blog">
