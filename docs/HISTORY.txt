@@ -4,6 +4,7 @@ Changelog
 1.0b4 (unreleased)
 ~~~~~~~~~~~~~~~~~~
 
+- fixed unindexed blogging content by package reinstallation [lzdych]
 - blog link from manage portlet excluded in the blog context [lzdych]
 - blogging permission is now acquired by default [lzdych]
 - unified entry rendering in blog and entry view [lzdych]

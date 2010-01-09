@@ -2,6 +2,7 @@ from logging import getLogger
 from Products.CMFCore.utils import getToolByName
 from plone.browserlayer import utils as layerutils
 from collective.blogging.interfaces import IBloggingSpecific
+from collective.blogging.interfaces import IEntryMarker, IBlogMarker
 
 log = getLogger('collective.blogging')
 
@@ -41,6 +42,19 @@ def setupCatalog(context):
         if mt not in mtds:
             catalog.addColumn(mt)
             log.info('Catalog metadata "%s" installed.' % mt)
+
+    # re-index blog content if exists (useful when reinstalling)
+    blogs = catalog(object_provides=IBlogMarker.__identifier__)
+    for blog in blogs:
+        obj = blog.getObject()
+        obj.reindexObject(idxs=INDEXES.keys())
+    log.info('Reindexed %d blogs.' % len(blogs))
+    
+    entries = catalog(object_provides=IEntryMarker.__identifier__)
+    for entry in entries:
+        obj = entry.getObject()
+        obj.reindexObject(idxs=INDEXES.keys())
+    log.info('Reindexed %d entries.' % len(entries))
 
 
 def resetCatalog(context):
