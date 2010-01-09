@@ -13,6 +13,7 @@
     width:768px;     
     min-height:200px; 
     border:1px solid #666; 
+    text-align:center;
     
     /* CSS3 styling for latest browsers */ 
     -moz-box-shadow:0 0 90px 5px #000; 
