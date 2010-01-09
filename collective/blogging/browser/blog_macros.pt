@@ -469,7 +469,7 @@
 
 
 <metal:entryFooter define-macro="entry_footer" i18n:domain="collective.blogging">
-    <p class="tileFooter">
+    <div class="tileFooter">
         <tal:block tal:condition="python:item_date and item_date != None">
             <span class="actionDate" tal:content="item_date">
                 August 16, 2001 at 23:35:59
@@ -508,7 +508,7 @@
                 i18n:attributes="title label_edit_title">
                 Edit</a>
         </tal:block>
-    </p>
+    </div>
 </metal:entryFooter>
 
 <metal:blogEmpty define-macro="blog_empty" i18n:domain="collective.blogging">

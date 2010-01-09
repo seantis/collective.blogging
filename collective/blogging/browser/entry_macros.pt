@@ -101,7 +101,7 @@
 </metal:imageContent>
 
 <metal:entryFooter define-macro="entry_footer" i18n:domain="collective.blogging">
-    <p class="tileFooter"
+    <div class="tileFooter"
         tal:define="toLocalizedTime nocall:toLocalizedTime|nocall:context/@@plone/toLocalizedTime;                                
                     item_url    context/absolute_url;
                     item_date   python:toLocalizedTime(context.Date(),long_format=1);
@@ -137,7 +137,7 @@
                 i18n:attributes="title label_edit_title">
                 Edit</a>
         </tal:block>
-    </p>
+    </div>
 </metal:entryFooter>
 
 <metal:eventInfo define-macro="event_info">
