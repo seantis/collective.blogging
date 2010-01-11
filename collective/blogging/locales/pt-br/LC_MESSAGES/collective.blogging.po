@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2009-12-30 16:44+0000\n"
-"PO-Revision-Date: 2009-12-09 09:58-0300\n"
+"PO-Revision-Date: 2010-01-10 15:30-0300\n"
 "Last-Translator: Davi Lima <davilima6@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -12,6 +12,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "X-Is-Fallback-For: pt\n"
+"Language-Team: \n"
 
 #. Default: "<b><i>And as a bonus the blogging package comes with new gallery view which can be selected from the <b>Display</b> menu and you get a simple but fancy picture gallery. </i></b>"
 #: ./browser/help.pt:461
@@ -56,7 +57,7 @@ msgstr "<b>Nota:</b> A função de <b>auto-redirecionamento de link</b> ainda es
 #. Default: "<b>Note:</b> Since Plone's Large Folder doesn't support next / prev navigation, there is no next / prev enable checkbox and it is <b>always enabled for Large Folder based blogs.</b>"
 #: ./browser/help.pt:608
 msgid "<b>Note:</b> Since Plone's Large Folder doesn't support next / prev navigation, there is no next / prev enable checkbox and it is <b>always enabled for Large Folder based blogs.</b>"
-msgstr ""
+msgstr "<b>OBS:</b> Já que a Pasta Gigante do Plone não suporta navegação de anterior/próximo, não há caixa de seleção anterior/próximo e ela está <b>sempre ativa para blogs baseados em Pastas Gigantes.</b>"
 
 #. Default: "<b>Note:</b> There is additional <b>edit</b> link for quick access to entry edit form just from the blog view if you have permissions to modify an entry."
 #: ./browser/help.pt:220
@@ -76,17 +77,17 @@ msgstr "<b>Nota:</b> Você pode transformar pastas em blogs a qualquer momento."
 #. Default: "<b>Warning:</b> Blog folder will not list entry which hasn't an effective date which is (by default in Plone) set automatically when content is published. To access not yet published entries (drafts) create a smart folder and link it with ${url}."
 #: ./browser/help.pt:227
 msgid "<b>Warning:</b> Blog folder will not list entry which hasn't an effective date which is (by default in Plone) set automatically when content is published. To access not yet published entries (drafts) create a smart folder and link it with ${url}."
-msgstr ""
+msgstr "<b>Aviso:</b> A pasta de blogs não listará entradas que não possuam data de efetivação, um parâmetro configurado automaticamente quando o conteúdo é publicado. Para acessar entradas ainda não publicadas (esboços), crie uma Coleção e faça um link dela para ${url}."
 
 #. Default: "<li><b>English</b> (default) — <i>Lukas Zdych (lzdych)</i></li> <li><b>Czech</b> — <i>Lukas Zdych (lzdych)</i></li> <li><b>Italian</b> — <i>Enzo Cesanelli (luthy)</i></li> <li><b>Portuguese</b> — <i>Davi Lima (davilima6)</i></li> <li><b>Dutch</b> — <i>Rob Gietema (robgietema)</i></li>"
 #: ./browser/help.pt:673
 msgid "<li><b>English</b> (default) &mdash; <i>Lukas Zdych (lzdych)</i></li> <li><b>Czech</b> &mdash; <i>Lukas Zdych (lzdych)</i></li> <li><b>Italian</b> &mdash; <i>Enzo Cesanelli (luthy)</i></li> <li><b>Portuguese</b> &mdash; <i>Davi Lima (davilima6)</i></li> <li><b>Dutch</b> &mdash; <i>Rob Gietema (robgietema)</i></li>"
-msgstr ""
+msgstr "<li><b>Inglês</b> (padrão) &mdash; <i>Lukas Zdych (lzdych)</i></li> <li><b>Tcheco</b> &mdash; <i>Lukas Zdych (lzdych)</i></li> <li><b>Italiano</b> &mdash; <i>Enzo Cesanelli (luthy)</i></li> <li><b>Português</b> &mdash; <i>Davi Lima (davilima6)</i></li> <li><b>Alemão</b> &mdash; <i>Rob Gietema (robgietema)</i></li>"
 
 #. Default: "<li><b>Full view</b> - <i>include body text of listed entries on the blog view</i></li> <li><b>Batch size</b> - <i>select number of entries listed per page</i></li> <li><b>Toolbar enabled</b> - <i>enable / disable the filter toolbar appearance</i></li>"
 #: ./browser/help.pt:169
 msgid "<li><b>Full view</b> - <i>include body text of listed entries on the blog view</i></li> <li><b>Batch size</b> - <i>select number of entries listed per page</i></li> <li><b>Toolbar enabled</b> - <i>enable / disable the filter toolbar appearance</i></li>"
-msgstr ""
+msgstr "<li><b>Exibição completa</b> - <i>inclui o corpo de texto das entradas listadas na exibição do blog</i></li> <li><b>Tamanho do lote</b> - <i>selecione o número de entradas listadas por página</i></li> <li><b>Barra de ferramentas ativada</b> - <i>ative/desative a exibição da barra de ferramentas de filtragem</i></li>"
 
 #. Default: "<li><b>object_provides</b> — <i>select <b>collective.bloggin.interfaces.IEntryMarker</b> item from the list</i></li> <li><b>Location</b> — <i>select your blog's folder (optional)</i></li> <li><b>State</b> — <i>mostly you will select <b>Published</b></i></li> <li><b>Sort order</b> — <i>select effective date and tick <b>reverse</b> checkbox</i></li>"
 #: ./browser/help.pt:417
@@ -108,7 +109,7 @@ msgstr "Adicionar portlet de Administração do Blog"
 
 #: ./portlets/share.py:140
 msgid "Add Share Entry portlet"
-msgstr ""
+msgstr "Adicionar portlet de Entrada Compartilhada"
 
 #. Default: "Add archive portlet"
 #: ./browser/help.pt:507
@@ -252,7 +253,7 @@ msgstr "Editar portlet de Gerenciamento do Blog"
 
 #: ./portlets/share.py:155
 msgid "Edit Share Entry portlet"
-msgstr ""
+msgstr "Editar portlet de Entrada Compartilhada"
 
 #: ./actions/autoblog.py:25
 msgid "Enable auto-blogging"
@@ -260,7 +261,7 @@ msgstr "Ativar auto-bloggin"
 
 #: ./portlets/share.py:54
 msgid "Enter portlet tile."
-msgstr ""
+msgstr "Insira o título do portlet."
 
 #. Default: "Event entry"
 #: ./browser/help.pt:358
@@ -301,7 +302,7 @@ msgstr "Encontre uma fonte de blog definida pelo usuário com esboços de entrad
 
 #: ./portlets/manage.py:61
 msgid "Find an user defined folder for blog pictures and photo galleries."
-msgstr ""
+msgstr "Localize uma pasta definida pelo usuário para imagens do blog e galerias de fotos."
 
 #: ./portlets/archive.py:36
 msgid "Find the blog which will be this portlet used for."
@@ -388,7 +389,7 @@ msgstr "Agora você pode começar a blogar na sua nova pasta de blog adicionando
 
 #: ./portlets/manage.py:60
 msgid "Pictures"
-msgstr ""
+msgstr "Imagens"
 
 #. Default: "Plone provides great feature of next / prev navigation for content inside folder but items position in the navigation is calculated by its position in the folder which is not useful for the blog where we list blog entries by its effective date."
 #: ./browser/help.pt:596
@@ -402,19 +403,19 @@ msgstr "Configurações do portlet"
 
 #: ./portlets/share.py:53
 msgid "Portlet title"
-msgstr ""
+msgstr "Título do portlet"
 
 #: ./portlets/share.py:67
 msgid "Providers"
-msgstr ""
+msgstr "Fornecedores"
 
 #: ./portlets/share.py:59
 msgid "Restrict by types"
-msgstr ""
+msgstr "Restringir por tipos"
 
 #: ./portlets/share.py:60
 msgid "Restrict portlet availability by content types wich entries are based on."
-msgstr ""
+msgstr "Restringir a disponibilidade do portlet pelos tipos de conteúdo nos quais as entradas se baseiam."
 
 #: ./portlets/manage.py:41
 msgid "Select content types for which you would like to show create link in the portlet."
@@ -422,11 +423,11 @@ msgstr "Selecione os tipos de conteúdo para os quais você gostaria de mostrar 
 
 #: ./portlets/share.py:68
 msgid "Select enabled sharing services."
-msgstr ""
+msgstr "Selecione os serviços de compartilhamento ativados."
 
 #: ./portlets/share.py:93
 msgid "Share post"
-msgstr ""
+msgstr "Compartilhar post"
 
 #. Default: "Since blogs and blog entries are still just a Plone's content it also supports content translations using ${url} extension without any extra changes.<br /> UI of <b>Blogging</b> extra features including this user's guide also supports i18n based translations where the following are available at this moment:"
 #: ./browser/help.pt:668
@@ -492,7 +493,7 @@ msgstr "Este portlet ajuda a gerenciar o conteúdo do blog."
 
 #: ./portlets/share.py:141
 msgid "This portlet renders link(s) to share an entry."
-msgstr ""
+msgstr "Este porlets renderiza links para compartilhar uma entrada."
 
 #. Default: "Those who want to host their pictures locally rather then link to external service, there is simple way how to create your own galleries using <b>Plone Folders</b> with <b>thumbnail view</b> selected in the <b>display</b> menu.<br /> These local galleries can be easily liked to your blog entries using Plone's content field called <b>Related Items</b> which can be found in the <b>Categorization</b> section of each entry's edit form."
 #: ./browser/help.pt:453
@@ -526,7 +527,7 @@ msgstr "Sim, tudo bem, mas depois de um tempo você termina pensando sobre melho
 #. Default: "You can enable it in the blog settings see ${url}"
 #: ./browser/help.pt:481
 msgid "You can enable it in the blog settings see ${url}"
-msgstr ""
+msgstr "Você pode ativá-lo nas configurações do blog em ${url}"
 
 #. Default: "You can use Plone's <b>Page</b> even <b>News Item</b> content to post an entry in the blog and the only difference is that News Item has a title image with caption which is the same as in Plone itself."
 #: ./browser/help.pt:236
