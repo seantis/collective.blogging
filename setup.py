@@ -25,19 +25,13 @@ setup(name='collective.blogging',
       install_requires=[
           'setuptools',
           'Plone',
-          'Products.ATContentTypes',
           'archetypes.schemaextender',
           'archetypes.markerfield',
-          'plone.app.contentmenu',
-          'plone.app.contentrules',
-          'plone.app.form',
-          'plone.memoize',
+          'plone.indexer',
           'plone.app.jquerytools',
       ],
       entry_points="""
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
-      paster_plugins = ["ZopeSkel"],
       )
