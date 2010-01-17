@@ -24,7 +24,7 @@ setup(name='collective.blogging',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'Plone',
+          'z3c.autoinclude',  # Required for Plone 3.2 compatibility
           'archetypes.schemaextender',
           'archetypes.markerfield',
           'plone.indexer',

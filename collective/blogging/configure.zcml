@@ -6,9 +6,8 @@
     
     <five:registerPackage package="." initialize=".initialize" />
     
-    <!-- <includeDependencies package="." /> -->
-    <include package="archetypes.schemaextender" />
-    <include package="plone.app.jquerytools" />
+    <include package="z3c.autoinclude" file="meta.zcml" /> <!-- Required for Plone 3.2 compatibility -->
+    <includeDependencies package="." />
     
     <include package=".actions" />
     <include package=".browser" />
