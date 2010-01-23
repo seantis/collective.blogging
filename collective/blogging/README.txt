@@ -102,6 +102,8 @@ Here are sites where the blogging tool is already in production use.
 
 .. _lukaszdych.net: http://lukaszdych.net
 
+.. _blog.horovi.com: http://blog.horovi.com
+
 Copyright and Credits
 =====================
 

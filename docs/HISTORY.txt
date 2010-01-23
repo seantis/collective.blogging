@@ -1,7 +1,13 @@
 Changelog
 =========
 
-1.0b4 (unreleased)
+1.0rc1 (UNRELEASED)
+~~~~~~~~~~~~~~~~~~~
+
+- updated portuguese translation [davilima6]
+- Plone 3.2 compatibility [naro]
+
+1.0b4 (2010-01-09)
 ~~~~~~~~~~~~~~~~~~
 
 - fixed unindexed blogging content by package reinstallation [lzdych]
