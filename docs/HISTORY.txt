@@ -4,6 +4,8 @@ Changelog
 1.0rc1 (UNRELEASED)
 ~~~~~~~~~~~~~~~~~~~
 
+- updated czech translation [lzdych]
+- cleaned up translation from blogging help page mess, so user's guide is no more translatable and will be replaced by online documentation in final version [lzdych]
 - added new blog option which enables blogger to set max. length of entry's description
 displayed in non-full blog view [lzdych]
 - auto-blogging content rule now can (optionally) enable blogging, comments, exclude from nav [lzdych]
