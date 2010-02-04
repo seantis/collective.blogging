@@ -76,11 +76,10 @@
 
 <metal:entryTitle define-macro="entry_title">
     <a name="" tal:attributes="name item_id"></a>
-    <h2>
-        <a href="#" class="summary url"
-           tal:attributes="href item_url"
-           tal:content="item_title_or_id">
-           Item Title
+    <h2><a href="#" class="summary url"
+        tal:attributes="href item_url"
+        tal:content="item_title_or_id">
+        Item Title
         </a>
     </h2>
 </metal:entryTitle>
