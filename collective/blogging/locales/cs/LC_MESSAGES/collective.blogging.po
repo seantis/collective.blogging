@@ -1,14 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2009-12-30 16:44+0000\n"
-"PO-Revision-Date: 2009-12-27 01:59+0100\n"
+"POT-Creation-Date: 2010-02-04 12:12+0000\n"
+"PO-Revision-Date: 2010-02-04 13:14+0100\n"
 "Last-Translator: Lukas Zdych <lukas.zdych@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8 latin2\n"
+"Language-Team: \n"
 
 #. Default: "<b><i>And as a bonus the blogging package comes with new gallery view which can be selected from the <b>Display</b> menu and you get a simple but fancy picture gallery. </i></b>"
 #: ./browser/help.pt:461
@@ -99,7 +100,7 @@ msgstr ""
 msgid "Add Blog Archive portlet"
 msgstr "Přidat portlet Archív blogu"
 
-#: ./portlets/manage.py:236
+#: ./portlets/manage.py:240
 msgid "Add Manage Blog portlet"
 msgstr "Přidat portlet Správa Blogu"
 
@@ -243,7 +244,7 @@ msgstr "Koncepty"
 msgid "Edit Blog Archive portlet"
 msgstr "Upravit portlet Archív Blogu"
 
-#: ./portlets/manage.py:254
+#: ./portlets/manage.py:258
 msgid "Edit Manage Blog portlet"
 msgstr "Upravit portlet Správa Blogu"
 
@@ -483,7 +484,7 @@ msgstr ""
 msgid "This displays blog archives."
 msgstr "Toto zobrazuje archívy blogu."
 
-#: ./portlets/manage.py:237
+#: ./portlets/manage.py:241
 msgid "This portlet helps to manage blog's content."
 msgstr "Tento portlet usnadní správu obsahu blogu."
 
@@ -626,37 +627,37 @@ msgid "heading_using_smart_folders"
 msgstr "Použití Rešerší"
 
 #. Default: "Select how many blog entries should be listed per page in the blog view."
-#: ./extenders.py:73
+#: ./extenders.py:75
 msgid "help_batch_size"
 msgstr "Vyberte počet příspěvků na stránku při zobrazení blogu."
 
 #. Default: "Tick to enable / disable blog behaviour."
-#: ./extenders.py:46
+#: ./extenders.py:48
 msgid "help_blog_enabled"
 msgstr "Zaškrtněte pro aktivaci blogování."
 
 #. Default: "Mark this content as blog entry."
-#: ./extenders.py:134
+#: ./extenders.py:155
 msgid "help_blog_entry_marker"
 msgstr "Označit tento obsah za položku blogu."
 
 #. Default: "Paste embed code for example youtube, google or other video content."
-#: ./extenders.py:171
+#: ./extenders.py:192
 msgid "help_embed"
 msgstr "Vložte externí kód, například youtube, google nebo jiný video obsah."
 
 #. Default: "Tick to enable / disable blog contents count displaying."
-#: ./extenders.py:99
+#: ./extenders.py:101
 msgid "help_enable_count"
 msgstr "Zaškrtněte pro zapnutí / vypnutí zobrazení počtu příspěvků blogu."
 
 #. Default: "Tick to enable / disable blog toolbar on the top of its page."
-#: ./extenders.py:86
+#: ./extenders.py:88
 msgid "help_enable_toolbar"
 msgstr "Zaškrtněte pro zobrazení nástrojové lišty blogu nahoře v jeho zobrazení."
 
 #. Default: "Tick this checkbox to display entry body text in the blog view."
-#: ./extenders.py:58
+#: ./extenders.py:60
 msgid "help_full_view"
 msgstr "Zaškrtněte tento checkbox pokud si přejete zahrnout textové tělo příspěvků v zobrazení blogu."
 
@@ -676,17 +677,17 @@ msgid "label_author"
 msgstr "Autor"
 
 #. Default: "Batch size"
-#: ./extenders.py:71
+#: ./extenders.py:73
 msgid "label_batch_size"
 msgstr "Velikost stránky"
 
 #. Default: "Blog enabled"
-#: ./extenders.py:44
+#: ./extenders.py:46
 msgid "label_blog_enabled"
 msgstr "Aktivní blog"
 
 #. Default: "Blog Entry"
-#: ./extenders.py:132
+#: ./extenders.py:153
 msgid "label_blog_entry"
 msgstr "Položka Blogu"
 
@@ -694,6 +695,11 @@ msgstr "Položka Blogu"
 #: ./browser/blog_macros.pt:60
 msgid "label_blog_posts_count"
 msgstr "Nalezeno ${count} příspěvků."
+
+#. Default: "Blog Text"
+#: ./extenders.py:119
+msgid "label_blog_text"
+msgstr "Text Blogu"
 
 #. Default: "Click to read full entry."
 #: ./browser/blog_macros.pt:481
@@ -726,17 +732,17 @@ msgid "label_edit_title"
 msgstr "Klikněte sem pro editaci příspěvku."
 
 #. Default: "Embed"
-#: ./extenders.py:170
+#: ./extenders.py:191
 msgid "label_embed"
 msgstr "Externí"
 
 #. Default: "Display count"
-#: ./extenders.py:97
+#: ./extenders.py:99
 msgid "label_enable_count"
 msgstr "Zobrazit počet"
 
 #. Default: "Toolbar enabled"
-#: ./extenders.py:84
+#: ./extenders.py:86
 msgid "label_enable_toolbar"
 msgstr "Povolit nástrojovou lištu"
 
@@ -761,7 +767,7 @@ msgid "label_filter_posts"
 msgstr "Filtrovat příspěvky"
 
 #. Default: "Full view"
-#: ./extenders.py:57
+#: ./extenders.py:59
 msgid "label_full_view"
 msgstr "Úplné zobrazení"
 

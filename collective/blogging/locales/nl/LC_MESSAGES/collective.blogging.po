@@ -1,18 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2009-12-30 16:44+0000\n"
+"POT-Creation-Date: 2010-02-04 12:12+0000\n"
 "PO-Revision-Date: 2010-01-06 16:09+0100\n"
 "Last-Translator: Rob Gietema <rob@fourdigits.nl>\n"
-"Language-Team:  <support@fourdigits.nl>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"Language-Code: nl\n"
-"Language-Name: Dutch\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: collective.blogging\n"
 "X-Poedit-Language: Dutch\n"
 "X-Poedit-Country: NETHERLANDS\n"
 
@@ -105,7 +101,7 @@ msgstr ""
 msgid "Add Blog Archive portlet"
 msgstr "Voeg Blog Archief portlet toe"
 
-#: ./portlets/manage.py:236
+#: ./portlets/manage.py:240
 msgid "Add Manage Blog portlet"
 msgstr "Voeg Beheer Blog portlet toe"
 
@@ -249,7 +245,7 @@ msgstr "Concepten"
 msgid "Edit Blog Archive portlet"
 msgstr "Wijzig Blog Archief portlet"
 
-#: ./portlets/manage.py:254
+#: ./portlets/manage.py:258
 msgid "Edit Manage Blog portlet"
 msgstr "Wijzig Beheer Blog portlet"
 
@@ -489,7 +485,7 @@ msgstr ""
 msgid "This displays blog archives."
 msgstr "Dit geeft blog archieven weer."
 
-#: ./portlets/manage.py:237
+#: ./portlets/manage.py:241
 msgid "This portlet helps to manage blog's content."
 msgstr "Deze portlet helpt bij het beheren van blog inhoud."
 
@@ -632,37 +628,37 @@ msgid "heading_using_smart_folders"
 msgstr "Verzamelingen gebruiken"
 
 #. Default: "Select how many blog entries should be listed per page in the blog view."
-#: ./extenders.py:73
+#: ./extenders.py:75
 msgid "help_batch_size"
 msgstr "Batch grootte"
 
 #. Default: "Tick to enable / disable blog behaviour."
-#: ./extenders.py:46
+#: ./extenders.py:48
 msgid "help_blog_enabled"
 msgstr "Klik om de blog functionaliteit aan of uit te zetten."
 
 #. Default: "Mark this content as blog entry."
-#: ./extenders.py:134
+#: ./extenders.py:155
 msgid "help_blog_entry_marker"
 msgstr "Markeer dit bericht als een blog item."
 
 #. Default: "Paste embed code for example youtube, google or other video content."
-#: ./extenders.py:171
+#: ./extenders.py:192
 msgid "help_embed"
 msgstr "Plak embed code van bijvoorbeeld youtube, google of andere video content."
 
 #. Default: "Tick to enable / disable blog contents count displaying."
-#: ./extenders.py:99
+#: ./extenders.py:101
 msgid "help_enable_count"
 msgstr "Schakel het blog inhoud aantal in en uit."
 
 #. Default: "Tick to enable / disable blog toolbar on the top of its page."
-#: ./extenders.py:86
+#: ./extenders.py:88
 msgid "help_enable_toolbar"
 msgstr "Schakel de blog toolbar in en uit bovenaan de pagina."
 
 #. Default: "Tick this checkbox to display entry body text in the blog view."
-#: ./extenders.py:58
+#: ./extenders.py:60
 msgid "help_full_view"
 msgstr "Volledige weergave"
 
@@ -682,17 +678,17 @@ msgid "label_author"
 msgstr "Auteur"
 
 #. Default: "Batch size"
-#: ./extenders.py:71
+#: ./extenders.py:73
 msgid "label_batch_size"
 msgstr "Batch grootte"
 
 #. Default: "Blog enabled"
-#: ./extenders.py:44
+#: ./extenders.py:46
 msgid "label_blog_enabled"
 msgstr "Blog ingeschakeld"
 
 #. Default: "Blog Entry"
-#: ./extenders.py:132
+#: ./extenders.py:153
 msgid "label_blog_entry"
 msgstr "Blog item"
 
@@ -700,6 +696,11 @@ msgstr "Blog item"
 #: ./browser/blog_macros.pt:60
 msgid "label_blog_posts_count"
 msgstr "Klik om het blog inhoud aantal te tonen."
+
+#. Default: "Blog Text"
+#: ./extenders.py:119
+msgid "label_blog_text"
+msgstr ""
 
 #. Default: "Click to read full entry."
 #: ./browser/blog_macros.pt:481
@@ -732,17 +733,17 @@ msgid "label_edit_title"
 msgstr "Klik hier om dit bericht te bewerken."
 
 #. Default: "Embed"
-#: ./extenders.py:170
+#: ./extenders.py:191
 msgid "label_embed"
 msgstr "Embed"
 
 #. Default: "Display count"
-#: ./extenders.py:97
+#: ./extenders.py:99
 msgid "label_enable_count"
 msgstr "Geef aantal weer"
 
 #. Default: "Toolbar enabled"
-#: ./extenders.py:84
+#: ./extenders.py:86
 msgid "label_enable_toolbar"
 msgstr "Toolbar ingeschakeld"
 
@@ -767,7 +768,7 @@ msgid "label_filter_posts"
 msgstr "Filter berichten"
 
 #. Default: "Full view"
-#: ./extenders.py:57
+#: ./extenders.py:59
 msgid "label_full_view"
 msgstr "Volledige weergave"
 

@@ -79,6 +79,13 @@ class BlogView(BrowserView):
         return getattr(pprops, 'site_properties')
 
     @property
+    def getText(self):
+        text_field = self.context.getField('text')
+        if text_field:
+            return text_field.get(self.context)
+        return self.context.getField('blog_text').get(self.context)
+
+    @property
     def show_about(self):
         return not self.portal_state.anonymous() or \
             self.site_props.getProperty('allowAnonymousViewAbout', False)

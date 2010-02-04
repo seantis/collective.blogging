@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2009-12-30 16:44+0000\n"
+"POT-Creation-Date: 2010-02-04 12:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,7 +106,7 @@ msgstr ""
 msgid "Add Blog Archive portlet"
 msgstr ""
 
-#: ./portlets/manage.py:236
+#: ./portlets/manage.py:240
 msgid "Add Manage Blog portlet"
 msgstr ""
 
@@ -250,7 +250,7 @@ msgstr ""
 msgid "Edit Blog Archive portlet"
 msgstr ""
 
-#: ./portlets/manage.py:254
+#: ./portlets/manage.py:258
 msgid "Edit Manage Blog portlet"
 msgstr ""
 
@@ -490,7 +490,7 @@ msgstr ""
 msgid "This displays blog archives."
 msgstr ""
 
-#: ./portlets/manage.py:237
+#: ./portlets/manage.py:241
 msgid "This portlet helps to manage blog's content."
 msgstr ""
 
@@ -633,37 +633,37 @@ msgid "heading_using_smart_folders"
 msgstr ""
 
 #. Default: "Select how many blog entries should be listed per page in the blog view."
-#: ./extenders.py:73
+#: ./extenders.py:75
 msgid "help_batch_size"
 msgstr ""
 
 #. Default: "Tick to enable / disable blog behaviour."
-#: ./extenders.py:46
+#: ./extenders.py:48
 msgid "help_blog_enabled"
 msgstr ""
 
 #. Default: "Mark this content as blog entry."
-#: ./extenders.py:134
+#: ./extenders.py:155
 msgid "help_blog_entry_marker"
 msgstr ""
 
 #. Default: "Paste embed code for example youtube, google or other video content."
-#: ./extenders.py:171
+#: ./extenders.py:192
 msgid "help_embed"
 msgstr ""
 
 #. Default: "Tick to enable / disable blog contents count displaying."
-#: ./extenders.py:99
+#: ./extenders.py:101
 msgid "help_enable_count"
 msgstr ""
 
 #. Default: "Tick to enable / disable blog toolbar on the top of its page."
-#: ./extenders.py:86
+#: ./extenders.py:88
 msgid "help_enable_toolbar"
 msgstr ""
 
 #. Default: "Tick this checkbox to display entry body text in the blog view."
-#: ./extenders.py:58
+#: ./extenders.py:60
 msgid "help_full_view"
 msgstr ""
 
@@ -683,23 +683,28 @@ msgid "label_author"
 msgstr ""
 
 #. Default: "Batch size"
-#: ./extenders.py:71
+#: ./extenders.py:73
 msgid "label_batch_size"
 msgstr ""
 
 #. Default: "Blog enabled"
-#: ./extenders.py:44
+#: ./extenders.py:46
 msgid "label_blog_enabled"
 msgstr ""
 
 #. Default: "Blog Entry"
-#: ./extenders.py:132
+#: ./extenders.py:153
 msgid "label_blog_entry"
 msgstr ""
 
 #. Default: "Found ${count} posts."
 #: ./browser/blog_macros.pt:60
 msgid "label_blog_posts_count"
+msgstr ""
+
+#. Default: "Blog Text"
+#: ./extenders.py:119
+msgid "label_blog_text"
 msgstr ""
 
 #. Default: "Click to read full entry."
@@ -733,17 +738,17 @@ msgid "label_edit_title"
 msgstr ""
 
 #. Default: "Embed"
-#: ./extenders.py:170
+#: ./extenders.py:191
 msgid "label_embed"
 msgstr ""
 
 #. Default: "Display count"
-#: ./extenders.py:97
+#: ./extenders.py:99
 msgid "label_enable_count"
 msgstr ""
 
 #. Default: "Toolbar enabled"
-#: ./extenders.py:84
+#: ./extenders.py:86
 msgid "label_enable_toolbar"
 msgstr ""
 
@@ -768,7 +773,7 @@ msgid "label_filter_posts"
 msgstr ""
 
 #. Default: "Full view"
-#: ./extenders.py:57
+#: ./extenders.py:59
 msgid "label_full_view"
 msgstr ""
 

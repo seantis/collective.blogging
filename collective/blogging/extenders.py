@@ -6,10 +6,12 @@ from archetypes.schemaextender.interfaces import (ISchemaExtender, IOrderableSch
 from archetypes.schemaextender.field import ExtensionField
 from archetypes.markerfield import InterfaceMarkerField
 
+from Products.ATContentTypes.configuration import zconf
+from Products.Archetypes.atapi import AnnotationStorage
 from Products.Archetypes.atapi import (TextField, IntegerField,
                                         BooleanField)
 from Products.Archetypes.atapi import (BooleanWidget, TextAreaWidget,
-                                        SelectionWidget)
+                                        SelectionWidget, RichWidget)
 from Products.ATContentTypes.interface import IATLink
 
 from collective.blogging.interfaces import (IBloggable, IPostable, IBlogMarker,
@@ -98,6 +100,26 @@ class BlogExtender(object):
                     default = u"Display count"),
                 description = _(u"help_enable_count",
                     default = u"Tick to enable / disable blog contents count displaying."),
+            ),
+        ),
+        
+        ExTextField('blog_text',
+            schemata = u'blog',
+            languageIndependent = False,
+            required=False,
+            searchable=True,
+            primary=False,
+            write_permission = BLOG_PERMISSION,
+            storage = AnnotationStorage(migrate=True),
+            validators = ('isTidyHtmlWithCleanup',),
+            #validators = ('isTidyHtml',),
+            default_output_type = 'text/x-html-safe',
+            widget = RichWidget(
+                condition="python:not object.getField('text')",
+                description = '',
+                label = _(u'label_blog_text', default=u'Blog Text'),
+                rows = 25,
+                allow_file_upload = zconf.ATDocument.allow_document_upload
             ),
         ),
     ]
