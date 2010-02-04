@@ -87,7 +87,7 @@
 
 <metal:entryDesc define-macro="entry_description">
     <div class="tileDesc" tal:condition="item_description">
-        <p class="description" tal:content="item_description">
+        <p class="description" tal:content="python:view.formatPerex(item_description)">
             description
         </p>
     </div>

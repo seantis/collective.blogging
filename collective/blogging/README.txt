@@ -72,7 +72,7 @@ Features
 
 - Google maps integration with events via collective.bloggingmaps extra-extension
 
-- User's guide included in the UI (localizable)
+- User's guide included in the UI
 
 - Safe uninstall
 

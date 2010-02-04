@@ -204,3 +204,13 @@ class BlogView(BrowserView):
             context = aq_inner(obj)
             return context.getField('embedCode').get(context)
         return None
+    
+    def formatPerex(self, text):
+        max = self.context.getField('perex_length').get(self.context)
+        if len(text) < max:
+            return text
+        props = self.tools.properties().get('site_properties')
+        if props:
+            ellipsis = props.ellipsis
+            return '%s%s' % (text[:max - len(ellipsis)], ellipsis)
+        return text[:max]

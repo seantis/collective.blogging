@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-02-04 12:12+0000\n"
+"POT-Creation-Date: 2010-02-04 14:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -95,6 +95,10 @@ msgstr ""
 msgid "<li>Assign <b>Simple publication workflow</b> to Files and Images in the <b>Types</b> configlet in the <b>Site setup</b> &mdash; <i>recommended</i> </li> <li>Set <b>Effective Date</b> for your File and Image based entries manually.</li>"
 msgstr ""
 
+#: ./actions/autoblog.py:97
+msgid "Add Auto-Blog Action"
+msgstr ""
+
 #: ./portlets/archive.py:167
 msgid "Add Blog Archive portlet"
 msgstr ""
@@ -139,6 +143,10 @@ msgstr ""
 #. Default: "After you save new link entry with embed code you get video post with external content."
 #: ./browser/help.pt:331
 msgid "After you save new link entry with embed code you get video post with external content."
+msgstr ""
+
+#: ./actions/autoblog.py:98
+msgid "An auto-blog action can initialize various attributes on new or existing content."
 msgstr ""
 
 #. Default: "And becuase events happen in some places it would be nice to show event location on the map. To enable maps feature for blogging events you just need to install additional extra package <b>${url}</b> and you will be available to use Google maps integration to share geo locations."
@@ -215,6 +223,10 @@ msgstr ""
 msgid "But it's just about your choice which of these content types you will use since you can put as many as you want images into document's body using <b>WYSIWYG</b> editor."
 msgstr ""
 
+#: ./actions/autoblog.py:99
+msgid "Configure properties"
+msgstr ""
+
 #. Default: "Content rule action"
 #: ./browser/help.pt:654
 msgid "Content rule action"
@@ -239,6 +251,10 @@ msgstr ""
 msgid "Drafts"
 msgstr ""
 
+#: ./actions/autoblog.py:112
+msgid "Edit Auto-Blog Action"
+msgstr ""
+
 #: ./portlets/archive.py:183
 msgid "Edit Blog Archive portlet"
 msgstr ""
@@ -251,8 +267,16 @@ msgstr ""
 msgid "Edit Share Entry portlet"
 msgstr ""
 
-#: ./actions/autoblog.py:25
+#: ./actions/autoblog.py:52
 msgid "Enable auto-blogging"
+msgstr ""
+
+#: ./actions/autoblog.py:19
+msgid "Enable blogging"
+msgstr ""
+
+#: ./actions/autoblog.py:33
+msgid "Enable comments"
 msgstr ""
 
 #: ./portlets/share.py:54
@@ -272,6 +296,10 @@ msgstr ""
 #. Default: "Event maps settings"
 #: ./browser/help.pt:380
 msgid "Event maps settings"
+msgstr ""
+
+#: ./actions/autoblog.py:26
+msgid "Exclude from navigation"
 msgstr ""
 
 #: ./portlets/archive.py:45
@@ -317,6 +345,18 @@ msgstr ""
 #. Default: "If <b>blogging maps</b> extension is available and you set event's geo location it appeares under event's details. If you want to enable geo location map appearance in the blog view also, go to blog settings and tick the <b>Maps enabled</b> checkbox."
 #: ./browser/help.pt:386
 msgid "If <b>blogging maps</b> extension is available and you set event's geo location it appeares under event's details. If you want to enable geo location map appearance in the blog view also, go to blog settings and tick the <b>Maps enabled</b> checkbox."
+msgstr ""
+
+#: ./actions/autoblog.py:20
+msgid "If checked, action will mark content as blog or blog entry if supported."
+msgstr ""
+
+#: ./actions/autoblog.py:34
+msgid "If checked, action will set content to allow comments."
+msgstr ""
+
+#: ./actions/autoblog.py:27
+msgid "If checked, action will set content to be excluded from navigation."
 msgstr ""
 
 #. Default: "If you want to share simple link to some external resources with your comments use Plone's link content type."
@@ -626,38 +666,43 @@ msgid "heading_using_smart_folders"
 msgstr ""
 
 #. Default: "Select how many blog entries should be listed per page in the blog view."
-#: ./extenders.py:75
+#: ./extenders.py:90
 msgid "help_batch_size"
 msgstr ""
 
 #. Default: "Tick to enable / disable blog behaviour."
-#: ./extenders.py:48
+#: ./extenders.py:49
 msgid "help_blog_enabled"
 msgstr ""
 
 #. Default: "Mark this content as blog entry."
-#: ./extenders.py:155
+#: ./extenders.py:171
 msgid "help_blog_entry_marker"
 msgstr ""
 
 #. Default: "Paste embed code for example youtube, google or other video content."
-#: ./extenders.py:192
+#: ./extenders.py:208
 msgid "help_embed"
 msgstr ""
 
 #. Default: "Tick to enable / disable blog contents count displaying."
-#: ./extenders.py:101
+#: ./extenders.py:116
 msgid "help_enable_count"
 msgstr ""
 
 #. Default: "Tick to enable / disable blog toolbar on the top of its page."
-#: ./extenders.py:88
+#: ./extenders.py:103
 msgid "help_enable_toolbar"
 msgstr ""
 
 #. Default: "Tick this checkbox to display entry body text in the blog view."
-#: ./extenders.py:60
+#: ./extenders.py:61
 msgid "help_full_view"
+msgstr ""
+
+#. Default: "You can set maximal length of entry's description displayed in blog view. Note: This doesn't affect blog view if Full view option above is enabled."
+#: ./extenders.py:74
+msgid "help_perex_length"
 msgstr ""
 
 #. Default: "Add new content:"
@@ -676,17 +721,17 @@ msgid "label_author"
 msgstr ""
 
 #. Default: "Batch size"
-#: ./extenders.py:73
+#: ./extenders.py:88
 msgid "label_batch_size"
 msgstr ""
 
 #. Default: "Blog enabled"
-#: ./extenders.py:46
+#: ./extenders.py:47
 msgid "label_blog_enabled"
 msgstr ""
 
 #. Default: "Blog Entry"
-#: ./extenders.py:153
+#: ./extenders.py:169
 msgid "label_blog_entry"
 msgstr ""
 
@@ -696,7 +741,7 @@ msgid "label_blog_posts_count"
 msgstr ""
 
 #. Default: "Blog Text"
-#: ./extenders.py:119
+#: ./extenders.py:135
 msgid "label_blog_text"
 msgstr ""
 
@@ -731,17 +776,17 @@ msgid "label_edit_title"
 msgstr ""
 
 #. Default: "Embed"
-#: ./extenders.py:191
+#: ./extenders.py:207
 msgid "label_embed"
 msgstr ""
 
 #. Default: "Display count"
-#: ./extenders.py:99
+#: ./extenders.py:114
 msgid "label_enable_count"
 msgstr ""
 
 #. Default: "Toolbar enabled"
-#: ./extenders.py:86
+#: ./extenders.py:101
 msgid "label_enable_toolbar"
 msgstr ""
 
@@ -766,7 +811,7 @@ msgid "label_filter_posts"
 msgstr ""
 
 #. Default: "Full view"
-#: ./extenders.py:59
+#: ./extenders.py:60
 msgid "label_full_view"
 msgstr ""
 
@@ -815,6 +860,11 @@ msgstr ""
 msgid "label_newest"
 msgstr ""
 
+#. Default: "Perex length"
+#: ./extenders.py:72
+msgid "label_perex_length"
+msgstr ""
+
 #. Default: "Permalink"
 #: ./browser/blog_macros.pt:121
 msgid "label_permalink"
@@ -846,17 +896,17 @@ msgid "label_tips"
 msgstr ""
 
 #. Default: "-- Category --"
-#: ./browser/blogview.py:141
+#: ./browser/blogview.py:148
 msgid "select_category_option"
 msgstr ""
 
 #. Default: "-- Month --"
-#: ./browser/blogview.py:153
+#: ./browser/blogview.py:160
 msgid "select_month_option"
 msgstr ""
 
 #. Default: "-- Year --"
-#: ./browser/blogview.py:147
+#: ./browser/blogview.py:154
 msgid "select_year_option"
 msgstr ""
 

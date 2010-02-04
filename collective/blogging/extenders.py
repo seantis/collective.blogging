@@ -11,7 +11,8 @@ from Products.Archetypes.atapi import AnnotationStorage
 from Products.Archetypes.atapi import (TextField, IntegerField,
                                         BooleanField)
 from Products.Archetypes.atapi import (BooleanWidget, TextAreaWidget,
-                                        SelectionWidget, RichWidget)
+                                        SelectionWidget, RichWidget,
+                                        IntegerWidget)
 from Products.ATContentTypes.interface import IATLink
 
 from collective.blogging.interfaces import (IBloggable, IPostable, IBlogMarker,
@@ -62,6 +63,20 @@ class BlogExtender(object):
             ),        
         ),
         
+        ExIntegerField("perex_length",
+            schemata = u'blog',
+            languageIndependent = True,
+            default = 200,
+            write_permission = BLOG_PERMISSION,
+            widget = IntegerWidget(
+                label = _(u"label_perex_length",
+                    default=u"Perex length"),
+                description = _(u"help_perex_length",
+                    default = u"You can set maximal length of entry's description displayed in blog view. " + \
+                               "Note: This doesn't affect blog view if Full view option above is enabled."),
+            ),
+        ),
+        
         ExIntegerField("batch_size",
             schemata = u'blog',
             languageIndependent = True,
@@ -102,7 +117,7 @@ class BlogExtender(object):
                     default = u"Tick to enable / disable blog contents count displaying."),
             ),
         ),
-        
+                
         ExTextField('blog_text',
             schemata = u'blog',
             languageIndependent = False,

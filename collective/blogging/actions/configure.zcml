@@ -9,17 +9,22 @@
 
     <include package="plone.contentrules" />
     <include package="plone.contentrules" file="meta.zcml" />
-
-    <!-- Auto blog action (no configurable options) -->
     
-     <adapter factory=".autoblog.AutoBlogActionExecutor" />
+    <adapter factory=".autoblog.AutoBlogActionExecutor" />
 
-     <browser:page 
-       for="plone.app.contentrules.browser.interfaces.IRuleActionAdding"
-       name="collective.blogging.actions.AutoBlog"
-       class=".autoblog.AutoBlogAddForm"
-       permission="cmf.ManagePortal"
-       />
+    <browser:page 
+        for="plone.app.contentrules.browser.interfaces.IRuleActionAdding"
+        name="collective.blogging.actions.AutoBlog"
+        class=".autoblog.AutoBlogAddForm"
+        permission="cmf.ManagePortal"
+        />
+    
+    <browser:page 
+        for=".autoblog.IAutoBlogAction"
+        name="edit"
+        class=".autoblog.AutoBlogEditForm"
+        permission="cmf.ManagePortal"
+        />
 
      <plone:ruleAction
          name="collective.blogging.actions.AutoBlog"
@@ -28,6 +33,7 @@
          for="*"
          event="*"
          addview="collective.blogging.actions.AutoBlog"
+         editview="edit"
          schema=".autoblog.IAutoBlogAction"
          factory=".autoblog.AutoBlogAction"
          />
