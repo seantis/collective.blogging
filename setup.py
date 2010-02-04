@@ -29,7 +29,6 @@ setup(name='collective.blogging',
           'archetypes.markerfield',
           'plone.indexer',
           'plone.app.jquerytools',
-          'monkey',
       ],
       entry_points="""
       [z3c.autoinclude.plugin]

@@ -1,4 +1,3 @@
-from monkey import patch
 from Products.CMFDefault.DiscussionItem import DiscussionItemContainer
 from AccessControl import getSecurityManager
 from AccessControl import Unauthorized
@@ -6,7 +5,6 @@ from AccessControl import Unauthorized
 import logging
 logger = logging.getLogger('collective.blogging')
 
-@patch(DiscussionItemContainer.replyCount, "3cc1be53aa51ec26f6e93b44f8bfe2479356507d")
 def replyCount(self, content_obj):
     """ How many replies do i have? """
     outer = self._getDiscussable( outer=1 )
@@ -26,4 +24,5 @@ def replyCount(self, content_obj):
         return self._repcount( replies )
 
 logger.warning('Patching Products.CMFDefault.DiscussionItem.DiscussionItemContainer (replyCount)')
+DiscussionItemContainer._replyCount = DiscussionItemContainer.replyCount
 DiscussionItemContainer.replyCount = replyCount
