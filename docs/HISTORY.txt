@@ -4,6 +4,7 @@ Changelog
 1.0rc1 (UNRELEASED)
 ~~~~~~~~~~~~~~~~~~~
 
+- added patch fixing reply counts if discussion moderation is enabled via quintagroup.plonecomments [lzdych]
 - updated portuguese translation [davilima6]
 - Plone 3.2 compatibility [naro]
 

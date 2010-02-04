@@ -1,6 +1,9 @@
 from zope.i18nmessageid import MessageFactory
 from Products.CMFCore.permissions import setDefaultRoles
 
+# import monkeys
+from collective.blogging import patch
+
 ## LinguaPlone addon?
 try:
     from Products.LinguaPlone.public import registerType
