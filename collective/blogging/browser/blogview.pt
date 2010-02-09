@@ -44,6 +44,7 @@
                 
                 <metal:blogText use-macro="context/blog_macros/macros/blog_text"/>
                 
+                <div class="visualClear" id="clear-before-entry-listing"><!-- --></div>
                 <tal:contents>
                     <tal:listing condition="batch">
                         <tal:foldercontents define="show_about view/show_about;">
