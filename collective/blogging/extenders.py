@@ -9,10 +9,10 @@ from archetypes.markerfield import InterfaceMarkerField
 from Products.ATContentTypes.configuration import zconf
 from Products.Archetypes.atapi import AnnotationStorage
 from Products.Archetypes.atapi import (TextField, IntegerField,
-                                        BooleanField)
+                                        BooleanField, StringField)
 from Products.Archetypes.atapi import (BooleanWidget, TextAreaWidget,
                                         SelectionWidget, RichWidget,
-                                        IntegerWidget)
+                                        IntegerWidget, StringWidget)
 from Products.ATContentTypes.interface import IATLink
 
 from collective.blogging.interfaces import (IBloggable, IPostable, IBlogMarker,
@@ -29,6 +29,10 @@ class ExBooleanField(ExtensionField, BooleanField):
 
 class ExIntegerField(ExtensionField, IntegerField):
     """ An integer field """
+
+class ExStringField(ExtensionField, StringField):
+    """ A string field """
+
 
 class BlogExtender(object):
     """ Add blog configuration fields to all bloggable content. """
@@ -170,6 +174,19 @@ class EntryExtender(object):
                     default=u"Blog Entry"),
                 description = _(u"help_blog_entry_marker",
                     default=u"Mark this content as blog entry."),
+            ),
+        ),
+        
+        ExStringField("blogger_name",
+            schemata = u'blog',
+            languageIndependent = True,
+            default = '',
+            write_permission = BLOG_PERMISSION,
+            widget = StringWidget(
+                label = _(u"label_blogger_name",
+                    default = u"Blogger's name"),
+                description = _(u"help_blogger_name",
+                    default = u"Enter blogger's name if you're posting entry of different person."),
             ),
         ),
     ]

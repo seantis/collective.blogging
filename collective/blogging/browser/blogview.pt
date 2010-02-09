@@ -61,6 +61,7 @@
                                                        item_creator     item/Creator;
                                                        item_subject     item/Subject|nothing;
                                                        item_object      item/getObject;
+                                                       item_blogger     python:view.getFieldValue('blogger_name', item_object);
                                                        talkback         python:isDiscussionAllowedFor(item_object) and getDiscussionFor(item_object);
                                                        reply_count      python:talkback is not False and talkback.replyCount(item_object);
                                                        item_text        item_object/getText|nothing;

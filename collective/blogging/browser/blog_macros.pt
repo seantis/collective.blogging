@@ -101,13 +101,13 @@
 
 <metal:entryDocumentByLine define-macro="entry_documentbyline" i18n:domain="collective.blogging">
     <div class="documentByLine" tal:condition="python: site_properties.allowAnonymousViewAbout or not isAnon">
-        <tal:name tal:condition="item_creator"
-            tal:define="author python:view.tools.membership().getMemberInfo(item_creator)">
+        <tal:name tal:condition="python:item_creator or item_blogger"
+            tal:define="author python:not item_blogger and item_creator and view.tools.membership().getMemberInfo(item_creator)">
             <span i18n:translate="label_posted_by">
                 Posted by
                 <a href="#"
                     tal:attributes="href string:${view/portal_state/navigation_root_url}/author/${item_creator}"
-                    tal:content="python:author and author['fullname'] or item_creator"
+                    tal:content="python:item_blogger or (author and author['fullname']) or item_creator"
                     tal:omit-tag="not:author"
                     i18n:name="author">
                     Bob Dobalina

@@ -28,6 +28,15 @@ class BlogView(BrowserView):
         self.tools = getMultiAdapter((context, request), name=u'plone_tools')
         self.portal_state = getMultiAdapter((context, request), name=u'plone_portal_state')
     
+    def getFieldValue(self, name, obj=None):
+        if obj is None:
+            obj = self.context
+        
+        field = obj.getField(name)
+        if field:
+            return field.get(obj)
+        return None
+
     @view.memoize
     def contents(self):
         brains = []

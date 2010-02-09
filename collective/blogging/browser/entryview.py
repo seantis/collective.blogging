@@ -23,6 +23,15 @@ class EntryView(BrowserView):
         
         return self.template()
     
+    def getFieldValue(self, name, obj=None):
+        if obj is None:
+            obj = self.context
+
+        field = obj.getField(name)
+        if field:
+            return field.get(obj)
+        return None
+    
     # News Item related
     @property
     def is_newsitem(self):
