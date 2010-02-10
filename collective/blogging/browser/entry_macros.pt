@@ -10,19 +10,13 @@
 </metal:redirectInfo>
 
 <metal:entryTitle define-macro="entry_title">
-    <h1 class="documentFirstHeading"> 
-        <metal:field use-macro="python:here.widget('title', mode='view')">
-            Title
-        </metal:field>
-    </h1>
+    <h1 class="documentFirstHeading" tal:content="context/title">Title</h1>
 </metal:entryTitle>
 
 <metal:entryDesc define-macro="entry_description">
     <p class="documentDescription"
-        tal:condition="context/Description">
-        <metal:field use-macro="python:here.widget('description', mode='view')">
-            Description
-        </metal:field>
+        tal:condition="context/Description" tal:content="context/Description">
+        Description
     </p>
 </metal:entryDesc>
 
