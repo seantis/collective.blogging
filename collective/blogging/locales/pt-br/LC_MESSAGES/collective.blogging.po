@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2010-02-04 14:19+0000\n"
-"PO-Revision-Date: 2010-01-10 15:30-0300\n"
+"PO-Revision-Date: 2010-02-14 12:01-0300\n"
 "Last-Translator: Davi Lima <davilima6@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -12,14 +12,15 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "X-Is-Fallback-For: pt\n"
+"Language-Team: \n"
 
 #: ./actions/autoblog.py:97
 msgid "Add Auto-Blog Action"
-msgstr ""
+msgstr "Adicionar ação de Auto-Blog"
 
 #: ./portlets/archive.py:167
 msgid "Add Blog Archive portlet"
-msgstr "Adicionar um portlet de Arquivo do Blog"
+msgstr "Adicionar portlet de Arquivos do Blog"
 
 #: ./portlets/manage.py:240
 msgid "Add Manage Blog portlet"
@@ -27,12 +28,12 @@ msgstr "Adicionar portlet de Administração do Blog"
 
 #: ./portlets/share.py:140
 msgid "Add Share Entry portlet"
-msgstr "Adicionar portlet de Entrada Compartilhada"
+msgstr "Adicionar portlet de Compartilhamento"
 
 #. Default: "Add archive portlet"
 #: ./browser/help.pt:507
 msgid "Add archive portlet"
-msgstr "Adicionar portlet de Arquivo"
+msgstr "Adicionar portlet de Arquivos"
 
 #. Default: "Add portlet"
 #: ./browser/help.pt:557
@@ -45,7 +46,7 @@ msgstr "Tipos adicionáveis"
 
 #: ./actions/autoblog.py:98
 msgid "An auto-blog action can initialize various attributes on new or existing content."
-msgstr ""
+msgstr "Uma ação de auto-blog pode configurar os parâmetros iniciais de conteúdos novos ou já existentes."
 
 #. Default: "Archive portlet"
 #: ./browser/help.pt:536
@@ -55,11 +56,11 @@ msgstr "Portlet de Arquivos"
 #. Default: "Archive portlet settings"
 #: ./browser/help.pt:521
 msgid "Archive portlet settings"
-msgstr "Configurações do portlet de arquivos"
+msgstr "Configurações do portlet de Arquivos"
 
 #: ./portlets/archive.py:74
 msgid "Blog Archive: ${blog}"
-msgstr "Arquivo do blog: ${blog}"
+msgstr "Arquivos do blog: ${blog}"
 
 #. Default: "Blog created"
 #: ./browser/help.pt:183
@@ -68,7 +69,7 @@ msgstr "Blog criado"
 
 #: ./actions/autoblog.py:99
 msgid "Configure properties"
-msgstr ""
+msgstr "Configurar propriedads"
 
 #. Default: "Content rule action"
 #: ./browser/help.pt:654
@@ -83,7 +84,7 @@ msgstr "Criar blog"
 #. Default: "Create entry"
 #: ./browser/help.pt:199
 msgid "Create entry"
-msgstr "Criar entrada"
+msgstr "Criar post"
 
 #. Default: "Default portlet"
 #: ./browser/help.pt:585
@@ -96,31 +97,31 @@ msgstr "Esboços"
 
 #: ./actions/autoblog.py:112
 msgid "Edit Auto-Blog Action"
-msgstr ""
+msgstr "Editar ação de Auto-Blog"
 
 #: ./portlets/archive.py:183
 msgid "Edit Blog Archive portlet"
-msgstr "Editar portlet de Arquivo do Blog"
+msgstr "Editar portlet de Arquivos do Blog"
 
 #: ./portlets/manage.py:258
 msgid "Edit Manage Blog portlet"
-msgstr "Editar portlet de Gerenciamento do Blog"
+msgstr "Editar portlet de Administração do Blog"
 
 #: ./portlets/share.py:155
 msgid "Edit Share Entry portlet"
-msgstr "Editar portlet de Entrada Compartilhada"
+msgstr "Editar portlet de Compartilhamento"
 
 #: ./actions/autoblog.py:52
 msgid "Enable auto-blogging"
-msgstr "Ativar auto-bloggin"
+msgstr "Ativar Auto-Blog"
 
 #: ./actions/autoblog.py:19
 msgid "Enable blogging"
-msgstr ""
+msgstr "Ativar blog"
 
 #: ./actions/autoblog.py:33
 msgid "Enable comments"
-msgstr ""
+msgstr "Ativar comentários"
 
 #: ./portlets/share.py:54
 msgid "Enter portlet tile."
@@ -129,7 +130,7 @@ msgstr "Insira o título do portlet."
 #. Default: "Event entry"
 #: ./browser/help.pt:358
 msgid "Event entry"
-msgstr "Entrada de Evento"
+msgstr "Post de Evento"
 
 #. Default: "Event maps"
 #: ./browser/help.pt:395
@@ -143,7 +144,7 @@ msgstr "Configurações de mapas de evento"
 
 #: ./actions/autoblog.py:26
 msgid "Exclude from navigation"
-msgstr ""
+msgstr "Excluir da navegação"
 
 #: ./portlets/archive.py:45
 msgid "Extend title"
@@ -152,24 +153,24 @@ msgstr "Extender título"
 #. Default: "File entry"
 #: ./browser/help.pt:283
 msgid "File entry"
-msgstr "Entrada de Arquivo"
+msgstr "Post de Arquivo"
 
 #. Default: "Filter toolbar"
 #: ./browser/help.pt:488
 msgid "Filter toolbar"
-msgstr "Barra de ferramentas de Filtragem"
+msgstr "Ferramentas de filtragem"
 
 #: ./portlets/manage.py:31
 msgid "Find a blog which will be this portlet used for."
-msgstr "Encontre um blog para o qual este portlet será usado."
+msgstr "Localize o blog para o qual este portlet será utilizado."
 
 #: ./portlets/manage.py:51
 msgid "Find an user defined blog source with blog entry drafts."
-msgstr "Encontre uma fonte de blog definida pelo usuário com esboços de entradas de blog."
+msgstr "Localize uma pasta contendo esboços de posts."
 
 #: ./portlets/manage.py:61
 msgid "Find an user defined folder for blog pictures and photo galleries."
-msgstr "Localize uma pasta definida pelo usuário para imagens do blog e galerias de fotos."
+msgstr "Localize uma pasta contendo imagens e galerias de fotos."
 
 #: ./portlets/archive.py:36
 msgid "Find the blog which will be this portlet used for."
@@ -178,38 +179,38 @@ msgstr "Encontre o blog para o qual este portlet será usado."
 #. Default: "First entry"
 #: ./browser/help.pt:214
 msgid "First entry"
-msgstr "Primeira entrada"
+msgstr "Primeiro post"
 
 #: ./actions/autoblog.py:20
 msgid "If checked, action will mark content as blog or blog entry if supported."
-msgstr ""
+msgstr "Caso selecionado, a ação marcará o conteúdo como blog ou blog post se suportado."
 
 #: ./actions/autoblog.py:34
 msgid "If checked, action will set content to allow comments."
-msgstr ""
+msgstr "Caso marcado, a ação configurará o conteúdo para permitir comentários."
 
 #: ./actions/autoblog.py:27
 msgid "If checked, action will set content to be excluded from navigation."
-msgstr ""
+msgstr "Caso marcado, a ação configurará o conteúdo para ser excluído da navegação."
 
 #. Default: "Image entry"
 #: ./browser/help.pt:269
 msgid "Image entry"
-msgstr "Entrada de Imagem"
+msgstr "Post de Imagem"
 
 #. Default: "Link entry"
 #: ./browser/help.pt:302
 msgid "Link entry"
-msgstr "Entrada de Link"
+msgstr "Post de Link"
 
 #: ./portlets/manage.py:96
 msgid "Manage Blog: ${blog}"
-msgstr "Gerenciar Blog: ${blog}"
+msgstr "Administrar Blog: ${blog}"
 
 #. Default: "News Item entry"
 #: ./browser/help.pt:248
 msgid "News Item entry"
-msgstr "Entrada de Notícia"
+msgstr "Post de Notícia"
 
 #. Default: "Next / Prev navigation"
 #: ./browser/help.pt:628
@@ -236,15 +237,15 @@ msgstr "Título do portlet"
 
 #: ./portlets/share.py:67
 msgid "Providers"
-msgstr "Fornecedores"
+msgstr "Serviços"
 
 #: ./portlets/share.py:59
 msgid "Restrict by types"
-msgstr "Restringir por tipos"
+msgstr "Filtar por tipos"
 
 #: ./portlets/share.py:60
 msgid "Restrict portlet availability by content types wich entries are based on."
-msgstr "Restringir a disponibilidade do portlet pelos tipos de conteúdo nos quais as entradas se baseiam."
+msgstr "Restringir a exibição do portlet de acordo com os tipos de conteúdo nos quais os posts se baseiam."
 
 #: ./portlets/manage.py:41
 msgid "Select content types for which you would like to show create link in the portlet."
@@ -252,7 +253,7 @@ msgstr "Selecione os tipos de conteúdo para os quais você gostaria de mostrar 
 
 #: ./portlets/share.py:68
 msgid "Select enabled sharing services."
-msgstr "Selecione os serviços de compartilhamento ativados."
+msgstr "Selecione os serviços de compartilhamento ativos."
 
 #: ./portlets/share.py:93
 msgid "Share post"
@@ -260,33 +261,33 @@ msgstr "Compartilhar post"
 
 #: ./portlets/archive.py:35
 msgid "Target blog"
-msgstr "Blog destino"
+msgstr "Blog de destino"
 
 #: ./portlets/archive.py:168
 msgid "This displays blog archives."
-msgstr "Isto exibe arquivos de blog."
+msgstr "Este portlet exibe os arquivos do blog."
 
 #: ./portlets/manage.py:241
 msgid "This portlet helps to manage blog's content."
-msgstr "Este portlet ajuda a gerenciar o conteúdo do blog."
+msgstr "Este portlet ajuda a administrar o conteúdo do blog."
 
 #: ./portlets/share.py:141
 msgid "This portlet renders link(s) to share an entry."
-msgstr "Este porlets renderiza links para compartilhar uma entrada."
+msgstr "Este portlet gera os links de compartilhamento do post."
 
 #: ./portlets/archive.py:46
 msgid "Tick the checkbox to extend portlet title with target blog's title."
-msgstr "Marque esta caixa de seleção para extender o título do portlet com o título do blog de destino."
+msgstr "Marque esta opção para explicitar o título do blog no título do portlet."
 
 #. Default: "Video entry"
 #: ./browser/help.pt:337
 msgid "Video entry"
-msgstr "Entrada de vídeo"
+msgstr "Post de vídeo"
 
 #. Default: "Video entry settings"
 #: ./browser/help.pt:324
 msgid "Video entry settings"
-msgstr "Configurações da entrada de vídeo"
+msgstr "Configurações do post de vídeo"
 
 #. Default: "There are currently no contents in this blog."
 #: ./browser/blog_macros.pt:515
