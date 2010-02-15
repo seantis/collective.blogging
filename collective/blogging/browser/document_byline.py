@@ -81,3 +81,12 @@ class DocumentBylineViewlet(ViewletBase):
                                         domain='plonelocales')
 
     index = ViewPageTemplateFile("document_byline.pt")
+
+    def getFieldValue(self, name, obj=None):
+        if obj is None:
+            obj = self.context
+        
+        field = obj.getField(name)
+        if field:
+            return field.get(obj)
+        return None

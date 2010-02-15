@@ -9,18 +9,21 @@
         <img tal:replace="structure lock_icon" />
     </span>
 
-    <tal:name tal:condition="view/creator">
-        <span i18n:translate="label_posted_by">
+    <tal:name tal:define="creator view/creator;
+                          blogger python:view.getFieldValue('blogger_name', context);"
+        tal:condition="python:creator or blogger">
+        <span i18n:translate="label_posted_by"
+            tal:define="author python:not blogger and creator and view.tools.membership().getMemberInfo(creator)">
             Posted by
             <a href="#"
                 tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/author/${view/creator}"
-                tal:content="view/authorname"
-                tal:omit-tag="not:view/author"
+                tal:content="python:blogger or (author and author['fullname']) or creator"
+                tal:omit-tag="not:author"
                 i18n:name="author">
                 Bob Dobalina
             </a>
         </span>
-    </tal:name>
+    </tal:name>    
     
     <tal:permalink>
         |
