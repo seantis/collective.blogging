@@ -1,14 +1,18 @@
 Changelog
 =========
 
+1.0rc2 (unreleased)
+~~~~~~~~~~~~~~~~~~~
+
+
+
 1.0rc1 (2010-02-16)
 ~~~~~~~~~~~~~~~~~~~
 	 
 - added blogger's name field to blog entry's schemata [lzdych]
 - updated czech translation [lzdych]
 - cleaned up translation from blogging help page mess, so user's guide is no more translatable and will be replaced by online documentation in final version [lzdych]
-- added new blog option which enables blogger to set max. length of entry's description
-displayed in non-full blog view [lzdych]
+- added new blog option which enables blogger to set max. length of entry's description displayed in non-full blog view [lzdych]
 - auto-blogging content rule now can (optionally) enable blogging, comments, exclude from nav [lzdych]
 - added new richtext field to blogs (hidden if blog content already has "text" field) [lzdych]
 - added patch fixing reply counts if discussion moderation is enabled via quintagroup.plonecomments [lzdych]
