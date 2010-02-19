@@ -94,47 +94,57 @@
     </tal:body>
 </metal:entryText>
 
-<metal:entryDocumentByLine define-macro="entry_documentbyline" i18n:domain="collective.blogging">
-    <div class="documentByLine" tal:condition="python: site_properties.allowAnonymousViewAbout or not isAnon">
-        <tal:name tal:condition="python:item_creator or item_blogger"
-            tal:define="author python:not item_blogger and item_creator and view.tools.membership().getMemberInfo(item_creator)">
-            <span i18n:translate="label_posted_by">
-                Posted by
-                <a href="#"
-                    tal:attributes="href string:${view/portal_state/navigation_root_url}/author/${item_creator}"
-                    tal:content="python:item_blogger or (author and author['fullname']) or item_creator"
-                    tal:omit-tag="not:author"
-                    i18n:name="author">
-                    Bob Dobalina
-                </a>
-            </span>
-        </tal:name>
-        
-        <tal:permalink>
-            |
-            <a href="" title="Permalink"
-                class="permalink"
-                tal:attributes="href item_url"
-                i18n:attributes="title label_permalink"
-                i18n:translate="label_permalink">
-                Permalink
+<metal:entryBlogger define-macro="entry_blogger" i18n:domain="collective.blogging">
+    <tal:name tal:condition="python:item_creator or item_blogger"
+        tal:define="author python:not item_blogger and item_creator and view.tools.membership().getMemberInfo(item_creator)">
+        <span i18n:translate="label_posted_by">
+            Posted by
+            <a href="#"
+                tal:attributes="href string:${view/portal_state/navigation_root_url}/author/${item_creator}"
+                tal:content="python:item_blogger or (author and author['fullname']) or item_creator"
+                tal:omit-tag="not:author"
+                i18n:name="author">
+                Bob Dobalina
             </a>
-        </tal:permalink>
+        </span>
+    </tal:name>
+</metal:entryBlogger>
 
-        <tal:block condition="item_subject">
-            |
-            <tal:filedunder i18n:translate="label_filed_under">filed under:</tal:filedunder>
-            <span tal:repeat="category item_subject">
-                <a href=""
-                    class="link-category"
-                    rel="tag"
-                    tal:content="category"
-                    tal:define="quotedCat python:url_quote(category)"
-                    tal:attributes="href string:${context/absolute_url}?Subject%3Alist=${quotedCat}">
-                    Category
-                </a><tal:separator condition="not: repeat/category/end">,</tal:separator>
-            </span>
-        </tal:block>
+<metal:entryPermalink define-macro="entry_permalink" i18n:domain="collective.blogging">
+    <tal:permalink>
+        |
+        <a href="" title="Permalink"
+            class="permalink"
+            tal:attributes="href item_url"
+            i18n:attributes="title label_permalink"
+            i18n:translate="label_permalink">
+            Permalink
+        </a>
+    </tal:permalink>
+</metal:entryPermalink>
+
+<metal:entryCategories define-macro="entry_categories" i18n:domain="collective.blogging">
+    <tal:block condition="item_subject">
+        |
+        <tal:filedunder i18n:translate="label_filed_under">filed under:</tal:filedunder>
+        <span tal:repeat="category item_subject">
+            <a href=""
+                class="link-category"
+                rel="tag"
+                tal:content="category"
+                tal:define="quotedCat python:url_quote(category)"
+                tal:attributes="href string:${context/absolute_url}?Subject%3Alist=${quotedCat}">
+                Category
+            </a><tal:separator condition="not: repeat/category/end">,</tal:separator>
+        </span>
+    </tal:block>
+</metal:entryCategories>
+
+<metal:entryDocumentByLine define-macro="entry_documentbyline">
+    <div class="documentByLine" tal:condition="python: site_properties.allowAnonymousViewAbout or not isAnon">
+        <metal:entryBlogger use-macro="context/blog_macros/macros/entry_blogger"/>
+        <metal:entryPermalink use-macro="context/blog_macros/macros/entry_permalink"/>
+        <metal:entryCategories use-macro="context/blog_macros/macros/entry_categories"/>
     </div>
 </metal:entryDocumentByLine>
 

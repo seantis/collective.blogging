@@ -4,7 +4,7 @@ Changelog
 1.0rc2 (unreleased)
 ~~~~~~~~~~~~~~~~~~~
 
-
+- made entry's document byline block easier to customize in the blog view [lzdych]
 
 1.0rc1 (2010-02-16)
 ~~~~~~~~~~~~~~~~~~~
