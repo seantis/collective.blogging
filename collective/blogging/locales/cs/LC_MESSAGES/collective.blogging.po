@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2010-02-04 14:19+0000\n"
-"PO-Revision-Date: 2010-02-04 15:20+0100\n"
+"POT-Creation-Date: 2010-02-24 20:46+0000\n"
+"PO-Revision-Date: 2010-02-24 22:01+0100\n"
 "Last-Translator: Lukas Zdych <lukas.zdych@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -257,6 +257,7 @@ msgid "Share post"
 msgstr "Sdílej příspěvek"
 
 #: ./portlets/archive.py:35
+#: ./portlets/manage.py:30
 msgid "Target blog"
 msgstr "Cílový blog"
 
@@ -286,48 +287,68 @@ msgstr "Video příspěvek"
 msgid "Video entry settings"
 msgstr "Nastavení video příspěvku"
 
+#. Default: "A portlet which displays blog archives."
+#: ./profiles/default/portlets.xml
+msgid "description_blog_archive_portlet"
+msgstr "Portlet, který zobrazuje archív blogu."
+
+#. Default: "A portlet which helps to manage blog's content."
+#: ./profiles/default/portlets.xml
+msgid "description_manage_blog_portlet"
+msgstr "Portlet, který usnadňuje správu blogu a jeho obsahu."
+
 #. Default: "There are currently no contents in this blog."
-#: ./browser/blog_macros.pt:515
+#: ./browser/blog_macros.pt:519
 msgid "description_no_items_in_blog"
 msgstr "V tomto blogu momentálně není žádný obsah."
 
+#. Default: "A portlet which displays share links."
+#: ./profiles/default/portlets.xml
+msgid "description_share_portlet"
+msgstr "Portlet, který zobrazuje odkazy pro sdílení."
+
 #. Default: "Select how many blog entries should be listed per page in the blog view."
-#: ./extenders.py:90
+#: ./extenders.py:94
 msgid "help_batch_size"
 msgstr "Vyberte počet příspěvků na stránku při zobrazení blogu."
 
 #. Default: "Tick to enable / disable blog behaviour."
-#: ./extenders.py:49
+#: ./extenders.py:53
 msgid "help_blog_enabled"
 msgstr "Zaškrtněte pro aktivaci blogování."
 
 #. Default: "Mark this content as blog entry."
-#: ./extenders.py:171
+#: ./extenders.py:175
 msgid "help_blog_entry_marker"
 msgstr "Označit tento obsah za položku blogu."
 
+#. Default: "Enter blogger's name if you're posting entry of different person."
+#: ./extenders.py:188
+msgid "help_blogger_name"
+msgstr "Zadejte jméno blogera pokud zadáváte příspěvek někoho jiného."
+
 #. Default: "Paste embed code for example youtube, google or other video content."
-#: ./extenders.py:208
+#: ./extenders.py:225
 msgid "help_embed"
 msgstr "Vložte externí kód, například youtube, google nebo jiný video obsah."
 
 #. Default: "Tick to enable / disable blog contents count displaying."
-#: ./extenders.py:116
+#: ./extenders.py:120
 msgid "help_enable_count"
 msgstr "Zaškrtněte pro zapnutí / vypnutí zobrazení počtu příspěvků blogu."
 
 #. Default: "Tick to enable / disable blog toolbar on the top of its page."
-#: ./extenders.py:103
+#: ./extenders.py:107
 msgid "help_enable_toolbar"
 msgstr "Zaškrtněte pro zobrazení nástrojové lišty blogu nahoře v jeho zobrazení."
 
 #. Default: "Tick this checkbox to display entry body text in the blog view."
-#: ./extenders.py:61
+#: ./extenders.py:65
 msgid "help_full_view"
 msgstr "Zaškrtněte tento checkbox pokud si přejete zahrnout textové tělo příspěvků v zobrazení blogu."
 
 #. Default: "You can set maximal length of entry's description displayed in blog view. Note: This doesn't affect blog view if Full view option above is enabled."
-#: ./extenders.py:74
+#: ./extenders.py:78
 msgid "help_perex_length"
 msgstr "Můžete nastavit maximální délku popisu příspěvku zobrazeného v zobrazení blogu. Poznámka: Tato volba neovlivní zobrazení blogu pokud je zaškrtnuto úplné zobrazení (nahoře)."
 
@@ -342,37 +363,43 @@ msgid "label_archives"
 msgstr "Archívy"
 
 #. Default: "Batch size"
-#: ./extenders.py:88
+#: ./extenders.py:92
 msgid "label_batch_size"
 msgstr "Velikost stránky"
 
 #. Default: "Blog enabled"
-#: ./extenders.py:47
+#: ./extenders.py:51
 msgid "label_blog_enabled"
 msgstr "Aktivní blog"
 
 #. Default: "Blog Entry"
-#: ./extenders.py:169
+#: ./extenders.py:173
 msgid "label_blog_entry"
 msgstr "Položka Blogu"
 
 #. Default: "Found ${count} posts."
-#: ./browser/blog_macros.pt:60
+#: ./browser/blog_macros.pt:55
 msgid "label_blog_posts_count"
 msgstr "Nalezeno ${count} příspěvků."
 
 #. Default: "Blog Text"
-#: ./extenders.py:135
+#: ./extenders.py:139
 msgid "label_blog_text"
 msgstr "Text Blogu"
 
+#. Default: "Blogger's name"
+#: ./extenders.py:186
+msgid "label_blogger_name"
+msgstr "Jméno blogera"
+
 #. Default: "Click to read full entry."
-#: ./browser/blog_macros.pt:481
+#: ./browser/blog_macros.pt:485
 msgid "label_click_to_read_full_entry"
 msgstr "Klikněte pro zobrazení celého příspěvku."
 
 #. Default: "Comments (${comments})"
-#: ./browser/blog_macros.pt:497
+#: ./browser/blog_macros.pt:501
+#: ./browser/entry_macros.pt:119
 msgid "label_comments_with_count"
 msgstr "Komentáře (${comments})"
 
@@ -382,47 +409,49 @@ msgid "label_drafts"
 msgstr "Koncepty"
 
 #. Default: "Edit"
-#: ./browser/blog_macros.pt:504
+#: ./browser/blog_macros.pt:508
+#: ./browser/entry_macros.pt:127
 msgid "label_edit"
 msgstr "Upravit"
 
 #. Default: "Click to edit this entry."
-#: ./browser/blog_macros.pt:504
+#: ./browser/blog_macros.pt:508
+#: ./browser/entry_macros.pt:127
 msgid "label_edit_title"
 msgstr "Klikněte sem pro editaci příspěvku."
 
 #. Default: "Embed"
-#: ./extenders.py:207
+#: ./extenders.py:224
 msgid "label_embed"
 msgstr "Externí"
 
 #. Default: "Display count"
-#: ./extenders.py:114
+#: ./extenders.py:118
 msgid "label_enable_count"
 msgstr "Zobrazit počet"
 
 #. Default: "Toolbar enabled"
-#: ./extenders.py:101
+#: ./extenders.py:105
 msgid "label_enable_toolbar"
 msgstr "Povolit nástrojovou lištu"
 
 #. Default: "filed under:"
-#: ./browser/blog_macros.pt:132
+#: ./browser/blog_macros.pt:129
 msgid "label_filed_under"
 msgstr "kategorie:"
 
 #. Default: "Filter"
-#: ./browser/blog_macros.pt:47
+#: ./browser/blog_macros.pt:42
 msgid "label_filter"
 msgstr "Filtr"
 
 #. Default: "Filter posts"
-#: ./browser/blog_macros.pt:24
+#: ./browser/blog_macros.pt:19
 msgid "label_filter_posts"
 msgstr "Filtrovat příspěvky"
 
 #. Default: "Full view"
-#: ./extenders.py:60
+#: ./extenders.py:64
 msgid "label_full_view"
 msgstr "Úplné zobrazení"
 
@@ -452,12 +481,13 @@ msgid "label_newest"
 msgstr "Nejnovější..."
 
 #. Default: "Perex length"
-#: ./extenders.py:72
+#: ./extenders.py:76
 msgid "label_perex_length"
 msgstr "Délka perexu"
 
 #. Default: "Permalink"
-#: ./browser/blog_macros.pt:121
+#: ./browser/blog_macros.pt:116
+#: ./browser/document_byline.pt:30
 msgid "label_permalink"
 msgstr "Permalink"
 
@@ -467,37 +497,53 @@ msgid "label_pictures"
 msgstr "Obrázky"
 
 #. Default: "Posted by ${author}"
-#: ./browser/blog_macros.pt:109
+#: ./browser/blog_macros.pt:102
 msgid "label_posted_by"
 msgstr "Author ${author}"
 
 #. Default: "Read comments on this entry."
-#: ./browser/blog_macros.pt:491
+#: ./browser/blog_macros.pt:495
+#: ./browser/entry_macros.pt:113
 msgid "label_read_comments_title"
 msgstr "Přečíst komentáře k tomuto příspěvku."
 
 #. Default: "Read more"
-#: ./browser/blog_macros.pt:481
+#: ./browser/blog_macros.pt:485
 msgid "label_read_more"
 msgstr "Čtěte více"
 
 #. Default: "-- Category --"
-#: ./browser/blogview.py:148
+#: ./browser/blogview.py:157
 msgid "select_category_option"
 msgstr "-- Kategorie --"
 
 #. Default: "-- Month --"
-#: ./browser/blogview.py:160
+#: ./browser/blogview.py:169
 msgid "select_month_option"
 msgstr "-- Měsíc --"
 
 #. Default: "-- Year --"
-#: ./browser/blogview.py:154
+#: ./browser/blogview.py:163
 msgid "select_year_option"
 msgstr "-- Rok --"
+
+#. Default: "Blog archive"
+#: ./profiles/default/portlets.xml
+msgid "title_blog_archive_portlet"
+msgstr "Archív blogu"
+
+#. Default: "Share Entry"
+#: ./profiles/default/portlets.xml
+msgid "title_blog_share_portlet"
+msgstr "Sdílet příspěvek"
 
 #. Default: "Can blog"
 #: ./sharing.py:10
 msgid "title_can_blog"
 msgstr "Může blogovat"
+
+#. Default: "Manage blog"
+#: ./profiles/default/portlets.xml
+msgid "title_manage_blog_portlet"
+msgstr "Spravovat blog"
 

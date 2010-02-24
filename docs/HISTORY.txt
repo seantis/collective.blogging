@@ -1,10 +1,11 @@
 Changelog
 =========
 
-1.0rc2 (unreleased)
+1.0rc2 (2010-02-24)
 ~~~~~~~~~~~~~~~~~~~
 
 - made entry's document byline block easier to customize in the blog view [lzdych]
+- updated i18n and czech translation [lzdych]
 
 1.0rc1 (2010-02-16)
 ~~~~~~~~~~~~~~~~~~~
