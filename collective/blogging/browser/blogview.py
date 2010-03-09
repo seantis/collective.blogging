@@ -53,7 +53,8 @@ class BlogView(BrowserView):
         
         month = self.request.get('publish_month', None)
         if month:
-            criteria['publish_month'] = int(month)
+            # Note: months are indexed as for example '03'
+            criteria['publish_month'] = month
 
         if self.is_topic:
             brains = self.context.queryCatalog(criteria)
