@@ -86,13 +86,11 @@ class BlogExtender(object):
             languageIndependent = True,
             default = 10,
             write_permission = BLOG_PERMISSION,
-            enforceVocabulary = False,
-            vocabulary = (3, 5, 10, 15, 20),
-            widget = SelectionWidget(
+            widget = IntegerWidget(
                 label = _(u"label_batch_size",
                     default=u"Batch size"),
                 description = _(u"help_batch_size",
-                    default = u"Select how many blog entries should be listed per page in the blog view."),
+                    default = u"Enter how many blog entries should be listed per page in the blog view."),
             ),
         ),
         
