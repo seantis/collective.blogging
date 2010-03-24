@@ -4,6 +4,9 @@ Changelog
 1.0rc3 (unreleased)
 ~~~~~~~~~~~~~~~~~~~
 
+- Changed batch_size field UI from a selection widget to a more flexible
+  entry field.  Also helps to avoid a problem with the handling of integer
+  vocabularies for the selection widget. [newbery]
 - Fixed error in filtering per month.
   Hopefully fixes http://plone.org/products/collective.blogging/issues/3
   [maurits]
