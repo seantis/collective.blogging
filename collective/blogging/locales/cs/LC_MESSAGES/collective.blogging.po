@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2010-04-26 11:24+0000\n"
-"PO-Revision-Date: 2010-04-26 13:27+0100\n"
+"POT-Creation-Date: 2010-04-26 12:57+0000\n"
+"PO-Revision-Date: 2010-04-26 14:59+0100\n"
 "Last-Translator: Lukas Zdych <lukas.zdych@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -64,7 +64,7 @@ msgstr "Archív blogu: ${blog}"
 msgid "Blog created"
 msgstr "Blog vytvořen"
 
-#: ./extenders.py:204
+#: ./extenders.py:217
 msgid "Blogger's bio"
 msgstr "Info o blogerovi"
 
@@ -248,7 +248,7 @@ msgstr "Omezit podle typů"
 msgid "Restrict portlet availability by content types wich entries are based on."
 msgstr "Omezte dostupnost portletu podle typů obsahu, na kterých jsou příspěvky založeny."
 
-#: ./extenders.py:205
+#: ./extenders.py:218
 msgid "Select a document with blogger's bio information."
 msgstr "Vyberte dokument s informacemi o blo"
 
@@ -326,22 +326,22 @@ msgid "help_blog_enabled"
 msgstr "Zaškrtněte pro aktivaci blogování."
 
 #. Default: "Mark this content as blog entry."
-#: ./extenders.py:177
+#: ./extenders.py:190
 msgid "help_blog_entry_marker"
 msgstr "Označit tento obsah za položku blogu."
 
 #. Default: "Enter blogger's name if you're posting entry of different person."
-#: ./extenders.py:190
+#: ./extenders.py:203
 msgid "help_blogger_name"
 msgstr "Zadejte jméno blogera pokud zadáváte příspěvek někoho jiného."
 
 #. Default: "Paste embed code for example youtube, google or other video content."
-#: ./extenders.py:243
+#: ./extenders.py:256
 msgid "help_embed"
 msgstr "Vložte externí kód, například youtube, google nebo jiný video obsah."
 
 #. Default: "Tick to enable / disable blog contents count displaying."
-#: ./extenders.py:122
+#: ./extenders.py:135
 msgid "help_enable_count"
 msgstr "Zaškrtněte pro zapnutí / vypnutí zobrazení počtu příspěvků blogu."
 
@@ -349,6 +349,11 @@ msgstr "Zaškrtněte pro zapnutí / vypnutí zobrazení počtu příspěvků blo
 #: ./extenders.py:109
 msgid "help_enable_toolbar"
 msgstr "Zaškrtněte pro zobrazení nástrojové lišty blogu nahoře v jeho zobrazení."
+
+#. Default: "Enter number of minutes for which will be cached filter options in the blog toolbar."
+#: ./extenders.py:122
+msgid "help_filter_cache"
+msgstr "Zadejte počet minut, po které budou v cache drženy volby filtrovací lišty blogu."
 
 #. Default: "Tick this checkbox to display entry body text in the blog view."
 #: ./extenders.py:69
@@ -381,7 +386,7 @@ msgid "label_blog_enabled"
 msgstr "Aktivní blog"
 
 #. Default: "Blog Entry"
-#: ./extenders.py:175
+#: ./extenders.py:188
 msgid "label_blog_entry"
 msgstr "Položka Blogu"
 
@@ -391,12 +396,12 @@ msgid "label_blog_posts_count"
 msgstr "Nalezeno ${count} příspěvků."
 
 #. Default: "Blog Text"
-#: ./extenders.py:141
+#: ./extenders.py:154
 msgid "label_blog_text"
 msgstr "Text Blogu"
 
 #. Default: "Blogger's name"
-#: ./extenders.py:188
+#: ./extenders.py:201
 msgid "label_blogger_name"
 msgstr "Jméno blogera"
 
@@ -429,12 +434,12 @@ msgid "label_edit_title"
 msgstr "Klikněte sem pro editaci příspěvku."
 
 #. Default: "Embed"
-#: ./extenders.py:242
+#: ./extenders.py:255
 msgid "label_embed"
 msgstr "Externí"
 
 #. Default: "Display count"
-#: ./extenders.py:120
+#: ./extenders.py:133
 msgid "label_enable_count"
 msgstr "Zobrazit počet"
 
@@ -452,6 +457,11 @@ msgstr "kategorie:"
 #: ./browser/blog_macros.pt:42
 msgid "label_filter"
 msgstr "Filtr"
+
+#. Default: "Filter cache"
+#: ./extenders.py:120
+msgid "label_filter_cache"
+msgstr "Cache filtru"
 
 #. Default: "Filter posts"
 #: ./browser/blog_macros.pt:19
@@ -521,17 +531,17 @@ msgid "label_read_more"
 msgstr "Čtěte více"
 
 #. Default: "-- Category --"
-#: ./browser/blogview.py:158
+#: ./browser/blogview.py:163
 msgid "select_category_option"
 msgstr "-- Kategorie --"
 
 #. Default: "-- Month --"
-#: ./browser/blogview.py:170
+#: ./browser/blogview.py:175
 msgid "select_month_option"
 msgstr "-- Měsíc --"
 
 #. Default: "-- Year --"
-#: ./browser/blogview.py:164
+#: ./browser/blogview.py:169
 msgid "select_year_option"
 msgstr "-- Rok --"
 

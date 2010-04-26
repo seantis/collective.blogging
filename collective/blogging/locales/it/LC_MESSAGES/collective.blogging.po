@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2010-04-26 11:24+0000\n"
+"POT-Creation-Date: 2010-04-26 12:57+0000\n"
 "PO-Revision-Date: 2009-12-13 03:59+0100\n"
 "Last-Translator: Enzo Cesanelli <enzo@noiza.com>\n"
 "MIME-Version: 1.0\n"
@@ -64,7 +64,7 @@ msgstr "Archivio: ${blog}"
 msgid "Blog created"
 msgstr "Blog creato"
 
-#: ./extenders.py:204
+#: ./extenders.py:217
 msgid "Blogger's bio"
 msgstr ""
 
@@ -248,7 +248,7 @@ msgstr ""
 msgid "Restrict portlet availability by content types wich entries are based on."
 msgstr ""
 
-#: ./extenders.py:205
+#: ./extenders.py:218
 msgid "Select a document with blogger's bio information."
 msgstr ""
 
@@ -326,22 +326,22 @@ msgid "help_blog_enabled"
 msgstr ""
 
 #. Default: "Mark this content as blog entry."
-#: ./extenders.py:177
+#: ./extenders.py:190
 msgid "help_blog_entry_marker"
 msgstr ""
 
 #. Default: "Enter blogger's name if you're posting entry of different person."
-#: ./extenders.py:190
+#: ./extenders.py:203
 msgid "help_blogger_name"
 msgstr ""
 
 #. Default: "Paste embed code for example youtube, google or other video content."
-#: ./extenders.py:243
+#: ./extenders.py:256
 msgid "help_embed"
 msgstr "Incolla il codice embed, ad esempio da YouTube, Google o altro contenuto video."
 
 #. Default: "Tick to enable / disable blog contents count displaying."
-#: ./extenders.py:122
+#: ./extenders.py:135
 msgid "help_enable_count"
 msgstr ""
 
@@ -349,6 +349,11 @@ msgstr ""
 #: ./extenders.py:109
 msgid "help_enable_toolbar"
 msgstr "Spunta per attivare/disattivare la barra blog all'inizio della pagina"
+
+#. Default: "Enter number of minutes for which will be cached filter options in the blog toolbar."
+#: ./extenders.py:122
+msgid "help_filter_cache"
+msgstr ""
 
 #. Default: "Tick this checkbox to display entry body text in the blog view."
 #: ./extenders.py:69
@@ -381,7 +386,7 @@ msgid "label_blog_enabled"
 msgstr "Blog attivato"
 
 #. Default: "Blog Entry"
-#: ./extenders.py:175
+#: ./extenders.py:188
 msgid "label_blog_entry"
 msgstr "Post"
 
@@ -391,12 +396,12 @@ msgid "label_blog_posts_count"
 msgstr ""
 
 #. Default: "Blog Text"
-#: ./extenders.py:141
+#: ./extenders.py:154
 msgid "label_blog_text"
 msgstr ""
 
 #. Default: "Blogger's name"
-#: ./extenders.py:188
+#: ./extenders.py:201
 msgid "label_blogger_name"
 msgstr ""
 
@@ -429,12 +434,12 @@ msgid "label_edit_title"
 msgstr "Clicca per modificare questo post"
 
 #. Default: "Embed"
-#: ./extenders.py:242
+#: ./extenders.py:255
 msgid "label_embed"
 msgstr "Codice Embed"
 
 #. Default: "Display count"
-#: ./extenders.py:120
+#: ./extenders.py:133
 msgid "label_enable_count"
 msgstr ""
 
@@ -452,6 +457,11 @@ msgstr "Archiviato sotto:"
 #: ./browser/blog_macros.pt:42
 msgid "label_filter"
 msgstr "Filtra"
+
+#. Default: "Filter cache"
+#: ./extenders.py:120
+msgid "label_filter_cache"
+msgstr ""
 
 #. Default: "Filter posts"
 #: ./browser/blog_macros.pt:19
@@ -522,18 +532,18 @@ msgid "label_read_more"
 msgstr "Clicca per leggere tutto il post"
 
 #. Default: "-- Category --"
-#: ./browser/blogview.py:158
+#: ./browser/blogview.py:163
 msgid "select_category_option"
 msgstr "--Categoria--"
 
 #. Default: "-- Month --"
-#: ./browser/blogview.py:170
+#: ./browser/blogview.py:175
 #, fuzzy
 msgid "select_month_option"
 msgstr "--Mese--"
 
 #. Default: "-- Year --"
-#: ./browser/blogview.py:164
+#: ./browser/blogview.py:169
 msgid "select_year_option"
 msgstr "--Anno--"
 

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-04-26 11:24+0000\n"
+"POT-Creation-Date: 2010-04-26 12:57+0000\n"
 "PO-Revision-Date: 2010-02-14 12:01-0300\n"
 "Last-Translator: Davi Lima <davilima6@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -66,7 +66,7 @@ msgstr "Arquivos do blog: ${blog}"
 msgid "Blog created"
 msgstr "Blog criado"
 
-#: ./extenders.py:204
+#: ./extenders.py:217
 msgid "Blogger's bio"
 msgstr ""
 
@@ -250,7 +250,7 @@ msgstr "Filtar por tipos"
 msgid "Restrict portlet availability by content types wich entries are based on."
 msgstr "Restringir a exibição do portlet de acordo com os tipos de conteúdo nos quais os posts se baseiam."
 
-#: ./extenders.py:205
+#: ./extenders.py:218
 msgid "Select a document with blogger's bio information."
 msgstr ""
 
@@ -328,28 +328,33 @@ msgid "help_blog_enabled"
 msgstr ""
 
 #. Default: "Mark this content as blog entry."
-#: ./extenders.py:177
+#: ./extenders.py:190
 msgid "help_blog_entry_marker"
 msgstr ""
 
 #. Default: "Enter blogger's name if you're posting entry of different person."
-#: ./extenders.py:190
+#: ./extenders.py:203
 msgid "help_blogger_name"
 msgstr ""
 
 #. Default: "Paste embed code for example youtube, google or other video content."
-#: ./extenders.py:243
+#: ./extenders.py:256
 msgid "help_embed"
 msgstr ""
 
 #. Default: "Tick to enable / disable blog contents count displaying."
-#: ./extenders.py:122
+#: ./extenders.py:135
 msgid "help_enable_count"
 msgstr ""
 
 #. Default: "Tick to enable / disable blog toolbar on the top of its page."
 #: ./extenders.py:109
 msgid "help_enable_toolbar"
+msgstr ""
+
+#. Default: "Enter number of minutes for which will be cached filter options in the blog toolbar."
+#: ./extenders.py:122
+msgid "help_filter_cache"
 msgstr ""
 
 #. Default: "Tick this checkbox to display entry body text in the blog view."
@@ -383,7 +388,7 @@ msgid "label_blog_enabled"
 msgstr ""
 
 #. Default: "Blog Entry"
-#: ./extenders.py:175
+#: ./extenders.py:188
 msgid "label_blog_entry"
 msgstr ""
 
@@ -393,12 +398,12 @@ msgid "label_blog_posts_count"
 msgstr ""
 
 #. Default: "Blog Text"
-#: ./extenders.py:141
+#: ./extenders.py:154
 msgid "label_blog_text"
 msgstr ""
 
 #. Default: "Blogger's name"
-#: ./extenders.py:188
+#: ./extenders.py:201
 msgid "label_blogger_name"
 msgstr ""
 
@@ -431,12 +436,12 @@ msgid "label_edit_title"
 msgstr ""
 
 #. Default: "Embed"
-#: ./extenders.py:242
+#: ./extenders.py:255
 msgid "label_embed"
 msgstr ""
 
 #. Default: "Display count"
-#: ./extenders.py:120
+#: ./extenders.py:133
 msgid "label_enable_count"
 msgstr ""
 
@@ -453,6 +458,11 @@ msgstr ""
 #. Default: "Filter"
 #: ./browser/blog_macros.pt:42
 msgid "label_filter"
+msgstr ""
+
+#. Default: "Filter cache"
+#: ./extenders.py:120
+msgid "label_filter_cache"
 msgstr ""
 
 #. Default: "Filter posts"
@@ -523,17 +533,17 @@ msgid "label_read_more"
 msgstr ""
 
 #. Default: "-- Category --"
-#: ./browser/blogview.py:158
+#: ./browser/blogview.py:163
 msgid "select_category_option"
 msgstr ""
 
 #. Default: "-- Month --"
-#: ./browser/blogview.py:170
+#: ./browser/blogview.py:175
 msgid "select_month_option"
 msgstr ""
 
 #. Default: "-- Year --"
-#: ./browser/blogview.py:164
+#: ./browser/blogview.py:169
 msgid "select_year_option"
 msgstr ""
 
