@@ -1,0 +1,75 @@
+Metadata-Version: 1.0
+Name: collective.collage.blogging
+Version: 1.0.4
+Summary: Collage view for blog post listing view.
+Home-page: http://plone.org/products/collective.collage.blogging
+Author: Davi Lima
+Author-email: davilima6@gmail.com
+License: GPL
+Description: Introduction
+        ============
+
+        Integrates collective.blogging into Collage.
+
+        Installation
+        ============
+
+        * Add ``collective.collage.blogging`` to the list of eggs to install, e.g.::
+
+        [buildout]
+        ...
+        eggs =
+        ...
+        collective.collage.blogging
+
+        * Tell the plone.recipe.zope2instance recipe to install a ZCML slug::
+
+        [instance]
+        recipe = plone.recipe.zope2instance
+        ...
+        zcml =
+        collective.collage.blogging
+
+        * Re-run buildout, e.g. with::
+
+        $ ./bin/buildout
+
+        You can skip the ZCML slug if you are using Plone 3.3 or if you are going to explicitly include
+        the package from another package's configure.zcml file.
+
+        Authors and Contributors
+        ========================
+        * Davi Lima <davilima6@gmail.com>
+
+        LICENSE
+        =======
+        This program is free software; you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation; either version 2 of the License, or
+        (at your option) any later version.
+
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+        GNU General Public License for more details.
+
+        You should have received a copy of the GNU General Public License
+        along with this program; if not, write to the Free Software
+        Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+        MA 02111-1307 USA.
+
+        Changelog
+        =========
+
+        1.0.1
+        -----
+        - Release to public repositories
+
+        1.0dev (unreleased)
+        -------------------
+        - Initial release
+
+Platform: UNKNOWN
+Classifier: Framework :: Plone
+Classifier: Programming Language :: Python
+
