@@ -96,13 +96,14 @@
 
 <metal:entryBlogger define-macro="entry_blogger" i18n:domain="collective.blogging">
     <tal:name tal:condition="python:item_creator or item_blogger"
-        tal:define="author python:not item_blogger and item_creator and view.tools.membership().getMemberInfo(item_creator)">
+        tal:define="author python:not item_blogger and item_creator and view.tools.membership().getMemberInfo(item_creator);
+                    bio python:item_blogger_bio and item_blogger_bio.absolute_url() or None">
         <span i18n:translate="label_posted_by">
             Posted by
             <a href="#"
-                tal:attributes="href string:${view/portal_state/navigation_root_url}/author/${item_creator}"
+                tal:attributes="href python:bio or '%s/author/%s' % (nav_root, item_creator)"
                 tal:content="python:item_blogger or (author and author['fullname']) or item_creator"
-                tal:omit-tag="not:author"
+                tal:omit-tag="python:not (author or bio)"
                 i18n:name="author">
                 Bob Dobalina
             </a>

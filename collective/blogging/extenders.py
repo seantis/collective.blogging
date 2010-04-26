@@ -9,11 +9,13 @@ from archetypes.markerfield import InterfaceMarkerField
 from Products.ATContentTypes.configuration import zconf
 from Products.Archetypes.atapi import AnnotationStorage
 from Products.Archetypes.atapi import (TextField, IntegerField,
-                                        BooleanField, StringField)
+                                        BooleanField, StringField,
+                                        ReferenceField)
 from Products.Archetypes.atapi import (BooleanWidget, TextAreaWidget,
                                         SelectionWidget, RichWidget,
                                         IntegerWidget, StringWidget)
 from Products.ATContentTypes.interface import IATLink
+from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import ReferenceBrowserWidget
 
 from collective.blogging.interfaces import (IBloggable, IPostable, IBlogMarker,
                                             IEntryMarker, IBloggingSpecific)
@@ -33,6 +35,8 @@ class ExIntegerField(ExtensionField, IntegerField):
 class ExStringField(ExtensionField, StringField):
     """ A string field """
 
+class ExtReferenceField(ExtensionField, ReferenceField):
+    """A Reference field  """
 
 class BlogExtender(object):
     """ Add blog configuration fields to all bloggable content. """
@@ -185,6 +189,22 @@ class EntryExtender(object):
                     default = u"Blogger's name"),
                 description = _(u"help_blogger_name",
                     default = u"Enter blogger's name if you're posting entry of different person."),
+            ),
+        ),
+        
+        ExtReferenceField('blogger_bio',
+            schemata = u'blog',
+            required = False,
+            storage = AnnotationStorage(),
+            languageIndependent = True,
+            keepReferencesOnCopy = True,
+            multiValued=False,
+            relationship='bloggersBioPage',
+            widget = ReferenceBrowserWidget(
+                label=_(u"Blogger's bio"),
+                description=_(u"Select a document with blogger's bio information." ),
+                force_close_on_insert=1,
+                hide_inaccessible=True,
             ),
         ),
     ]
