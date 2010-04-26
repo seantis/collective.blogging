@@ -16,7 +16,11 @@ from collective.blogging import _
 def _filter_cachekey(method,self):
     """ Time and path based cache """
     path = '/'.join(self.context.getPhysicalPath())
-    return hash((path, time() // (60 * 60)))
+    interval = 60
+    int_fld = self.context.getField('filter_cache')
+    if int_fld:
+        interval = int_fld.get(self.context)
+    return hash((path, time() // (60 * interval)))
 
 class BlogView(BrowserView):
     """ A blog browser view """
@@ -129,7 +133,8 @@ class BlogView(BrowserView):
         return 10
     
     @ram.cache(_filter_cachekey)
-    def filter_info(self):        
+    def filter_info(self):
+        print 'Caching filter info'     
         subject = self.request.get('Subject')
         year    = self.request.get('publish_year')
         month   = self.request.get('publish_month')

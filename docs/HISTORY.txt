@@ -13,6 +13,7 @@ Changelog
 - blog entry author's link can now optionally target to any referencable object instead of default
   author's page [lzdych]
 - added Japanese translation by Yusuke NAKAI [lzdych]
+- cache interval for the filter toolbar dropdowns configurable in the blog (folder) settings [lzdych]
 
 1.0rc2 (2010-02-24)
 ~~~~~~~~~~~~~~~~~~~

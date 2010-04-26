@@ -111,6 +111,19 @@ class BlogExtender(object):
             ),
         ),
         
+        ExIntegerField("filter_cache",
+            schemata = u'blog',
+            languageIndependent = True,
+            default = 60,
+            write_permission = BLOG_PERMISSION,
+            widget = IntegerWidget(
+                label = _(u"label_filter_cache",
+                    default=u"Filter cache"),
+                description = _(u"help_filter_cache",
+                    default = u"Enter number of minutes for which will be cached filter options in the blog toolbar."),
+            ),
+        ),
+        
         ExBooleanField("enable_count",
             schemata = u'blog',
             languageIndependent = True,
