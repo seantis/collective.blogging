@@ -91,6 +91,8 @@ Translations
 
 - Dutch: Rob Gietema (robgietema)
 
+- Japanese: Yusuke NAKAI (nyusuke at nagosui dot org)
+
 New translations or help with correction of an existing ones would be appreciated.
 
 Examples
