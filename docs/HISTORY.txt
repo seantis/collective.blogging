@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0rc3 (unreleased)
+1.0rc3 (2010-04-26)
 ~~~~~~~~~~~~~~~~~~~
 
 - Changed batch_size field UI from a selection widget to a more flexible
@@ -12,7 +12,7 @@ Changelog
   [maurits]
 - blog entry author's link can now optionally target to any referencable object instead of default
   author's page [lzdych]
-- added Japanese translation by Yusuke NAKAI [lzdych]
+- added Japanese translation by Yusuke Nakai [lzdych]
 - cache interval for the filter toolbar dropdowns configurable in the blog (folder) settings [lzdych]
 
 1.0rc2 (2010-02-24)

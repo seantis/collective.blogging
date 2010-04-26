@@ -72,11 +72,7 @@ Features
 
 - Google maps integration with events via collective.bloggingmaps extra-extension
 
-- User's guide included in the UI
-
 - Safe uninstall
-
-For more information about how to use blogging features go to [your-site]/blogging-help.
 
 Translations
 ============
@@ -104,6 +100,8 @@ Here are sites where the blogging tool is already in production use.
 
 .. _lukaszdych.net: http://lukaszdych.net
 
+- blog.horovi.com_
+
 .. _blog.horovi.com: http://blog.horovi.com
 
 Copyright and Credits
@@ -123,9 +121,3 @@ Homepage: collective.blogging_.
 
 .. _collective.blogging: http://plone.org/products/collective.blogging
 
-
-Tips: `My blogging posts`__.
-
-.. _blogging: http://lukaszdych.net/search?Subject%3Alist=blogging
-
-__ blogging_
