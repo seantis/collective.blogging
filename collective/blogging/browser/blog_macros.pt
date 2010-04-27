@@ -1,10 +1,11 @@
 <metal:blogTitle define-macro="blog_title">
-    <h1 class="documentFirstHeading" tal:content="context/title">Title</h1>
+    <h1 class="documentFirstHeading" tal:content="context/title"
+        tal:attributes="style hiddableStyle|nothing">Title</h1>
 </metal:blogTitle>
 
 <metal:blogDesc define-macro="blog_description">
     <p class="documentDescription" tal:condition="context/Description"
-        tal:attributes="style hiddableStyle">
+        tal:attributes="style hiddableStyle|nothing">
         <metal:field use-macro="python:context.widget('description', mode='view')">
             Description
         </metal:field>

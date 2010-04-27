@@ -5,6 +5,7 @@ Changelog
 ~~~~~~~~~~~~~~~~~~~
 
 - minor fixes in the templates to support collective.collage.blogging extension [lzdych]
+- blog's title and description can be hidden in the blog view by new option in the blog's settings [lzdych]
 
 1.0rc3 (2010-04-26)
 ~~~~~~~~~~~~~~~~~~~

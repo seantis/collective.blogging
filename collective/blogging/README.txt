@@ -96,6 +96,10 @@ Examples
 
 Here are sites where the blogging tool is already in production use.
 
+- plan-international.org_
+
+.. _plan-international.org: http://plan-international.org/about-plan/resources/blogs
+
 - lukaszdych.net_
 
 .. _lukaszdych.net: http://lukaszdych.net

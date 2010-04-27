@@ -10,7 +10,6 @@
                             getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
                             templateId template/getId;
                             batch view/batch;
-                            hiddableStyle python:batch and 'visibility:hidden;;height:1px;;padding:0;;margin:0;;' or None;
                             url_quote nocall:modules/Products.PythonScripts.standard/url_quote;
                             portal_discussion nocall:context/portal_discussion;
                             isDiscussionAllowedFor nocall:portal_discussion/isDiscussionAllowedFor;
@@ -21,7 +20,9 @@
                             nav_root context/@@plone_portal_state/navigation_root_url;
                             isAnon isAnon|context/@@plone_portal_state/anonymous;
                             wtool wtool|context/portal_workflow;
-                            show_body view/show_body">
+                            show_body view/show_body;
+                            show_header python:view.getFieldValue('show_header', context);
+                            hiddableStyle python:(not show_header) and 'visibility:hidden;;height:1px;;padding:0;;margin:0;;' or None;">
 
                 <div tal:replace="structure provider:plone.abovecontenttitle" />
                 

@@ -12,8 +12,7 @@ from Products.Archetypes.atapi import (TextField, IntegerField,
                                         BooleanField, StringField,
                                         ReferenceField)
 from Products.Archetypes.atapi import (BooleanWidget, TextAreaWidget,
-                                        SelectionWidget, RichWidget,
-                                        IntegerWidget, StringWidget)
+                                        RichWidget, IntegerWidget, StringWidget)
 from Products.ATContentTypes.interface import IATLink
 from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import ReferenceBrowserWidget
 
@@ -68,6 +67,18 @@ class BlogExtender(object):
                 label = _(u"label_full_view", default=u"Full view"),
                 description = _(u"help_full_view",
                     default = u"Tick this checkbox to display entry body text in the blog view."),
+            ),        
+        ),
+        
+        ExBooleanField("show_header",
+            schemata = u'blog',
+            languageIndependent = True,
+            default = True,
+            write_permission = BLOG_PERMISSION,
+            widget = BooleanWidget(
+                label = _(u"label_show_header", default=u"Show header"),
+                description = _(u"help_show_header",
+                    default = u"If unchecked, blog's title and description will be hidden in the blog view."),
             ),        
         ),
         
