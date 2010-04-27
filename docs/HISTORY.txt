@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.0 (unreleased)
+~~~~~~~~~~~~~~~~~~~
+
+- minor fixes in the templates to support collective.collage.blogging extension [lzdych]
+
 1.0rc3 (2010-04-26)
 ~~~~~~~~~~~~~~~~~~~
 

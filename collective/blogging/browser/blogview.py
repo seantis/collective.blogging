@@ -29,9 +29,18 @@ class BlogView(BrowserView):
         super(BlogView, self).__init__(context, request)
         self.context = context
         self.request = request
-        self.tools = getMultiAdapter((context, request), name=u'plone_tools')
-        self.portal_state = getMultiAdapter((context, request), name=u'plone_portal_state')
+        #import pdb; pdb.set_trace( )
+        #self.tools = getMultiAdapter((context, request), name=u'plone_tools')
+        #self.portal_state = getMultiAdapter((context, request), name=u'plone_portal_state')
     
+    @property
+    def tools(self):
+        return getMultiAdapter((self.context, self.request), name=u'plone_tools')
+    
+    @property
+    def portal_state(self):
+        return getMultiAdapter((self.context, self.request), name=u'plone_portal_state')
+
     def getFieldValue(self, name, obj=None):
         if obj is None:
             obj = self.context

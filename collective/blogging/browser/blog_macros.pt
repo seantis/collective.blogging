@@ -142,7 +142,7 @@
 </metal:entryCategories>
 
 <metal:entryDocumentByLine define-macro="entry_documentbyline">
-    <div class="documentByLine" tal:condition="python: site_properties.allowAnonymousViewAbout or not isAnon">
+    <div class="documentByLine" tal:condition="python: view.site_props.allowAnonymousViewAbout or not isAnon">
         <metal:entryBlogger use-macro="context/blog_macros/macros/entry_blogger"/>
         <metal:entryPermalink use-macro="context/blog_macros/macros/entry_permalink"/>
         <metal:entryCategories use-macro="context/blog_macros/macros/entry_categories"/>
