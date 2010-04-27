@@ -46,6 +46,7 @@
             </dd>
         </dl>
     </tal:toolbar>
+    <div class="visualClear" id="visual-clear-after-blog-toolbar"><!-- --></div>
 </metal:toolbar>
 
 <metal:postCount define-macro="post_count" i18n:domain="collective.blogging">
