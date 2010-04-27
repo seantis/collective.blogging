@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2010-04-26 12:57+0000\n"
+"POT-Creation-Date: 2010-04-27 10:34+0000\n"
 "PO-Revision-Date: 2010-01-06 16:09+0100\n"
 "Last-Translator: Rob Gietema <rob@fourdigits.nl>\n"
 "MIME-Version: 1.0\n"
@@ -65,7 +65,7 @@ msgstr "Blog Archief ${blog}"
 msgid "Blog created"
 msgstr "Blog aangemaakt"
 
-#: ./extenders.py:217
+#: ./extenders.py:228
 msgid "Blogger's bio"
 msgstr ""
 
@@ -249,7 +249,7 @@ msgstr "Scherm af op typen"
 msgid "Restrict portlet availability by content types wich entries are based on."
 msgstr "Scherm portlet beschikbaarheid op basis van de content typen waar de items op zijn gebaseerd."
 
-#: ./extenders.py:218
+#: ./extenders.py:229
 msgid "Select a document with blogger's bio information."
 msgstr ""
 
@@ -307,7 +307,7 @@ msgid "description_manage_blog_portlet"
 msgstr ""
 
 #. Default: "There are currently no contents in this blog."
-#: ./browser/blog_macros.pt:520
+#: ./browser/blog_macros.pt:522
 msgid "description_no_items_in_blog"
 msgstr "Deze blog bevat op dit moment geen inhoud."
 
@@ -317,54 +317,59 @@ msgid "description_share_portlet"
 msgstr ""
 
 #. Default: "Enter how many blog entries should be listed per page in the blog view."
-#: ./extenders.py:96
+#: ./extenders.py:107
 #, fuzzy
 msgid "help_batch_size"
 msgstr "Batch grootte"
 
 #. Default: "Tick to enable / disable blog behaviour."
-#: ./extenders.py:57
+#: ./extenders.py:56
 msgid "help_blog_enabled"
 msgstr "Klik om de blog functionaliteit aan of uit te zetten."
 
 #. Default: "Mark this content as blog entry."
-#: ./extenders.py:190
+#: ./extenders.py:201
 msgid "help_blog_entry_marker"
 msgstr "Markeer dit bericht als een blog item."
 
 #. Default: "Enter blogger's name if you're posting entry of different person."
-#: ./extenders.py:203
+#: ./extenders.py:214
 msgid "help_blogger_name"
 msgstr ""
 
 #. Default: "Paste embed code for example youtube, google or other video content."
-#: ./extenders.py:256
+#: ./extenders.py:267
 msgid "help_embed"
 msgstr "Plak embed code van bijvoorbeeld youtube, google of andere video content."
 
 #. Default: "Tick to enable / disable blog contents count displaying."
-#: ./extenders.py:135
+#: ./extenders.py:146
 msgid "help_enable_count"
 msgstr "Schakel het blog inhoud aantal in en uit."
 
 #. Default: "Tick to enable / disable blog toolbar on the top of its page."
-#: ./extenders.py:109
+#: ./extenders.py:120
 msgid "help_enable_toolbar"
 msgstr "Schakel de blog toolbar in en uit bovenaan de pagina."
 
 #. Default: "Enter number of minutes for which will be cached filter options in the blog toolbar."
-#: ./extenders.py:122
+#: ./extenders.py:133
 msgid "help_filter_cache"
 msgstr ""
 
 #. Default: "Tick this checkbox to display entry body text in the blog view."
-#: ./extenders.py:69
+#: ./extenders.py:68
 msgid "help_full_view"
 msgstr "Volledige weergave"
 
 #. Default: "You can set maximal length of entry's description displayed in blog view. Note: This doesn't affect blog view if Full view option above is enabled."
-#: ./extenders.py:82
+#: ./extenders.py:93
 msgid "help_perex_length"
+msgstr ""
+
+#. Default: "If unchecked, blog's title and description will be hidden in the blog view."
+#: ./extenders.py:80
+msgid "help_show_header"
 msgstr ""
 
 #. Default: "Add new content:"
@@ -378,42 +383,42 @@ msgid "label_archives"
 msgstr "Archieven"
 
 #. Default: "Batch size"
-#: ./extenders.py:94
+#: ./extenders.py:105
 msgid "label_batch_size"
 msgstr "Batch grootte"
 
 #. Default: "Blog enabled"
-#: ./extenders.py:55
+#: ./extenders.py:54
 msgid "label_blog_enabled"
 msgstr "Blog ingeschakeld"
 
 #. Default: "Blog Entry"
-#: ./extenders.py:188
+#: ./extenders.py:199
 msgid "label_blog_entry"
 msgstr "Blog item"
 
 #. Default: "Found ${count} posts."
-#: ./browser/blog_macros.pt:55
+#: ./browser/blog_macros.pt:57
 msgid "label_blog_posts_count"
 msgstr "Klik om het blog inhoud aantal te tonen."
 
 #. Default: "Blog Text"
-#: ./extenders.py:154
+#: ./extenders.py:165
 msgid "label_blog_text"
 msgstr ""
 
 #. Default: "Blogger's name"
-#: ./extenders.py:201
+#: ./extenders.py:212
 msgid "label_blogger_name"
 msgstr ""
 
 #. Default: "Click to read full entry."
-#: ./browser/blog_macros.pt:486
+#: ./browser/blog_macros.pt:488
 msgid "label_click_to_read_full_entry"
 msgstr "Lees meer"
 
 #. Default: "Comments (${comments})"
-#: ./browser/blog_macros.pt:502
+#: ./browser/blog_macros.pt:504
 #: ./browser/entry_macros.pt:119
 msgid "label_comments_with_count"
 msgstr "Reacties (${comments})"
@@ -424,54 +429,54 @@ msgid "label_drafts"
 msgstr "Concepten"
 
 #. Default: "Edit"
-#: ./browser/blog_macros.pt:509
+#: ./browser/blog_macros.pt:511
 #: ./browser/entry_macros.pt:127
 msgid "label_edit"
 msgstr "Bewerken"
 
 #. Default: "Click to edit this entry."
-#: ./browser/blog_macros.pt:509
+#: ./browser/blog_macros.pt:511
 #: ./browser/entry_macros.pt:127
 msgid "label_edit_title"
 msgstr "Klik hier om dit bericht te bewerken."
 
 #. Default: "Embed"
-#: ./extenders.py:255
+#: ./extenders.py:266
 msgid "label_embed"
 msgstr "Embed"
 
 #. Default: "Display count"
-#: ./extenders.py:133
+#: ./extenders.py:144
 msgid "label_enable_count"
 msgstr "Geef aantal weer"
 
 #. Default: "Toolbar enabled"
-#: ./extenders.py:107
+#: ./extenders.py:118
 msgid "label_enable_toolbar"
 msgstr "Toolbar ingeschakeld"
 
 #. Default: "filed under:"
-#: ./browser/blog_macros.pt:130
+#: ./browser/blog_macros.pt:132
 msgid "label_filed_under"
 msgstr "geplaatst onder:"
 
 #. Default: "Filter"
-#: ./browser/blog_macros.pt:42
+#: ./browser/blog_macros.pt:43
 msgid "label_filter"
 msgstr "Filter"
 
 #. Default: "Filter cache"
-#: ./extenders.py:120
+#: ./extenders.py:131
 msgid "label_filter_cache"
 msgstr ""
 
 #. Default: "Filter posts"
-#: ./browser/blog_macros.pt:19
+#: ./browser/blog_macros.pt:20
 msgid "label_filter_posts"
 msgstr "Filter berichten"
 
 #. Default: "Full view"
-#: ./extenders.py:68
+#: ./extenders.py:67
 msgid "label_full_view"
 msgstr "Volledige weergave"
 
@@ -501,12 +506,12 @@ msgid "label_newest"
 msgstr "Nieuwste&hellip;"
 
 #. Default: "Perex length"
-#: ./extenders.py:80
+#: ./extenders.py:91
 msgid "label_perex_length"
 msgstr ""
 
 #. Default: "Permalink"
-#: ./browser/blog_macros.pt:117
+#: ./browser/blog_macros.pt:119
 #: ./browser/document_byline.pt:33
 msgid "label_permalink"
 msgstr "Permalink"
@@ -517,33 +522,38 @@ msgid "label_pictures"
 msgstr "Afbeeldingen"
 
 #. Default: "Posted by ${author}"
-#: ./browser/blog_macros.pt:103
+#: ./browser/blog_macros.pt:105
 msgid "label_posted_by"
 msgstr "Geplaatst door ${author}"
 
 #. Default: "Read comments on this entry."
-#: ./browser/blog_macros.pt:496
+#: ./browser/blog_macros.pt:498
 #: ./browser/entry_macros.pt:113
 msgid "label_read_comments_title"
 msgstr "Lees reacties op dit bericht."
 
 #. Default: "Read more"
-#: ./browser/blog_macros.pt:486
+#: ./browser/blog_macros.pt:488
 msgid "label_read_more"
 msgstr "Lees meer"
 
+#. Default: "Show header"
+#: ./extenders.py:79
+msgid "label_show_header"
+msgstr ""
+
 #. Default: "-- Category --"
-#: ./browser/blogview.py:163
+#: ./browser/blogview.py:169
 msgid "select_category_option"
 msgstr "-- Categorie --"
 
 #. Default: "-- Month --"
-#: ./browser/blogview.py:175
+#: ./browser/blogview.py:181
 msgid "select_month_option"
 msgstr "-- Maand --"
 
 #. Default: "-- Year --"
-#: ./browser/blogview.py:169
+#: ./browser/blogview.py:175
 msgid "select_year_option"
 msgstr "-- Jaar --"
 
