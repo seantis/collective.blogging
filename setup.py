@@ -24,6 +24,7 @@ setup(name='collective.collage.blogging',
       install_requires=[
           'setuptools',
           'z3c.autoinclude',  # Required for Plone 3.2 compatibility
+          'Products.Collage',
       ],
       entry_points="""
       [z3c.autoinclude.plugin]

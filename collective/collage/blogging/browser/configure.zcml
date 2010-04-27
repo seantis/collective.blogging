@@ -10,7 +10,7 @@
 
   <browser:page
       name="blog"
-      for="Products.ATContentTypes.interface.folder.IATFolder"
+      for="collective.blogging.interfaces.IBlogMarker"
       permission="zope.Public"
       template="templates/blogging.pt"
       class=".views.BloggingView"
