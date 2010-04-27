@@ -2,14 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
 "POT-Creation-Date: 2010-04-27 10:34+0000\n"
-"PO-Revision-Date: 2009-12-13 03:59+0100\n"
-"Last-Translator: Yusuke NAKAI <nyusuke@nagosui.org>\n"
+"PO-Revision-Date: 2010-04-27 21:36+0900\n"
+"Last-Translator: nyusuke <nyusuke@nagosui.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8\n"
 "X-Poedit-Language: Japanese\n"
+"Language-Team: \n"
+"X-Poedit-Country: JAPAN\n"
 
 #: ./actions/autoblog.py:97
 msgid "Add Auto-Blog Action"
@@ -317,7 +319,6 @@ msgstr "共有リンクを表示するポートレット。"
 
 #. Default: "Enter how many blog entries should be listed per page in the blog view."
 #: ./extenders.py:107
-#, fuzzy
 msgid "help_batch_size"
 msgstr "ブログビューで1ページあたりいくつのエントリを表示するかを選びます。"
 
@@ -354,7 +355,7 @@ msgstr "ブログの上部にツールバーを表示するにはチェックを
 #. Default: "Enter number of minutes for which will be cached filter options in the blog toolbar."
 #: ./extenders.py:133
 msgid "help_filter_cache"
-msgstr ""
+msgstr "ブログツールバーのフィルターオプションが何分間キャッシュされるかを入力してください。"
 
 #. Default: "Tick this checkbox to display entry body text in the blog view."
 #: ./extenders.py:68
@@ -369,7 +370,7 @@ msgstr "ブログビューで表示されるエントリのディスクリプシ
 #. Default: "If unchecked, blog's title and description will be hidden in the blog view."
 #: ./extenders.py:80
 msgid "help_show_header"
-msgstr ""
+msgstr "チェックがない場合、ブログのタイトルとディスクリプションはブログビューで表示されません。"
 
 #. Default: "Add new content:"
 #: ./portlets/manage.pt:16
@@ -467,7 +468,7 @@ msgstr "絞り込む"
 #. Default: "Filter cache"
 #: ./extenders.py:131
 msgid "label_filter_cache"
-msgstr ""
+msgstr "フィルターキャッシュ"
 
 #. Default: "Filter posts"
 #: ./browser/blog_macros.pt:20
@@ -533,14 +534,13 @@ msgstr "このエントリのコメントを読む"
 
 #. Default: "Read more"
 #: ./browser/blog_macros.pt:488
-#, fuzzy
 msgid "label_read_more"
 msgstr "続きを読む"
 
 #. Default: "Show header"
 #: ./extenders.py:79
 msgid "label_show_header"
-msgstr ""
+msgstr "ヘッダーを表示する"
 
 #. Default: "-- Category --"
 #: ./browser/blogview.py:169
@@ -549,7 +549,6 @@ msgstr "--カテゴリ--"
 
 #. Default: "-- Month --"
 #: ./browser/blogview.py:181
-#, fuzzy
 msgid "select_month_option"
 msgstr "--月--"
 
