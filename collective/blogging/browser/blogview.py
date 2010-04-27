@@ -29,9 +29,6 @@ class BlogView(BrowserView):
         super(BlogView, self).__init__(context, request)
         self.context = context
         self.request = request
-        #import pdb; pdb.set_trace( )
-        #self.tools = getMultiAdapter((context, request), name=u'plone_tools')
-        #self.portal_state = getMultiAdapter((context, request), name=u'plone_portal_state')
     
     @property
     def tools(self):
