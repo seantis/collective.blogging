@@ -14,7 +14,7 @@ from collective.blogging.interfaces import IEntryMarker
 from collective.blogging import _
 
 
-def _filter_cachekey(method,self):
+def _filter_cachekey(method, self):
     """ Time and path based cache """
     path = '/'.join(self.context.getPhysicalPath())
     interval = 60
@@ -35,11 +35,11 @@ class BlogView(BrowserView):
         super(BlogView, self).__init__(context, request)
         self.context = context
         self.request = request
-    
+
     @property
     def tools(self):
         return getMultiAdapter((self.context, self.request), name=u'plone_tools')
-    
+
     @property
     def portal_state(self):
         return getMultiAdapter((self.context, self.request), name=u'plone_portal_state')
@@ -47,7 +47,7 @@ class BlogView(BrowserView):
     def getFieldValue(self, name, obj=None):
         if obj is None:
             obj = self.context
-        
+
         field = obj.getField(name)
         if field:
             return field.get(obj)
@@ -62,11 +62,11 @@ class BlogView(BrowserView):
         subject = self.request.get('Subject', None)
         if subject and subject != ['']:
             criteria['Subject'] = subject
-        
+
         year = self.request.get('publish_year', None)
         if year:
             criteria['publish_year'] = int(year)
-        
+
         month = self.request.get('publish_month', None)
         if month:
             # Note: months are indexed as for example '03'
@@ -81,7 +81,7 @@ class BlogView(BrowserView):
             criteria['sort_order'] = 'reverse'
             brains = self.tools.catalog()(criteria)
         return brains
-    
+
     def batch(self):
         b_start = self.request.get('b_start', 0)
         return Batch(self.contents(), self.batch_size, int(b_start), orphan=0)
@@ -98,7 +98,7 @@ class BlogView(BrowserView):
     @property
     def is_topic(self):
         return IATTopic.providedBy(self.context)
-    
+
     @property
     def site_props(self):
         pprops = self.tools.properties()
@@ -115,14 +115,14 @@ class BlogView(BrowserView):
     def show_about(self):
         return not self.portal_state.anonymous() or \
             self.site_props.getProperty('allowAnonymousViewAbout', False)
-    
+
     @property
     def show_toolbar(self):
         field = self.context.getField('enable_toolbar')
         if field:
             return field.get(self.context)
         return True
-    
+
     @property
     def show_count(self):
         field = self.context.getField('enable_count')
@@ -136,21 +136,21 @@ class BlogView(BrowserView):
         if field:
             return field.get(self.context)
         return False
-    
+
     @property
     def batch_size(self):
         field = self.context.getField('batch_size')
         if field:
             return field.get(self.context)
         return 10
-    
+
     @ram.cache(_filter_cachekey)
     def filter_info(self):
-        print 'Caching filter info'     
+        print 'Caching filter info'
         subject = self.request.get('Subject')
         year    = self.request.get('publish_year')
         month   = self.request.get('publish_month')
-        
+
         subjects = set()
         years = set()
         months = set()
@@ -164,11 +164,11 @@ class BlogView(BrowserView):
         subjects = list(subjects)
         years = list(years)
         months = list(months)
-        
+
         subjects.sort()
         years.sort()
         months.sort()
-        
+
         return [
             {
                 'id': 'Subject:list',
@@ -193,15 +193,15 @@ class BlogView(BrowserView):
     # Image related
     def is_image(self, obj):
         return IATImage.providedBy(obj)
-    
+
     def image_size(self, obj):
         context = aq_inner(obj)
         return context.getObjSize(context)
-    
+
     # News Item related
     def is_newsitem(self, obj):
         return IATNewsItem.providedBy(obj)
-    
+
     # Event related
     def is_event(self, obj):
         return IATEvent.providedBy(obj)
@@ -209,12 +209,12 @@ class BlogView(BrowserView):
     # File related
     def is_file(self, obj):
         return IATFile.providedBy(obj)
-    
+
     def file_info(self, obj):
         context = aq_inner(obj)
         field = context.getField('file')
         fl = field.get(context)
-        size = fl.get_size() or fl and len(fl) or 0;
+        size = fl.get_size() or fl and len(fl) or 0
         return {
             'icon': fl.getBestIcon() or None,
             'filename': fl.filename or None,
@@ -231,7 +231,7 @@ class BlogView(BrowserView):
             context = aq_inner(obj)
             return context.getField('embedCode').get(context)
         return None
-    
+
     def formatPerex(self, text):
         max = self.context.getField('perex_length').get(self.context)
         if len(text) < max:
