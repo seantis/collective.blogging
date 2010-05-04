@@ -1,3 +1,4 @@
+import logging
 from time import time
 from Acquisition import aq_inner
 from zope.component import getMultiAdapter
@@ -12,6 +13,8 @@ from plone.memoize import view, ram, volatile
 
 from collective.blogging.interfaces import IEntryMarker
 from collective.blogging import _
+
+logger = logging.getLogger('collective.blogging')
 
 
 def _filter_cachekey(method, self):
@@ -146,7 +149,7 @@ class BlogView(BrowserView):
 
     @ram.cache(_filter_cachekey)
     def filter_info(self):
-        print 'Caching filter info'
+        logger.info('Caching filter info')
         subject = self.request.get('Subject')
         year    = self.request.get('publish_year')
         month   = self.request.get('publish_month')
