@@ -8,10 +8,11 @@ from Products.ATContentTypes.interface import (IATTopic, IATFolder, IATBTreeFold
 from Products.CMFPlone import Batch
 from Products.Five import BrowserView
 
-from plone.memoize import view, ram
+from plone.memoize import view, ram, volatile
 
 from collective.blogging.interfaces import IEntryMarker
 from collective.blogging import _
+
 
 def _filter_cachekey(method,self):
     """ Time and path based cache """
@@ -20,7 +21,12 @@ def _filter_cachekey(method,self):
     int_fld = self.context.getField('filter_cache')
     if int_fld:
         interval = int_fld.get(self.context)
+        if interval == 0:
+            # Avoid ZeroDivisionError by raising a different error
+            # that will be caught by plone.memoize
+            raise volatile.DontCache
     return hash((path, time() // (60 * interval)))
+
 
 class BlogView(BrowserView):
     """ A blog browser view """

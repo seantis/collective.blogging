@@ -4,6 +4,7 @@ Changelog
 1.0 (unreleased)
 ~~~~~~~~~~~~~~~~~~~
 
+- Avoid ZeroDivisionError when the filter_cache field is 0 (simply do not cache then). [maurits]
 - minor fixes in the templates to support collective.collage.blogging extension [lzdych]
 - blog's title and description can be hidden in the blog view by new option in the blog's settings [lzdych]
 
