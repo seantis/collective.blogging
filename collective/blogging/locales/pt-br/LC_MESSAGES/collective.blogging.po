@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2010-04-27 10:34+0000\n"
-"PO-Revision-Date: 2010-04-29 12:52-0300\n"
+"PO-Revision-Date: 2010-04-29 21:11-0300\n"
 "Last-Translator: Davi Lima <davilima6@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -303,7 +303,7 @@ msgstr "Insira quantos blog posts devem ser listados por página na exibição d
 #. Default: "Tick to enable / disable blog behaviour."
 #: ./extenders.py:56
 msgid "help_blog_enabled"
-msgstr "Marque para ativar/desativar o comportamento de blog."
+msgstr "Marque para ativar o comportamento de blog na pasta."
 
 #. Default: "Mark this content as blog entry."
 #: ./extenders.py:201
@@ -323,12 +323,12 @@ msgstr "Cole o código de incorporação fornecido pelo site de vídeos (ex: You
 #. Default: "Tick to enable / disable blog contents count displaying."
 #: ./extenders.py:146
 msgid "help_enable_count"
-msgstr "Marque para ativar/desativar a exibição da contagem de posts do blogs."
+msgstr "Marque para ativar a exibição da contagem de posts do blogs."
 
 #. Default: "Tick to enable / disable blog toolbar on the top of its page."
 #: ./extenders.py:120
 msgid "help_enable_toolbar"
-msgstr "Marque para ativar/desativar a barra de ferramentas do blog que fica no topo da página."
+msgstr "Marque para ativar a barra de ferramentas do blog que fica no topo da página."
 
 #. Default: "Enter number of minutes for which will be cached filter options in the blog toolbar."
 #: ./extenders.py:133
@@ -343,12 +343,12 @@ msgstr "Marque para exibir o corpo de texto do post na exibição do blog."
 #. Default: "You can set maximal length of entry's description displayed in blog view. Note: This doesn't affect blog view if Full view option above is enabled."
 #: ./extenders.py:93
 msgid "help_perex_length"
-msgstr "Você pode configurar a extensão máxima da descrição do post que é exibida na exibição do blog. OBS: Isto não afeta a exibição do blog se a opção Visão completa acima estiver ativada."
+msgstr "Você pode configurar a extensão máxima da descrição do post exibida na exibição do blog. OBS: Isto não afeta a exibição do blog se a opção Visão completa acima estiver ativada."
 
 #. Default: "If unchecked, blog's title and description will be hidden in the blog view."
 #: ./extenders.py:80
 msgid "help_show_header"
-msgstr "Caso desmarcado, o título e a descrição do blog serão escondidas da exibição do blog."
+msgstr "Caso desmarcado, o título e a descrição do blog serão escondidos da exibição do blog."
 
 #. Default: "Add new content:"
 #: ./portlets/manage.pt:16
@@ -486,7 +486,7 @@ msgstr "Mais novos..."
 #. Default: "Perex length"
 #: ./extenders.py:91
 msgid "label_perex_length"
-msgstr "Comprimento perex"
+msgstr "Comprimento da entrada"
 
 #. Default: "Permalink"
 #: ./browser/blog_macros.pt:119
