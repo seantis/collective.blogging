@@ -326,37 +326,24 @@
 </metal:entryEventInfo>
 
 <metal:entryTitleImage define-macro="entry_title_image">
-    <div class="newsImageContainer" tal:condition="item_is_newsitem">
-        <tal:block condition="item_object/image_mini|nothing">
+    <tal:newsitem tal:condition="item_is_newsitem">
+        <div class="blogNewsImageContainer"
+            tal:condition="item_object/image_mini|nothing">
         
-            <p>
-                <img src="" rel="" width=""
-                    tal:attributes="src string:${item_url}/image_mini;
-                                    rel string:#fancy_${item_object/UID}" />
-                <br/>
-                <span class="discreet" tal:content="item_object/imageCaption">
-                    Caption
+            <a href="#"
+                tal:attributes="href string:$item_url/image/image_view_fullscreen"
+                id="parent-fieldname-image">
+            
+                <img tal:replace="structure python: item_object.tag(scale='mini', css_class='newsImage')" src="" alt="" />
+            </a>
+            
+            <p class="discreet">
+                <span tal:content="item_object/imageCaption">
+                    Image Caption
                 </span>
             </p>
-                                                        
-            <div class="fancybox visualNoPrint" tal:attributes="id string:fancy_${item_object/UID}"> 
-                <div class="close">&nbsp;</div>
-
-                <!-- large image --> 
-                <img src=""
-                    tal:attributes="src string:${item_url}/image_large" /> 
-
-                <!-- image details --> 
-                <div class="fancydetails"> 
-                    <h3 tal:content="item_object/imageCaption">Caption</h3>
-
-                    <p tal:content="item_description">Description</p> 
-
-                </div> 
-            </div>
-        
-        </tal:block>
-    </div>
+        </div>
+    </tal:newsitem>
 </metal:entryTitleImage>
 
 <metal:entryLinkContent define-macro="entry_link_content">
@@ -409,27 +396,13 @@
         <tal:block define="image_size python:view.image_size(item_object)"
             tal:condition="image_size">
         
-            <p>
-                <img src="" rel="" width=""
-                    tal:attributes="src string:${item_url}/image_preview;
-                                    rel string:#fancy_${item_object/UID}" />
-            </p>
-
-            <div class="fancybox visualNoPrint" tal:attributes="id string:fancy_${item_object/UID}"> 
-                <div class="close">&nbsp;</div>
-
-                <!-- large image --> 
-                <img src=""
-                    tal:attributes="src string:${item_url}/image_large" /> 
-
-                <!-- image details --> 
-                <div class="fancydetails"> 
-                    <h3 tal:content="item_title_or_id">Title</h3>
-
-                    <p tal:content="item_description">Description</p> 
-
-                </div> 
+            <div class="blogImageContainer" tal:condition="image_size|nothing">
+                <a href="#"
+                    tal:attributes="href string:$item_url/image/image_view_fullscreen">
+                    <img tal:replace="structure python: item_object.tag(scale='preview', css_class='newsImage')" src="" alt="" />
+                </a>
             </div>
+
         </tal:block>
     </tal:image>
 </metal:entryImageContent>

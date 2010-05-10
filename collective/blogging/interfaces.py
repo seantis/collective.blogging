@@ -10,6 +10,9 @@ class IBloggable(Interface):
 class IPostable(Interface):
     """ A content which can be posted as blog entry. """
 
+class IBloggingView(Interface):
+    """ A blogging browser view """
+
 # markers
 class IBlogMarker(Interface):
     """ A content which can act like a blog """

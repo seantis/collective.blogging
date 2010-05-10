@@ -1,3 +1,5 @@
+from zope.interface import implements
+
 from Acquisition import aq_inner
 
 from Products.ATContentTypes.interface import (IATNewsItem, IATEvent, IATLink, IATImage,
@@ -8,10 +10,12 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.Five import BrowserView
 
 from plone.memoize import view
-
+from collective.blogging.interfaces import IBloggingView
 
 class EntryView(BrowserView):
     """ An entry browser view """
+
+    implements(IBloggingView)
 
     template = ViewPageTemplateFile('entryview.pt')
     

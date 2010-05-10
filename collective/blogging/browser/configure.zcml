@@ -83,6 +83,15 @@
         layer="..interfaces.IBloggingSpecific"
         />
     
+    <!-- conditional view -->
+    <browser:page
+        for="*"
+        name="blogging-view"
+        class=".bloggingview.BloggingView"
+        permission="zope2.Public"
+        layer="..interfaces.IBloggingSpecific"
+        />
+    
     <!-- Gallery view -->
     <browser:page
         name="blog-gallery"

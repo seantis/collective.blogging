@@ -1,14 +1,13 @@
 /* FANCYBOX */
 
 jq(document).ready(function () {
-    jq("img[rel]").overlay(/*{
-        'absolute':false,
-        'speed':'fast',
-        'top':-20,
-        'left':-20
-    }*/);
+    jq(".blogNewsImageContainer a, .blogImageContainer a")
+        .prepOverlay({
+            subtype:'image',
+            urlmatch:'/image_view_fullscreen$',
+            urlreplace:'_large'
+    });
 });
-
 
 /* GALLERY */
 

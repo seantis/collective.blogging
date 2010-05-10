@@ -69,27 +69,13 @@
     <tal:image condition="view/is_image">
         <tal:block define="size context/size" tal:condition="size">
             
-            <p>
-                <img src="" rel="" width=""
-                    tal:attributes="src string:${context/absolute_url}/image_preview;
-                                    rel string:#fancy_${context/UID}" />
-            </p>
-            
-            <div class="fancybox visualNoPrint" tal:attributes="id string:fancy_${context/UID}"> 
-                <div class="close">&nbsp;</div>
-                
-                <!-- large image --> 
-                <img src=""
-                    tal:attributes="src string:${context/absolute_url}/image_large" /> 
-
-                <!-- image details --> 
-                <div class="fancydetails"> 
-                    <h3 tal:content="context/Title">Title</h3>
-                    
-                    <p tal:content="context/Description">Description</p> 
-
-                </div> 
+            <div class="blogImageContainer" tal:condition="size|nothing">
+                <a href="#"
+                    tal:attributes="href string:$here_url/image/image_view_fullscreen">
+                    <img tal:replace="structure python: here.tag(scale='preview', css_class='newsImage')" src="" alt="" />
+                </a>
             </div>
+            
         </tal:block>
     </tal:image>
 </metal:imageContent>
@@ -311,33 +297,19 @@
 
 <metal:titleImage define-macro="title_image">
     <tal:newsitem condition="view/is_newsitem">
-        <div class="newsImageContainer" tal:condition="here/image_mini|nothing">
-            
-            <p>
-                <img src="" rel="" width=""
-                    tal:attributes="src string:${context/absolute_url}/image_mini;
-                                    rel string:#fancy_${context/UID}" />
-                <br/>
-                <span class="discreet" tal:content="context/imageCaption">
-                    Caption
-                </span>
+    
+        <div class="blogNewsImageContainer"
+             tal:condition="here/image_mini|nothing">
+            <a href="#"
+               tal:attributes="href string:$here_url/image/image_view_fullscreen"
+               id="parent-fieldname-image">
+               <img tal:replace="structure python: here.tag(scale='mini', css_class='newsImage')" src="" alt="" />
+            </a>
+            <p class="discreet">
+              <metal:field use-macro="python:here.widget('imageCaption', mode='view')">
+              Image Caption
+              </metal:field>
             </p>
-            
-            <div class="fancybox visualNoPrint" tal:attributes="id string:fancy_${context/UID}"> 
-                
-                
-                <!-- large image --> 
-                <img src=""
-                    tal:attributes="src string:${context/absolute_url}/image_large" /> 
-
-                <!-- image details --> 
-                <div class="fancydetails"> 
-                    <h3 tal:content="context/imageCaption">Caption</h3>
-                    
-                    <p tal:content="context/Description">Description</p> 
-
-                </div> 
-            </div>
         </div>
     </tal:newsitem>
 </metal:titleImage>

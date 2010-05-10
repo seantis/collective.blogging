@@ -1,10 +1,17 @@
 Changelog
 =========
 
-1.0 (unreleased)
+1.1 (unreleased)
 ~~~~~~~~~~~~~~~~~~~
 
 - Avoid ZeroDivisionError when the filter_cache field is 0 (simply do not cache then). [maurits]
+- css/js resources registered for blog and entry views only [lzdych]
+- fixed dissapearing image and newsitem fancyboxes (replaced with overlays) [lzdych]
+
+
+1.0 (2010-05-03)
+~~~~~~~~~~~~~~~~~~~
+
 - minor fixes in the templates to support collective.collage.blogging extension [lzdych]
 - blog's title and description can be hidden in the blog view by new option in the blog's settings [lzdych]
 

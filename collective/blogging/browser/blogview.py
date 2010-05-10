@@ -2,6 +2,7 @@ import logging
 from time import time
 from Acquisition import aq_inner
 from zope.component import getMultiAdapter
+from zope.interface import implements
 
 from Products.ATContentTypes.interface import (IATTopic, IATFolder, IATBTreeFolder,
                                                 IATNewsItem, IATEvent, IATLink, IATImage,
@@ -11,7 +12,7 @@ from Products.Five import BrowserView
 
 from plone.memoize import view, ram, volatile
 
-from collective.blogging.interfaces import IEntryMarker
+from collective.blogging.interfaces import IEntryMarker, IBloggingView
 from collective.blogging import _
 
 logger = logging.getLogger('collective.blogging')
@@ -34,6 +35,8 @@ def _filter_cachekey(method, self):
 class BlogView(BrowserView):
     """ A blog browser view """
 
+    implements(IBloggingView)
+    
     def __init__(self, context, request):
         super(BlogView, self).__init__(context, request)
         self.context = context
