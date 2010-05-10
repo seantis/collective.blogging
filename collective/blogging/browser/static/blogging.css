@@ -215,16 +215,20 @@ td.entryMap div.googleMapLocation {
 dl#blog-filter dt.collapsibleHeader {
     border:1px solid #8CACBB;
     background-color:#DEE7EC;
-    padding:0.4em 1em 0.4em 2em;
+    padding:0.4em 1em 0.4em 1em;
 }
 
+/*
 dl#blog-filter dd.collapsibleContent {
     padding:1em;
 }
+*/
 
 .blogPostsCount {
     float:right;
     clear:right;
+    background:white;
+    padding:0.2em 0.4em;
 }
 
 div.tileFooter {

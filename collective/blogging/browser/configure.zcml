@@ -152,5 +152,11 @@
         directory="static"
         layer="..interfaces.IBloggingSpecific"
         />
+    
+    <browser:resource
+        name="collective.blogging.sunburst.css"
+        file="sunburst.css"
+        layer="plonetheme.sunburst.browser.interfaces.IThemeSpecific"
+        />
 
 </configure>

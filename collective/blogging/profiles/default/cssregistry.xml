@@ -7,4 +7,10 @@
         cacheable="True" compression="safe" cookable="True"
         enabled="1" expression="nocall:object/@@blogging-view/is_blogging|nothing"/>
     
+    <stylesheet title=""
+        id="++resource++collective.blogging.sunburst.css"
+        media="screen" rel="stylesheet" rendering="import"
+        cacheable="True" compression="safe" cookable="True"
+        enabled="1" expression="nocall:object/@@blogging-view/is_blogging|nothing"/>
+    
 </object>
