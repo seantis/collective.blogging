@@ -9,7 +9,7 @@ with extra blogging features in a while.
 Installing
 ============
 
-This package requires Plone 3.x or later (tested on 3.3.x and 4.0b2).
+This package requires Plone 3.x or later (tested on 3.3.x and 4.0b3).
 
 Installing without buildout
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -56,23 +56,26 @@ Features
 
 - Posting Plone's Pages, News Items, Events, Files, Images, Links and External Videos (or other embed content)
 
-- Smart folders supported
+- Collection supported
 
 - Fancy image galleries
 
 - Simple archive toolbar (filter by category, year, month)
 
-- Archive portlet (lists entry numbers in years and months)
-
-- Helper blog portlet
+- Portlets: Archive and Admin
 
 - Next / Prev navigation replacement
 
 - Auto-blogging action for content rules
 
-- Google maps integration with events via collective.bloggingmaps extra-extension
-
 - Safe uninstall
+
+- Google maps integration with events via collective.bloggingmaps_
+
+- Collage integration via collective.collage.blogging collective.collage.blogging_ 
+
+.. _collective.bloggingmaps: http://plone.org/products/collective.bloggingmaps
+.. _collective.collage.blogging: http://plone.org/products/collective.collage.blogging
 
 Translations
 ============
@@ -119,7 +122,13 @@ Author: `Lukas Zdych (lzdych)`__.
 
 __ lzdych_
 
-Thanks to Enzo Cesanelli (luthy) for testing and ideas.
+Contributors:
+
+- Maurits van Rees (maurits) - fixes, patches
+
+- Davi Lima (davi-lima, davilima6) - ideas, testing
+
+- Enzo Cesanelli (luthy) - ideas, testing
 
 Homepage: collective.blogging_.
 
