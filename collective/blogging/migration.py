@@ -99,3 +99,32 @@ def reindexPublishDates(context):
         
         entry.reindexObject()
         logger.info('Entry "%s" reindexed.' % brain.getPath())
+
+
+def migrateLayouts(context):
+    logger.info("Starting blogging layouts migration.")
+    catalog = getToolByName(context, 'portal_catalog')
+    blog_brains = catalog(
+        object_provides=IBlogMarker.__identifier__,
+        Language=u'all'
+    )
+    
+    logger.info("Found %s blogs...", len(blog_brains))
+    for brain in blog_brains:
+        brain.getObject().setLayout('blog-view')
+        logger.info('Layout migrated for blog: "%s".' % brain.getPath())
+    
+    
+    
+    catalog = getToolByName(context, 'portal_catalog')
+    entry_brains = catalog(
+        object_provides=IEntryMarker.__identifier__,
+        Language=u'all'
+    )
+    
+    logger.info("Found %s entries...", len(entry_brains))
+    for brain in entry_brains:
+        brain.getObject().setLayout('entry-view')
+        logger.info('Layout migrated for entry: "%s".' % brain.getPath())
+
+    logger.info("Blogging layouts migration completed.")

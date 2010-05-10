@@ -24,7 +24,7 @@
     
     <!-- Blog -->
     <browser:page
-        name="view"
+        name="blog-view"
         for="collective.blogging.interfaces.IBlogMarker"
         class=".blogview.BlogView"
         permission="zope2.View"
@@ -32,15 +32,18 @@
         layer="..interfaces.IBloggingSpecific"
         />
     
-    <browser:defaultView 
+    <browser:menuItem
         for="collective.blogging.interfaces.IBlogMarker"
-        name="view"
+        menu="plone_displayviews"
+        action="blog-view"
+        title="Blog View"
+        description="A default blog view"
         layer="..interfaces.IBloggingSpecific"
         />
-    
+
     <!-- Entry -->
     <browser:page
-        name="view"
+        name="entry-view"
         for="collective.blogging.interfaces.IEntryMarker"
         class=".entryview.EntryView"
         permission="zope2.View"
@@ -48,13 +51,17 @@
         layer="..interfaces.IBloggingSpecific"
         />
     
-    <browser:defaultView 
+    <browser:menuItem
         for="collective.blogging.interfaces.IEntryMarker"
-        name="view"
+        menu="plone_displayviews"
+        action="entry-view"
+        title="Entry View"
+        description="A default blog entry view"
         layer="..interfaces.IBloggingSpecific"
         />
     
     <!-- Special handling for File & Image due to using obj/view -->
+    <!--
     <browser:page
         name="file_view"
         for="collective.blogging.interfaces.IEntryMarker"
@@ -72,7 +79,8 @@
         template="entryview.pt"
         layer="..interfaces.IBloggingSpecific"
         />
-
+    -->
+    
     <!-- Help -->
     <browser:page
         name="blogging-help"

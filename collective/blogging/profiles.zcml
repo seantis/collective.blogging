@@ -45,6 +45,15 @@
         handler="collective.blogging.migration.reindexPublishDates"
         sortkey="1"
         profile="collective.blogging:default" />
+    
+    <upgradeStep
+        title="Blogging layouts"
+        description="Set blogging layouts for existing blogging content."
+        source="2"
+        destination="3"
+        handler="collective.blogging.migration.migrateLayouts"
+        sortkey="1"
+        profile="collective.blogging:default" />
 
     <!-- BBB: see interfaces.py -->
     <upgradeStep

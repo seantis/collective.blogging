@@ -53,6 +53,27 @@
     <adapter factory=".indexer.year" name="publish_year" />
     <adapter factory=".indexer.month" name="publish_month" />
     <adapter factory=".indexer.blogged" name="blogged" />
+    
+    <!-- Subscribers -->
+    <subscriber
+        for="collective.blogging.interfaces.IBloggable
+             Products.Archetypes.interfaces.IObjectInitializedEvent"
+        handler=".handlers.initBlogLayout" />
+    
+    <subscriber
+        for="collective.blogging.interfaces.IBloggable
+             zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+        handler=".handlers.updateBlogLayout" />
+
+    <subscriber
+        for="collective.blogging.interfaces.IPostable
+             Products.Archetypes.interfaces.IObjectInitializedEvent"
+        handler=".handlers.initEntryLayout" />
+    
+    <subscriber
+        for="collective.blogging.interfaces.IPostable
+             zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+        handler=".handlers.updateEntryLayout" />
 
 </configure>
 

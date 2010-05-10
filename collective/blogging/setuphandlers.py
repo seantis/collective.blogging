@@ -18,9 +18,13 @@ METADATA = [
     'publish_month',
 ]
 
-VIEW_TYPES = ['Folder', 'Large Plone Folder', 'Topic']
-GALLERY_VIEW = u'blog-gallery'
-FALLBACK_VIEW = u'atct_album_view'
+BLOG_TYPES = ('Folder', 'Large Plone Folder', 'Topic')
+BLOG_VIEWS = ('blog-view', 'blog-gallery')
+
+ENTRY_TYPES = ('Document', 'News Item', 'Event', 'File', 'Image', 'Link')
+ENTRY_VIEWS = ('entry-view',)
+
+FALLBACK_VIEW = 'atct_album_view'
 
 def setupCatalog(context):
 
@@ -86,12 +90,19 @@ def setupViews(context):
     portal = context.getSite()
     portal_types = getToolByName(portal, 'portal_types')
 
-    # Folder views
-    for ptype in VIEW_TYPES:
-        type_info = portal_types.getTypeInfo(ptype)
-        if GALLERY_VIEW not in type_info.view_methods:
-            type_info.view_methods = type_info.view_methods + (GALLERY_VIEW,)
-            log.info('"%s" view installed for %s.' % (GALLERY_VIEW, ptype))
+    for ptype in BLOG_TYPES:
+        for view_method in BLOG_VIEWS:
+            type_info = portal_types.getTypeInfo(ptype)
+            if view_method not in type_info.view_methods:
+                type_info.view_methods = type_info.view_methods + (view_method,)
+                log.info('"%s" view installed for %s.' % (view_method, ptype))
+
+    for ptype in ENTRY_TYPES:
+        for view_method in ENTRY_VIEWS:
+            type_info = portal_types.getTypeInfo(ptype)
+            if view_method not in type_info.view_methods:
+                type_info.view_methods = type_info.view_methods + (view_method,)
+                log.info('"%s" view installed for %s.' % (view_method, ptype))
 
 
 def resetViews(context):
@@ -102,12 +113,19 @@ def resetViews(context):
     portal = context.getSite()
     portal_types = getToolByName(portal, 'portal_types')
 
-    # Folder views
-    for ptype in VIEW_TYPES:
-        type_info = portal_types.getTypeInfo(ptype)
-        if GALLERY_VIEW in type_info.view_methods:
-            type_info.view_methods = tuple([vm for vm in type_info.view_methods if vm !=GALLERY_VIEW])
-            log.info('"%s" view uninstalled for %s.' % (GALLERY_VIEW, ptype))
+    for ptype in BLOG_TYPES:
+        for view_method in BLOG_VIEWS:
+            type_info = portal_types.getTypeInfo(ptype)
+            if view_method in type_info.view_methods:
+                type_info.view_methods = tuple([vm for vm in type_info.view_methods if vm !=view_method])
+                log.info('"%s" view uninstalled for %s.' % (view_method, ptype))
+    
+    for ptype in ENTRY_TYPES:
+        for view_method in ENTRY_VIEWS:
+            type_info = portal_types.getTypeInfo(ptype)
+            if view_method in type_info.view_methods:
+                type_info.view_methods = tuple([vm for vm in type_info.view_methods if vm !=view_method])
+                log.info('"%s" view uninstalled for %s.' % (view_method, ptype))
     
     # This is how you can fix broken gallery folders due to assigned removed layout
     # it is commented out here because we don't want to call it during package "reinstall"

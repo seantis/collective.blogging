@@ -7,6 +7,7 @@ Changelog
 - Avoid ZeroDivisionError when the filter_cache field is 0 (simply do not cache then). [maurits]
 - css/js resources registered for blog and entry views only [lzdych]
 - image and newsitem fancyboxes replaced by overlays - fixes: #6 [lzdych]
+- enabled "Display menu" for blogs and entries [lzdych]
 
 
 1.0 (2010-05-03)
