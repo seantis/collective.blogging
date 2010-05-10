@@ -1,5 +1,6 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="collective.blogging">
     
@@ -153,7 +154,7 @@
         layer="..interfaces.IBloggingSpecific"
         />
     
-    <browser:resource
+    <browser:resource zcml:condition="installed plonetheme.sunburst"
         name="collective.blogging.sunburst.css"
         file="sunburst.css"
         layer="plonetheme.sunburst.browser.interfaces.IThemeSpecific"

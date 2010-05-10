@@ -12,6 +12,7 @@ for lang in $LANGUAGES; do
 done
 
 i18ndude rebuild-pot --pot locales/$PRODUCT.pot --create $PRODUCT ./
+i18ndude merge --pot locales/$PRODUCT.pot --merge locales/manual-$PRODUCT.pot
 
 # filter out invalid PO file headers. i18ndude sync adds them to the file, 
 # but i18ntestcase fails if these headers are there

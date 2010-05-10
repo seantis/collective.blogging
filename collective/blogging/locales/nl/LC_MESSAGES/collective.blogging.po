@@ -1,18 +1,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2010-04-27 10:34+0000\n"
+"POT-Creation-Date: 2010-05-10 23:51+0000\n"
 "PO-Revision-Date: 2010-04-29 13:48+0100\n"
 "Last-Translator: Rob Gietema <rob@fourdigits.nl>\n"
-"Language-Team: Rob Gietema <rob@fourdigits.nl>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: nl\n"
-"Language-Name: Dutch\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: collective.blogging\n"
 
 #: ./actions/autoblog.py:97
 msgid "Add Auto-Blog Action"
@@ -61,6 +57,11 @@ msgstr "Archief portlet instellingen"
 #: ./portlets/archive.py:74
 msgid "Blog Archive: ${blog}"
 msgstr "Blog Archief ${blog}"
+
+#. Default: "Blog View"
+#: ./browser/configure.zcml:39
+msgid "Blog View"
+msgstr ""
 
 #. Default: "Blog created"
 #: ./browser/help.pt:183
@@ -130,6 +131,11 @@ msgstr "Commentaar toestaan"
 #: ./portlets/share.py:54
 msgid "Enter portlet tile."
 msgstr "Geef de titel van de portlet."
+
+#. Default: "Entry View"
+#: ./browser/configure.zcml:58
+msgid "Entry View"
+msgstr ""
 
 #. Default: "Event entry"
 #: ./browser/help.pt:358
@@ -309,7 +315,7 @@ msgid "description_manage_blog_portlet"
 msgstr "Een portlet die helpt bij het beheren van blog content."
 
 #. Default: "There are currently no contents in this blog."
-#: ./browser/blog_macros.pt:522
+#: ./browser/blog_macros.pt:495
 msgid "description_no_items_in_blog"
 msgstr "Deze blog bevat op dit moment geen inhoud."
 
@@ -414,13 +420,13 @@ msgid "label_blogger_name"
 msgstr "Naam van de blogger"
 
 #. Default: "Click to read full entry."
-#: ./browser/blog_macros.pt:488
+#: ./browser/blog_macros.pt:461
 msgid "label_click_to_read_full_entry"
 msgstr "Lees meer"
 
 #. Default: "Comments (${comments})"
-#: ./browser/blog_macros.pt:504
-#: ./browser/entry_macros.pt:119
+#: ./browser/blog_macros.pt:477
+#: ./browser/entry_macros.pt:105
 msgid "label_comments_with_count"
 msgstr "Reacties (${comments})"
 
@@ -430,14 +436,14 @@ msgid "label_drafts"
 msgstr "Concepten"
 
 #. Default: "Edit"
-#: ./browser/blog_macros.pt:511
-#: ./browser/entry_macros.pt:127
+#: ./browser/blog_macros.pt:484
+#: ./browser/entry_macros.pt:113
 msgid "label_edit"
 msgstr "Bewerken"
 
 #. Default: "Click to edit this entry."
-#: ./browser/blog_macros.pt:511
-#: ./browser/entry_macros.pt:127
+#: ./browser/blog_macros.pt:484
+#: ./browser/entry_macros.pt:113
 msgid "label_edit_title"
 msgstr "Klik hier om dit bericht te bewerken."
 
@@ -528,13 +534,13 @@ msgid "label_posted_by"
 msgstr "Geplaatst door ${author}"
 
 #. Default: "Read comments on this entry."
-#: ./browser/blog_macros.pt:498
-#: ./browser/entry_macros.pt:113
+#: ./browser/blog_macros.pt:471
+#: ./browser/entry_macros.pt:99
 msgid "label_read_comments_title"
 msgstr "Lees reacties op dit bericht."
 
 #. Default: "Read more"
-#: ./browser/blog_macros.pt:488
+#: ./browser/blog_macros.pt:461
 msgid "label_read_more"
 msgstr "Lees meer"
 
@@ -544,17 +550,17 @@ msgid "label_show_header"
 msgstr "Header weergeven"
 
 #. Default: "-- Category --"
-#: ./browser/blogview.py:169
+#: ./browser/blogview.py:181
 msgid "select_category_option"
 msgstr "-- Categorie --"
 
 #. Default: "-- Month --"
-#: ./browser/blogview.py:181
+#: ./browser/blogview.py:193
 msgid "select_month_option"
 msgstr "-- Maand --"
 
 #. Default: "-- Year --"
-#: ./browser/blogview.py:175
+#: ./browser/blogview.py:187
 msgid "select_year_option"
 msgstr "-- Jaar --"
 

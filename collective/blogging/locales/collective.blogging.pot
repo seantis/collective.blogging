@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-04-27 10:34+0000\n"
+"POT-Creation-Date: 2010-05-10 23:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,6 +59,11 @@ msgstr ""
 
 #: ./portlets/archive.py:74
 msgid "Blog Archive: ${blog}"
+msgstr ""
+
+#. Default: "Blog View"
+#: ./browser/configure.zcml:39
+msgid "Blog View"
 msgstr ""
 
 #: ./browser/help.pt:183
@@ -123,6 +128,11 @@ msgstr ""
 
 #: ./portlets/share.py:54
 msgid "Enter portlet tile."
+msgstr ""
+
+#. Default: "Entry View"
+#: ./browser/configure.zcml:58
+msgid "Entry View"
 msgstr ""
 
 #: ./browser/help.pt:358
@@ -289,7 +299,7 @@ msgid "description_manage_blog_portlet"
 msgstr ""
 
 #. Default: "There are currently no contents in this blog."
-#: ./browser/blog_macros.pt:522
+#: ./browser/blog_macros.pt:495
 msgid "description_no_items_in_blog"
 msgstr ""
 
@@ -394,13 +404,13 @@ msgid "label_blogger_name"
 msgstr ""
 
 #. Default: "Click to read full entry."
-#: ./browser/blog_macros.pt:488
+#: ./browser/blog_macros.pt:461
 msgid "label_click_to_read_full_entry"
 msgstr ""
 
 #. Default: "Comments (${comments})"
-#: ./browser/blog_macros.pt:504
-#: ./browser/entry_macros.pt:119
+#: ./browser/blog_macros.pt:477
+#: ./browser/entry_macros.pt:105
 msgid "label_comments_with_count"
 msgstr ""
 
@@ -410,14 +420,14 @@ msgid "label_drafts"
 msgstr ""
 
 #. Default: "Edit"
-#: ./browser/blog_macros.pt:511
-#: ./browser/entry_macros.pt:127
+#: ./browser/blog_macros.pt:484
+#: ./browser/entry_macros.pt:113
 msgid "label_edit"
 msgstr ""
 
 #. Default: "Click to edit this entry."
-#: ./browser/blog_macros.pt:511
-#: ./browser/entry_macros.pt:127
+#: ./browser/blog_macros.pt:484
+#: ./browser/entry_macros.pt:113
 msgid "label_edit_title"
 msgstr ""
 
@@ -508,13 +518,13 @@ msgid "label_posted_by"
 msgstr ""
 
 #. Default: "Read comments on this entry."
-#: ./browser/blog_macros.pt:498
-#: ./browser/entry_macros.pt:113
+#: ./browser/blog_macros.pt:471
+#: ./browser/entry_macros.pt:99
 msgid "label_read_comments_title"
 msgstr ""
 
 #. Default: "Read more"
-#: ./browser/blog_macros.pt:488
+#: ./browser/blog_macros.pt:461
 msgid "label_read_more"
 msgstr ""
 
@@ -524,17 +534,17 @@ msgid "label_show_header"
 msgstr ""
 
 #. Default: "-- Category --"
-#: ./browser/blogview.py:169
+#: ./browser/blogview.py:181
 msgid "select_category_option"
 msgstr ""
 
 #. Default: "-- Month --"
-#: ./browser/blogview.py:181
+#: ./browser/blogview.py:193
 msgid "select_month_option"
 msgstr ""
 
 #. Default: "-- Year --"
-#: ./browser/blogview.py:175
+#: ./browser/blogview.py:187
 msgid "select_year_option"
 msgstr ""
 

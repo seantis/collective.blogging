@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2010-04-27 10:34+0000\n"
+"POT-Creation-Date: 2010-05-10 23:51+0000\n"
 "PO-Revision-Date: 2010-04-27 21:36+0900\n"
 "Last-Translator: nyusuke <nyusuke@nagosui.org>\n"
 "MIME-Version: 1.0\n"
@@ -10,7 +10,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8\n"
 "X-Poedit-Language: Japanese\n"
-"Language-Team: \n"
 "X-Poedit-Country: JAPAN\n"
 
 #: ./actions/autoblog.py:97
@@ -60,6 +59,11 @@ msgstr "アーカイブポートレットの設定"
 #: ./portlets/archive.py:74
 msgid "Blog Archive: ${blog}"
 msgstr "ブログアーカイブ: ${blog}"
+
+#. Default: "Blog View"
+#: ./browser/configure.zcml:39
+msgid "Blog View"
+msgstr ""
 
 #. Default: "Blog created"
 #: ./browser/help.pt:183
@@ -129,6 +133,11 @@ msgstr "コメントを有効にする"
 #: ./portlets/share.py:54
 msgid "Enter portlet tile."
 msgstr "ポートレットタイトルを入力してください。"
+
+#. Default: "Entry View"
+#: ./browser/configure.zcml:58
+msgid "Entry View"
+msgstr ""
 
 #. Default: "Event entry"
 #: ./browser/help.pt:358
@@ -308,7 +317,7 @@ msgid "description_manage_blog_portlet"
 msgstr "ブログのコンテンツを管理するポートレット。"
 
 #. Default: "There are currently no contents in this blog."
-#: ./browser/blog_macros.pt:522
+#: ./browser/blog_macros.pt:495
 msgid "description_no_items_in_blog"
 msgstr "エントリがありません。"
 
@@ -413,13 +422,13 @@ msgid "label_blogger_name"
 msgstr "ブロガー名"
 
 #. Default: "Click to read full entry."
-#: ./browser/blog_macros.pt:488
+#: ./browser/blog_macros.pt:461
 msgid "label_click_to_read_full_entry"
 msgstr "エントリを全部読む"
 
 #. Default: "Comments (${comments})"
-#: ./browser/blog_macros.pt:504
-#: ./browser/entry_macros.pt:119
+#: ./browser/blog_macros.pt:477
+#: ./browser/entry_macros.pt:105
 msgid "label_comments_with_count"
 msgstr "コメント（${comments}）"
 
@@ -429,14 +438,14 @@ msgid "label_drafts"
 msgstr "ドラフト"
 
 #. Default: "Edit"
-#: ./browser/blog_macros.pt:511
-#: ./browser/entry_macros.pt:127
+#: ./browser/blog_macros.pt:484
+#: ./browser/entry_macros.pt:113
 msgid "label_edit"
 msgstr "編集"
 
 #. Default: "Click to edit this entry."
-#: ./browser/blog_macros.pt:511
-#: ./browser/entry_macros.pt:127
+#: ./browser/blog_macros.pt:484
+#: ./browser/entry_macros.pt:113
 msgid "label_edit_title"
 msgstr "このエントリを編集する"
 
@@ -527,13 +536,13 @@ msgid "label_posted_by"
 msgstr "${author} による投稿"
 
 #. Default: "Read comments on this entry."
-#: ./browser/blog_macros.pt:498
-#: ./browser/entry_macros.pt:113
+#: ./browser/blog_macros.pt:471
+#: ./browser/entry_macros.pt:99
 msgid "label_read_comments_title"
 msgstr "このエントリのコメントを読む"
 
 #. Default: "Read more"
-#: ./browser/blog_macros.pt:488
+#: ./browser/blog_macros.pt:461
 msgid "label_read_more"
 msgstr "続きを読む"
 
@@ -543,17 +552,17 @@ msgid "label_show_header"
 msgstr "ヘッダーを表示する"
 
 #. Default: "-- Category --"
-#: ./browser/blogview.py:169
+#: ./browser/blogview.py:181
 msgid "select_category_option"
 msgstr "--カテゴリ--"
 
 #. Default: "-- Month --"
-#: ./browser/blogview.py:181
+#: ./browser/blogview.py:193
 msgid "select_month_option"
 msgstr "--月--"
 
 #. Default: "-- Year --"
-#: ./browser/blogview.py:175
+#: ./browser/blogview.py:187
 msgid "select_year_option"
 msgstr "--年--"
 

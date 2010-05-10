@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2010-04-27 10:34+0000\n"
+"POT-Creation-Date: 2010-05-10 23:51+0000\n"
 "PO-Revision-Date: 2009-12-13 03:59+0100\n"
 "Last-Translator: Enzo Cesanelli <enzo@noiza.com>\n"
 "MIME-Version: 1.0\n"
@@ -58,6 +58,11 @@ msgstr "Impostazioni riquadro Archivio"
 #: ./portlets/archive.py:74
 msgid "Blog Archive: ${blog}"
 msgstr "Archivio: ${blog}"
+
+#. Default: "Blog View"
+#: ./browser/configure.zcml:39
+msgid "Blog View"
+msgstr ""
 
 #. Default: "Blog created"
 #: ./browser/help.pt:183
@@ -126,6 +131,11 @@ msgstr ""
 
 #: ./portlets/share.py:54
 msgid "Enter portlet tile."
+msgstr ""
+
+#. Default: "Entry View"
+#: ./browser/configure.zcml:58
+msgid "Entry View"
 msgstr ""
 
 #. Default: "Event entry"
@@ -306,7 +316,7 @@ msgid "description_manage_blog_portlet"
 msgstr ""
 
 #. Default: "There are currently no contents in this blog."
-#: ./browser/blog_macros.pt:522
+#: ./browser/blog_macros.pt:495
 msgid "description_no_items_in_blog"
 msgstr "Non ci sono post in questo blog"
 
@@ -411,13 +421,13 @@ msgid "label_blogger_name"
 msgstr ""
 
 #. Default: "Click to read full entry."
-#: ./browser/blog_macros.pt:488
+#: ./browser/blog_macros.pt:461
 msgid "label_click_to_read_full_entry"
 msgstr ""
 
 #. Default: "Comments (${comments})"
-#: ./browser/blog_macros.pt:504
-#: ./browser/entry_macros.pt:119
+#: ./browser/blog_macros.pt:477
+#: ./browser/entry_macros.pt:105
 msgid "label_comments_with_count"
 msgstr "Commenti (${comments})"
 
@@ -427,14 +437,14 @@ msgid "label_drafts"
 msgstr "Bozze"
 
 #. Default: "Edit"
-#: ./browser/blog_macros.pt:511
-#: ./browser/entry_macros.pt:127
+#: ./browser/blog_macros.pt:484
+#: ./browser/entry_macros.pt:113
 msgid "label_edit"
 msgstr "Modifica"
 
 #. Default: "Click to edit this entry."
-#: ./browser/blog_macros.pt:511
-#: ./browser/entry_macros.pt:127
+#: ./browser/blog_macros.pt:484
+#: ./browser/entry_macros.pt:113
 msgid "label_edit_title"
 msgstr "Clicca per modificare questo post"
 
@@ -525,13 +535,13 @@ msgid "label_posted_by"
 msgstr "Postato da ${author}"
 
 #. Default: "Read comments on this entry."
-#: ./browser/blog_macros.pt:498
-#: ./browser/entry_macros.pt:113
+#: ./browser/blog_macros.pt:471
+#: ./browser/entry_macros.pt:99
 msgid "label_read_comments_title"
 msgstr "Leggi i Commenti a questo Post"
 
 #. Default: "Read more"
-#: ./browser/blog_macros.pt:488
+#: ./browser/blog_macros.pt:461
 #, fuzzy
 msgid "label_read_more"
 msgstr "Clicca per leggere tutto il post"
@@ -542,18 +552,18 @@ msgid "label_show_header"
 msgstr ""
 
 #. Default: "-- Category --"
-#: ./browser/blogview.py:169
+#: ./browser/blogview.py:181
 msgid "select_category_option"
 msgstr "--Categoria--"
 
 #. Default: "-- Month --"
-#: ./browser/blogview.py:181
+#: ./browser/blogview.py:193
 #, fuzzy
 msgid "select_month_option"
 msgstr "--Mese--"
 
 #. Default: "-- Year --"
-#: ./browser/blogview.py:175
+#: ./browser/blogview.py:187
 msgid "select_year_option"
 msgstr "--Anno--"
 
