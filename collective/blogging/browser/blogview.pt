@@ -22,7 +22,8 @@
                             wtool wtool|context/portal_workflow;
                             show_body view/show_body;
                             show_header python:view.getFieldValue('show_header', context);
-                            hiddableStyle python:(not show_header) and 'visibility:hidden;;height:1px;;padding:0;;margin:0;;' or None;">
+                            hiddableStyle python:(not show_header) and 'visibility:hidden;;height:1px;;padding:0;;margin:0;;' or None;
+                            use_view_action nocall:context/portal_properties/site_properties/typesUseViewActionInListings|python:();">
 
                 <div tal:replace="structure provider:plone.abovecontenttitle" />
                 

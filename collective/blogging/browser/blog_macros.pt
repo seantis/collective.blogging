@@ -74,7 +74,7 @@
 <metal:entryTitle define-macro="entry_title">
     <a name="" tal:attributes="name item_id"></a>
     <h2><a href="#" class="summary url"
-        tal:attributes="href item_url"
+        tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url;"
         tal:content="item_title_or_id">
         Item Title
         </a>
@@ -118,7 +118,7 @@
         |
         <a href="" title="Permalink"
             class="permalink"
-            tal:attributes="href item_url"
+            tal:attributes="href python:item_type in use_view_action and item_url+'/view' or item_url;"
             i18n:attributes="title label_permalink"
             i18n:translate="label_permalink">
             Permalink
