@@ -38,6 +38,7 @@ dl#blog-filter dt.collapsibleHeader {
     border:0 none;
     color:white;
     font-weight:normal;
+    padding:0.4em 1em 0.4em 1em;
     border-top-right-radius: 0.5em;
 	border-top-left-radius: 0.5em;
 	-webkit-border-top-right-radius: 0.5em;
@@ -48,6 +49,10 @@ dl#blog-filter dt.collapsibleHeader {
 	-moz-border-radius-topright: 0.5em;
 	-moz-border-radius-bottomleft: 0.5em;
 	-moz-border-radius-bottomright: 0.5em;
+}
+
+dl#blog-filter dd.collapsibleContent {
+    padding:0 1em;
 }
 
 span#plone-document-byline {
