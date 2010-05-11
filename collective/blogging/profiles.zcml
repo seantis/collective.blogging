@@ -54,6 +54,15 @@
         handler="collective.blogging.migration.migrateLayouts"
         sortkey="1"
         profile="collective.blogging:default" />
+    
+    <upgradeStep
+        title="Remove blog gallery layout"
+        description="Set existing blog gallery layouts to default thumbnail view and remove it from all type info."
+        source="2"
+        destination="3"
+        handler="collective.blogging.migration.removeGalleryView"
+        sortkey="2"
+        profile="collective.blogging:default" />
 
     <!-- BBB: see interfaces.py -->
     <upgradeStep

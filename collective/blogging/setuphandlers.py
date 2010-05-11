@@ -19,12 +19,10 @@ METADATA = [
 ]
 
 BLOG_TYPES = ('Folder', 'Large Plone Folder', 'Topic')
-BLOG_VIEWS = ('blog-view', 'blog-gallery')
+BLOG_VIEWS = ('blog-view',)
 
 ENTRY_TYPES = ('Document', 'News Item', 'Event', 'File', 'Image', 'Link')
 ENTRY_VIEWS = ('entry-view',)
-
-FALLBACK_VIEW = 'atct_album_view'
 
 def setupCatalog(context):
 
@@ -126,18 +124,7 @@ def resetViews(context):
             if view_method in type_info.view_methods:
                 type_info.view_methods = tuple([vm for vm in type_info.view_methods if vm !=view_method])
                 log.info('"%s" view uninstalled for %s.' % (view_method, ptype))
-    
-    # This is how you can fix broken gallery folders due to assigned removed layout
-    # it is commented out here because we don't want to call it during package "reinstall"
-    """
-    catalog = getToolByName(portal, 'portal_catalog')
-    content = catalog(portal_type=VIEW_TYPES)
-    for brain in content:
-        obj = brain.getObject()
-        if obj.getLayout() == GALLERY_VIEW:
-            obj.setLayout(FALLBACK_VIEW)
-            log.info('Default "%s" layout set for "%s".' % (FALLBACK_VIEW, '/'.join(obj.getPhysicalPath())))
-    """
+
 
 def resetLayers(context):
     if context.readDataFile('collective.blogging_uninstall.txt') is None:

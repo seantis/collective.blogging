@@ -1,13 +1,15 @@
 Changelog
 =========
 
-1.1 (unreleased)
+1.1 (2010-05-11)
 ~~~~~~~~~~~~~~~~~~~
 
 - Avoid ZeroDivisionError when the filter_cache field is 0 (simply do not cache then). [maurits]
 - image and newsitem fancyboxes replaced by overlays - fixes: #6 [lzdych]
 - enabled "Display menu" for blogs and entries [lzdych]
 - added styles for sunburst Plone theme [lzdych]
+- added Catalan translation by Sebas Vila-Marta [lzdych]
+- removed gallery view use for example: "collective.prettyphoto" instead [lzdych]
 
 1.0 (2010-05-03)
 ~~~~~~~~~~~~~~~~~~~

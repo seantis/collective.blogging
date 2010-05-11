@@ -128,3 +128,24 @@ def migrateLayouts(context):
         logger.info('Layout migrated for entry: "%s".' % brain.getPath())
 
     logger.info("Blogging layouts migration completed.")
+
+def removeGalleryView(context):
+    logger.info("Removing blog gallery view.")
+    
+    catalog = getToolByName(context, 'portal_catalog')
+    content = catalog(portal_type=['Folder', 'Large Plone Folder', 'Topic'])
+    for brain in content:
+        obj = brain.getObject()
+        if obj.getLayout() == 'blog-gallery':
+            obj.setLayout('atct_album_view')
+            logger.info('Default "%s" layout set for "%s".' % ('atct_album_view', brain.getPath()))
+    
+    
+    portal_types = getToolByName(context, 'portal_types')
+    for ptype in ['Folder', 'Large Plone Folder', 'Topic']:
+        type_info = portal_types.getTypeInfo(ptype)
+        if 'blog-gallery' in type_info.view_methods:
+            type_info.view_methods = tuple([vm for vm in type_info.view_methods if vm !='blog-gallery'])
+            logger.info('"%s" view uninstalled for %s.' % ('blog-gallery', ptype))
+    
+    logger.info("Gallery view removed.")
