@@ -58,8 +58,6 @@ Features
 
 - Collection supported
 
-- Fancy image galleries
-
 - Simple archive toolbar (filter by category, year, month)
 
 - Portlets: Archive, Manage and Share
@@ -68,7 +66,7 @@ Features
 
 - Auto-blogging action for content rules
 
-- Safe uninstall
+- Safe uninstall (except issue #7)
 
 - Google maps integration with events via collective.bloggingmaps_
 
@@ -76,25 +74,6 @@ Features
 
 .. _collective.bloggingmaps: http://plone.org/products/collective.bloggingmaps
 .. _collective.collage.blogging: http://plone.org/products/collective.collage.blogging
-
-Translations
-============
-
-- English (default): lzdych (lukas dot zdych at gmail dot com)
-
-- Czech: lzdych (lukas dot zdych at gmail dot com)
-
-- Italian: Enzo Cesanelli (luthy)
-
-- Portuguese: Davi Lima (davilima6)
-
-- Dutch: Rob Gietema (robgietema)
-
-- Japanese: Yusuke NAKAI (nyusuke at nagosui dot org)
-
-- Catalan: Sebas Vila-Marta (sebas at dipse dot upc dot edu)
-
-New translations or help with correction of an existing ones would be appreciated.
 
 Examples
 ========
@@ -122,7 +101,7 @@ Copyright and Credits
 
 collective.blogging is licensed under the GPL. See LICENSE.txt for details.
 
-Author: `Lukas Zdych (lzdych)`__
+Author: `Lukas Zdych (lzdych)`__ - development, maintenance, Czech translation
 
 .. _lzdych: mailto:lukas.zdych@gmail.com
 
@@ -132,9 +111,15 @@ Contributors:
 
 - Maurits van Rees (maurits) - fixes, patches
 
-- Davi Lima (davi-lima, davilima6) - ideas, testing
+- Davi Lima (davi-lima, davilima6) - ideas, testing, Portuguese translation
 
-- Enzo Cesanelli (luthy) - ideas, testing
+- Enzo Cesanelli (luthy) - ideas, testing, Italian translation
+
+- Rob Gietema (robgietema) - Dutch translation
+
+- Yusuke NAKAI (nyusuke at nagosui dot org) - Japanese translation
+
+- Sebas Vila-Marta (sebas at dipse dot upc dot edu) - Catalan translation
 
 Homepage: collective.blogging_.
 
