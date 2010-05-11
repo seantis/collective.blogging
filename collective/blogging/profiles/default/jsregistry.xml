@@ -2,8 +2,7 @@
 <object name="portal_javascripts">
 
     <javascript cacheable="True" compression="safe"
-        cookable="False" enabled="True" inline="False"
-        expression="nocall:object/@@blogging-view/is_blogging|nothing"
+        cookable="False" enabled="True" inline="False" expression=""
         id="++resource++collective.blogging.static/blogging.js" />
 
 </object>

@@ -62,7 +62,7 @@ Features
 
 - Simple archive toolbar (filter by category, year, month)
 
-- Portlets: Archive and Admin
+- Portlets: Archive, Manage and Share
 
 - Next / Prev navigation replacement
 
