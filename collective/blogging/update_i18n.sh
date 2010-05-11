@@ -5,7 +5,7 @@ PRODUCT="collective.blogging"
 
 # if you want to add new language, add the language
 # to the following list (separated by space)
-LANGUAGES='cs en it nl pt-br ja ca'
+LANGUAGES='cs en it nl pt-br ja ca de'
 for lang in $LANGUAGES; do
     mkdir -p locales/$lang/LC_MESSAGES/
     touch locales/$lang/LC_MESSAGES/$PRODUCT.po

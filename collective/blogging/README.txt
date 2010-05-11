@@ -115,7 +115,7 @@ Here are sites where the blogging tool is already in production use.
 
 - itic.epsem.upc.edu_
 
-.._itic.epsem.upc.edu: http://itic.epsem.upc.edu/blog
+.. _itic.epsem.upc.edu: http://itic.epsem.upc.edu/blog
 
 Copyright and Credits
 =====================

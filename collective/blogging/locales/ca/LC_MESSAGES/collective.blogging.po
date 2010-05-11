@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2010-05-11 01:01+0000\n"
+"POT-Creation-Date: 2010-05-11 13:14+0000\n"
 "PO-Revision-Date: 2010-04-30 18:13+0200\n"
 "Last-Translator: Sebas Vila-Marta <sebas@dipse.upc.edu>\n"
 "MIME-Version: 1.0\n"
@@ -467,11 +467,6 @@ msgstr "Filtra les anotacions"
 msgid "label_full_view"
 msgstr "Mostra el text principal"
 
-#. Default: "Galleries"
-#: ./browser/galleryview.pt:92
-msgid "label_galleries"
-msgstr "Galeríes"
-
 #. Default: "Go to blog…"
 #: ./portlets/manage.pt:65
 msgid "label_go_to_blog"
@@ -481,11 +476,6 @@ msgstr "Aneu al bloc…"
 #: ./portlets/manage.pt:55
 msgid "label_help"
 msgstr "Ajuda"
-
-#. Default: "Loading..."
-#: ./browser/galleryview.pt:54
-msgid "label_loading"
-msgstr "Carregant…"
 
 #. Default: "Newest…"
 #: ./portlets/archive.pt:41
