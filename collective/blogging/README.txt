@@ -92,6 +92,8 @@ Translations
 
 - Japanese: Yusuke NAKAI (nyusuke at nagosui dot org)
 
+- Catalan: Sebas Vila-Marta (sebas at dipse dot upc dot edu)
+
 New translations or help with correction of an existing ones would be appreciated.
 
 Examples
@@ -111,12 +113,16 @@ Here are sites where the blogging tool is already in production use.
 
 .. _blog.horovi.com: http://blog.horovi.com
 
+- itic.epsem.upc.edu_
+
+.._itic.epsem.upc.edu: http://itic.epsem.upc.edu/blog
+
 Copyright and Credits
 =====================
 
 collective.blogging is licensed under the GPL. See LICENSE.txt for details.
 
-Author: `Lukas Zdych (lzdych)`__.
+Author: `Lukas Zdych (lzdych)`__
 
 .. _lzdych: mailto:lukas.zdych@gmail.com
 

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-05-10 23:51+0000\n"
+"POT-Creation-Date: 2010-05-11 01:01+0000\n"
 "PO-Revision-Date: 2010-05-10 21:50-0300\n"
 "Last-Translator: Davi Lima <davilima6@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "X-Is-Fallback-For: pt\n"
-"Language-Team: \n"
 
 #: ./actions/autoblog.py:97
 msgid "Add Auto-Blog Action"
