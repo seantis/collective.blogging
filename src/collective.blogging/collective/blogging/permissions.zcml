@@ -1,0 +1,25 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="collective.blogging">
+
+    <permission
+        id="collective.blogging.AddBlog"
+        title="collective.blogging: Add blog"
+        />
+
+    <permission
+        id="collective.blogging.ModifyBlog"
+        title="collective.blogging: Modify blog"
+        />
+    
+    <permission
+        id="collective.blogging.AddEntry"
+        title="collective.blogging: Add entry"
+        />
+
+    <permission
+        id="collective.blogging.ModifyEntry"
+        title="collective.blogging: Modify entry"
+        />
+        
+</configure>

@@ -1,0 +1,67 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.blogging">
+
+    <include package="plone.behavior" file="meta.zcml" />
+    
+    <include package="plone.directives.form" file="meta.zcml" />
+    <include package="plone.directives.form" />
+
+    <plone:behavior
+        title="Bloggging: A Blog"
+        description="Enable blogging features for a folderish content."
+        provides=".interfaces.IBlog"
+        factory="plone.behavior.AnnotationStorage"
+        marker=".interfaces.IBlogMarker"
+        />
+
+    <plone:behavior
+        title="Bloggging: An Entry"
+        description="Enable blogging features for a non-folderish content."
+        provides=".interfaces.IEntry"
+        factory="plone.behavior.AnnotationStorage"
+        marker=".interfaces.IEntryMarker"
+        />
+    
+    <plone:behavior
+        title="Blogging: A Text entry"
+        description="Text based blog entry."
+        provides=".interfaces.IText"
+        factory="plone.behavior.AnnotationStorage"
+        marker=".interfaces.ITextMarker"
+        />
+    
+    <plone:behavior
+        title="Blogging: A Link entry"
+        description="Link based blog entry."
+        provides=".interfaces.ILink"
+        factory="plone.behavior.AnnotationStorage"
+        marker=".interfaces.ILinkMarker"
+        />
+    
+    <plone:behavior
+        title="Blogging: An Image entry"
+        description="Image based blog entry."
+        provides=".interfaces.IImage"
+        factory="plone.behavior.AnnotationStorage"
+        marker=".interfaces.IImageMarker"
+        />
+    
+    <plone:behavior
+        title="Blogging: A File entry"
+        description="Image based blog entry."
+        provides=".interfaces.IFile"
+        factory="plone.behavior.AnnotationStorage"
+        marker=".interfaces.IFileMarker"
+        />
+    
+    <plone:behavior
+        title="Blogging: An Event entry"
+        description="Image based blog entry."
+        provides=".interfaces.IEvent"
+        factory="plone.behavior.AnnotationStorage"
+        marker=".interfaces.IEventMarker"
+        />
+
+</configure>

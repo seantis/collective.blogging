@@ -1,0 +1,21 @@
+<div class="entryEvent" i18n:domain="collective.blogging"
+    tal:define="start viewlet/start;
+                end   viewlet/end">
+    
+    <table class="vertical listing" tal:condition="python:start or end">
+        <tr tal:condition="start">
+            <th i18n:translate="label_start">Start date</th>
+            <td tal:content="start">2010-01-01 11:10</td>
+        </tr>
+        
+        <tr tal:condition="end">
+            <th i18n:translate="label_end">End date</th>
+            <td tal:content="end">2010-01-01 12:10</td>
+        </tr>
+    </table>
+    
+    <dl class="portalMessage warning" tal:condition="python:viewlet.editor and not (start and end)">
+        <dt i18n:translate="warning">Warning</dt>
+        <dd i18n:translate="no_event_dates">There are no event dates entered yet.</dd>
+    </dl>
+</div>

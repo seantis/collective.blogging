@@ -1,0 +1,26 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.blogging">
+
+    <include package="plone.app.contentmenu" />
+    
+    <browser:menuItem
+        for="..interfaces.IBlogMarker"
+        menu="plone_displayviews"
+        action="view"
+        title="Blog view"
+        description="A default blog view"
+        layer="..interfaces.IBloggingSpecific"
+        />
+    
+    <browser:menuItem
+        for="..interfaces.IEntryMarker"
+        menu="plone_displayviews"
+        action="view"
+        title="Entry view"
+        description="A default entry view"
+        layer="..interfaces.IBloggingSpecific"
+        />
+
+</configure>

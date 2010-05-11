@@ -1,0 +1,12 @@
+<div class="entryText" i18n:domain="collective.blogging"
+    tal:define="text viewlet/text">
+    
+    <tal:block replace="structure viewlet/text">
+        Text
+    </tal:block>
+
+    <dl class="portalMessage warning" tal:condition="python:viewlet.editor and not text">
+        <dt i18n:translate="warning">Warning</dt>
+        <dd i18n:translate="no_text_body">There is no text body entered yet.</dd>
+    </dl>
+</div>

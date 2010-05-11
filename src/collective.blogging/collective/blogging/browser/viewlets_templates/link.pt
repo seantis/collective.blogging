@@ -1,0 +1,17 @@
+<div class="entryLink" i18n:domain="collective.blogging"
+    tal:define="remote_url viewlet/remote_url">
+    
+    <tal:block condition="remote_url">
+        <span i18n:translate="link_address_is">The link address is</span>:
+        <a href=""
+            tal:attributes="href remote_url"
+            tal:content="structure remote_url">
+            Remote URL
+        </a>
+    </tal:block>
+    
+    <dl class="portalMessage warning" tal:condition="python:viewlet.editor and not remote_url">
+        <dt i18n:translate="warning">Warning</dt>
+        <dd i18n:translate="no_link_url">There is no link url entered yet.</dd>
+    </dl>
+</div>

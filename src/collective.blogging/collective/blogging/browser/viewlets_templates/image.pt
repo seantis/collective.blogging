@@ -1,0 +1,23 @@
+<div class="entryImage" i18n:domain="collective.blogging"
+    tal:define="size context/picture/size|nothing">
+    
+    <tal:block condition="size"
+        define="picture nocall:context/picture;
+                thumb nocall:context/thumb;
+                filename picture/filename|nothing">
+        <img src=""
+            tal:attributes="src    string:${context/absolute_url}/@@download/thumb;
+                            alt    filename;
+                            height nothing;
+                            width  nothing;" /><br/>
+        <a href="" title="Click to zoom this image."
+            tal:attributes="href  string:${context/absolute_url}/@@download/picture"
+            i18n:attributes="title click_to_zoom_image"
+            i18n:translate="image_zoom">Image zoom</a>&mdash;<span tal:replace="python:size/1024">54</span> KB
+    </tal:block>
+    
+    <dl class="portalMessage warning" tal:condition="python:viewlet.editor and not size">
+        <dt i18n:translate="warning">Warning</dt>
+        <dd i18n:translate="no_image_uploaded">There is no image uploaded yet.</dd>
+    </dl>
+</div>

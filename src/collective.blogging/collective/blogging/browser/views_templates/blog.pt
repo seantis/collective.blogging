@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="collective.blogging">
+<body>
+
+<metal:content-core fill-slot="content-core">
+    <metal:content-core define-macro="content-core">
+        <div id="blog-listing" tal:define="batch view/contents" tal:condition="batch">
+            <div class="blogEntryBox" tal:repeat="item batch">
+                <tal:block define="item_object item/getObject;
+                                   context     nocall:item_object">
+                    <metal:block use-macro="context/@@view/macros/content-core"/>        
+                </tal:block>                        
+            </div>
+        </div>        
+    </metal:content-core>
+</metal:content-core>
+
+</body>
+</html>

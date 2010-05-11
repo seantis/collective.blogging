@@ -1,0 +1,10 @@
+setuptools
+Plone
+plone.app.dexterity
+collective.autopermission
+plone.behavior
+plone.directives.form
+rwproperty
+plone.namedfile[blobs]
+plone.formwidget.namedfile
+plone.app.contentmenu

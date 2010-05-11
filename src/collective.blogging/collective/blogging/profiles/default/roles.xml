@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<rolemap>
+    <permissions>
+        <permission name="collective.blogging: Add blog" acquire="True">
+            <role name="Owner"/>
+            <role name="Manager"/>
+            <role name="Member"/>
+            <role name="Contributor"/>
+        </permission>
+    
+        <permission name="collective.blogging: Modify blog" acquire="True">
+            <role name="Owner"/>
+            <role name="Manager"/>
+        </permission>
+        
+        <permission name="collective.blogging: Add entry" acquire="True">
+            <role name="Owner"/>
+            <role name="Manager"/>
+            <role name="Member"/>
+            <role name="Contributor"/>
+        </permission>
+    
+        <permission name="collective.blogging: Modify entry" acquire="True">
+            <role name="Owner"/>
+            <role name="Manager"/>
+        </permission>
+    </permissions>
+</rolemap>
