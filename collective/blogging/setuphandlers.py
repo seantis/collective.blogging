@@ -91,7 +91,7 @@ def setupViews(context):
     for ptype in BLOG_TYPES:
         for view_method in BLOG_VIEWS:
             type_info = portal_types.getTypeInfo(ptype)
-            if type_info and view_method not in type_info.view_methods:
+            if type_info and (type_info and view_method not in type_info.view_methods):
                 type_info.view_methods = type_info.view_methods + (view_method,)
                 log.info('"%s" view installed for %s.' % (view_method, ptype))
 

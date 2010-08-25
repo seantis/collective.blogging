@@ -1,6 +1,11 @@
 Changelog
 =========
 
+trunk (unreleased)
+-------------------
+
+- Adds a condition in setuphandlers.py in order to install under Plone 4, as there is no Large Plone Folder [erico_andrei]
+
 1.1 (2010-05-12)
 ~~~~~~~~~~~~~~~~~~~
 
