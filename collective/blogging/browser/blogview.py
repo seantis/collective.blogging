@@ -150,6 +150,14 @@ class BlogView(BrowserView):
             return field.get(self.context)
         return 10
 
+    @property
+    def is_filtered(self):
+        subject = self.request.get('Subject', None)
+        year = self.request.get('publish_year', None)
+        month = self.request.get('publish_month', None)
+        
+        return not (subject is None and year is None and month is None)
+
     @ram.cache(_filter_cachekey)
     def filter_info(self):
         logger.info('Caching filter info')
@@ -178,19 +186,19 @@ class BlogView(BrowserView):
         return [
             {
                 'id': 'Subject:list',
-                'title': _(u'select_category_option', default=u'-- Category --'),
+                'title': _(u'select_category_option', default=u'Category'),
                 'options': subjects,
                 'selected': subject and subject != [''] and subject[0] or None
             },
             {
                 'id': 'publish_year',
-                'title': _(u'select_year_option', default=u'-- Year --'),
+                'title': _(u'select_year_option', default=u'Year'),
                 'options': years,
                 'selected': year and int(year) or None
             },
             {
                 'id': 'publish_month',
-                'title': _(u'select_month_option', default=u'-- Month --'),
+                'title': _(u'select_month_option', default=u'Month'),
                 'options': months,
                 'selected': month and int(month) or None
             }

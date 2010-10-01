@@ -211,7 +211,7 @@ td.entryMap div.googleMapLocation {
 .blogArchivePortlet span.archiveCount {
     font-weight:bold;
 }
-
+/** Not used anymore **/
 dl#blog-filter dt.collapsibleHeader {
     border:1px solid #8CACBB;
     background-color:#DEE7EC;
@@ -220,6 +220,21 @@ dl#blog-filter dt.collapsibleHeader {
 
 dl#blog-filter dd.collapsibleContent {
     padding:1em;
+}
+/**********************/
+
+.criteria_filter {
+    float: left;
+    margin-right: 1em;
+}
+
+.criteria_filter label {
+    font-weight: normal;
+    display: block;
+}
+
+.criteria_filter_actions {
+    
 }
 
 .blogPostsCount {
