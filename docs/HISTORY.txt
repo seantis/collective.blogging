@@ -5,6 +5,8 @@ trunk (unreleased)
 -------------------
 
 - Adds a condition in setuphandlers.py in order to install under Plone 4, as there is no Large Plone Folder [erico_andrei]
+- added Spanish translation [marcosfromero]
+- Filter toolbar improvements: now is a fieldset, added a "Clear filter" link, filters with AJAX. Changed "POST" method for "get". This fixes http://plone.org/products/collective.blogging/issues/21 [marcosfromero]
 
 1.1 (2010-05-12)
 ~~~~~~~~~~~~~~~~~~~
