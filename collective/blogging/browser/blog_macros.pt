@@ -55,7 +55,8 @@
                     <a  href="" 
                         tal:condition="view/is_filtered"
                         tal:attributes="href context/absolute_url" 
-                        i18n:translate="label_clear_filter">Clear filter</a>
+                        i18n:translate="label_clear_filter"
+                        id="collective-blog-clearfilter">Clear filter</a>
                 </div>
             </fieldset>
 

@@ -50,3 +50,75 @@ jq(document).ready(function () {
     }).filter(":first").click();
     
 });
+
+/* BLOG VIEW */
+
+/* filter toolbar */
+var bloggingEmptyHash = (new Date()).getTime()
+var bloggingLastHash = '';
+
+function bloggingMonitorHash() {
+    var param = window.location.hash;
+    if(bloggingLastHash!=param) {
+        var url = window.location.href;
+        if(url.indexOf('#')>-1) {
+            url = url.substring(0, url.indexOf('#'));
+        }
+        jq('#content').load(url + '?' + param.substring(1) + ' #content>div', bloggingFilterToolbar);
+        bloggingLastHash = param;
+    }
+}
+
+function bloggingFilterToolbar() {
+    jq("#filter-blog-form input[name=collective.blog.filter]").click(function(event) {
+        // stop default click of button
+        event.preventDefault();
+        event.stopPropagation();
+        // feedback for user
+        jq('body').css('cursor', 'wait');
+        // get button, form and data
+        var button = jQuery(event.target);
+        var form = button.closest('form');
+        var url = form.attr('action');
+        var param = form.serialize();
+        // update url with proper hash
+        window.location.hash = param;
+    });
+    
+    jq('#collective-blog-clearfilter').click(function(event) {
+        // stop default click of button
+        event.preventDefault();
+        event.stopPropagation();
+        // feedback for user
+        jq('body').css('cursor', 'wait');
+        // get link and url
+        var link = jQuery(event.target);
+        var url = link.attr('href');
+        // update url with no hash
+        window.location.hash = bloggingEmptyHash;
+    });
+    // reset feedback for user
+    jq('body').css('cursor', 'auto');
+}
+
+function bloggingPreloadFilter() {
+    var form = jq('#filter-blog-form');
+    var hash = window.location.hash;
+    
+    if (hash!='') {
+        hash = hash.substring(1);
+    }
+    var params = hash.split('&');
+    jQuery.each(params, function(idx, pair) {
+        var field_name = pair.split('=')[0];
+        var field_value = pair.split('=')[1];
+        form.find('[name=' + field_name + ']').val(field_value);
+    });
+}
+jq(document).ready(function () {
+    bloggingFilterToolbar();
+    bloggingPreloadFilter();
+    setInterval(bloggingMonitorHash, 100);
+});
+
+

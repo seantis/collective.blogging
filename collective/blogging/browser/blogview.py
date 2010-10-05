@@ -152,11 +152,11 @@ class BlogView(BrowserView):
 
     @property
     def is_filtered(self):
-        subject = self.request.get('Subject', None)
-        year = self.request.get('publish_year', None)
-        month = self.request.get('publish_month', None)
+        subject = self.request.get('Subject', [''])
+        year = self.request.get('publish_year', '')
+        month = self.request.get('publish_month', '')
         
-        return not (subject is None and year is None and month is None)
+        return not (subject[0]=='' and year=='' and month=='')
 
     @ram.cache(_filter_cachekey)
     def filter_info(self):
