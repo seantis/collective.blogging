@@ -223,25 +223,20 @@ dl#blog-filter dd.collapsibleContent {
 }
 /**********************/
 
-.criteria_filter {
-    float: left;
-    margin-right: 1em;
-}
-
-.criteria_filter label {
+#filter-blog-form label {
     font-weight: normal;
-    display: block;
 }
 
-.criteria_filter_actions {
-    
+#filter-blog-form td {
+    padding: 0 1em 1em 0;
+}
+
+#filter-blog-form select {
+    width: 100%;
 }
 
 .blogPostsCount {
-    float:right;
-    clear:right;
-    background:white;
-    padding:0.2em 0.4em;
+    padding-top:0;
 }
 
 div.tileFooter {

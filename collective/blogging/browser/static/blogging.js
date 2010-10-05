@@ -54,22 +54,33 @@ jq(document).ready(function () {
 /* BLOG VIEW */
 
 /* filter toolbar */
-var bloggingEmptyHash = (new Date()).getTime()
+var bloggingEmptyHash = (new Date()).getTime();
 var bloggingLastHash = '';
 
 function bloggingMonitorHash() {
+    /* Function that monitors changes in location hash
+     * If it detects and change, reloads blog contents
+     */
     var param = window.location.hash;
+    // If current hash is different than previous one, reloads blog contents
     if(bloggingLastHash!=param) {
         var url = window.location.href;
         if(url.indexOf('#')>-1) {
             url = url.substring(0, url.indexOf('#'));
         }
-        jq('#content').load(url + '?' + param.substring(1) + ' #content>div', bloggingFilterToolbar);
+        var nocaching = (new Date()).getTime();
+        // After loading blog contents, changes cursor css
+        jq('#content').load(url + '?ajax_load=' + nocaching + '&' + param.substring(1) + ' #content>div', function() {
+            // reset feedback for user
+            jq('body').css('cursor', 'auto');
+        });
+        // Finally, updates last hash
         bloggingLastHash = param;
     }
 }
 
-function bloggingFilterToolbar() {
+jq(document).ready(function () {
+    /* Event handler for filter-form button */
     jq("#filter-blog-form input[name=collective.blog.filter]").click(function(event) {
         // stop default click of button
         event.preventDefault();
@@ -78,47 +89,66 @@ function bloggingFilterToolbar() {
         jq('body').css('cursor', 'wait');
         // get button, form and data
         var button = jQuery(event.target);
+        button.removeClass('submitting');
         var form = button.closest('form');
         var url = form.attr('action');
         var param = form.serialize();
-        // update url with proper hash
-        window.location.hash = param;
+        // does form really have selected values?
+        var isFiltered = false;
+        jQuery.each(param.split('&'), function(idx, val) {
+            var field_value = val.split('=')[1];           
+            isFiltered = isFiltered || (field_value && field_value!='');
+        });
+        if(isFiltered) {
+            // if form has selected values, shows 'Clear filter' link
+            jq('#collective-blog-clearfilter').show();
+            // update url with proper hash
+            window.location.hash = param;
+        } else {
+            // if not, hides 'Clear filter' link
+            jq('#collective-blog-clearfilter').hide();
+            // and removes hash
+            window.location.hash = bloggingEmptyHash;
+        }
+
     });
     
+    /* Event handler for 'Clear filter' link */
     jq('#collective-blog-clearfilter').click(function(event) {
         // stop default click of button
         event.preventDefault();
         event.stopPropagation();
         // feedback for user
         jq('body').css('cursor', 'wait');
-        // get link and url
-        var link = jQuery(event.target);
-        var url = link.attr('href');
+        // hide link
+        jq(event.target).hide();
+        // reset form
+        jq('#filter-blog-form')[0].reset();
         // update url with no hash
         window.location.hash = bloggingEmptyHash;
     });
-    // reset feedback for user
-    jq('body').css('cursor', 'auto');
-}
-
-function bloggingPreloadFilter() {
+    
+    // Preloads combo-boxes with hashed parameters
     var form = jq('#filter-blog-form');
     var hash = window.location.hash;
     
     if (hash!='') {
         hash = hash.substring(1);
     }
-    var params = hash.split('&');
+    var params = hash.split('&');    
+    var isFiltered = false;
+        
     jQuery.each(params, function(idx, pair) {
         var field_name = pair.split('=')[0];
         var field_value = pair.split('=')[1];
         form.find('[name=' + field_name + ']').val(field_value);
+        isFiltered = isFiltered || (field_value && field_value!='');
     });
-}
-jq(document).ready(function () {
-    bloggingFilterToolbar();
-    bloggingPreloadFilter();
+    
+    if(isFiltered) {
+        jq('#collective-blog-clearfilter').show();
+    }
+    
     setInterval(bloggingMonitorHash, 100);
 });
-
 

@@ -525,17 +525,17 @@ msgstr "Mostrar título y descripción"
 #. Default: "-- Category --"
 #: ./browser/blogview.py:181
 msgid "select_category_option"
-msgstr "Etiquetas"
+msgstr "Etiquetas:"
 
 #. Default: "-- Month --"
 #: ./browser/blogview.py:193
 msgid "select_month_option"
-msgstr "Mes"
+msgstr "Mes:"
 
 #. Default: "-- Year --"
 #: ./browser/blogview.py:187
 msgid "select_year_option"
-msgstr "Año"
+msgstr "Año:"
 
 #. Default: "Blog archive"
 #: ./profiles/default/portlets.xml

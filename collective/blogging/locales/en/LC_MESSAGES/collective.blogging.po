@@ -542,17 +542,17 @@ msgstr ""
 #. Default: "-- Category --"
 #: ./browser/blogview.py:181
 msgid "select_category_option"
-msgstr ""
+msgstr "Category:"
 
 #. Default: "-- Month --"
 #: ./browser/blogview.py:193
 msgid "select_month_option"
-msgstr ""
+msgstr "Month:"
 
 #. Default: "-- Year --"
 #: ./browser/blogview.py:187
 msgid "select_year_option"
-msgstr ""
+msgstr "Year:"
 
 #. Default: "Blog archive"
 #: ./profiles/default/portlets.xml

@@ -38,5 +38,16 @@
         addview=".share.AddForm"
         editview=".share.EditForm"
         />
+  
+    <plone:portlet
+        name="collective.blogging.FilterPortlet"
+        interface=".filter.IFilterPortlet"
+        assignment=".filter.Assignment"
+        view_permission="zope2.View"
+        edit_permission="cmf.ManagePortal"
+        renderer=".filter.Renderer"
+        addview=".filter.AddForm"
+        editview=".filter.EditForm"
+        />
 
 </configure>
