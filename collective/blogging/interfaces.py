@@ -23,26 +23,3 @@ class IEntryMarker(Interface):
 class IBloggingSpecific(IDefaultPloneLayer):
     """ A marker interface that defines a Zope 3 browser layer. """
 
-# BBB - all these interfaces are obsolete and should
-# be removed before first release candidate
-
-class IFolderMarker(IBlogMarker):
-    """ A blog folderish content """
-
-class IDocumentMarker(IEntryMarker):
-    """ A document based blog entry """
-
-class INewsItemMarker(IEntryMarker):
-    """ A news item based blog entry """
-
-class IEventMarker(IEntryMarker):
-    """ An event based blog entry """
-
-class ILinkMarker(IEntryMarker):
-    """ A link based blog entry """
-
-class IImageMarker(IEntryMarker):
-    """ An image based blog entry """
-
-class IFileMarker(IEntryMarker):
-    """ An file based blog entry """

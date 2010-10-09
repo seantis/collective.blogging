@@ -188,12 +188,12 @@ class Renderer(base.Renderer):
               
     @ram.cache(_filter_cachekey)
     def _filter_info(self):
-        logger.info('Caching filter info')
+        #logger.info('Caching filter info')
         
         subjects = set()
         years = set()
         months = set()
-        
+
         for brain in self.contents():
             for s in brain.Subject:
                 subjects.add(s)
