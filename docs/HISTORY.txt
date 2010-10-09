@@ -9,7 +9,8 @@ Changelog
 - Changed filter toolbar for a filter portlet. GS upgrade step to automatically create a portlet when filter toolbar was enabled. [marcosfromero]
 - Filter improvements: now it's a fieldset, with a "Clear filter" link. It filters with AJAX. Changed "POST" method for "get". This fixes http://plone.org/products/collective.blogging/issues/21 [marcosfromero]
 - fixed installation in Plone 4.0 [khink, erico_andrei]
-- added german translation by Hartmut Goebel - closes:#17
+- added german translation by Hartmut Goebel - closes: #17
+- added patch by Hartmut Goebel for help page - closes: #18
 
 1.1 (2010-05-12)
 ~~~~~~~~~~~~~~~~~~~

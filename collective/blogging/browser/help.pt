@@ -91,6 +91,11 @@
                                         </a>
                                     </li>
                                     <li>
+                                        <a href="blogging-help#site-view">
+                                            Blog as main view for site
+                                        </a>
+                                    </li>
+                                    <li>
                                         <a href="blogging-help#translations">
                                             Multilingual and Translations
                                         </a>
@@ -658,6 +663,41 @@
                     </p>
                     <br/>
                     
+                    <a name="site-view"></a>
+                    <div class="helpTopLink">
+                        <a href="blogging-help#top">Go to top</a>
+                    </div>
+                    <h3>Blog as main view for site</h3>
+                    <p>
+
+                        You may want the main view of your site being a blog, like it is on <a
+                        href="http://lukaszdych.net">lukaszdych.net</a>. Unfortunately it's not possible to
+                        <em>blog enable</em> the <em>Plone Site</em>. But you can achieve this with a simple
+                        trick:
+                    </p>
+		    <ul>
+		      <li>
+			Add a blog as normally: Add folder and check <b>Blog enabled</b> on the <b>Blog</b>-tab
+			of the folders properties. For this example we name this Folder <em>Articles</em>.
+		      </li>
+		      <li>
+			Now add a <em>Collection</em>, lets call it <em>MyBlog</em>, to the root folder of your
+			Plone Site. Set criterias to select all published content from the <em>Articles</em> folder.
+		      </li>
+		      <li>
+			Add and configure any portlet you may want for this blog.
+		      </li>
+		      <li>
+			Now make <em>MyBlog</em> a blog, too (by checking <b>Blog enabled</b>). This will allow
+			all view settings for a blog to be set on the collection. (Note: The collection still
+			is no <em>blog</em>, thus you can not use this collection as a target-blog.)
+		      </li>
+		      <li>
+			At last, make <em>MyBlog</em> the default view of your Plone Site.
+		      </li>
+		    </ul>
+                    <br/>
+
                     <a name="translations"></a>
                     <div class="helpTopLink">
                         <a href="blogging-help#top">Go to top</a>
