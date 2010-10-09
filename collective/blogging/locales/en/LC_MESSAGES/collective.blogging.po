@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-10-09 19:45+0000\n"
+"POT-Creation-Date: 2010-10-09 20:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -137,6 +137,10 @@ msgstr ""
 msgid "Enable comments"
 msgstr ""
 
+#: ./portlets/share.py:48
+msgid "Enable portlet by content types wich entries are based on."
+msgstr ""
+
 #: ./extenders.py:139
 msgid "Enable sharing"
 msgstr ""
@@ -267,14 +271,6 @@ msgstr ""
 msgid "Reset"
 msgstr ""
 
-#: ./portlets/share.py:47
-msgid "Restrict by types"
-msgstr ""
-
-#: ./portlets/share.py:48
-msgid "Restrict portlet availability by content types wich entries are based on."
-msgstr ""
-
 #: ./extenders.py:202
 msgid "Select a document with blogger's bio information."
 msgstr ""
@@ -286,6 +282,10 @@ msgstr ""
 #: ./extenders.py:140
 #: ./portlets/share.py:56
 msgid "Select enabled sharing services."
+msgstr ""
+
+#: ./portlets/share.py:47
+msgid "Select types"
 msgstr ""
 
 #: ./portlets/share.py:81

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2010-10-09 19:45+0000\n"
+"POT-Creation-Date: 2010-10-09 20:16+0000\n"
 "PO-Revision-Date: 2010-04-29 13:48+0100\n"
 "Last-Translator: Rob Gietema <rob@fourdigits.nl>\n"
 "MIME-Version: 1.0\n"
@@ -137,6 +137,10 @@ msgstr "Bloggen inschakelen"
 msgid "Enable comments"
 msgstr "Commentaar toestaan"
 
+#: ./portlets/share.py:48
+msgid "Enable portlet by content types wich entries are based on."
+msgstr ""
+
 #: ./extenders.py:139
 msgid "Enable sharing"
 msgstr ""
@@ -267,14 +271,6 @@ msgstr "Aanbieders"
 msgid "Reset"
 msgstr ""
 
-#: ./portlets/share.py:47
-msgid "Restrict by types"
-msgstr "Scherm af op typen"
-
-#: ./portlets/share.py:48
-msgid "Restrict portlet availability by content types wich entries are based on."
-msgstr "Scherm portlet beschikbaarheid op basis van de content typen waar de items op zijn gebaseerd."
-
 #: ./extenders.py:202
 msgid "Select a document with blogger's bio information."
 msgstr "Selecteer een pagina met de biografie van de blogger."
@@ -287,6 +283,10 @@ msgstr "Selecteer content typen voor welke je een voeg toe link wilt tonen in de
 #: ./portlets/share.py:56
 msgid "Select enabled sharing services."
 msgstr "Selecteer de beschikbare delen opties."
+
+#: ./portlets/share.py:47
+msgid "Select types"
+msgstr ""
 
 #: ./portlets/share.py:81
 msgid "Share post"

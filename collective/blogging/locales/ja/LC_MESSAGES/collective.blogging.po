@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2010-10-09 19:45+0000\n"
+"POT-Creation-Date: 2010-10-09 20:16+0000\n"
 "PO-Revision-Date: 2010-04-27 21:36+0900\n"
 "Last-Translator: nyusuke <nyusuke@nagosui.org>\n"
 "MIME-Version: 1.0\n"
@@ -139,6 +139,10 @@ msgstr "bloggingを有効にする"
 msgid "Enable comments"
 msgstr "コメントを有効にする"
 
+#: ./portlets/share.py:48
+msgid "Enable portlet by content types wich entries are based on."
+msgstr ""
+
 #: ./extenders.py:139
 msgid "Enable sharing"
 msgstr ""
@@ -269,14 +273,6 @@ msgstr "共有サービスプロバイダ"
 msgid "Reset"
 msgstr ""
 
-#: ./portlets/share.py:47
-msgid "Restrict by types"
-msgstr "コンテンツタイプで制限する"
-
-#: ./portlets/share.py:48
-msgid "Restrict portlet availability by content types wich entries are based on."
-msgstr "ポートレットで利用できる、エントリのコンテンツタイプを制限します。"
-
 #: ./extenders.py:202
 msgid "Select a document with blogger's bio information."
 msgstr "ブロガーの略歴についてのドキュメントを選択してください。"
@@ -289,6 +285,10 @@ msgstr "ポートレットに表示するコンテンツタイプを選択して
 #: ./portlets/share.py:56
 msgid "Select enabled sharing services."
 msgstr "有効にする共有サービスを選んでください。"
+
+#: ./portlets/share.py:47
+msgid "Select types"
+msgstr ""
 
 #: ./portlets/share.py:81
 msgid "Share post"

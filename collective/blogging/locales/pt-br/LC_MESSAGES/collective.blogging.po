@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-10-09 19:45+0000\n"
+"POT-Creation-Date: 2010-10-09 20:16+0000\n"
 "PO-Revision-Date: 2010-05-10 21:50-0300\n"
 "Last-Translator: Davi Lima <davilima6@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -131,6 +131,10 @@ msgstr "Ativar blog"
 msgid "Enable comments"
 msgstr "Ativar comentários"
 
+#: ./portlets/share.py:48
+msgid "Enable portlet by content types wich entries are based on."
+msgstr ""
+
 #: ./extenders.py:139
 msgid "Enable sharing"
 msgstr ""
@@ -249,14 +253,6 @@ msgstr "Serviços"
 msgid "Reset"
 msgstr ""
 
-#: ./portlets/share.py:47
-msgid "Restrict by types"
-msgstr "Filtrar por tipos"
-
-#: ./portlets/share.py:48
-msgid "Restrict portlet availability by content types wich entries are based on."
-msgstr "Restringir a exibição do portlet de acordo com os tipos de conteúdo nos quais os posts se baseiam."
-
 #: ./extenders.py:202
 msgid "Select a document with blogger's bio information."
 msgstr "Selecione um documento que contenha a informação biográfica do blogueiro."
@@ -269,6 +265,10 @@ msgstr "Selecione os tipos de conteúdo para os quais você gostaria de mostrar 
 #: ./portlets/share.py:56
 msgid "Select enabled sharing services."
 msgstr "Selecione os serviços de compartilhamento ativos."
+
+#: ./portlets/share.py:47
+msgid "Select types"
+msgstr ""
 
 #: ./portlets/share.py:81
 msgid "Share post"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2010-10-09 19:45+0000\n"
+"POT-Creation-Date: 2010-10-09 20:16+0000\n"
 "PO-Revision-Date: 2010-04-30 18:13+0200\n"
 "Last-Translator: Sebas Vila-Marta <sebas@dipse.upc.edu>\n"
 "MIME-Version: 1.0\n"
@@ -128,6 +128,10 @@ msgstr "Activeu el blogging"
 msgid "Enable comments"
 msgstr "Activeu els comentaris"
 
+#: ./portlets/share.py:48
+msgid "Enable portlet by content types wich entries are based on."
+msgstr ""
+
 #: ./extenders.py:139
 msgid "Enable sharing"
 msgstr ""
@@ -246,14 +250,6 @@ msgstr "Serveis de compartició"
 msgid "Reset"
 msgstr ""
 
-#: ./portlets/share.py:47
-msgid "Restrict by types"
-msgstr "Restringiu per tipus"
-
-#: ./portlets/share.py:48
-msgid "Restrict portlet availability by content types wich entries are based on."
-msgstr "Mostreu el portlet només si el tipus d'anotació és algún dels següents."
-
 #: ./extenders.py:202
 msgid "Select a document with blogger's bio information."
 msgstr "Seleccioneu un document amb la biografia del blocaire."
@@ -266,6 +262,10 @@ msgstr "Seleccioneu els tipus d'anotació que voleu crear des del portlet."
 #: ./portlets/share.py:56
 msgid "Select enabled sharing services."
 msgstr "Seleccioneu els serveis de compartició que voleu."
+
+#: ./portlets/share.py:47
+msgid "Select types"
+msgstr ""
 
 #: ./portlets/share.py:81
 msgid "Share post"

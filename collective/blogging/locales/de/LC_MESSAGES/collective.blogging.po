@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2010-10-09 19:45+0000\n"
+"POT-Creation-Date: 2010-10-09 20:16+0000\n"
 "PO-Revision-Date: 2010-08-19 12:37+0200\n"
 "Last-Translator: Hartmut Goebel <h.goebel@goebel-consult.de>\n"
 "MIME-Version: 1.0\n"
@@ -134,6 +134,10 @@ msgstr "Bloggen einschalten"
 msgid "Enable comments"
 msgstr "Kommentare erlauben"
 
+#: ./portlets/share.py:48
+msgid "Enable portlet by content types wich entries are based on."
+msgstr ""
+
 #: ./extenders.py:139
 msgid "Enable sharing"
 msgstr ""
@@ -252,14 +256,6 @@ msgstr "Anbieter"
 msgid "Reset"
 msgstr ""
 
-#: ./portlets/share.py:47
-msgid "Restrict by types"
-msgstr "Artikeltypen"
-
-#: ./portlets/share.py:48
-msgid "Restrict portlet availability by content types wich entries are based on."
-msgstr "Wählen Sie die Artikeltypen aus, für die das »Mitteilen«-Portlet angezeigt werden soll."
-
 #: ./extenders.py:202
 msgid "Select a document with blogger's bio information."
 msgstr "Wählen Sie ein Dokument aus, das die Biographie des Bloggers enthält."
@@ -272,6 +268,10 @@ msgstr "Wählen Sie die Artikeltypen aus, für die im Portlet ein Link zum Erste
 #: ./portlets/share.py:56
 msgid "Select enabled sharing services."
 msgstr "Wählen Sie aus, welche Social-Bookmark-Dienste aktiviert werden sollen."
+
+#: ./portlets/share.py:47
+msgid "Select types"
+msgstr ""
 
 #: ./portlets/share.py:81
 msgid "Share post"

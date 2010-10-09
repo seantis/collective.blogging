@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2010-10-09 19:45+0000\n"
-"PO-Revision-Date: 2010-10-09 21:45+0100\n"
+"POT-Creation-Date: 2010-10-09 20:16+0000\n"
+"PO-Revision-Date: 2010-10-09 22:22+0100\n"
 "Last-Translator: Lukas Zdych <lukas.zdych@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -138,6 +138,10 @@ msgstr "Nastavit blogování"
 msgid "Enable comments"
 msgstr "Povolit komentáře"
 
+#: ./portlets/share.py:48
+msgid "Enable portlet by content types wich entries are based on."
+msgstr "Povolit portlet podle typu obsahu, na kterem jsou příspěvky založeny."
+
 #: ./extenders.py:139
 msgid "Enable sharing"
 msgstr "Umožnit sdílení"
@@ -268,14 +272,6 @@ msgstr "Poskytovatelé"
 msgid "Reset"
 msgstr "Vymazat"
 
-#: ./portlets/share.py:47
-msgid "Restrict by types"
-msgstr "Omezit podle typů"
-
-#: ./portlets/share.py:48
-msgid "Restrict portlet availability by content types wich entries are based on."
-msgstr "Omezte dostupnost portletu podle typů obsahu, na kterých jsou příspěvky založeny."
-
 #: ./extenders.py:202
 msgid "Select a document with blogger's bio information."
 msgstr "Vyberte dokument s informacemi o blo"
@@ -288,6 +284,10 @@ msgstr "Vyberte typy obsahu, pro které budou v portletu zobrazeny odkazy vytvo�
 #: ./portlets/share.py:56
 msgid "Select enabled sharing services."
 msgstr "Vyberte povolené služby sdílení."
+
+#: ./portlets/share.py:47
+msgid "Select types"
+msgstr "Výběr typů"
 
 #: ./portlets/share.py:81
 msgid "Share post"
