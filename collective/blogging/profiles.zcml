@@ -83,5 +83,15 @@
         sortkey="3"
         profile="collective.blogging:default" />
 
+    <upgradeStep
+        title="Filter portlet"
+        description="Change filter toolbar for filter portlet."
+        source="*"
+        destination="3"
+        handler="collective.blogging.migration.setFilterPortlet"
+        sortkey="4"
+        profile="collective.blogging:default" />
+
+
 </configure>
 

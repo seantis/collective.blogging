@@ -12,59 +12,6 @@
     </p>
 </metal:blogDesc>
 
-<metal:toolbar define-macro="toolbar" i18n:domain="collective.blogging">
-    <tal:toolbar condition="view/show_toolbar">
-       
-        <form id="filter-blog-form" name="filterBlogForm"
-            method="get" action=""
-            tal:define="filter_info view/filter_info"
-            tal:attributes="action context/absolute_url">
-            <fieldset id="blog-filter">
-                <legend i18n:translate="label_filter_posts">Filter posts</legend>
-
-                <tal:options repeat="criteria filter_info">
-                    <div class="criteria_filter"
-                         tal:define="field_id string:filter-blog-${criteria/id}">
-                        <label for="" 
-                               tal:attributes="for field_id"
-                               tal:content="criteria/title">Title</label>
-                        <select id="" name=""
-                            tal:attributes="id field_id;
-                                            name criteria/id">
-                            <option value="" i18n:translate="string:filter-blog-all-${criteria/id}">All</option>
-                            <tal:block tal:repeat="item criteria/options">
-                                <option
-                                    tal:content="python:str(item)[:30]"
-                                    tal:attributes="value item;
-                                                    selected python:item == criteria['selected'] or None">
-                                    Option
-                                </option>
-                            </tal:block>
-                        </select>
-                    </div>
-
-                </tal:options>
-                
-                <div class="criteria_filter_actions">
-                    <br />
-                    
-                    <input type="submit" name="collective.blog.filter"
-                        value="Filter" class="standalone"
-                        i18n:attributes="value label_filter"/>
-                        
-                    <a  href="" 
-                        tal:condition="view/is_filtered"
-                        tal:attributes="href context/absolute_url" 
-                        i18n:translate="label_clear_filter"
-                        id="collective-blog-clearfilter">Clear filter</a>
-                </div>
-            </fieldset>
-
-        </form>
-    </tal:toolbar>
-    <div class="visualClear" id="visual-clear-after-blog-toolbar"><!-- --></div>
-</metal:toolbar>
-
 <metal:postCount define-macro="post_count" i18n:domain="collective.blogging">
     <div class="blogPostsCount discreet"
         tal:condition="view/show_count"

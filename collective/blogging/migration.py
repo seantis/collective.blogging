@@ -2,6 +2,11 @@ import logging
 import transaction
 
 from zope.interface import alsoProvides, noLongerProvides
+from zope.component import getMultiAdapter, getUtility
+from zope.app.container.interfaces import INameChooser
+
+from plone.portlets.interfaces import IPortletManager
+from plone.portlets.interfaces import IPortletAssignmentMapping
 
 from Products.CMFCore.utils import getToolByName
 
@@ -11,6 +16,9 @@ from collective.blogging.interfaces import (IFolderMarker, IEntryMarker,
                                             IEventMarker, ILinkMarker,
                                             IImageMarker, IFileMarker,
                                             IBlogMarker)    
+
+from collective.blogging.interfaces import IBlog
+from collective.blogging.portlets import filter
 
 logger = logging.getLogger("collective.blogging")
 PROFILE_ID = 'profile-collective.blogging:default'
@@ -149,3 +157,28 @@ def removeGalleryView(context):
             logger.info('"%s" view uninstalled for %s.' % ('blog-gallery', ptype))
     
     logger.info("Gallery view removed.")
+
+def setFilterPortlet(context):
+    logger.info("Replacing filter toolbars with filter portlets.")
+    catalog = getToolByName(context, 'portal_catalog')
+    brains = catalog(object_provides=IBlog.__identifier__, blogged=True)
+    for brain in brains:
+        blog = brain.getObject()
+        blog_path = '/' + ('/'.join(blog.getPhysicalPath()[2:]))
+        logger.info('Upgrading blog at %s' % (blog_path))
+        settings = {'enable_toolbar': {'value': None, 'default': 'Empty'}, 'filter_cache': {'value': None, 'default': 60}, 'enable_count': {'value': None, 'default': False}}
+        for field_name in settings:
+            default = settings[field_name]['default']
+            settings[field_name]['value'] = getattr(blog, field_name, default)
+            if hasattr(blog, field_name):
+                delattr(blog, field_name)
+        
+        toolbar = settings['enable_toolbar']['value']
+        if toolbar!='Empty' and toolbar:
+            column = getUtility(IPortletManager, name=u'plone.rightcolumn')
+            manager = getMultiAdapter((blog, column,), IPortletAssignmentMapping)
+            assignment = filter.Assignment(target_blog=blog_path, filter_cache=settings['filter_cache']['value'], enable_count=settings['enable_count']['value'])
+            chooser = INameChooser(manager)
+            manager[chooser.chooseName(None, assignment)] = assignment
+            
+    logger.info("Toolbars replaced")

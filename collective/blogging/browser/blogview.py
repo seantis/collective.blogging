@@ -1,5 +1,3 @@
-import logging
-from time import time
 from Acquisition import aq_inner
 from zope.component import getMultiAdapter
 from zope.interface import implements
@@ -10,27 +8,9 @@ from Products.ATContentTypes.interface import (IATTopic, IATFolder, IATBTreeFold
 from Products.CMFPlone import Batch
 from Products.Five import BrowserView
 
-from plone.memoize import view, ram, volatile
+from plone.memoize import view
 
 from collective.blogging.interfaces import IEntryMarker, IBloggingView
-from collective.blogging import _
-
-logger = logging.getLogger('collective.blogging')
-
-
-def _filter_cachekey(method, self):
-    """ Time and path based cache """
-    path = '/'.join(self.context.getPhysicalPath())
-    interval = 60
-    int_fld = self.context.getField('filter_cache')
-    if int_fld:
-        interval = int_fld.get(self.context)
-        if interval == 0:
-            # Avoid ZeroDivisionError by raising a different error
-            # that will be caught by plone.memoize
-            raise volatile.DontCache
-    return hash((path, time() // (60 * interval)))
-
 
 class BlogView(BrowserView):
     """ A blog browser view """
@@ -123,20 +103,6 @@ class BlogView(BrowserView):
             self.site_props.getProperty('allowAnonymousViewAbout', False)
 
     @property
-    def show_toolbar(self):
-        field = self.context.getField('enable_toolbar')
-        if field:
-            return field.get(self.context)
-        return True
-
-    @property
-    def show_count(self):
-        field = self.context.getField('enable_count')
-        if field:
-            return field.get(self.context)
-        return True
-
-    @property
     def show_body(self):
         field = self.context.getField('enable_full')
         if field:
@@ -149,60 +115,6 @@ class BlogView(BrowserView):
         if field:
             return field.get(self.context)
         return 10
-
-    @property
-    def is_filtered(self):
-        subject = self.request.get('Subject', [''])
-        year = self.request.get('publish_year', '')
-        month = self.request.get('publish_month', '')
-        
-        return not (subject[0]=='' and year=='' and month=='')
-
-    @ram.cache(_filter_cachekey)
-    def filter_info(self):
-        logger.info('Caching filter info')
-        subject = self.request.get('Subject')
-        year    = self.request.get('publish_year')
-        month   = self.request.get('publish_month')
-
-        subjects = set()
-        years = set()
-        months = set()
-        for brain in self.contents():
-            for s in brain.Subject:
-                subjects.add(s)
-            if brain.publish_year:
-                years.add(brain.publish_year)
-            if brain.publish_month:
-                months.add(brain.publish_month)
-        subjects = list(subjects)
-        years = list(years)
-        months = list(months)
-
-        subjects.sort()
-        years.sort()
-        months.sort()
-
-        return [
-            {
-                'id': 'Subject:list',
-                'title': _(u'select_category_option', default=u'Category'),
-                'options': subjects,
-                'selected': subject and subject != [''] and subject[0] or None
-            },
-            {
-                'id': 'publish_year',
-                'title': _(u'select_year_option', default=u'Year'),
-                'options': years,
-                'selected': year and int(year) or None
-            },
-            {
-                'id': 'publish_month',
-                'title': _(u'select_month_option', default=u'Month'),
-                'options': months,
-                'selected': month and int(month) or None
-            }
-        ]
 
     # Image related
     def is_image(self, obj):

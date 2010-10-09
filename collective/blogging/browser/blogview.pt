@@ -34,11 +34,7 @@
                 </tal:block>
                 
                 <metal:blogDesc use-macro="context/blog_macros/macros/blog_description"/>
-                
-                <metal:postCount use-macro="context/blog_macros/macros/post_count"/>
-                
-                <metal:toolbar use-macro="context/blog_macros/macros/toolbar"/>
-                
+                                
                 <div class="visualClear" id="clear-before-entries-listing"><!-- --></div>
                 
                 <tal:block condition="not:batch">
