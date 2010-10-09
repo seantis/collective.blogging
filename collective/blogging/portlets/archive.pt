@@ -21,17 +21,19 @@
                 tal:attributes="class python:oddyear and 'portletItem even' or 'portletItem odd'">
                 <a href="" tal:attributes="href archive/url">
                     <span class="archiveYearTitle" tal:content="year_title">2009</span>
-                    (<span class="archiveCount" tal:content="archive/count">99</span>)
+                    (<span class="archiveCount" tal:content="archive/count">99</span>):
                 </a>
-                
-                <tal:block repeat="month archive/months">
-                    <div class="archiveMonth">
-                        <a href="" tal:attributes="href python:month[2]">
-                            <span class="archiveMonthTitle" tal:content="python:'%s / %s' % (year_title, month[0])">11</span>
-                            (<span class="archiveCount" tal:content="python:month[1]">33</span>)
-                        </a>
-                    </div>
-                </tal:block>
+                <div class="archiveMonths">
+                    <tal:block repeat="month archive/months">
+                        <span class="archiveMonth">
+                            <a href="" tal:attributes="href python:month[2]">
+                                <span class="archiveMonthTitle" tal:content="python:month[3]">11</span>
+                                (<span class="archiveCount" tal:content="python:month[1]">33</span>)
+                            </a>
+                        </span>
+                        <span tal:define="last repeat/month/end" tal:condition="not:last">, </span>
+                    </tal:block>
+                </div>
             </dd>
         </tal:year>
     </tal:block>

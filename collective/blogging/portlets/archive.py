@@ -4,6 +4,7 @@ from zope.interface import implements
 from zope.component import getMultiAdapter
 from zope import schema
 from zope.formlib import form
+from zope.i18nmessageid import MessageFactory
 
 from plone.app.vocabularies.catalog import SearchableTextSourceBinder
 from plone.portlets.interfaces import IPortletDataProvider
@@ -12,10 +13,13 @@ from plone.app.form.widgets.uberselectionwidget import UberSelectionWidget
 from plone.memoize import instance, ram
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from Products.CMFCore.utils import getToolByName
 
 from collective.blogging import HAS_LINGUA_PLONE
 from collective.blogging import _
 from collective.blogging.interfaces import IBlog, IEntryMarker
+
+PLMF = MessageFactory('plonelocales')
 
 def _cachekey(method,self):
     blog = self.data.target_blog
@@ -104,6 +108,7 @@ class Renderer(base.Renderer):
     
     @ram.cache(_cachekey)
     def archives(self):
+        ts = getToolByName(self.context, 'translation_service')
         catalog = self.tools.catalog()
         entries = catalog(
             object_provides=IEntryMarker.__identifier__,
@@ -129,10 +134,10 @@ class Renderer(base.Renderer):
                 'year'  : archive,
                 'count' : archives[archive]['count'],
                 'url'   : year_url,
-                'months': sorted([(m, c, '%s&publish_month=%s' % (year_url, m)) \
-                                    for m,c in archives[archive]['entries'].items()])
+                'months': sorted([(m, c, '%s&publish_month=%s' % (year_url, m), PLMF(ts.month_msgid(m), default=ts.month_english(m))) \
+                                    for m,c in archives[archive]['entries'].items()], reverse=True)
             })
-        return sorted(result)
+        return sorted(result, reverse=True)
     
     @instance.memoize
     def blog(self):
