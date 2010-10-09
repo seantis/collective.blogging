@@ -115,11 +115,15 @@ Contributors:
 
 - Enzo Cesanelli (luthy) - ideas, testing, Italian translation
 
+- Marcos Romero (marcosfromero) - filtering improvements
+
 - Rob Gietema (robgietema) - Dutch translation
 
 - Yusuke NAKAI (nyusuke at nagosui dot org) - Japanese translation
 
 - Sebas Vila-Marta (sebas at dipse dot upc dot edu) - Catalan translation
+
+- Hartmut Goebel (h dot goebel at goebel-consult dot de) - German translation
 
 Homepage: collective.blogging_.
 
