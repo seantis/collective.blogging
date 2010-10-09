@@ -11,7 +11,7 @@ from Products.Archetypes.atapi import AnnotationStorage
 from Products.Archetypes.atapi import (TextField, IntegerField,
                                         BooleanField, StringField,
                                         ReferenceField)
-from Products.Archetypes.atapi import (BooleanWidget, TextAreaWidget,
+from Products.Archetypes.atapi import (BooleanWidget, TextAreaWidget, InAndOutWidget,
                                         RichWidget, IntegerWidget, StringWidget)
 from Products.ATContentTypes.interface import IATLink
 from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import ReferenceBrowserWidget
@@ -19,7 +19,7 @@ from Products.ATReferenceBrowserWidget.ATReferenceBrowserWidget import Reference
 from collective.blogging.interfaces import (IBloggable, IPostable, IBlogMarker,
                                             IEntryMarker, IBloggingSpecific)
 from collective.blogging import _
-from collective.blogging import BLOG_PERMISSION
+from collective.blogging import BLOG_PERMISSION, SHARING_PROVIDERS
 
 
 class ExTextField(ExtensionField, TextField):
@@ -108,46 +108,7 @@ class BlogExtender(object):
                     default = u"Enter how many blog entries should be listed per page in the blog view."),
             ),
         ),
-        
-#        ExBooleanField("enable_toolbar",
-#            schemata = u'blog',
-#            languageIndependent = True,
-#            default = True,
-#            write_permission = BLOG_PERMISSION,
-#            widget = BooleanWidget(
-#                label = _(u"label_enable_toolbar",
-#                    default = u"Toolbar enabled"),
-#                description = _(u"help_enable_toolbar",
-#                    default = u"Tick to enable / disable blog toolbar on the top of its page."),
-#            ),
-#        ),
-        
-#        ExIntegerField("filter_cache",
-#            schemata = u'blog',
-#            languageIndependent = True,
-#            default = 60,
-#            write_permission = BLOG_PERMISSION,
-#            widget = IntegerWidget(
-#                label = _(u"label_filter_cache",
-#                    default=u"Filter cache"),
-#                description = _(u"help_filter_cache",
-#                    default = u"Enter number of minutes for which will be cached filter options in the blog toolbar."),
-#            ),
-#        ),
-        
-#        ExBooleanField("enable_count",
-#            schemata = u'blog',
-#            languageIndependent = True,
-#            default = True,
-#            write_permission = BLOG_PERMISSION,
-#            widget = BooleanWidget(
-#                label = _(u"label_enable_count",
-#                    default = u"Display count"),
-#                description = _(u"help_enable_count",
-#                    default = u"Tick to enable / disable blog contents count displaying."),
-#            ),
-#        ),
-                
+                        
         ExTextField('blog_text',
             schemata = u'blog',
             languageIndependent = False,
@@ -165,6 +126,18 @@ class BlogExtender(object):
                 label = _(u'label_blog_text', default=u'Blog Text'),
                 rows = 25,
                 allow_file_upload = zconf.ATDocument.allow_document_upload
+            ),
+        ),
+        
+        ExStringField("enable_sharing",
+            schemata = u'blog',
+            languageIndependent = True,
+            write_permission = BLOG_PERMISSION,
+            enforceVocabulary = True,
+            vocabulary = SHARING_PROVIDERS.keys(),
+            widget = InAndOutWidget(
+                label = _(u"Enable sharing"),
+                description = _(u"Select enabled sharing services."),
             ),
         ),
     ]

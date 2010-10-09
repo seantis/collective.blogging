@@ -412,6 +412,21 @@
 
 <metal:entryFooter define-macro="entry_footer" i18n:domain="collective.blogging">
     <div class="tileFooter">
+        <div class="entrySharing"
+            tal:define="sharing_services python:view.sharing_services(item_url, item_title_or_id)"
+            tal:condition="sharing_services">
+            
+            <tal:block repeat="item sharing_services">
+                <a href="" title=""
+                    tal:attributes="href item/url">
+                    <img src="" alt="" title=""
+                        tal:attributes="src item/logo;
+                                        alt item/id;
+                                        title item/id">
+                </a>
+            </tal:block>
+        </div>
+        
         <tal:block tal:condition="python:item_date and item_date != None">
             <span class="actionDate" tal:content="item_date">
                 August 16, 2001 at 23:35:59

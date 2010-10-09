@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.blogging\n"
-"POT-Creation-Date: 2010-05-11 13:14+0000\n"
+"POT-Creation-Date: 2010-10-09 19:45+0000\n"
 "PO-Revision-Date: 2010-04-30 18:13+0200\n"
 "Last-Translator: Sebas Vila-Marta <sebas@dipse.upc.edu>\n"
 "MIME-Version: 1.0\n"
@@ -9,6 +9,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8 latin1\n"
+
+#: ./profiles/default/portlets.xml
+msgid "A portlet which displays a filter form."
+msgstr ""
 
 #: ./actions/autoblog.py:97
 msgid "Add Auto-Blog Action"
@@ -22,15 +26,15 @@ msgstr "Afegiu un portlet d'arxiu d'un bloc"
 msgid "Add Manage Blog portlet"
 msgstr "Afegiu un portlet de gestió d'un bloc"
 
-#: ./portlets/share.py:140
+#: ./portlets/share.py:127
 msgid "Add Share Entry portlet"
 msgstr "Afegiu un portlet de compartir anotació"
 
-#: ./browser/help.pt:507
+#: ./browser/help.pt:512
 msgid "Add archive portlet"
 msgstr "Afegiu un portlet d'arxiu"
 
-#: ./browser/help.pt:557
+#: ./browser/help.pt:562
 msgid "Add portlet"
 msgstr "Afegiu un portlet"
 
@@ -42,11 +46,11 @@ msgstr "Tipus per afegir"
 msgid "An auto-blog action can initialize various attributes on new or existing content."
 msgstr "Una acció d'auto-bloc pot inicialitzar els atributs del contingut nou o existent"
 
-#: ./browser/help.pt:536
+#: ./browser/help.pt:541
 msgid "Archive portlet"
 msgstr "Portlet d'arxiu"
 
-#: ./browser/help.pt:521
+#: ./browser/help.pt:526
 msgid "Archive portlet settings"
 msgstr "Configuració del portlet d'arxiu"
 
@@ -59,11 +63,16 @@ msgstr "Arxiu del bloc: ${blog}"
 msgid "Blog View"
 msgstr ""
 
-#: ./browser/help.pt:183
+#: ./browser/help.pt:188
 msgid "Blog created"
 msgstr "Bloc creat"
 
-#: ./extenders.py:228
+#: ./portlets/filter.py:76
+#: ./profiles/default/portlets.xml
+msgid "Blog filter portlet"
+msgstr ""
+
+#: ./extenders.py:201
 msgid "Blogger's bio"
 msgstr "Biografia del blocaire"
 
@@ -71,19 +80,19 @@ msgstr "Biografia del blocaire"
 msgid "Configure properties"
 msgstr "Configureu les propietats"
 
-#: ./browser/help.pt:654
+#: ./browser/help.pt:659
 msgid "Content rule action"
 msgstr "Acció de la regla"
 
-#: ./browser/help.pt:157
+#: ./browser/help.pt:162
 msgid "Create blog"
 msgstr "Creeu un bloc"
 
-#: ./browser/help.pt:199
+#: ./browser/help.pt:204
 msgid "Create entry"
 msgstr "Creeu una anotació"
 
-#: ./browser/help.pt:585
+#: ./browser/help.pt:590
 msgid "Default portlet"
 msgstr "Portlet predeterminat"
 
@@ -103,7 +112,7 @@ msgstr "Editeu el portlet d'arxiu"
 msgid "Edit Manage Blog portlet"
 msgstr "Editeu el portlet de gestió"
 
-#: ./portlets/share.py:155
+#: ./portlets/share.py:142
 msgid "Edit Share Entry portlet"
 msgstr "Editeu el portlet de compartició"
 
@@ -119,7 +128,11 @@ msgstr "Activeu el blogging"
 msgid "Enable comments"
 msgstr "Activeu els comentaris"
 
-#: ./portlets/share.py:54
+#: ./extenders.py:139
+msgid "Enable sharing"
+msgstr ""
+
+#: ./portlets/share.py:42
 msgid "Enter portlet tile."
 msgstr "Introduiu el títol"
 
@@ -128,15 +141,15 @@ msgstr "Introduiu el títol"
 msgid "Entry View"
 msgstr ""
 
-#: ./browser/help.pt:358
+#: ./browser/help.pt:363
 msgid "Event entry"
 msgstr "Anotació tipus esdeveniment"
 
-#: ./browser/help.pt:395
+#: ./browser/help.pt:400
 msgid "Event maps"
 msgstr "Mapes d'esdeveniments"
 
-#: ./browser/help.pt:380
+#: ./browser/help.pt:385
 msgid "Event maps settings"
 msgstr "Configuració dels mapes d'esdeveniments"
 
@@ -148,11 +161,11 @@ msgstr "Excloeu-lo de la navegació"
 msgid "Extend title"
 msgstr "Estèn el títol"
 
-#: ./browser/help.pt:283
+#: ./browser/help.pt:288
 msgid "File entry"
 msgstr "Anotacuió tipus fitxer"
 
-#: ./browser/help.pt:488
+#: ./browser/help.pt:493
 msgid "Filter toolbar"
 msgstr "Eines de filtrat"
 
@@ -169,10 +182,11 @@ msgid "Find an user defined folder for blog pictures and photo galleries."
 msgstr "Determineu una carpeta per emmagatzemar les fotos i galeries"
 
 #: ./portlets/archive.py:36
+#: ./portlets/filter.py:32
 msgid "Find the blog which will be this portlet used for."
 msgstr "Determineu el bloc a que es refereix aquest portlet."
 
-#: ./browser/help.pt:214
+#: ./browser/help.pt:219
 msgid "First entry"
 msgstr "Primera anotació"
 
@@ -188,11 +202,11 @@ msgstr "Si ho marqueu l'acció activarà els comentaris del contingut."
 msgid "If checked, action will set content to be excluded from navigation."
 msgstr "Si ho marqueu l'acció exclourà els continguts de la navegació."
 
-#: ./browser/help.pt:269
+#: ./browser/help.pt:274
 msgid "Image entry"
 msgstr "Anotació tipus imatge"
 
-#: ./browser/help.pt:302
+#: ./browser/help.pt:307
 msgid "Link entry"
 msgstr "Anotació tipus enllaç"
 
@@ -200,15 +214,15 @@ msgstr "Anotació tipus enllaç"
 msgid "Manage Blog: ${blog}"
 msgstr "Gestiona el bloc: ${blog}"
 
-#: ./browser/help.pt:248
+#: ./browser/help.pt:253
 msgid "News Item entry"
 msgstr "Anotació tipus notícia"
 
-#: ./browser/help.pt:628
+#: ./browser/help.pt:633
 msgid "Next / Prev navigation"
 msgstr "Navegació següent/anterior"
 
-#: ./browser/help.pt:616
+#: ./browser/help.pt:621
 msgid "Next / Prev navigation settings"
 msgstr "Configuració de la navegació Seg/Pre"
 
@@ -216,27 +230,31 @@ msgstr "Configuració de la navegació Seg/Pre"
 msgid "Pictures"
 msgstr "Imatges"
 
-#: ./browser/help.pt:570
+#: ./browser/help.pt:575
 msgid "Portlet settings"
 msgstr "Configuració del portlet"
 
-#: ./portlets/share.py:53
+#: ./portlets/share.py:41
 msgid "Portlet title"
 msgstr "Títol del portlet"
 
-#: ./portlets/share.py:67
+#: ./portlets/share.py:55
 msgid "Providers"
 msgstr "Serveis de compartició"
 
-#: ./portlets/share.py:59
+#: ./portlets/filter.pt:51
+msgid "Reset"
+msgstr ""
+
+#: ./portlets/share.py:47
 msgid "Restrict by types"
 msgstr "Restringiu per tipus"
 
-#: ./portlets/share.py:60
+#: ./portlets/share.py:48
 msgid "Restrict portlet availability by content types wich entries are based on."
 msgstr "Mostreu el portlet només si el tipus d'anotació és algún dels següents."
 
-#: ./extenders.py:229
+#: ./extenders.py:202
 msgid "Select a document with blogger's bio information."
 msgstr "Seleccioneu un document amb la biografia del blocaire."
 
@@ -244,15 +262,17 @@ msgstr "Seleccioneu un document amb la biografia del blocaire."
 msgid "Select content types for which you would like to show create link in the portlet."
 msgstr "Seleccioneu els tipus d'anotació que voleu crear des del portlet."
 
-#: ./portlets/share.py:68
+#: ./extenders.py:140
+#: ./portlets/share.py:56
 msgid "Select enabled sharing services."
 msgstr "Seleccioneu els serveis de compartició que voleu."
 
-#: ./portlets/share.py:93
+#: ./portlets/share.py:81
 msgid "Share post"
 msgstr "Compartiu l'anotació"
 
 #: ./portlets/archive.py:35
+#: ./portlets/filter.py:31
 #: ./portlets/manage.py:30
 msgid "Target blog"
 msgstr ""
@@ -267,7 +287,7 @@ msgstr "Mostra l'arxiu del bloc."
 msgid "This portlet helps to manage blog's content."
 msgstr "Aquest portlet ajuda a gestionar el contingut del bloc."
 
-#: ./portlets/share.py:141
+#: ./portlets/share.py:128
 msgid "This portlet renders link(s) to share an entry."
 msgstr "Aquest portlet permet compartir una anotació a través d'un servei de compartició."
 
@@ -275,11 +295,11 @@ msgstr "Aquest portlet permet compartir una anotació a través d'un servei de c
 msgid "Tick the checkbox to extend portlet title with target blog's title."
 msgstr "Marqueu per afegir el títol del bloc al títol del portlet."
 
-#: ./browser/help.pt:337
+#: ./browser/help.pt:342
 msgid "Video entry"
 msgstr "Anotació tipus vídeo"
 
-#: ./browser/help.pt:324
+#: ./browser/help.pt:329
 msgid "Video entry settings"
 msgstr "Configuració de la'unt tipus vídeo."
 
@@ -294,7 +314,7 @@ msgid "description_manage_blog_portlet"
 msgstr "Un portlet que ajuda a gestionar el contingut del bloc."
 
 #. Default: "There are currently no contents in this blog."
-#: ./browser/blog_macros.pt:495
+#: ./browser/blog_macros.pt:472
 msgid "description_no_items_in_blog"
 msgstr "Actualment el bloc no té anotacions."
 
@@ -314,32 +334,27 @@ msgid "help_blog_enabled"
 msgstr "Marqueu per activar/desactivar el comportament de bloc."
 
 #. Default: "Mark this content as blog entry."
-#: ./extenders.py:201
+#: ./extenders.py:174
 msgid "help_blog_entry_marker"
 msgstr "Feu que aquest contingut esdevingui una anotació del bloc."
 
 #. Default: "Enter blogger's name if you're posting entry of different person."
-#: ./extenders.py:214
+#: ./extenders.py:187
 msgid "help_blogger_name"
 msgstr "Escriviu el nom del blocaire en cas que escriviu en nom d'una altra persona."
 
 #. Default: "Paste embed code for example youtube, google or other video content."
-#: ./extenders.py:267
+#: ./extenders.py:240
 msgid "help_embed"
 msgstr "Enganxeu el codi d'encastat de YouTube, Google o altres dipòsits de video."
 
 #. Default: "Tick to enable / disable blog contents count displaying."
-#: ./extenders.py:146
+#: ./portlets/filter.py:49
 msgid "help_enable_count"
 msgstr "Marqueu per activar/desactivar el comptador d'entrades del bloc."
 
-#. Default: "Tick to enable / disable blog toolbar on the top of its page."
-#: ./extenders.py:120
-msgid "help_enable_toolbar"
-msgstr "Marqueu per activar/desactivar la barra d'eines del bloc al principi de pàgina."
-
 #. Default: "Enter number of minutes for which will be cached filter options in the blog toolbar."
-#: ./extenders.py:133
+#: ./portlets/filter.py:43
 msgid "help_filter_cache"
 msgstr "Escriviu durant quants minuts cal mantenir les opcions de filtratge triades a al barra d'eines."
 
@@ -380,32 +395,33 @@ msgid "label_blog_enabled"
 msgstr "Bloc activat"
 
 #. Default: "Blog Entry"
-#: ./extenders.py:199
+#: ./extenders.py:172
 msgid "label_blog_entry"
 msgstr "És una anotació del bloc"
 
 #. Default: "Found ${count} posts."
-#: ./browser/blog_macros.pt:57
+#: ./browser/blog_macros.pt:19
+#: ./portlets/filter.pt:68
 msgid "label_blog_posts_count"
 msgstr "S'han trobat ${count} anotacions."
 
 #. Default: "Blog Text"
-#: ./extenders.py:165
+#: ./extenders.py:126
 msgid "label_blog_text"
 msgstr "Text del bloc"
 
 #. Default: "Blogger's name"
-#: ./extenders.py:212
+#: ./extenders.py:185
 msgid "label_blogger_name"
 msgstr "Nom del blocaire"
 
 #. Default: "Click to read full entry."
-#: ./browser/blog_macros.pt:461
+#: ./browser/blog_macros.pt:438
 msgid "label_click_to_read_full_entry"
 msgstr "Cliqueu per llegir l'anotació sencera."
 
 #. Default: "Comments (${comments})"
-#: ./browser/blog_macros.pt:477
+#: ./browser/blog_macros.pt:454
 #: ./browser/entry_macros.pt:105
 msgid "label_comments_with_count"
 msgstr "Comentaris (${comments})"
@@ -416,49 +432,39 @@ msgid "label_drafts"
 msgstr "Esborranys"
 
 #. Default: "Edit"
-#: ./browser/blog_macros.pt:484
+#: ./browser/blog_macros.pt:461
 #: ./browser/entry_macros.pt:113
 msgid "label_edit"
 msgstr "Editeu"
 
 #. Default: "Click to edit this entry."
-#: ./browser/blog_macros.pt:484
+#: ./browser/blog_macros.pt:461
 #: ./browser/entry_macros.pt:113
 msgid "label_edit_title"
 msgstr "Cliqueu per editar aquesta anotació."
 
 #. Default: "Embed"
-#: ./extenders.py:266
+#: ./extenders.py:239
 msgid "label_embed"
 msgstr "Encasta"
 
 #. Default: "Display count"
-#: ./extenders.py:144
+#: ./portlets/filter.py:48
 msgid "label_enable_count"
 msgstr "Mostra el comptador"
 
-#. Default: "Toolbar enabled"
-#: ./extenders.py:118
-msgid "label_enable_toolbar"
-msgstr "Barra d'eines activada"
-
 #. Default: "filed under:"
-#: ./browser/blog_macros.pt:132
+#: ./browser/blog_macros.pt:94
 msgid "label_filed_under"
 msgstr "Arxiva sota:"
 
-#. Default: "Filter"
-#: ./browser/blog_macros.pt:43
-msgid "label_filter"
-msgstr "Filtra"
-
 #. Default: "Filter cache"
-#: ./extenders.py:131
+#: ./portlets/filter.py:42
 msgid "label_filter_cache"
 msgstr "Cache del filtre"
 
 #. Default: "Filter posts"
-#: ./browser/blog_macros.pt:20
+#: ./portlets/filter.pt:6
 msgid "label_filter_posts"
 msgstr "Filtra les anotacions"
 
@@ -489,7 +495,7 @@ msgid "label_perex_length"
 msgstr "Longitud màxima de la descripció"
 
 #. Default: "Permalink"
-#: ./browser/blog_macros.pt:119
+#: ./browser/blog_macros.pt:81
 #: ./browser/document_byline.pt:33
 msgid "label_permalink"
 msgstr "Permalink"
@@ -500,18 +506,18 @@ msgid "label_pictures"
 msgstr "Fotografíes"
 
 #. Default: "Posted by ${author}"
-#: ./browser/blog_macros.pt:105
+#: ./browser/blog_macros.pt:67
 msgid "label_posted_by"
 msgstr "Anotat per ${author}"
 
 #. Default: "Read comments on this entry."
-#: ./browser/blog_macros.pt:471
+#: ./browser/blog_macros.pt:448
 #: ./browser/entry_macros.pt:99
 msgid "label_read_comments_title"
 msgstr "Llegeiu els comentaris sobre aquesta anotació."
 
 #. Default: "Read more"
-#: ./browser/blog_macros.pt:461
+#: ./browser/blog_macros.pt:438
 msgid "label_read_more"
 msgstr "Llegiu-ne més"
 
@@ -520,20 +526,33 @@ msgstr "Llegiu-ne més"
 msgid "label_show_header"
 msgstr "Mostra l'encapçalament"
 
-#. Default: "-- Category --"
-#: ./browser/blogview.py:181
+#. Default: "Update"
+#: ./portlets/filter.pt:47
+msgid "label_update"
+msgstr ""
+
+#. Default: "Category"
+#: ./portlets/filter.py:215
+#, fuzzy
 msgid "select_category_option"
 msgstr "-- Categoria --"
 
-#. Default: "-- Month --"
-#: ./browser/blogview.py:193
+#. Default: "Month"
+#: ./portlets/filter.py:227
+#, fuzzy
 msgid "select_month_option"
 msgstr "-- Mes --"
 
-#. Default: "-- Year --"
-#: ./browser/blogview.py:187
+#. Default: "Year"
+#: ./portlets/filter.py:221
+#, fuzzy
 msgid "select_year_option"
 msgstr "-- Any --"
+
+#. Default: "All"
+#: ./portlets/filter.pt:29
+msgid "string:filter-blog-all-${criteria/id}"
+msgstr ""
 
 #. Default: "Blog archive"
 #: ./profiles/default/portlets.xml

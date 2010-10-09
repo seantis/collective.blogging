@@ -45,14 +45,14 @@
                     <td>&nbsp;</td>
                     <td>
                         <input type="submit" name="collective.blog.filter"
-                        value="Filter" class="standalone"
-                        i18n:attributes="value label_filter"/>
+                        value="Update" class="standalone"
+                        i18n:attributes="value label_update"/>
                         
                     <a  href="" 
                         tal:define="is_filtered view/is_filtered"
                         tal:attributes="href view/blog_url; style python:'display: %s;;' % (is_filtered and 'inline' or 'none')" 
-                        i18n:translate="label_clear_filter"
-                        id="collective-blog-clearfilter">Clear filter</a>
+                        i18n:translate=""
+                        id="collective-blog-clearfilter">Reset</a>
                     </td>
                 </tr>
             </table>

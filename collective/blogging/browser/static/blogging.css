@@ -211,17 +211,10 @@ td.entryMap div.googleMapLocation {
 .blogArchivePortlet span.archiveCount {
     font-weight:bold;
 }
-/** Not used anymore **/
-dl#blog-filter dt.collapsibleHeader {
-    border:1px solid #8CACBB;
-    background-color:#DEE7EC;
-    padding:0.4em 1em 0.4em 2em
-}
 
-dl#blog-filter dd.collapsibleContent {
-    padding:1em;
+dl.sharePortlet a {
+    border-bottom:0 none!important;
 }
-/**********************/
 
 #filter-blog-form label {
     font-weight: normal;
@@ -243,4 +236,12 @@ div.tileFooter {
     border:1px solid #8CACBB;
     background-color:#DEE7EC;
     padding:0.4em 1em;
+}
+
+div.entrySharing {
+    float:right;
+}
+
+div.entrySharing a {
+    border-bottom:0 none!important;
 }

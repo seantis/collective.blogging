@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-05-11 13:14+0000\n"
+"POT-Creation-Date: 2010-10-09 19:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -9,6 +9,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8 latin1\n"
+
+#: ./profiles/default/portlets.xml
+msgid "A portlet which displays a filter form."
+msgstr ""
 
 #: ./actions/autoblog.py:97
 msgid "Add Auto-Blog Action"
@@ -22,17 +26,17 @@ msgstr ""
 msgid "Add Manage Blog portlet"
 msgstr ""
 
-#: ./portlets/share.py:140
+#: ./portlets/share.py:127
 msgid "Add Share Entry portlet"
 msgstr ""
 
 #. Default: "Add archive portlet"
-#: ./browser/help.pt:507
+#: ./browser/help.pt:512
 msgid "Add archive portlet"
 msgstr ""
 
 #. Default: "Add portlet"
-#: ./browser/help.pt:557
+#: ./browser/help.pt:562
 msgid "Add portlet"
 msgstr ""
 
@@ -45,12 +49,12 @@ msgid "An auto-blog action can initialize various attributes on new or existing 
 msgstr ""
 
 #. Default: "Archive portlet"
-#: ./browser/help.pt:536
+#: ./browser/help.pt:541
 msgid "Archive portlet"
 msgstr ""
 
 #. Default: "Archive portlet settings"
-#: ./browser/help.pt:521
+#: ./browser/help.pt:526
 msgid "Archive portlet settings"
 msgstr ""
 
@@ -64,11 +68,16 @@ msgid "Blog View"
 msgstr ""
 
 #. Default: "Blog created"
-#: ./browser/help.pt:183
+#: ./browser/help.pt:188
 msgid "Blog created"
 msgstr ""
 
-#: ./extenders.py:228
+#: ./portlets/filter.py:76
+#: ./profiles/default/portlets.xml
+msgid "Blog filter portlet"
+msgstr ""
+
+#: ./extenders.py:201
 msgid "Blogger's bio"
 msgstr ""
 
@@ -77,22 +86,22 @@ msgid "Configure properties"
 msgstr ""
 
 #. Default: "Content rule action"
-#: ./browser/help.pt:654
+#: ./browser/help.pt:659
 msgid "Content rule action"
 msgstr ""
 
 #. Default: "Create blog"
-#: ./browser/help.pt:157
+#: ./browser/help.pt:162
 msgid "Create blog"
 msgstr ""
 
 #. Default: "Create entry"
-#: ./browser/help.pt:199
+#: ./browser/help.pt:204
 msgid "Create entry"
 msgstr ""
 
 #. Default: "Default portlet"
-#: ./browser/help.pt:585
+#: ./browser/help.pt:590
 msgid "Default portlet"
 msgstr ""
 
@@ -112,7 +121,7 @@ msgstr ""
 msgid "Edit Manage Blog portlet"
 msgstr ""
 
-#: ./portlets/share.py:155
+#: ./portlets/share.py:142
 msgid "Edit Share Entry portlet"
 msgstr ""
 
@@ -128,7 +137,11 @@ msgstr ""
 msgid "Enable comments"
 msgstr ""
 
-#: ./portlets/share.py:54
+#: ./extenders.py:139
+msgid "Enable sharing"
+msgstr ""
+
+#: ./portlets/share.py:42
 msgid "Enter portlet tile."
 msgstr ""
 
@@ -138,17 +151,17 @@ msgid "Entry View"
 msgstr ""
 
 #. Default: "Event entry"
-#: ./browser/help.pt:358
+#: ./browser/help.pt:363
 msgid "Event entry"
 msgstr ""
 
 #. Default: "Event maps"
-#: ./browser/help.pt:395
+#: ./browser/help.pt:400
 msgid "Event maps"
 msgstr ""
 
 #. Default: "Event maps settings"
-#: ./browser/help.pt:380
+#: ./browser/help.pt:385
 msgid "Event maps settings"
 msgstr ""
 
@@ -161,12 +174,12 @@ msgid "Extend title"
 msgstr ""
 
 #. Default: "File entry"
-#: ./browser/help.pt:283
+#: ./browser/help.pt:288
 msgid "File entry"
 msgstr ""
 
 #. Default: "Filter toolbar"
-#: ./browser/help.pt:488
+#: ./browser/help.pt:493
 msgid "Filter toolbar"
 msgstr ""
 
@@ -183,11 +196,12 @@ msgid "Find an user defined folder for blog pictures and photo galleries."
 msgstr ""
 
 #: ./portlets/archive.py:36
+#: ./portlets/filter.py:32
 msgid "Find the blog which will be this portlet used for."
 msgstr ""
 
 #. Default: "First entry"
-#: ./browser/help.pt:214
+#: ./browser/help.pt:219
 msgid "First entry"
 msgstr ""
 
@@ -204,12 +218,12 @@ msgid "If checked, action will set content to be excluded from navigation."
 msgstr ""
 
 #. Default: "Image entry"
-#: ./browser/help.pt:269
+#: ./browser/help.pt:274
 msgid "Image entry"
 msgstr ""
 
 #. Default: "Link entry"
-#: ./browser/help.pt:302
+#: ./browser/help.pt:307
 msgid "Link entry"
 msgstr ""
 
@@ -218,17 +232,17 @@ msgid "Manage Blog: ${blog}"
 msgstr ""
 
 #. Default: "News Item entry"
-#: ./browser/help.pt:248
+#: ./browser/help.pt:253
 msgid "News Item entry"
 msgstr ""
 
 #. Default: "Next / Prev navigation"
-#: ./browser/help.pt:628
+#: ./browser/help.pt:633
 msgid "Next / Prev navigation"
 msgstr ""
 
 #. Default: "Next / Prev navigation settings"
-#: ./browser/help.pt:616
+#: ./browser/help.pt:621
 msgid "Next / Prev navigation settings"
 msgstr ""
 
@@ -237,27 +251,31 @@ msgid "Pictures"
 msgstr ""
 
 #. Default: "Portlet settings"
-#: ./browser/help.pt:570
+#: ./browser/help.pt:575
 msgid "Portlet settings"
 msgstr ""
 
-#: ./portlets/share.py:53
+#: ./portlets/share.py:41
 msgid "Portlet title"
 msgstr ""
 
-#: ./portlets/share.py:67
+#: ./portlets/share.py:55
 msgid "Providers"
 msgstr ""
 
-#: ./portlets/share.py:59
+#: ./portlets/filter.pt:51
+msgid "Reset"
+msgstr ""
+
+#: ./portlets/share.py:47
 msgid "Restrict by types"
 msgstr ""
 
-#: ./portlets/share.py:60
+#: ./portlets/share.py:48
 msgid "Restrict portlet availability by content types wich entries are based on."
 msgstr ""
 
-#: ./extenders.py:229
+#: ./extenders.py:202
 msgid "Select a document with blogger's bio information."
 msgstr ""
 
@@ -265,15 +283,17 @@ msgstr ""
 msgid "Select content types for which you would like to show create link in the portlet."
 msgstr ""
 
-#: ./portlets/share.py:68
+#: ./extenders.py:140
+#: ./portlets/share.py:56
 msgid "Select enabled sharing services."
 msgstr ""
 
-#: ./portlets/share.py:93
+#: ./portlets/share.py:81
 msgid "Share post"
 msgstr ""
 
 #: ./portlets/archive.py:35
+#: ./portlets/filter.py:31
 #: ./portlets/manage.py:30
 msgid "Target blog"
 msgstr ""
@@ -286,7 +306,7 @@ msgstr ""
 msgid "This portlet helps to manage blog's content."
 msgstr ""
 
-#: ./portlets/share.py:141
+#: ./portlets/share.py:128
 msgid "This portlet renders link(s) to share an entry."
 msgstr ""
 
@@ -295,12 +315,12 @@ msgid "Tick the checkbox to extend portlet title with target blog's title."
 msgstr ""
 
 #. Default: "Video entry"
-#: ./browser/help.pt:337
+#: ./browser/help.pt:342
 msgid "Video entry"
 msgstr ""
 
 #. Default: "Video entry settings"
-#: ./browser/help.pt:324
+#: ./browser/help.pt:329
 msgid "Video entry settings"
 msgstr ""
 
@@ -315,7 +335,7 @@ msgid "description_manage_blog_portlet"
 msgstr ""
 
 #. Default: "There are currently no contents in this blog."
-#: ./browser/blog_macros.pt:495
+#: ./browser/blog_macros.pt:472
 msgid "description_no_items_in_blog"
 msgstr ""
 
@@ -335,32 +355,27 @@ msgid "help_blog_enabled"
 msgstr ""
 
 #. Default: "Mark this content as blog entry."
-#: ./extenders.py:201
+#: ./extenders.py:174
 msgid "help_blog_entry_marker"
 msgstr ""
 
 #. Default: "Enter blogger's name if you're posting entry of different person."
-#: ./extenders.py:214
+#: ./extenders.py:187
 msgid "help_blogger_name"
 msgstr ""
 
 #. Default: "Paste embed code for example youtube, google or other video content."
-#: ./extenders.py:267
+#: ./extenders.py:240
 msgid "help_embed"
 msgstr ""
 
 #. Default: "Tick to enable / disable blog contents count displaying."
-#: ./extenders.py:146
+#: ./portlets/filter.py:49
 msgid "help_enable_count"
 msgstr ""
 
-#. Default: "Tick to enable / disable blog toolbar on the top of its page."
-#: ./extenders.py:120
-msgid "help_enable_toolbar"
-msgstr ""
-
 #. Default: "Enter number of minutes for which will be cached filter options in the blog toolbar."
-#: ./extenders.py:133
+#: ./portlets/filter.py:43
 msgid "help_filter_cache"
 msgstr ""
 
@@ -400,32 +415,33 @@ msgid "label_blog_enabled"
 msgstr ""
 
 #. Default: "Blog Entry"
-#: ./extenders.py:199
+#: ./extenders.py:172
 msgid "label_blog_entry"
 msgstr ""
 
 #. Default: "Found ${count} posts."
-#: ./browser/blog_macros.pt:57
+#: ./browser/blog_macros.pt:19
+#: ./portlets/filter.pt:68
 msgid "label_blog_posts_count"
 msgstr ""
 
 #. Default: "Blog Text"
-#: ./extenders.py:165
+#: ./extenders.py:126
 msgid "label_blog_text"
 msgstr ""
 
 #. Default: "Blogger's name"
-#: ./extenders.py:212
+#: ./extenders.py:185
 msgid "label_blogger_name"
 msgstr ""
 
 #. Default: "Click to read full entry."
-#: ./browser/blog_macros.pt:461
+#: ./browser/blog_macros.pt:438
 msgid "label_click_to_read_full_entry"
 msgstr ""
 
 #. Default: "Comments (${comments})"
-#: ./browser/blog_macros.pt:477
+#: ./browser/blog_macros.pt:454
 #: ./browser/entry_macros.pt:105
 msgid "label_comments_with_count"
 msgstr ""
@@ -436,49 +452,39 @@ msgid "label_drafts"
 msgstr ""
 
 #. Default: "Edit"
-#: ./browser/blog_macros.pt:484
+#: ./browser/blog_macros.pt:461
 #: ./browser/entry_macros.pt:113
 msgid "label_edit"
 msgstr ""
 
 #. Default: "Click to edit this entry."
-#: ./browser/blog_macros.pt:484
+#: ./browser/blog_macros.pt:461
 #: ./browser/entry_macros.pt:113
 msgid "label_edit_title"
 msgstr ""
 
 #. Default: "Embed"
-#: ./extenders.py:266
+#: ./extenders.py:239
 msgid "label_embed"
 msgstr ""
 
 #. Default: "Display count"
-#: ./extenders.py:144
+#: ./portlets/filter.py:48
 msgid "label_enable_count"
 msgstr ""
 
-#. Default: "Toolbar enabled"
-#: ./extenders.py:118
-msgid "label_enable_toolbar"
-msgstr ""
-
 #. Default: "filed under:"
-#: ./browser/blog_macros.pt:132
+#: ./browser/blog_macros.pt:94
 msgid "label_filed_under"
 msgstr ""
 
-#. Default: "Filter"
-#: ./browser/blog_macros.pt:43
-msgid "label_filter"
-msgstr ""
-
 #. Default: "Filter cache"
-#: ./extenders.py:131
+#: ./portlets/filter.py:42
 msgid "label_filter_cache"
 msgstr ""
 
 #. Default: "Filter posts"
-#: ./browser/blog_macros.pt:20
+#: ./portlets/filter.pt:6
 msgid "label_filter_posts"
 msgstr ""
 
@@ -508,7 +514,7 @@ msgid "label_perex_length"
 msgstr ""
 
 #. Default: "Permalink"
-#: ./browser/blog_macros.pt:119
+#: ./browser/blog_macros.pt:81
 #: ./browser/document_byline.pt:33
 msgid "label_permalink"
 msgstr ""
@@ -519,18 +525,18 @@ msgid "label_pictures"
 msgstr ""
 
 #. Default: "Posted by ${author}"
-#: ./browser/blog_macros.pt:105
+#: ./browser/blog_macros.pt:67
 msgid "label_posted_by"
 msgstr ""
 
 #. Default: "Read comments on this entry."
-#: ./browser/blog_macros.pt:471
+#: ./browser/blog_macros.pt:448
 #: ./browser/entry_macros.pt:99
 msgid "label_read_comments_title"
 msgstr ""
 
 #. Default: "Read more"
-#: ./browser/blog_macros.pt:461
+#: ./browser/blog_macros.pt:438
 msgid "label_read_more"
 msgstr ""
 
@@ -539,20 +545,33 @@ msgstr ""
 msgid "label_show_header"
 msgstr ""
 
-#. Default: "-- Category --"
-#: ./browser/blogview.py:181
+#. Default: "Update"
+#: ./portlets/filter.pt:47
+msgid "label_update"
+msgstr ""
+
+#. Default: "Category"
+#: ./portlets/filter.py:215
+#, fuzzy
 msgid "select_category_option"
 msgstr "Category:"
 
-#. Default: "-- Month --"
-#: ./browser/blogview.py:193
+#. Default: "Month"
+#: ./portlets/filter.py:227
+#, fuzzy
 msgid "select_month_option"
 msgstr "Month:"
 
-#. Default: "-- Year --"
-#: ./browser/blogview.py:187
+#. Default: "Year"
+#: ./portlets/filter.py:221
+#, fuzzy
 msgid "select_year_option"
 msgstr "Year:"
+
+#. Default: "All"
+#: ./portlets/filter.pt:29
+msgid "string:filter-blog-all-${criteria/id}"
+msgstr ""
 
 #. Default: "Blog archive"
 #: ./profiles/default/portlets.xml

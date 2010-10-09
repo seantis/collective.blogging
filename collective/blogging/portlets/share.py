@@ -15,27 +15,15 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from collective.blogging.interfaces import IEntryMarker
 from collective.blogging import _
-
-PROVIDERS = [
-    {'id':'Del.icio.us','url':'http://del.icio.us/post?url=$url&amp;title=$title','logo':'++resource++collective.blogging.static/delicious.png'},
-    {'id':'Facebook','url':'http://www.facebook.com/share.php?u=$url','logo':'++resource++collective.blogging.static/facebook.png'},
-    {'id':'Google Bookmarks','url':'http://www.google.com/bookmarks/mark?op=add&bkmk=$url&title=$title','logo':'++resource++collective.blogging.static/google.png'},
-    {'id':'Yahoo Bookmarks','url':'http://bookmarks.yahoo.com/toolbar/savebm?opener=tb&amp;u=$url&amp;t=$title','logo':'++resource++collective.blogging.static/yahoo.png'},
-    {'id':'Twitter','url':'http://twitter.com/home?status=$url','logo':'++resource++collective.blogging.static/twitter.png'},
-    {'id':'MySpace','url':'http://www.myspace.com/Modules/PostTo/Pages/?c=$url&amp;t=$title','logo':'++resource++collective.blogging.static/myspace.png'},
-    {'id':'Digg','url':'http://digg.com/submit?phase=2&amp;url=$url&amp;title=$title','logo':'++resource++collective.blogging.static/digg.png'},
-    {'id':'Slashdot','url':'http://slashdot.org/bookmark.pl?title=$title&amp;url=$url','logo':'++resource++collective.blogging.static/slashdot.png'},
-    {'id':'Live','url':'https://favorites.live.com/quickadd.aspx?marklet=1&amp;mkt=en-us&amp;url=$url&amp;title=$title&amp;top=1','logo':'++resource++collective.blogging.static/live.png'},
-    {'id':'LinkedIn', 'url':'http://www.linkedin.com/shareArticle?mini=true&amp;url=$url&amp;title=$title','logo':'++resource++collective.blogging.static/linkedin.png'},
-]
+from collective.blogging import SHARING_PROVIDERS
 
 class ProvidersVocabulary(object):
     """"""
     implements(IVocabularyFactory)
 
     def __call__(self, context):
-        items = [SimpleTerm(p.get('id'), p.get('id'), p.get('id'))
-                    for p in PROVIDERS]
+        items = [SimpleTerm(p, p, p)
+                    for p in SHARING_PROVIDERS.keys()]
         return SimpleVocabulary(items)
 
 ProvidersVocabularyFactory = ProvidersVocabulary()
@@ -118,14 +106,13 @@ class Renderer(base.Renderer):
         obj = aq_inner(self.context)
         url = obj.absolute_url()
         title = obj.title
-        for p in PROVIDERS:
-            if p.get('id') in self.data.providers:
-                p_url = Template(p['url']).safe_substitute(url=url, title=title)
-                result.append({
-                    'id': p['id'],
-                    'logo':p['logo'],
-                    'url':p_url
-                })
+        for p in self.data.providers:
+            p_url = Template(SHARING_PROVIDERS[p]['url']).safe_substitute(url=url, title=title)
+            result.append({
+                'id': p,
+                'logo':SHARING_PROVIDERS[p]['logo'],
+                'url':p_url
+            })
         return result
 
 class AddForm(base.AddForm):

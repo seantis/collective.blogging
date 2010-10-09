@@ -1,3 +1,4 @@
+from string import Template
 from Acquisition import aq_inner
 from zope.component import getMultiAdapter
 from zope.interface import implements
@@ -11,6 +12,7 @@ from Products.Five import BrowserView
 from plone.memoize import view
 
 from collective.blogging.interfaces import IEntryMarker, IBloggingView
+from collective.blogging import SHARING_PROVIDERS
 
 class BlogView(BrowserView):
     """ A blog browser view """
@@ -167,3 +169,17 @@ class BlogView(BrowserView):
             ellipsis = props.ellipsis
             return '%s%s' % (text[:max - len(ellipsis)], ellipsis)
         return text[:max]
+    
+    def sharing_services(self, item_url, title):
+        services = self.context.getField('enable_sharing').get(self.context)
+        result = []
+        
+        for service in services:
+            if service in SHARING_PROVIDERS.keys():
+                s_url = Template(SHARING_PROVIDERS[service]['url']).safe_substitute(url=item_url, title=title)
+                result.append(dict(
+                    id=service,
+                    logo=SHARING_PROVIDERS[service]['logo'],
+                    url=s_url)
+                )
+        return result
