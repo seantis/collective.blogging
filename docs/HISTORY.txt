@@ -13,6 +13,7 @@ Changelog
 - added patch by Hartmut Goebel for help page - closes: #18 [lzdych]
 - sharing portlet now respects services order + added sharing feature to blog view - closes: #16 [lzdych]
 - minor change in sharing portlet edit form - closes: #14 [lzdych]
+- minor improvements of manage portlet [lzdych]
 
 1.1 (2010-05-12)
 ~~~~~~~~~~~~~~~~~~~

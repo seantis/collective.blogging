@@ -151,7 +151,7 @@ class Renderer(base.Renderer):
                         'id'         : item,
                         'title'      : ti.title,
                         'description': translate(PMF(ti.description), context=self.request),
-                        'icon'       : '%s/%s' % (portal_url, ti.getIcon()),
+                        'icon'       : '%s/%s' % (portal_url, ti.content_icon),
                         'url'        : '%s/createObject?type_name=%s' % (blog_url, item)
                     })
         return result

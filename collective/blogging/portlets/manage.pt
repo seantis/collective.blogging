@@ -1,6 +1,8 @@
 <dl class="portlet manageBlogPortlet"
     i18n:domain="collective.blogging"
-    tal:define="blog_url view/blog_url">
+    tal:define="blog_url     view/blog_url;
+                drafts_url   view/drafts_url;
+                pictures_url view/pictures_url">
 
     <dt class="portletHeader">
         <span class="portletTopLeft"></span>
@@ -13,50 +15,42 @@
     <dd class="portletItem odd"
         tal:define="creation_links view/creation_links"
         tal:condition="creation_links">
-        <div class="discreet" i18n:translate="label_add_new_content">Add new content:</div>
-
         
-        <div tal:repeat="item creation_links" i18n:domain="plone">
-            <img src="" alt=""
-                tal:attributes="src item/icon;
-                                alt item/title">
-            <a href="" title=""
-                tal:attributes="href item/url;
-                                title item/description"
-                tal:content="item/title"
-                i18n:translate="">
-                Item
-            </a>
-        </div>
-    </dd>
-    
-    <dd class="portletItem even" tal:condition="view/drafts_url">
-        <div>
-            <img tal:replace="structure context/edit.gif"/>
-            <a href="" title="Go to blog entry drafts"
-                tal:attributes="href view/drafts_url"
-                i18n:translate="label_drafts">
-                Drafts
-            </a>
-        </div>
-        <div>
-            <img tal:replace="structure context/image_icon.gif"/>
-            <a href="" title="Go to blog pictures folder"
-                tal:attributes="href view/pictures_url"
-                i18n:translate="label_pictures">
-                Pictures
-            </a>
-        </div>
-    </dd>
-    
-    <dd class="portletItem odd">
-        <div>
-            <img tal:replace="structure context/info_icon.gif"/>
-            <a href="" title="User's help and documentation"
-                tal:attributes="href string:${view/portal_url}/blogging-help"
-                i18n:translate="label_help">
-                Help
-            </a>
+        <select onchange="window.location.href=this.options[this.selectedIndex].value">
+            <option value="" i18n:translate="label_add_new_content">Add new content:</option>
+            <option  tal:repeat="item creation_links"
+                tal:content="python:item['title'][:30]"
+                tal:attributes="value item/url;
+                                title item/description">
+            </option>
+        </select>
+
+        <div class="manageBlogLinks">
+            <div tal:condition="drafts_url">
+                <img tal:replace="structure context/edit.gif"/>
+                <a href="" title="Go to blog entry drafts"
+                    tal:attributes="href drafts_url"
+                    i18n:translate="label_drafts">
+                    Drafts
+                </a>
+            </div>
+            <div tal:condition="pictures_url">
+                <img tal:replace="structure context/image_icon.gif"/>
+                <a href="" title="Go to blog pictures folder"
+                    tal:attributes="href pictures_url"
+                    i18n:translate="label_pictures">
+                    Pictures
+                </a>
+            </div>
+        
+            <div>
+                <img tal:replace="structure context/info_icon.gif"/>
+                <a href="" title="User's help and documentation"
+                    tal:attributes="href string:${view/portal_url}/blogging-help"
+                    i18n:translate="label_help">
+                    Help
+                </a>
+            </div>
         </div>
     </dd>
 

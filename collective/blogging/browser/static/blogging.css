@@ -220,6 +220,10 @@ dl.sharePortlet a {
     border-bottom:0 none!important;
 }
 
+div.manageBlogLinks {
+    padding-top:0.5em;
+}
+
 #filter-blog-form label {
     font-weight: normal;
 }

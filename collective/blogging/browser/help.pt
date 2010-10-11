@@ -20,95 +20,93 @@
                 </p>
 
                 <div class="documentBody">
-                    <div class="toc">
-                        <dl class="portlet" id="document-toc">
-                            <dt class="portletHeader">Contents</dt>
-                            <dd class="portletItem">
-                                <ol class="TOC1Digit" style="margin-left:2em;">
-                                    <li>
-                                        <a href="blogging-help#intro">
-                                            Introduction
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blogging-help#basic-usage">
-                                            Basic usage
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blogging-help#page-newsitem">
-                                            Page and News Item
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blogging-help#images-files">
-                                            Images and Files
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blogging-help#links-embed-code">
-                                            Links and Embed code
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blogging-help#events-maps">
-                                            Events and Maps
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blogging-help#using-smart-folders">
-                                            Using Smart Folders
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blogging-help#galleries">
-                                            Image Galleries
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blogging-help#archive-filter">
-                                            Archive vs. Filter
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blogging-help#portlet">
-                                            Manage Blog portlet
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blogging-help#next-prev">
-                                            Next / Prev navigation
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blogging-help#content-rules">
-                                            Content rules
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blogging-help#sharing">
-                                            Sharing
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blogging-help#site-view">
-                                            Blog as main view for site
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blogging-help#translations">
-                                            Multilingual and Translations
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="blogging-help#support">
-                                            Support
-                                        </a>
-                                    </li>
-                                </ol>
-                            </dd>
-                        </dl>
-                    </div>
+                    <dl class="portlet toc" id="document-toc">
+                        <dt class="portletHeader">Contents</dt>
+                        <dd class="portletItem">
+                            <ol class="TOC1Digit" style="margin-left:2em;">
+                                <li>
+                                    <a href="blogging-help#intro">
+                                        Introduction
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blogging-help#basic-usage">
+                                        Basic usage
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blogging-help#page-newsitem">
+                                        Page and News Item
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blogging-help#images-files">
+                                        Images and Files
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blogging-help#links-embed-code">
+                                        Links and Embed code
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blogging-help#events-maps">
+                                        Events and Maps
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blogging-help#using-smart-folders">
+                                        Using Smart Folders
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blogging-help#galleries">
+                                        Image Galleries
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blogging-help#archive-filter">
+                                        Archive vs. Filter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blogging-help#portlet">
+                                        Manage Blog portlet
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blogging-help#next-prev">
+                                        Next / Prev navigation
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blogging-help#content-rules">
+                                        Content rules
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blogging-help#sharing">
+                                        Sharing
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blogging-help#site-view">
+                                        Blog as main view for site
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blogging-help#translations">
+                                        Multilingual and Translations
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blogging-help#support">
+                                        Support
+                                    </a>
+                                </li>
+                            </ol>
+                        </dd>
+                    </dl>
                     
                     <a name="intro"></a>
                     <div class="helpTopLink">
