@@ -18,7 +18,7 @@ METADATA = [
     'publish_month',
 ]
 
-BLOG_TYPES = ('Folder', 'Large Plone Folder', 'Topic')
+BLOG_TYPES = ('Folder', 'Topic')
 BLOG_VIEWS = ('blog-view',)
 
 ENTRY_TYPES = ('Document', 'News Item', 'Event', 'File', 'Image', 'Link')
