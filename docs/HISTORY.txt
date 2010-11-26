@@ -1,14 +1,15 @@
 Changelog
 =========
 
-1.2 (unreleased)
+1.2 (2010-11-26)
 ~~~~~~~~~~~~~~~~~~~
 
-- Adds a condition in setuphandlers.py in order to install under Plone 4, as there is no Large Plone Folder [erico_andrei]
 - added Spanish translation [marcosfromero]
-- Changed filter toolbar for a filter portlet. GS upgrade step to automatically create a portlet when filter toolbar was enabled. [marcosfromero]
-- Filter improvements: now it's a fieldset, with a "Clear filter" link. It filters with AJAX. Changed "POST" method for "get". This fixes http://plone.org/products/collective.blogging/issues/21 [marcosfromero]
-- fixed installation in Plone 4.0 [khink, erico_andrei]
+- changed filter toolbar for a filter portlet. GS upgrade step to automatically create a portlet when filter
+  toolbar was enabled. [marcosfromero]
+- filter improvements: now it's a fieldset, with a "Clear filter" link. It filters with AJAX. Changed "POST"
+  method for "get" - fixes: #21 [marcosfromero]
+- fixed installation in Plone 4.0 [khink, erico_andrei, yurj]
 - added german translation by Hartmut Goebel - closes: #17 [lzdych]
 - added patch by Hartmut Goebel for help page - closes: #18 [lzdych]
 - sharing portlet now respects services order + added sharing feature to blog view - closes: #16 [lzdych]
