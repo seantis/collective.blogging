@@ -549,7 +549,7 @@ msgstr "-- Jaar --"
 #. Default: "All"
 #: portlets/filter.pt:29
 msgid "string:filter-blog-all-${criteria/id}"
-msgstr "string:filter-blog-all-${criteria/id}"
+msgstr ""
 
 #. Default: "Blog archive"
 #: profiles/default/portlets.xml
