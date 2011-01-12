@@ -530,26 +530,23 @@ msgstr "Bijwerken"
 
 #. Default: "Category"
 #: portlets/filter.py:215
-#, fuzzy
 msgid "select_category_option"
-msgstr "-- Categorie --"
+msgstr "Categorie"
 
 #. Default: "Month"
 #: portlets/filter.py:227
-#, fuzzy
 msgid "select_month_option"
-msgstr "-- Maand --"
+msgstr "Maand"
 
 #. Default: "Year"
 #: portlets/filter.py:221
-#, fuzzy
 msgid "select_year_option"
-msgstr "-- Jaar --"
+msgstr "Jaar"
 
 #. Default: "All"
 #: portlets/filter.pt:29
 msgid "string:filter-blog-all-${criteria/id}"
-msgstr ""
+msgstr "Alle"
 
 #. Default: "Blog archive"
 #: profiles/default/portlets.xml
