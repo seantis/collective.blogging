@@ -6,7 +6,7 @@
     i18n_domain="collective.blogging">
     
     <include package="zope.annotation" />
-
+    <include package="Products.CMFCore" />
     <include package="plone.contentrules" />
     <include package="plone.contentrules" file="meta.zcml" />
     
