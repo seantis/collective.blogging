@@ -6,7 +6,11 @@ from zope.interface import implements
 from Products.ATContentTypes.interface import (IATTopic, IATFolder, IATBTreeFolder,
                                                 IATNewsItem, IATEvent, IATLink, IATImage,
                                                 IATFile)
-from Products.CMFPlone import Batch
+try:
+    from Products.CMFPlone import Batch
+except ImportError:
+    # plone 4.1
+    from Products.CMFPlone.PloneBatch import Batch
 from Products.Five import BrowserView
 
 from plone.memoize import view
