@@ -74,6 +74,43 @@
         for="collective.blogging.interfaces.IPostable
              zope.lifecycleevent.interfaces.IObjectModifiedEvent"
         handler=".handlers.updateEntryLayout" />
+        
+    <!--Call init handlers also on edit, for the cases where
+        object is switched back to blog functionality-->
+    
+    <subscriber
+        for="collective.blogging.interfaces.IBloggable
+             zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+        handler=".handlers.initBlogLayout" />
+        
+    <subscriber
+        for="collective.blogging.interfaces.IPostable
+             zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+        handler=".handlers.initEntryLayout" />
+        
+    <!--Add edit event handlers for Plone 3, where 
+        zope.lifecycleevent is not available   -->
+
+    <subscriber
+        for="collective.blogging.interfaces.IPostable
+             Products.Archetypes.event.ObjectEditedEvent"
+        handler="collective.blogging.handlers.updateEntryLayout" />
+        
+    <subscriber
+        for="collective.blogging.interfaces.IPostable
+             Products.Archetypes.event.ObjectEditedEvent"
+        handler="collective.blogging.handlers.initEntryLayout" />
+
+    <subscriber
+        for="collective.blogging.interfaces.IBloggable
+             Products.Archetypes.event.ObjectEditedEvent"
+        handler="collective.blogging.handlers.updateBlogLayout" />
+        
+    <subscriber
+        for="collective.blogging.interfaces.IBloggable
+             Products.Archetypes.event.ObjectEditedEvent"
+        handler="collective.blogging.handlers.initBlogLayout" />
+
 
 </configure>
 
