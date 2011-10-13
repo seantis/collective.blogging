@@ -6,7 +6,11 @@ from zope.interface import implements
 from Products.ATContentTypes.interface import (IATTopic, IATFolder, IATBTreeFolder,
                                                 IATNewsItem, IATEvent, IATLink, IATImage,
                                                 IATFile)
-from Products.CMFPlone.PloneBatch import Batch
+try:
+    from Products.CMFPlone import Batch
+except ImportError:
+    # plone 4.1
+    from Products.CMFPlone.PloneBatch import Batch
 from Products.Five import BrowserView
 
 from plone.memoize import view
@@ -162,13 +166,8 @@ class BlogView(BrowserView):
 
     def formatPerex(self, text):
         max = self.context.getField('perex_length').get(self.context)
-        if len(text) < max:
-            return text
-        props = self.tools.properties().get('site_properties')
-        if props:
-            ellipsis = props.ellipsis
-            return '%s%s' % (text[:max - len(ellipsis)], ellipsis)
-        return text[:max]
+        view = getMultiAdapter((self.context, self.request), name=u'plone')
+        return view.cropText(text, max)
     
     def sharing_services(self, item_url, title):
         services = self.context.getField('enable_sharing').get(self.context)

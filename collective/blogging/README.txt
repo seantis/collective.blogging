@@ -9,7 +9,7 @@ with extra blogging features in a while.
 Installing
 ============
 
-This package requires Plone 3.x or later (tested on 3.3.x and 4.0b3).
+This package requires Plone 3.x or later (tested on 3.3.x up to 4.1).
 
 Installing without buildout
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
