@@ -2,7 +2,7 @@ from zope.i18nmessageid import MessageFactory
 from Products.CMFCore.permissions import setDefaultRoles
 
 # import monkeys
-from collective.blogging import patch
+#from collective.blogging import patch
 
 ## LinguaPlone addon?
 try:

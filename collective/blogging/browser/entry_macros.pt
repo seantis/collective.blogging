@@ -98,7 +98,7 @@
             |
             <a title="Read comments on this entry."
                 class="actionComments"
-                tal:attributes="href string:${item_url}#comments"
+                tal:attributes="href item_url"
                 i18n:translate="label_comments_with_count"
                 i18n:attributes="title label_read_comments_title"
                 >Comments

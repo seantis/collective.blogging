@@ -1,4 +1,5 @@
 from zope.interface import implements
+from zope.component import getMultiAdapter
 
 from Acquisition import aq_inner
 
@@ -9,8 +10,10 @@ from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.Five import BrowserView
 
+from plone.app.discussion.interfaces import IConversation
 from plone.memoize import view
 from collective.blogging.interfaces import IBloggingView
+
 
 class EntryView(BrowserView):
     """ An entry browser view """
@@ -18,7 +21,7 @@ class EntryView(BrowserView):
     implements(IBloggingView)
 
     template = ViewPageTemplateFile('entryview.pt')
-    
+
     def __call__(self):
         # Link related
         if self.is_link and not self.embed_code:
@@ -79,12 +82,12 @@ class EntryView(BrowserView):
         return mtool.checkPermission('Modify portal content', self.context)
 
     @property
-    def talkback(self):
-        portal_discussion = getToolByName(self.context, 'portal_discussion')
-        discussion_allowed = portal_discussion.isDiscussionAllowedFor(self.context)
-        return discussion_allowed and portal_discussion.getDiscussionFor(self.context);
+    def commetns_allowed(self):
+        context = aq_inner(self.context)
+        return getMultiAdapter((context, self.request), name=u'conversation_view').enabled()
 
     @property
     def reply_count(self):
-        talkback = self.talkback
-        return talkback is not False and talkback.replyCount(self.context);
+        context = aq_inner(self.context)
+        discussion = IConversation(context)
+        return discussion.total_comments

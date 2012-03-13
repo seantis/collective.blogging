@@ -9,7 +9,7 @@ with extra blogging features in a while.
 Installing
 ============
 
-This package requires Plone 3.x or later (tested on 3.3.x up to 4.1).
+This package requires Plone 4.x.
 
 Installing without buildout
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -83,10 +83,6 @@ Here are sites where the blogging tool is already in production use.
 - plan-international.org_
 
 .. _plan-international.org: http://plan-international.org/about-plan/resources/blogs
-
-- lukaszdych.net_
-
-.. _lukaszdych.net: http://lukaszdych.net
 
 - blog.horovi.com_
 
