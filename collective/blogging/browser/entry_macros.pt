@@ -85,7 +85,7 @@
         tal:define="toLocalizedTime nocall:toLocalizedTime|nocall:context/@@plone/toLocalizedTime;                                
                     item_url    context/absolute_url;
                     item_date   python:toLocalizedTime(context.Date(),long_format=1);
-                    talkback    view/talkback;
+                    commetns_allowed    view/commetns_allowed;
                     reply_count view/reply_count;">
 
         <tal:block tal:condition="python:item_date and item_date != None">
@@ -94,7 +94,7 @@
             </span>
         </tal:block>
         
-        <tal:block tal:condition="talkback|nothing">
+        <tal:block tal:condition="commetns_allowed|nothing">
             |
             <a title="Read comments on this entry."
                 class="actionComments"
