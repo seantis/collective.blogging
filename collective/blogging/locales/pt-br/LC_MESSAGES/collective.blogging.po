@@ -4,18 +4,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2010-10-09 20:16+0000\n"
-"PO-Revision-Date: 2010-05-10 21:50-0300\n"
-"Last-Translator: Davi Lima <davilima6@gmail.com>\n"
+"PO-Revision-Date: 2012-05-08 17:03-0300\n"
+"Last-Translator: Gustavo Lepri <lepri@simplesconsultoria.com.br>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "X-Is-Fallback-For: pt\n"
+"Language-Team: \n"
 
 #: ./profiles/default/portlets.xml
 msgid "A portlet which displays a filter form."
-msgstr ""
+msgstr "Um portlet que exibe uma forma de filtro."
 
 #: ./actions/autoblog.py:97
 msgid "Add Auto-Blog Action"
@@ -73,7 +74,7 @@ msgstr "Blog criado"
 #: ./portlets/filter.py:76
 #: ./profiles/default/portlets.xml
 msgid "Blog filter portlet"
-msgstr ""
+msgstr "Portlet de filtro de blog"
 
 #: ./extenders.py:201
 msgid "Blogger's bio"
@@ -133,11 +134,11 @@ msgstr "Ativar comentários"
 
 #: ./portlets/share.py:48
 msgid "Enable portlet by content types wich entries are based on."
-msgstr ""
+msgstr "Habilitar portlet  cujas entradas são baseadas em tipos de conteúdos."
 
 #: ./extenders.py:139
 msgid "Enable sharing"
-msgstr ""
+msgstr "Habilitar compartilhamento"
 
 #: ./portlets/share.py:42
 msgid "Enter portlet tile."
@@ -251,7 +252,7 @@ msgstr "Serviços"
 
 #: ./portlets/filter.pt:51
 msgid "Reset"
-msgstr ""
+msgstr "Redefinir"
 
 #: ./extenders.py:202
 msgid "Select a document with blogger's bio information."
@@ -268,7 +269,7 @@ msgstr "Selecione os serviços de compartilhamento ativos."
 
 #: ./portlets/share.py:47
 msgid "Select types"
-msgstr ""
+msgstr "Seletionar tipos"
 
 #: ./portlets/share.py:81
 msgid "Share post"
@@ -528,30 +529,27 @@ msgstr "Mostrar cabeçalho"
 #. Default: "Update"
 #: ./portlets/filter.pt:47
 msgid "label_update"
-msgstr ""
+msgstr "Atualizar"
 
 #. Default: "Category"
 #: ./portlets/filter.py:215
-#, fuzzy
 msgid "select_category_option"
-msgstr "-- Categoria --"
+msgstr "Categoria"
 
 #. Default: "Month"
 #: ./portlets/filter.py:227
-#, fuzzy
 msgid "select_month_option"
-msgstr "-- Mês --"
+msgstr "Mês"
 
 #. Default: "Year"
 #: ./portlets/filter.py:221
-#, fuzzy
 msgid "select_year_option"
-msgstr "-- Ano --"
+msgstr "Ano"
 
 #. Default: "All"
 #: ./portlets/filter.pt:29
 msgid "string:filter-blog-all-${criteria/id}"
-msgstr ""
+msgstr "Todos"
 
 #. Default: "Blog archive"
 #: ./profiles/default/portlets.xml
