@@ -16,6 +16,7 @@ INDEXES = {
 METADATA = [
     'publish_year',
     'publish_month',
+    'total_comments',
 ]
 
 BLOG_TYPES = ('Folder', 'Topic')
