@@ -1,15 +1,17 @@
 Changelog
 =========
 
-1.3.1 (unreleased)
-~~~~~~~~~~~~~~~~
+1.3.1 (2012-06-12)
+~~~~~~~~~~~~~~~~~~
 
-- Discussion Item based comments support replaced by p.a.discussion commments one - fixes: #26
-  [lzdych]
+ - discussion Item based comments support replaced by p.a.discussion commments one - fixes: #26
+   [lzdych]
+
+ - updated template variables [lzdych]  
 
  - updated translation for pt-br [lepri]
- - added metadata 'total_comments' in setuphandlers [lepri]
 
+ - added metadata 'total_comments' in setuphandlers [lepri]
 
 1.3 (2011-10-05)
 ~~~~~~~~~~~~~~~~
