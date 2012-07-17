@@ -36,6 +36,14 @@ class IAutoBlogAction(Interface):
         default=False
     )
 
+    set_entry_layout = Bool(
+        title=_(u"Set layout to entry-view"),
+        description=_(u"If checked, new blog item will use entry-view template layout."),
+        required=False,
+        default=True
+    )
+
+
 class AutoBlogAction(SimpleItem):
     """
     The implementation of the action defined before
@@ -45,6 +53,7 @@ class AutoBlogAction(SimpleItem):
     enable_blogging = False
     exclude_from_nav = False
     enable_comments = False
+    set_entry_layout = False
     element = 'collective.blogging.actions.AutoBlog'
 
     @property
@@ -79,6 +88,9 @@ class AutoBlogActionExecutor(object):
         
         if self.element.enable_comments:
             obj.allowDiscussion(True)
+
+        if self.element.set_entry_layout:
+            obj.setLayout('entry-view')
         
         return True
 
