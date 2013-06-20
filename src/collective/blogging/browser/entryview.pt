@@ -42,8 +42,12 @@
                 
                 <metal:imageContent use-macro="context/entry_macros/macros/image_content"/>
                 
-                <div metal:use-macro="here/document_relateditems/macros/relatedItems">
+                <div tal:condition="nothing">
+                <!-- no more there in plone4-->
+                <div 
+                metal:use-macro="here/document_relateditems/macros/relatedItems">
                     Show related items if they exist
+                </div>
                 </div>
                 
                 <div class="visualClear" id="clear-before-entry-footer"><!-- --></div>

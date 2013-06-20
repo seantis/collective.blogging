@@ -1,6 +1,9 @@
 from string import Template
 from Acquisition import aq_inner
 from zope.component import getMultiAdapter
+from AccessControl import Unauthorized
+from Products.CMFPlone.utils import base_hasattr
+ 
 from zope.interface import implements
 
 from Products.ATContentTypes.interface import (IATTopic, IATFolder, IATBTreeFolder,
@@ -22,6 +25,29 @@ class BlogView(BrowserView):
     """ A blog browser view """
 
     implements(IBloggingView)
+
+    def computeRelatedItems(self, context=None):
+        if not context:
+            context = self.context
+        if base_hasattr(context, 'getRelatedItems'):
+            outgoing = context.getRelatedItems()
+            incoming = []
+            # if you want to show up the items which point to this one, too, then use
+            # the line below
+            #incoming = context.getBRefs('relatesTo')
+            res = []
+            mtool = context.portal_membership
+
+            in_out = outgoing + incoming
+            for d in range(len(in_out)):
+                try:
+                    obj = in_out[d]
+                except Unauthorized:
+                    continue
+                if obj not in res:
+                    if mtool.checkPermission('View', obj):
+                        res.append(obj)
+            return res
     
     def __init__(self, context, request):
         super(BlogView, self).__init__(context, request)

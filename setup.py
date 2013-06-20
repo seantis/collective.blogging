@@ -6,8 +6,8 @@ version = '1.3.2'
 setup(name='collective.blogging',
       version=version,
       description="A blogging extension for Plone 4.x.",
-      long_description=open(os.path.join("collective", "blogging", "README.txt")).read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+      long_description=open(os.path.join("README.rst")).read() + "\n" +
+                       open(os.path.join("docs", "HISTORY.rst")).read(),
       # Get more strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Framework :: Plone",
@@ -18,10 +18,16 @@ setup(name='collective.blogging',
       author_email='lukas.zdych@gmail.com',
       url='http://plone.org/products/collective.blogging',
       license='GPL',
-      packages=find_packages(exclude=['ez_setup']),
+      packages=find_packages('src'),
+      package_dir = {'': 'src'},
       namespace_packages=['collective'],
       include_package_data=True,
       zip_safe=False,
+      extras_require = {
+          'test': [
+              'plone.app.testing',
+          ],
+      },
       install_requires=[
           'setuptools',
           'z3c.autoinclude',  # Required for Plone 3.2 compatibility

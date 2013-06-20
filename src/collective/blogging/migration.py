@@ -1,7 +1,7 @@
 import logging
 
 from zope.component import getMultiAdapter, getUtility
-from zope.app.container.interfaces import INameChooser
+from zope.container.interfaces import INameChooser
 
 from plone.portlets.interfaces import IPortletManager
 from plone.portlets.interfaces import IPortletAssignmentMapping

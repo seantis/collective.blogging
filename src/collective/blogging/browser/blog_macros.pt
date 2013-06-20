@@ -372,7 +372,7 @@
 <metal:entryRelated define-macro="entry_related">
     <div class="relatedItems" i18n:domain="plone"
         tal:define="getInfoFor python:wtool.getInfoFor;">
-        <tal:relatedItems tal:define="related python:item_object.computeRelatedItems();">
+        <tal:relatedItems tal:define="related python:view.computeRelatedItems(item_object);">
             <tal:block tal:condition="python:related">
                 <div class="visualClear"><!-- --></div>
                 <fieldset class="entryRelatedItemsBox">

@@ -1,10 +1,22 @@
 Changelog
 =========
 
+1.3.3 (unreleased)
+~~~~~~~~~~~~~~~~~~
+- plone 4.3 compat
+  [kiorky]
+
+- Refresh buildout infra
+  [kiorky]
+
+- Move to github
+  [kiorky]
+
+
 1.3.2 (2012-07-17)
 ~~~~~~~~~~~~~~~~~~
 
-- Added option to set entry layout to AutoBlog rule. ObjectInitialized subscriber may be 
+- Added option to set entry layout to AutoBlog rule. ObjectInitialized subscriber may be
   invoked before the autoblog rule so the layout might not be set.
   [naro]
 
@@ -15,7 +27,7 @@ Changelog
  - discussion Item based comments support replaced by p.a.discussion commments one - fixes: #26
    [lzdych]
 
- - updated template variables [lzdych]  
+ - updated template variables [lzdych]
 
  - updated translation for pt-br [lepri]
 
@@ -34,7 +46,7 @@ Changelog
 
  - Fixed fuzzy (and broken) dutch translations
    [maerteijn]
- 
+
  - Added missing normalizeString declaration (Plone4)
    [naro]
 
@@ -92,7 +104,7 @@ Changelog
 
 1.0rc1 (2010-02-16)
 ~~~~~~~~~~~~~~~~~~~
-	 
+
 - added blogger's name field to blog entry's schemata [lzdych]
 - updated czech translation [lzdych]
 - cleaned up translation from blogging help page mess, so user's guide is no more translatable and will be replaced by online documentation in final version [lzdych]
