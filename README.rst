@@ -121,6 +121,8 @@ Contributors:
 
 - Hartmut Goebel (h dot goebel at goebel-consult dot de) - German translation
 
+- Mathieu Le Marec - Pasquet (kiorky at cryptelium dot net) - fixes, patches, buildout infra
+
 Homepage: collective.blogging_.
 
 .. _collective.blogging: http://plone.org/products/collective.blogging
