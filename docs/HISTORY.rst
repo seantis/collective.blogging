@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.3.2 (XXXX-xx-xx)
+1.3.3 (2013-08-29)
 ~~~~~~~~~~~~~~~~~~
 - plone 4.3 compat
   [kiorky]
