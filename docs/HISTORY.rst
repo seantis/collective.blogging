@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.3.3 (unreleased)
+1.3.2 (XXXX-xx-xx)
 ~~~~~~~~~~~~~~~~~~
 - plone 4.3 compat
   [kiorky]
