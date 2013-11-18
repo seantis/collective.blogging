@@ -137,7 +137,7 @@ class Renderer(base.Renderer):
                 'months': sorted([(m, c, '%s&publish_month=%s' % (year_url, m), PLMF(ts.month_msgid(m), default=ts.month_english(m))) \
                                     for m,c in archives[archive]['entries'].items()], reverse=True)
             })
-        return sorted(result, reverse=True)
+        return sorted(result, key=lambda archive: archive['year'], reverse=True)
     
     @instance.memoize
     def blog(self):
